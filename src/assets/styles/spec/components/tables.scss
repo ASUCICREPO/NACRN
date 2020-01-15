@@ -1,0 +1,35 @@
+/*Style the number column for all-program table*/
+#allProgramTable tr td:nth-child() {
+    width: 5%;
+    padding: 5px;
+    text-align: center;
+    font-weight: normal;
+}
+
+/*Set width of the program name column*/
+#allProgramTable tr td:nth-child(2) {
+    width: 15%;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    font-weight: bolder;
+
+}
+
+/*Set width of the contact column*/
+#allProgramTable tr td:nth-child(3) {
+    width: 10%;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+}
+
+#allProgramTable tr td:nth-child(4) {
+    width: 40%;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 14px;
+}
+
+#allProgramTable tr td:nth-child(5) {
+    width: 30%;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 14px;
+}
