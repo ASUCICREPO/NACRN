@@ -390,71 +390,61 @@
         <!-- ### $App Screen Content ### -->
         <main class='main-content bgc-grey-100'>
           <div id='mainContent'>
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-md-12">
+            <div class="container-fluid" id="profileCardContainer">
+                <div class="col-md-9" id="centeredCard">
                   <div class="card">
                     <div class="card-header card-header-primary">
-                      <h4 class="card-title">Edit Profile</h4>
-                      <p class="card-category">Complete your profile</p>
+                      <h4 class="card-title">Profile</h4>
+                      <p class="card-category">Important information about you</p>
                     </div>
                     <div class="card-body">
-                      <form>
-                        <div class="row">
-                          <div class="col-md-4">
-                            <div class="form-group bmd-form-group">
-                              <label class="bmd-label-floating">Email address</label>
-                              <input type="email" class="form-control">
-                            </div>
-                          </div>
-                          <div class="col-md-4">
-                            <div class="form-group bmd-form-group">
-                              <label class="bmd-label-floating">First Name</label>
-                              <input type="text" class="form-control">
-                            </div>
-                          </div>
-                          <div class="col-md-4">
-                            <div class="form-group bmd-form-group">
-                              <label class="bmd-label-floating">Last Name</label>
-                              <input type="text" class="form-control">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-md-4">
-                            <div class="form-group bmd-form-group">
-                              <label class="bmd-label-floating">Password</label>
-                              <input type="text" class="form-control">
-                            </div>
-                          </div>
-                          <div class="col-md-4">
-                            <div class="form-group bmd-form-group">
-                              <label class="bmd-label-floating">Phone Number</label>
-                              <input type="text" class="form-control">
-                            </div>
-                          </div>
-                            <div class="col-md-4">
-                              <div class="dropdown" id="contactPreferencesDropdown">
-                                <label class="bmd-label-floating">Contact Preferences</label>
-                                <button class="btn btn-block btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  Contact Preferences
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                  <a class="dropdown-item" href="#">Action</a>
-                                  <a class="dropdown-item" href="#">Another action</a>
-                                  <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                              </div>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
-                        <div class="clearfix"></div>
-                      </form>
+                      <table width="100%" id="profileTable">
+                        <tr class="profile-table-row" width="100%">
+                            <td id="profilePhotoText" class="profile-title-text">Photo</td>
+                            <td id="profilePhotoBlurb" class="profile-info">A photo helps us get to know you</td>
+                            <td><img class="w-2r bdrs-50p" src="https://randomuser.me/api/portraits/men/10.jpg" alt="" id="profileImage"></td>
+                        </tr>
+                        <tr>
+                            <td class="profile-title-text">Name</td>
+                            <td class="profile-info" id="profileName">John Doe</td>
+                        </tr>
+                        <tr>
+                            <td class="profile-title-text">Password</td>
+                            <td class="profile-info">••••••••</td>
+                            <td class="input-button-cell"><input type="button" class="btn btn-primary" value="Edit Profile" id="editProfileButton"/></td>
+                        </tr>
+                    </table>
                     </div>
                   </div>
                 </div>
-              </div>
             </div>
+            <div class="container-fluid" id="profileCardContainer">
+              <div class="col-md-9" id="centeredCard">
+                <div class="card">
+                  <div class="card-header card-header-primary">
+                    <h4 class="card-title">Contact Information</h4>
+                    <p class="card-category">Ways to keep in touch</p>
+                  </div>
+                  <div class="card-body">
+                    <table width="100%" id="profileTable">
+                      <tr class="profile-table-row" width="100%">
+                          <td id="profilePhotoText" class="profile-title-text">Email</td>
+                          <td class="profile-info">j.doe@gmail.com</td>
+                      </tr>
+                      <tr>
+                          <td class="profile-title-text">Phone</td>
+                          <td class="profile-info" id="profileName">602-854-9458</td>
+                      </tr>
+                      <tr>
+                          <td class="profile-title-text">Contact Preferences</td>
+                          <td class="profile-info">Email only</td>
+                          <td class="input-button-row"><input type="button" class="btn btn-primary" value="Edit Contact Info" id="editProfileButton"/></td>
+                      </tr>
+                  </table>
+                  </div>
+                </div>
+              </div>
+          </div>
           </div>
         </main>
       </div>
