@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Settings</title>
+    <title>All Programs</title>
 
     <link href="https://fonts.googleapis.com/css?family=PT+Sans|Public+Sans|Source+Sans+Pro&display=swap" rel="stylesheet">
     <style>
@@ -84,6 +84,12 @@
           loader.classList.add('fadeOut');
         }, 300);
       });
+
+      window.onload(
+        $(document).ready(function(){
+          $("#contactPreferencesDropdown").dropdown('update');
+        })
+      )
     </script>
 
     <!-- @App Content -->
@@ -130,7 +136,7 @@
               </a>
             </li>
             <li class="nav-item mT-30 actived">
-              <a class="sidebar-link" href="settings.html">
+              <a class="sidebar-link" href="blank.html">
                 <span class="icon-holder">
                   <i class="c-blue-500 ti-settings"></i>
                 </span>
@@ -138,7 +144,7 @@
               </a>
             </li>
             <li class="nav-item mT-30 actived">
-              <a class="sidebar-link" href="index.html">
+              <a class="sidebar-link" href="settings.html">
                 <span class="icon-holder">
                   <i class="c-blue-500 ti-user"></i>
                 </span>
@@ -382,6 +388,75 @@
         </div>
 
         <!-- ### $App Screen Content ### -->
+        <main class='main-content bgc-grey-100'>
+          <div id='mainContent'>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="card">
+                    <div class="card-header card-header-primary">
+                      <h4 class="card-title">Edit Profile</h4>
+                      <p class="card-category">Complete your profile</p>
+                    </div>
+                    <div class="card-body">
+                      <form>
+                        <div class="row">
+                          <div class="col-md-4">
+                            <div class="form-group bmd-form-group">
+                              <label class="bmd-label-floating">Email address</label>
+                              <input type="email" class="form-control">
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-group bmd-form-group">
+                              <label class="bmd-label-floating">First Name</label>
+                              <input type="text" class="form-control">
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-group bmd-form-group">
+                              <label class="bmd-label-floating">Last Name</label>
+                              <input type="text" class="form-control">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-4">
+                            <div class="form-group bmd-form-group">
+                              <label class="bmd-label-floating">Password</label>
+                              <input type="text" class="form-control">
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-group bmd-form-group">
+                              <label class="bmd-label-floating">Phone Number</label>
+                              <input type="text" class="form-control">
+                            </div>
+                          </div>
+                            <div class="col-md-4">
+                              <div class="dropdown" id="contactPreferencesDropdown">
+                                <label class="bmd-label-floating">Contact Preferences</label>
+                                <button class="btn btn-block btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Contact Preferences
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#">Action</a>
+                                  <a class="dropdown-item" href="#">Another action</a>
+                                  <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
+                        <div class="clearfix"></div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
       </div>
     </div>
 
