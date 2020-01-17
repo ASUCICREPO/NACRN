@@ -24,6 +24,8 @@ const titles = {
   'basic-table': 'Basic Table',
   'settings': 'Settings',
   'invite': 'Invite',
+  'edit-profile': 'Edit Profile',
+  'edit-contact-preferences': 'Edit Contact Preferences',
 };
 
 module.exports = Object.keys(titles).map(title => {

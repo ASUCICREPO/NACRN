@@ -380,61 +380,47 @@
                 <div class="col-md-9" id="centeredCard">
                   <div class="card">
                     <div class="card-header card-header-primary">
-                      <h4 class="card-title">Profile</h4>
-                      <p class="card-category">Important information about you</p>
+                      <h4 class="card-title">Edit Profile</h4>
+                      <p class="card-category">Update or change your information</p>
                     </div>
                     <div class="card-body">
-                      <table width="100%" id="profileTable">
-                        <tr class="profile-table-row" width="100%">
-                            <td id="profilePhotoText" class="profile-title-text">Photo</td>
-                            <td id="profilePhotoBlurb" class="profile-info">A photo helps us get to know you</td>
-                            <td><img class="w-2r bdrs-50p" src="https://randomuser.me/api/portraits/men/10.jpg" alt="" id="profileImage"></td>
-                        </tr>
-                        <tr>
-                            <td class="profile-title-text">Name</td>
-                            <td class="profile-info" id="profileName">John Doe</td>
-                        </tr>
-                        <tr>
-                            <td class="profile-title-text">Password</td>
-                            <td class="profile-info">••••••••</td>
-                            <td class="input-button-cell">
-                              <a href="edit-profile.html">
-                                <button type="button" class="btn btn-primary" id="editProfileButton">Edit</button>
-                              </a>
-                            </td>
-                        </tr>
-                    </table>
+                      <form>
+                        <div class="row">
+                          <div class="col-md-3">
+                            <div class="form-group bmd-form-group">
+                              <label class="bmd-label-floating">First Name</label>
+                              <input type="text" class="form-control">
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="form-group bmd-form-group">
+                              <label class="bmd-label-floating">Last Name</label>
+                              <input type="text" class="form-control">
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="form-group bmd-form-group">
+                              <label class="bmd-label-floating">Password</label>
+                              <input type="text" class="form-control">
+                            </div>
+                          </div>
+                          <div class="col-md-3" id="profileImageContainer">
+                              <a href="https://www.amazon.com">
+                                <img class="w-5r bdrs-50p img-fluid" src="https://randomuser.me/api/portraits/men/10.jpg" alt="" id="profileImageHoverable">
+                                <p id="hoverText">Change</p>
+                              </a> 
+                          </div>
+                        </div>
+                          <div class="text-right">
+                            <a href="settings.html">
+                              <button type="button" class="btn btn-primary pull-right" id="saveProfileButton">Save Profile</button>
+                            </a>
+                          </div>
+                      </form>
                     </div>
                   </div>
                 </div>
             </div>
-            <div class="container-fluid" id="profileCardContainer">
-              <div class="col-md-9" id="centeredCard">
-                <div class="card">
-                  <div class="card-header card-header-primary">
-                    <h4 class="card-title">Contact Information</h4>
-                    <p class="card-category">Ways to keep in touch</p>
-                  </div>
-                  <div class="card-body">
-                    <table width="100%" id="profileTable">
-                      <tr class="profile-table-row" width="100%">
-                          <td id="profilePhotoText" class="profile-title-text">Email</td>
-                          <td class="profile-info">j.doe@gmail.com</td>
-                      </tr>
-                      <tr>
-                          <td class="profile-title-text">Phone</td>
-                          <td class="profile-info" id="profileName">602-854-9458</td>
-                      </tr>
-                      <tr>
-                          <td class="profile-title-text">Contact Preferences</td>
-                          <td class="profile-info">Email only</td>
-                          <td class="input-button-row"><a href="edit-contact-preferences.html"><button type="button" class="btn btn-primary" id="editContactInfoButton">Edit</button></a></td>
-                      </tr>
-                  </table>
-                  </div>
-                </div>
-              </div>
-          </div>
           </div>
         </main>
       </div>
