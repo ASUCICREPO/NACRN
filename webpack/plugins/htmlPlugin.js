@@ -23,6 +23,7 @@ const titles = {
   '500': '500',
   'basic-table': 'Basic Table',
   'settings': 'Settings',
+  'invite': 'Invite',
 };
 
 module.exports = Object.keys(titles).map(title => {
