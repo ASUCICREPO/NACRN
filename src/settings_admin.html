@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Dashboard</title>
+    <title>Settings</title>
 
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Public+Sans|Source+Sans+Pro&display=swap" rel="stylesheet">
     <style>
       #loader {
         transition: all 0.3s ease-in-out;
@@ -54,6 +55,7 @@
       }
     </style>
   </head>
+
   <body class="app">
     <!-- @TOC -->
     <!-- =================================================== -->
@@ -82,6 +84,12 @@
           loader.classList.add('fadeOut');
         }, 300);
       });
+
+      window.onload(
+        $(document).ready(function(){
+          $("#contactPreferencesDropdown").dropdown('update');
+        })
+      )
     </script>
 
     <!-- @App Content -->
@@ -118,15 +126,7 @@
           </div>
 
           <!-- ### $Sidebar Menu ### -->
-          <ul class="sidebar-menu scrollable pos-r">
-            <li class="nav-item mT-30 actived">
-              <a class="sidebar-link" href="basic-table.html">
-                <span class="icon-holder">
-                  <i class="c-blue-500 ti-settings"></i>
-                </span>
-                <span class="title">Settings</span>
-              </a>
-            </li>
+          <ul class="sidebar-menu scrollable pos-r" id="sideNavBar">
             <li class="nav-item mT-30 actived">
               <a class="sidebar-link" href="index.html">
                 <span class="icon-holder">
@@ -136,19 +136,19 @@
               </a>
             </li>
             <li class="nav-item mT-30 actived">
-              <a class="sidebar-link" href="index.html">
-                <span class="icon-holder">
-                  <i class="c-blue-500 ti-home"></i>
-                </span>
-                <span class="title">My Programs</span>
-              </a>
-            </li>
-            <li class="nav-item mT-30 actived">
-              <a class="sidebar-link" href="index.html">
+              <a class="sidebar-link" href="settings.html">
                 <span class="icon-holder">
                   <i class="c-blue-500 ti-user"></i>
                 </span>
-                <span class="title">My Account</span>
+                <span class="title">User Profile</span>
+              </a>
+            </li>
+            <li class="nav-item mT-30 actived">
+              <a class="sidebar-link" href="invite.html">
+                <span class="icon-holder">
+                  <i class="c-blue-500 ti-user"></i>
+                </span>
+                <span class="title">Send an Invite</span>
               </a>
             </li>
           </ul>
@@ -164,12 +164,6 @@
               <li>
                 <a id='sidebar-toggle' class="sidebar-toggle" href="javascript:void(0);">
                   <i class="ti-menu"></i>
-                </a>
-              </li>
-              <li class="search-box">
-                <a class="search-toggle no-pdd-right" href="javascript:void(0);">
-                  <i class="search-icon ti-search pdd-right-10"></i>
-                  <i class="search-icon-close ti-close pdd-right-10"></i>
                 </a>
               </li>
               <li class="search-input">
@@ -382,54 +376,70 @@
         <!-- ### $App Screen Content ### -->
         <main class='main-content bgc-grey-100'>
           <div id='mainContent'>
-            <div class="row">
-              <div class="col-md-12">
-                <div class="bgc-white bd bdrs-3 p-20 mB-20">
-                  <h4 class="c-grey-900 mB-20">All Programs</h4>
-                  <p>Use <code class="highlighter-rouge">.table-striped</code> to add zebra-striping to any table row within the <code class="highlighter-rouge">&lt;tbody&gt;</code>.</p>
-                  <table class="table table-striped">
-                    <thead>
-                      <tr>
-                        <th scope="col"  class="d-inline-block col-1">#</th>
-                        <th scope="col"  class="d-inline-block col-3">Program Name</th>
-                        <th scope="col"  class="d-inline-block col-2">Contact</th>
-                        <th scope="col"  class="d-inline-block col-5">Description</th>
-                        <th scope="col"  class="d-inline-block col-4">Elegibility Criteria</th>
+            <div class="container-fluid" id="profileCardContainer">
+                <div class="col-md-9" id="centeredCard">
+                  <div class="card">
+                    <div class="card-header card-header-primary">
+                      <h4 class="card-title">Profile</h4>
+                      <p class="card-category">Important information about you</p>
+                    </div>
+                    <div class="card-body">
+                      <table width="100%" id="profileTable">
+                        <tr class="profile-table-row" width="100%">
+                            <td id="profilePhotoText" class="profile-title-text">Photo</td>
+                            <td id="profilePhotoBlurb" class="profile-info">A photo helps us get to know you</td>
+                            <td><img class="w-2r bdrs-50p" src="https://randomuser.me/api/portraits/men/10.jpg" alt="" id="profileImage"></td>
+                        </tr>
+                        <tr>
+                            <td class="profile-title-text">Name</td>
+                            <td class="profile-info" id="profileName">John Doe</td>
+                        </tr>
+                        <tr>
+                            <td class="profile-title-text">Password</td>
+                            <td class="profile-info">••••••••</td>
+                            <td class="input-button-cell">
+                              <a href="edit-profile.html">
+                                <button type="button" class="btn btn-primary" id="editProfileButton">Edit</button>
+                              </a>
+                            </td>
+                        </tr>
+                    </table>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="container-fluid" id="profileCardContainer">
+              <div class="col-md-9" id="centeredCard">
+                <div class="card">
+                  <div class="card-header card-header-primary">
+                    <h4 class="card-title">Contact Information</h4>
+                    <p class="card-category">Ways to keep in touch</p>
+                  </div>
+                  <div class="card-body">
+                    <table width="100%" id="profileTable">
+                      <tr class="profile-table-row" width="100%">
+                          <td id="profilePhotoText" class="profile-title-text">Email</td>
+                          <td class="profile-info">j.doe@gmail.com</td>
                       </tr>
-                    </thead>
-                    <tbody>
                       <tr>
-                        <td scope="row">1</td>
-                        <td>Helping Homeless Moms</td>
-                        <td>6023139407</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor elit sed vulputate mi sit amet mauris. In est ante in nibh mauris cursus mattis molestie. Arcu ac tortor dignissim convallis aenean. Tortor consequat id porta nibh. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Pellentesque dignissim enim sit amet venenatis.</td>
-                        <td>Quam nulla porttitor massa id neque. Semper feugiat nibh sed pulvinar proin gravida. Augue ut lectus arcu bibendum at varius vel pharetra vel.</td>
+                          <td class="profile-title-text">Phone</td>
+                          <td class="profile-info" id="profileName">602-854-9458</td>
                       </tr>
                       <tr>
-                        <td scope="row">2</td>
-                        <td>Single Dads Organization</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
+                          <td class="profile-title-text">Contact Preferences</td>
+                          <td class="profile-info">Email only</td>
+                          <td class="input-button-row"><a href="edit-contact-preferences.html"><button type="button" class="btn btn-primary" id="editContactInfoButton">Edit</button></a></td>
                       </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                      </tr>
-                    </tbody>
                   </table>
+                  </div>
                 </div>
               </div>
-            </div>
+          </div>
           </div>
         </main>
-
-        <!-- ### $App Screen Footer ### -->
-        <footer class="bdT ta-c p-30 lh-0 fsz-sm c-grey-600">
-          <span>Copyright © 2019 Designed by <a href="https://colorlib.com" target='_blank' title="Colorlib">Colorlib</a>. All rights reserved.</span>
-        </footer>
       </div>
     </div>
+
+    <script src="https://kit.fontawesome.com/bbf8fb8b35.js" crossorigin="anonymous"></script>
   </body>
 </html>

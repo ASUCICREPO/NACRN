@@ -5,6 +5,7 @@ const
 
 const titles = {
   'index': 'Dashboard',
+  'index_admin': 'Dashboard',
   'blank': 'Blank',
   'buttons': 'Buttons',
   'calendar': 'Calendar',
@@ -23,9 +24,13 @@ const titles = {
   '500': '500',
   'basic-table': 'Basic Table',
   'settings': 'Settings',
+  'settings_admin': 'Settings',
   'invite': 'Invite',
+  'invite_admin': 'Invite',
   'edit-profile': 'Edit Profile',
   'edit-contact-preferences': 'Edit Contact Preferences',
+  'add-remove-admin': 'Add/Remove Admin',
+  'view-admins': 'View Admins'
 };
 
 module.exports = Object.keys(titles).map(title => {
