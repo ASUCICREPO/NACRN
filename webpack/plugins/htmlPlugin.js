@@ -5,15 +5,17 @@ const
 
 const titles = {
   'index': 'Dashboard',
-  'index_admin': 'Dashboard',
+  'index-admin': 'Dashboard',
   '404': '404',
   '500': '500',
   'settings': 'Settings',
-  'settings_admin': 'Settings',
+  'settings-admin': 'Settings',
   'invite': 'Invite',
-  'invite_admin': 'Invite',
+  'invite-admin': 'Invite',
   'edit-profile': 'Edit Profile',
+  'edit-profile-admin': 'Edit Profile',
   'edit-contact-preferences': 'Edit Contact Preferences',
+  'edit-contact-preferences-admin': 'Edit Contact Preferences',
   'add-remove-admin': 'Add/Remove Admin',
   'view-admins': 'View Admins'
 };

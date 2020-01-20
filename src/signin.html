@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Sign In</title>
+    <style>
+      #loader {
+        transition: all 0.3s ease-in-out;
+        opacity: 1;
+        visibility: visible;
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background: #fff;
+        z-index: 90000;
+      }
+
+      #loader.fadeOut {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .spinner {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: calc(50% - 20px);
+        left: calc(50% - 20px);
+        background-color: #333;
+        border-radius: 100%;
+        -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+        animation: sk-scaleout 1.0s infinite ease-in-out;
+      }
+
+      @-webkit-keyframes sk-scaleout {
+        0% { -webkit-transform: scale(0) }
+        100% {
+          -webkit-transform: scale(1.0);
+          opacity: 0;
+        }
+      }
+
+      @keyframes sk-scaleout {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        } 100% {
+          -webkit-transform: scale(1.0);
+          transform: scale(1.0);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body class="app">
+    <div id='loader'>
+      <div class="spinner"></div>
+    </div>
+ <script>
+      window.addEventListener('load', function load() {
+        const loader = document.getElementById('loader');
+        setTimeout(function() {
+          loader.classList.add('fadeOut');
+        }, 300);
+      });
+
+      var attempt = 3; // Variable to count number of attempts.
+// Below function Executes on click of login button.
+function setPage(){
+  document.location.href = "http://localhost:3000/powerUser.html" ;
+}
+function validate(){
+var username = document.getElementById("username").value;
+var password = document.getElementById("password").value;
+if (username == "poweruser" && password == "poweruser"){
+var redirectPage = 'http://localhost:3000/powerUser.html'
+try{
+  setTimeout(function(){document.location.href = "http://localhost:3000/powerUser.html"},500); 
+alert ("Login successful");
+
+}
+catch(err){
+  alert(err.message);
+}
+
+ return false;
+
+
+ // Redirecting to other page.
+
+}else if (username == "user" && password == "user"){
+var redirectPage = 'http://localhost:3000/index.html'
+try{
+  setTimeout(function(){document.location.href = "http://localhost:3000/index.html"},500); 
+alert ("Login successful");
+
+}
+catch(err){
+  alert(err.message);
+}
+
+ return false;
+
+
+ // Redirecting to other page.
+
+}else if (username == "admin" && password == "admin"){
+var redirectPage = 'http://localhost:3000/index_admin.html'
+try{
+  setTimeout(function(){document.location.href = "http://localhost:3000/index_admin.html"},500); 
+alert ("Login successful");
+
+}
+catch(err){
+  alert(err.message);
+}
+
+ return false;
+
+
+ // Redirecting to other page.
+
+}
+
+
+else{
+attempt --;// Decrementing by one.
+alert("You have left "+attempt+" attempt;");
+// Disabling fields after 3 attempts.
+if( attempt == 0){
+document.getElementById("username").disabled = true;
+document.getElementById("password").disabled = true;
+document.getElementById("submit").disabled = true;
+return false;
+}
+}
+}
+    </script>
+    
+    <div class="peers ai-s fxw-nw h-100vh">
+      <div class="d-n@sm- peer peer-greed h-100 pos-r bgr-n bgpX-c bgpY-c bgsz-cv" style='background-image: url("assets/static/images/navajo.jpg")'>
+      <img src="assets/static/images/navajologo copy.png" alt="" align = "left">
+       
+      </div>
+       
+      <div class="col-12 col-md-4 peer pX-40 pY-80 h-100 bgc-white scrollable pos-r" style='min-width: 320px;'>
+     
+        <h4 class="fw-300 c-grey-900 mB-40">Login</h4>
+        
+        
+        <form>
+          <div class="form-group">
+            <label class="text-normal text-dark">Username</label>
+            <input type="text" class="form-control" placeholder="John Doe" name="username" id="username">
+          </div>
+          <div class="form-group">
+            <label class="text-normal text-dark">Password</label>
+            <input type="password" class="form-control" placeholder="Password" name="password" id="password">
+          </div>
+          <div class="form-group">
+            <div class="peers ai-c jc-sb fxw-nw">
+              <div class="peer">
+                <div class="checkbox checkbox-circle checkbox-info peers ai-c">
+                  <input type="checkbox" id="inputCall1" name="inputCheckboxesCall" class="peer">
+                  <label for="inputCall1" class=" peers peer-greed js-sb ai-c">
+                    <span class="peer peer-greed">Remember Me</span>
+                  </label>
+                </div>
+              </div>
+              <div class="peer">
+                <button class="btn btn-primary" value="Login" id="submit" onclick="validate()">Login</button>
+              </div>
+       
+            </div>
+             <div class="peer">
+				<div class="d-flex justify-content-center links">
+					Don't have an account?<a class='sidebar-link' href="signup.html">Register</a>
+				</div>
+				<div class="d-flex justify-content-center">
+					
+          <a href="#" data-target="#pwdModal" data-toggle="modal">Forgot your password?</a>
+				</div>
+        <!--modal-->
+<div id="pwdModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+  <div class="modal-content">
+      <div class="modal-header">
+          <h2 class="text-center">Reset Password</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          
+      </div>
+      <div class="modal-body">
+          <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="text-center">
+                          
+                          <p>If you have forgotten your password you can reset it here.</p>
+                            <div class="panel-body">
+                                <fieldset>
+                                    <div class="form-group">
+                                        <input class="form-control input-lg" placeholder="E-mail Address" name="email" type="text">
+                                    </div>
+                                    <input class="btn btn-lg btn-primary btn-block" value="Send link for password reset" type="submit">
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      </div>
+      <div class="modal-footer">
+          <div class="peer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+		  </div>
+      	
+      </div>
+  </div>
+  </div>
+</div>
+			</div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

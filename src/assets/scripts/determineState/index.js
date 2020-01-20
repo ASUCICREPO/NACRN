@@ -1,7 +1,7 @@
 let url = window.location.href;
 
 let adminBar = `<li class="nav-item mT-30 actived">
-<a class="sidebar-link" href="index_admin.html">
+<a class="sidebar-link" href="index-admin.html">
   <span class="icon-holder">
     <i class="c-blue-500 ti-search"></i>
   </span>
@@ -9,7 +9,7 @@ let adminBar = `<li class="nav-item mT-30 actived">
 </a>
 </li>
 <li class="nav-item mT-30 actived">
-<a class="sidebar-link" href="settings_admin.html">
+<a class="sidebar-link" href="settings-admin.html">
   <span class="icon-holder">
     <i class="c-blue-500 ti-user"></i>
   </span>

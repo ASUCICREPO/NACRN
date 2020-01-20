@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Send an Invite</title>
+    <title>Settings</title>
 
     <link href="https://fonts.googleapis.com/css?family=PT+Sans|Public+Sans|Source+Sans+Pro|Roboto&display=swap" rel="stylesheet">
     <style>
@@ -165,12 +165,6 @@
                   <i class="ti-menu"></i>
                 </a>
               </li>
-              <li class="search-box">
-                <a class="search-toggle no-pdd-right" href="javascript:void(0);">
-                  <i class="search-icon ti-search pdd-right-10"></i>
-                  <i class="search-icon-close ti-close pdd-right-10"></i>
-                </a>
-              </li>
               <li class="search-input">
                 <input class="form-control" type="text" placeholder="Search...">
               </li>
@@ -282,19 +276,60 @@
         <main class='main-content bgc-grey-100'>
           <div id='mainContent'>
             <div class="container-fluid" id="profileCardContainer">
+                <div class="col-md-9" id="centeredCard">
+                  <div class="card">
+                    <div class="card-header card-header-primary">
+                      <h4 class="card-title">Profile</h4>
+                      <p class="card-category">Important information about you</p>
+                    </div>
+                    <div class="card-body">
+                      <table width="100%" id="profileTable">
+                        <tr class="profile-table-row" width="100%">
+                            <td id="profilePhotoText" class="profile-title-text">Photo</td>
+                            <td id="profilePhotoBlurb" class="profile-info">A photo helps us get to know you</td>
+                            <td><img class="w-2r bdrs-50p" src="https://randomuser.me/api/portraits/men/10.jpg" alt="" id="profileImage"></td>
+                        </tr>
+                        <tr>
+                            <td class="profile-title-text">Name</td>
+                            <td class="profile-info" id="profileName">John Doe</td>
+                        </tr>
+                        <tr>
+                            <td class="profile-title-text">Password</td>
+                            <td class="profile-info">••••••••</td>
+                            <td class="input-button-cell">
+                              <a href="edit-profile-admin.html">
+                                <button type="button" class="btn btn-primary" id="editProfileButton">Edit</button>
+                              </a>
+                            </td>
+                        </tr>
+                    </table>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="container-fluid" id="profileCardContainer">
               <div class="col-md-9" id="centeredCard">
                 <div class="card">
                   <div class="card-header card-header-primary">
-                    <h4 class="card-title">Send an Invite</h4>
-                    <p class="card-category">Enter the email you'd like to send an invite to</p>
+                    <h4 class="card-title">Contact Information</h4>
+                    <p class="card-category">Ways to keep in touch</p>
                   </div>
                   <div class="card-body">
-                    <form id="invitationForm">
-                        <input type="text" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
-                        <div class="text-right">
-                          <button type="button" class="btn btn-primary pull-right" id="sendInvitationButton">Send Invitation</button>
-                        </div>
-                    </form>
+                    <table width="100%" id="profileTable">
+                      <tr class="profile-table-row" width="100%">
+                          <td id="profilePhotoText" class="profile-title-text">Email</td>
+                          <td class="profile-info">j.doe@gmail.com</td>
+                      </tr>
+                      <tr>
+                          <td class="profile-title-text">Phone</td>
+                          <td class="profile-info" id="profileName">602-854-9458</td>
+                      </tr>
+                      <tr>
+                          <td class="profile-title-text">Contact Preferences</td>
+                          <td class="profile-info">Email only</td>
+                          <td class="input-button-row"><a href="edit-contact-preferences-admin.html"><button type="button" class="btn btn-primary" id="editContactInfoButton">Edit</button></a></td>
+                      </tr>
+                  </table>
                   </div>
                 </div>
               </div>
