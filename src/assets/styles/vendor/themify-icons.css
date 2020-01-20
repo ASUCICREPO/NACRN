@@ -413,7 +413,7 @@
 .ti-printer:before {
 	content: "\e681";
 }
-.ti-power-off:before {
+.fas fa-power-off:before {
 	content: "\e682";
 }
 .ti-plug:before {
