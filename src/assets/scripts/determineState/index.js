@@ -59,8 +59,8 @@ let endUserBar = `<li class="nav-item mT-30 actived">
 </li>`
 
 if(url.includes("admin")) {
-    document.getElementById("sideNavBar").innerHTML = adminBar;
+    document.querySelector("#sideNavBar").innerHTML = adminBar;
 }
 else {
-    document.getElementById("sideNavBar").innerHTML = endUserBar;
+    document.querySelector("#sideNavBar").innerHTML = endUserBar;
 }

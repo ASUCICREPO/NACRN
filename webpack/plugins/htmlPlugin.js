@@ -4,8 +4,8 @@ const
   HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const titles = {
-  'index': 'Dashboard',
-  'index-admin': 'Dashboard',
+  'index': 'Global User Dashboard',
+  'index-admin': 'Administrator Dashboard',
   '404': '404',
   '500': '500',
   'settings': 'Settings',
