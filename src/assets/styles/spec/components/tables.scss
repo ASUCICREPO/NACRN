@@ -24,14 +24,67 @@
     font-size: 16px;
 }
 
+/*Set width of the description column*/
 #allProgramTable tr td:nth-child(4) {
     width: 40%;
     font-family: 'Public Sans', sans-serif;
     font-size: 14px;
 }
 
+/*Set width of the elegibility criteria column*/
 #allProgramTable tr td:nth-child(5) {
     width: 30%;
     font-family: 'Public Sans', sans-serif;
     font-size: 14px;
+}
+
+
+/*ADMINISTRATOR TABLE STYLES*/
+
+/*Set width for number column*/
+#adminTable tr td:nth-child() {
+    width: 5%;
+    padding: 5px;
+    text-align: center;
+    font-weight: normal;
+}
+
+/*Set width for name column*/
+#adminTable tr td:nth-child(2) {
+    width: 19%;
+    text-align: center;
+    font-weight: normal;
+}
+
+/*Set width for email column*/
+#adminTable tr td:nth-child(3) {
+    width: 19%;
+    text-align: center;
+    font-weight: normal;
+}
+
+/*Set width for phone column*/
+#adminTable tr td:nth-child(4) {
+    width: 19%;
+    text-align: center;
+    font-weight: normal;
+}
+
+/*Set width for NACRN ID column*/
+#adminTable tr td:nth-child(5) {
+    width: 19%;
+    text-align: center;
+    font-weight: normal;
+}
+
+/*Set width for button column*/
+#adminTable tr td:nth-child(6) {
+    width: 19%;
+    text-align: center;
+    font-weight: normal;
+}
+
+/*Center the column head text*/
+#adminTable tr th {
+    text-align: center;
 }

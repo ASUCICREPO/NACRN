@@ -29,7 +29,7 @@ let adminBar = `<li class="nav-item mT-30 actived">
   <span class="icon-holder">
     <i class="c-blue-500 fas fa-plus"></i>
   </span>
-  <span class="title">Add an Administrator</span>
+  <span class="title">Manage Administrators</span>
 </a>
 </li>`;
 
