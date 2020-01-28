@@ -5,6 +5,8 @@ if(url.includes("add-remove-admin")) {
     var allAdminsTable = document.querySelector('#adminTable');
     var adminRows = allAdminsTable.tBodies[0].rows;
     var adminRemovalButton = document.querySelector('#removeSelectedAdminsButton');
+    var confirmAdminRemovalButton = document.querySelector('#confirmAdminDelete');
+    var confirmAdminRemovalModalText = document.querySelector('#confirmModalText');
 
     // Add "highlightable-admin-row" helper class to each row
     for(let item of adminRows) {
@@ -34,12 +36,16 @@ if(url.includes("add-remove-admin")) {
         if(getAllSelectedCheckboxRows().length > 0) {
             adminRemovalButton.classList.remove("disabled");
             var buttonText = `Remove Selected (${getAllSelectedCheckboxRows().length})`;
+            adminRemovalButton.setAttribute("data-toggle", "modal")
+            adminRemovalButton.setAttribute("data-target", "#exampleModal");
             adminRemovalButton.innerHTML = buttonText;
         }
 
         // If nothing is selected, disable the "Remove Selected" button and remove number of selections
         else if(getAllSelectedCheckboxRows().length < 1) {
             adminRemovalButton.classList.add("disabled");
+            adminRemovalButton.setAttribute("data-toggle", "")
+            adminRemovalButton.setAttribute("data-target", "");
             adminRemovalButton.innerHTML = "Remove Selected";
         }
     }
@@ -69,14 +75,14 @@ if(url.includes("add-remove-admin")) {
         allAdminsTable.dispatchEvent(myEvent);
     }
 
-    
+
     /*LISTENER ATTACHMENT*/
 
     // Attach determineHighlightStateListener to administrator table
     allAdminsTable.addEventListener('change', determineHighlightStateListener);
 
-    // Attach adminRemovalButtonListener to administrator removal button
-    adminRemovalButton.addEventListener('click', adminRemovalButtonListener);
+    // Attach adminRemovalButtonListener to the confirm administrator removal button
+    confirmAdminRemovalButton.addEventListener('click', adminRemovalButtonListener);
 }
 
 
