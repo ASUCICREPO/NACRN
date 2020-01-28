@@ -181,7 +181,9 @@
               <div class="col-md-12">
                 <div class="bgc-white bd bdrs-3 p-20 mB-20">
                   <h4 class="c-grey-900 mB-20">Manage Administrators</h4>
-                  <table class="table table-striped table-bordered" id="adminTable">
+                  <button type="button" class="btn btn-primary" id="addAdministratorButton">Add an Administrator</button>
+                  <button type="button" class="btn btn-danger disabled" id="removeSelectedAdminsButton">Remove Selected</button>
+                  <table class="table table-bordered" id="adminTable">
                     <thead>
                       <tr>
                         <th scope="col"></th>
@@ -189,57 +191,45 @@
                         <th scope="col">Email</th>
                         <th scope="col">Phone</th>
                         <th scope="col">NACRN ID</th>
-                        <th scope="col">Manage</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td scope="row">1</td>
+                        <td scope="row">
+                          <input type="checkbox"></input>
+                        </td>
                         <td>Bob Jones</td>
                         <td><a href="gmail.com" >b.jones@gmail.com</a></td>
                         <td>602-313-9407</td>
                         <td>85879</td>
-                        <td>
-                          <a href="settings.html">
-                            <button type="button" class="btn btn-primary">Manage</button>
-                          </a>
-                      </td>
                       </tr>
                       <tr>
-                        <td scope="row">2</td>
+                        <td scope="row">
+                          <input type="checkbox"></input>
+                        </td>
                         <td>James McMillan</td>
                         <td><a href="gmail.com" >j.mcmillan@yahoo.com</a></td>
                         <td>917-873-2159</td>
                         <td>48306</td>
-                        <td>
-                          <a href="settings.html">
-                            <button type="button" class="btn btn-primary">Manage</button>
-                          </a>
                         </td>
                       </tr>
                       <tr>
-                        <td scope="row">3</td>
+                        <td scope="row">
+                          <input type="checkbox"></input>
+                        </td>
                         <td>Miles Jackson</td>
                         <td><a href="gmail.com" >m.jackson@gmail.com</a></td>
                         <td>623-385-9527</td>
                         <td>36241</td>
-                        <td>
-                          <a href="settings.html">
-                            <button type="button" class="btn btn-primary">Manage</button>
-                          </a>
-                        </td>
                       </tr>
                       <tr>
-                        <td scope="row">4</td>
+                        <td scope="row">
+                          <input type="checkbox"></input>
+                        </td>
                         <td>George Hanson</td>
                         <td><a href="gmail.com" >g.hanson@gmail.com</a></td>
                         <td>480-498-2631</td>
                         <td>15729</td>
-                        <td>
-                          <a href="settings.html">
-                            <button type="button" class="btn btn-primary">Manage</button>
-                          </a>
-                        </td>
                       </tr>
                     </tbody>
                   </table>
