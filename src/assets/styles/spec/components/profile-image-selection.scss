@@ -1,0 +1,22 @@
+// div.profile-image-circle {
+//     font-family: 'FontAwesome';
+//     content: "\f093";
+//     background-color: green;
+// }
+.circle-icon {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    padding: 30px;
+}
+
+#circleIconUpload {
+    background: grey;
+    color: white;
+}
+
+#circleIconFirstOption {
+    background-image: url("assets/static/images/waterfall-profile-image.png") !important;
+}

@@ -17,7 +17,8 @@ const titles = {
   'edit-contact-preferences': 'Edit Contact Preferences',
   'edit-contact-preferences-admin': 'Edit Contact Preferences',
   'add-remove-admin': 'Add/Remove Admin',
-  'view-admins': 'View Admins'
+  'view-admins': 'View Admins',
+  'profile-image-selection': 'Select Profile Image'
 };
 
 module.exports = Object.keys(titles).map(title => {

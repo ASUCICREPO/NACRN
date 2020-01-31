@@ -37,7 +37,7 @@ if(url.includes("add-remove-admin")) {
             adminRemovalButton.classList.remove("disabled");
             var buttonText = `Remove Selected (${getAllSelectedCheckboxRows().length})`;
             adminRemovalButton.setAttribute("data-toggle", "modal")
-            adminRemovalButton.setAttribute("data-target", "#exampleModal");
+            adminRemovalButton.setAttribute("data-target", "#confirmDeletionModal");
             adminRemovalButton.innerHTML = buttonText;
         }
 
@@ -71,6 +71,7 @@ if(url.includes("add-remove-admin")) {
             node.remove();
         })
 
+        // Dispatch change event in table to trigger button re-render
         var myEvent = new CustomEvent("change");
         allAdminsTable.dispatchEvent(myEvent);
     }
