@@ -172,29 +172,70 @@
         <!-- ### $App Screen Content ### -->
         <main class='main-content bgc-grey-100'>
           <div id='mainContent'>
-            <div class="row">
+            <div class="container-fluid">
               <div class="col-md-12">
-                <div class="bgc-white bd bdrs-3 p-20 mB-20">
-                  <h4 class="c-grey-900 mB-20">Select a Profile Image</h4>
+                <div class="card">
+                  <div class="card-header card-header-primary" styles="margin-bottom: 10px;">
+                    <h4 class="card-title">Select a Profile Image</h4>
+                    <p class="card-category">Upload your own image or choose from a list of default options</p>
+                  </div>
                 </div>
                 <div class="profile-image-circle-container" style="display: flex;">
-                    <div class="col-md-1">
-                        <i class="fas fa-upload fa-5x circle-icon" id="circleIconUpload"></i>
+                  <div class="col-md-1">
+                    <div class="hoverable-image-container" style="margin: 10px 0px 0px 0px;">
+                      <i class="fas fa-upload fa-5x circle-icon" id="circleIconUpload"></i>
+                      <div class="circle-icon-hover btn" data-toggle="modal" data-target="#uploadModal">Upload</div>
                     </div>
-                    <div class="col-md-1">
-                        <div class="circle-icon" id="circleIconFirstOption"></div>
+                  </div>
+                  <div class="col-md-1">
+                    <a href="www.gmail.com">
+                      <div class="hoverable-image-container" style="margin: 10px 0px 0px 10px;">
+                        <div class="circle-icon" style="background-image: url(assets/static/images/beach-profile-image.png);"></div>
+                        <div class="circle-icon-hover">Choose</div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-1">
+                    <div class="hoverable-image-container" style="margin: 10px 0px 0px 20px;">
+                      <div class="circle-icon" style="background-image: url(assets/static/images/sunset-profile-image.png);"></div>
+                      <div class="circle-icon-hover">Choose</div>
                     </div>
-                    <div class="col-md-1">
-                        <div class="circle-icon"></div>
+                  </div>
+                  <div class="col-md-1">
+                    <div class="hoverable-image-container" style="margin: 10px 0px 0px 30px;">
+                      <div class="circle-icon" style="background-image: url(assets/static/images/mountains-profile-image.png);"></div>
+                      <div class="circle-icon-hover">Choose</div>
                     </div>
-                    <div class="col-md-1">
-                        <div class="circle-icon"></div>
-                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </main>
+        <!-- Modal -->
+        <div id="uploadModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4>Upload a File</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <!-- Form -->
+                <form class="md-form" style="display: flex;">
+                  <div class="file-upload-wrapper">
+                    <input type="file" id="input-file-now" class="file-upload btn" style="background-color: #98FF98;"/>
+                    <button>Submit form</button>
+                  </div>
+                </form>
+                <!-- Preview-->
+                <div id='preview'></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
