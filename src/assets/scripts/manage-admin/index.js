@@ -4,9 +4,12 @@ if(url.includes("add-remove-admin")) {
     // Get references to administrator table and rows
     var allAdminsTable = document.querySelector('#adminTable');
     var adminRows = allAdminsTable.tBodies[0].rows;
-    var adminRemovalButton = document.querySelector('#removeSelectedAdminsButton');
     var confirmAdminRemovalButton = document.querySelector('#confirmAdminDelete');
     var confirmAdminRemovalModalText = document.querySelector('#confirmModalText');
+
+    // Get references to power user table
+    var allPowerUsersTable = document.querySelector('#powerUserTable');
+    var powerUserRemovalButton = document.querySelector('#removeSelectedPowerUsersButton');
 
     // Add "highlightable-admin-row" helper class to each row
     for(let item of adminRows) {
@@ -17,56 +20,58 @@ if(url.includes("add-remove-admin")) {
     
     // This is the listener for determining which table rows to highlight based on which checkboxes are selected
     function determineHighlightStateListener(e) {
+        var removalButton = document.querySelector('.tab-pane .removal-button');
+
         // The event will fire from the target, but the listener is attached to the table and not the checkbox itself, so the event target is needed
-        var adminTableEventTarget = e.target;
+        var tableEventTarget = e.target;
 
         // The type of the input is important since we only want to catch events that originate from a type="checkbox" input
-        var adminTargetType = adminTableEventTarget.type;
+        var targetType = tableEventTarget.type;
 
         // If the event target is a checkbox and is checked, add the "currently-highlighted-admin-row" class to highlight the row.  If the target is a checkbox 
         // and is not checked, remove the "currently-highlighted-admin-row" class 
-        if(adminTargetType === "checkbox" && adminTableEventTarget.checked) {
-            adminTableEventTarget.closest("tr").classList.add("currently-highlighted-admin-row");
+        if(targetType === "checkbox" && tableEventTarget.checked) {
+            tableEventTarget.closest("tr").classList.add("currently-highlighted-row");
         }
-        else if(adminTargetType === "checkbox" && !adminTableEventTarget.checked) {
-            adminTableEventTarget.closest("tr").classList.remove("currently-highlighted-admin-row");
+        else if(targetType === "checkbox" && !tableEventTarget.checked) {
+            tableEventTarget.closest("tr").classList.remove("currently-highlighted-row");
         }
 
         // If at least one checkbox is selected, enable the "Remove Selected" button and display the number of selections
-        if(getAllSelectedCheckboxRows().length > 0) {
-            adminRemovalButton.classList.remove("disabled");
-            var buttonText = `Remove Selected (${getAllSelectedCheckboxRows().length})`;
-            adminRemovalButton.setAttribute("data-toggle", "modal")
-            adminRemovalButton.setAttribute("data-target", "#confirmDeletionModal");
-            adminRemovalButton.innerHTML = buttonText;
+        if(getAllSelectedCheckboxRows(this.id, removalButton).length > 0) {
+            removalButton.classList.remove("disabled");
+            var buttonText = `Remove Selected (${getAllSelectedCheckboxRows(this.id).length})`;
+            removalButton.setAttribute("data-toggle", "modal")
+            removalButton.setAttribute("data-target", "#confirmDeletionModal");
+            removalButton.innerHTML = buttonText;
         }
 
         // If nothing is selected, disable the "Remove Selected" button and remove number of selections
-        else if(getAllSelectedCheckboxRows().length < 1) {
-            adminRemovalButton.classList.add("disabled");
-            adminRemovalButton.setAttribute("data-toggle", "")
-            adminRemovalButton.setAttribute("data-target", "");
-            adminRemovalButton.innerHTML = "Remove Selected";
+        else if(getAllSelectedCheckboxRows(this.id).length < 1) {
+            removalButton.classList.add("disabled");
+            removalButton.setAttribute("data-toggle", "")
+            removalButton.setAttribute("data-target", "");
+            removalButton.innerHTML = "Remove Selected";
         }
     }
 
     // This is the listener for the "Remove Selected" button; it listens for clicks on the button
-    function adminRemovalButtonListener(e) {
-        removeSelectedAdmins();
+    function removalButtonListener() {
+        removeSelectedRows(this);
     }
-
 
     /*CUSTOM FUNCTION DECLARATIONS*/
 
     // This function finds all selected table rows and returns a NodeList of them
-    function getAllSelectedCheckboxRows() {
-        var selectedRows = document.querySelectorAll(".currently-highlighted-admin-row");
+    function getAllSelectedCheckboxRows(tableId) {
+        var selectedRows = document.querySelector('#' + tableId).querySelectorAll(".currently-highlighted-row");
         return selectedRows;
     }
 
     // This function takes a NodeList of all the selected table rows and removes them from the DOM
-    function removeSelectedAdmins() {
-        var selection = getAllSelectedCheckboxRows();
+    function removeSelectedRows() {
+        var tableId = document.querySelector('.tab-pane.active').querySelector('.table').id;
+        var selection = getAllSelectedCheckboxRows(tableId);
         selection.forEach(function(node) {
             node.remove();
         })
@@ -81,9 +86,11 @@ if(url.includes("add-remove-admin")) {
 
     // Attach determineHighlightStateListener to administrator table
     allAdminsTable.addEventListener('change', determineHighlightStateListener);
+    allPowerUsersTable.addEventListener('change', determineHighlightStateListener);
 
-    // Attach adminRemovalButtonListener to the confirm administrator removal button
-    confirmAdminRemovalButton.addEventListener('click', adminRemovalButtonListener);
+    // Attach removalButtonListener to the confirm administrator removal button
+    confirmAdminRemovalButton.addEventListener('click', removalButtonListener);
+    confirmPowerUserRemovalButton.addEventListener('click', removalButtonListener);
 }
 
 

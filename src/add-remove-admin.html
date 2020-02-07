@@ -180,66 +180,178 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="bgc-white bd bdrs-3 p-20 mB-20">
-                  <h4 class="c-grey-900 mB-20">Manage Administrators</h4>
-                  <button type="button" class="btn btn-primary mB-10" id="addAdministratorButton">Add an Administrator</button>
-                  <button type="button" class="btn btn-danger disabled mB-10" id="removeSelectedAdminsButton">Remove Selected</button>
-                  <table class="table table-bordered" id="adminTable">
-                    <thead>
-                      <tr>
-                        <th scope="col"></th>
-                        <th scope="col">Administrator Name</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Phone</th>
-                        <th scope="col">NACRN ID</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td scope="row">
-                          <input type="checkbox"></input>
-                        </td>
-                        <td>Bob Jones</td>
-                        <td><a href="gmail.com" >b.jones@gmail.com</a></td>
-                        <td>602-313-9407</td>
-                        <td>85879</td>
-                      </tr>
-                      <tr>
-                        <td scope="row">
-                          <input type="checkbox"></input>
-                        </td>
-                        <td>James McMillan</td>
-                        <td><a href="gmail.com" >j.mcmillan@yahoo.com</a></td>
-                        <td>917-873-2159</td>
-                        <td>48306</td>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td scope="row">
-                          <input type="checkbox"></input>
-                        </td>
-                        <td>Miles Jackson</td>
-                        <td><a href="gmail.com" >m.jackson@gmail.com</a></td>
-                        <td>623-385-9527</td>
-                        <td>36241</td>
-                      </tr>
-                      <tr>
-                        <td scope="row">
-                          <input type="checkbox"></input>
-                        </td>
-                        <td>George Hanson</td>
-                        <td><a href="gmail.com" >g.hanson@gmail.com</a></td>
-                        <td>480-498-2631</td>
-                        <td>15729</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <div style="display: flex;justify-content: space-between;">
+                    <h4 class="c-grey-900 mB-20">Manage Users</h4>
+                    <a style="padding-top: .5%" href=""><span>Bulk User Upload</span></a>
+                  </div>
+                  <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
+                    <div class="input-group">
+                      <input type="search" placeholder="What're you searching for?" aria-describedby="button-addon1" class="form-control border-0 bg-light">
+                      <div class="input-group-append">
+                        <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div style="display: flex; padding-left: 0px; padding-right: 0px;" class="col-md-12">
+                    <nav class="col-md-12">
+                      <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                          <a class="nav-item nav-link active" id="selectManageAdmins" data-toggle="tab" href="#manageAdmins" role="tab">Administrators</a>
+                          <a class="nav-item nav-link" id="selectManagePowerUsers" data-toggle="tab" href="#managePowerUsers" role="tab">Power Users</a>
+                          <a class="nav-item nav-link" id="selectManageCareCoordinators" data-toggle="tab" href="#manageCareCoordinators" role="tab">Care Coordinators</a>
+                          <a class="nav-item nav-link" id="selectManageUsers" data-toggle="tab" href="#manageEndUsers" role="tab">End Users</a>
+                      </div>
+                    </nav>
+                  </div>
+                  <div class="tab-content col-md-12">
+                    <div class="tab-pane fade show active" id="manageAdmins" role="tabpanel">
+                      <table class="table table-bordered" id="adminTable" style="margin-top: 10px;">
+                        <thead>
+                          <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Administrator Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">NACRN ID</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>Bob Jones</td>
+                            <td><a href="gmail.com" >b.jones@gmail.com</a></td>
+                            <td>602-313-9407</td>
+                            <td>85879</td>
+                          </tr>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>James McMillan</td>
+                            <td><a href="gmail.com" >j.mcmillan@yahoo.com</a></td>
+                            <td>917-873-2159</td>
+                            <td>48306</td>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>Miles Jackson</td>
+                            <td><a href="gmail.com" >m.jackson@gmail.com</a></td>
+                            <td>623-385-9527</td>
+                            <td>36241</td>
+                          </tr>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>George Hanson</td>
+                            <td><a href="gmail.com" >g.hanson@gmail.com</a></td>
+                            <td>480-498-2631</td>
+                            <td>15729</td>
+                          </tr>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>Harry Davidson</td>
+                            <td><a href="gmail.com" >h.davidson@gmail.com</a></td>
+                            <td>623-434-9231</td>
+                            <td>29786</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <a href="add-user-admin.html">
+                        <button type="button" class="btn btn-primary mB-10" id="addAdministratorButton">Add an Administrator</button>
+                      </a>
+                      <button type="button" class="btn btn-danger disabled mB-10 removal-button" id="removeSelectedAdminsButton">Remove Selected</button>
+                      <i class="fas fa-arrow-right fa-2x pull-right c-blue-500 mT-3"></i>
+                      <span class="pull-right mL-10 mR-10 mT-3" style="line-height: 2.1;">Page 1/10</span>
+                      <i class="fas fa-arrow-left fa-2x pull-right c-blue-500 mT-3"></i>
+                    </div>
+                    <div class="tab-pane fade show" id="managePowerUsers" role="tabpanel">
+                      <table class="table table-bordered" id="powerUserTable" style="margin-top: 10px;">
+                        <thead>
+                          <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Power User Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">NACRN ID</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>Bob Jones</td>
+                            <td><a href="gmail.com" >b.jones@gmail.com</a></td>
+                            <td>602-313-9407</td>
+                            <td>85879</td>
+                          </tr>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>James McMillan</td>
+                            <td><a href="gmail.com" >j.mcmillan@yahoo.com</a></td>
+                            <td>917-873-2159</td>
+                            <td>48306</td>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>Miles Jackson</td>
+                            <td><a href="gmail.com" >m.jackson@gmail.com</a></td>
+                            <td>623-385-9527</td>
+                            <td>36241</td>
+                          </tr>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>George Hanson</td>
+                            <td><a href="gmail.com" >g.hanson@gmail.com</a></td>
+                            <td>480-498-2631</td>
+                            <td>15729</td>
+                          </tr>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>Harry Davidson</td>
+                            <td><a href="gmail.com" >h.davidson@gmail.com</a></td>
+                            <td>623-434-9231</td>
+                            <td>29786</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <button type="button" class="btn btn-primary mB-10" id="addPowerUserButton">Add a Power User</button>
+                      <button type="button" class="btn btn-danger disabled mB-10 removal-button" id="removeSelectedPowerUsersButton">Remove Selected</button>
+                      <i class="fas fa-arrow-right fa-2x pull-right c-blue-500 mT-3"></i>
+                      <span class="pull-right mL-10 mR-10 mT-3" style="line-height: 2.1;">Page 1/10</span>
+                      <i class="fas fa-arrow-left fa-2x pull-right c-blue-500 mT-3"></i>
+                    </div>
+                    <div class="tab-pane fade show" id="manageCareCoordinators" role="tabpanel">
+                      Hola!
+                    </div>
+                    <div class="tab-pane fade show" id="manageEndUsers" role="tabpanel">
+                      Hiho!
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </main>
-      </div>
+        </div>
+      </main>
     </div>
+  </div>
     
     <!--Confirm Deletion Modal-->
     <div class="modal fade" id="confirmDeletionModal" tabindex="-1" role="dialog" aria-labelledby="confirmDeletionModalLabel" aria-hidden="true">

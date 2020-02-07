@@ -19,7 +19,8 @@ const titles = {
   'add-remove-admin': 'Add/Remove Admin',
   'view-admins': 'View Admins',
   'profile-image-selection': 'Select Profile Image',
-  'profile-image-selection-admin': 'Select Profile Image'
+  'profile-image-selection-admin': 'Select Profile Image',
+  'add-user-admin': 'Add a User'
 };
 
 module.exports = Object.keys(titles).map(title => {

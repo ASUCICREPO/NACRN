@@ -29,7 +29,15 @@ let adminBar = `<li class="nav-item mT-30 actived">
   <span class="icon-holder">
     <i class="c-blue-500 fas fa-plus"></i>
   </span>
-  <span class="title">Manage Administrators</span>
+  <span class="title">Manage Users</span>
+</a>
+</li>
+<li class="nav-item mT-30 actived">
+<a class="sidebar-link" href="add-remove-admin.html">
+  <span class="icon-holder">
+    <i class="c-blue-500 fas fa-users"></i>
+  </span>
+  <span class="title">Manage Groups</span>
 </a>
 </li>`;
 
