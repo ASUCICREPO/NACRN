@@ -1,13 +1,5 @@
 # NACRN Prototype Application
-This project is based on the Bootstrap 4 **Adminator** dashboard theme, seen [here](https://github.com/puikinsh/Adminator-admin-dashboard)
-
-# Preview
-
-### Screenshot
-
-![Adminator admin dashboard template preview](https://colorlib.com/wp/wp-content/uploads/sites/2/adminator-free-admin-dashboard-template.jpg)
-
-### Demo Site: [Here](https://colorlib.com/polygon/adminator/index.html)
+This project is based on the Bootstrap 4 **Adminator** dashboard theme, seen [here](https://github.com/puikinsh/Adminator-admin-dashboard).  Note that some of the functionality brought by the dashboard theme is not used, like calendar plugins, Google Maps integration, etc.  
 
 ## TOC
 - [Getting Started](#getting-started)
@@ -22,7 +14,7 @@ This project is based on the Bootstrap 4 **Adminator** dashboard theme, seen [he
 
 
 ## Getting Started
-In order to run **Adminator** on your local machine all what you need to do is to have the prerequisites stated below installed on your machine and follow the installation steps down below.
+In order to run the NACRN project on your local machine, you'll need the following prerequesite software installed.  After installing the necessary software, follow the startup instructions given below to host the project and start development.
 
 #### Prerequisites
   - Node.js
@@ -31,11 +23,11 @@ In order to run **Adminator** on your local machine all what you need to do is t
   - libpng-dev (*Linux only*)
 
 #### Installing & Local Development
-Start by typing the following commands in your terminal in order to get **Adminator** full package on your machine and starting a local development server with live reload feature.
+To clone the repository and start the Webpack server, run the following commands:
 
 ```
-> git clone https://github.com/puikinsh/Adminator-admin-dashboard.git adminator
-> cd adminator
+> git clone https://github.com/ASUCICREPO/NACRN.git NACRN
+> cd NACRN
 > npm install
 > npm run dev
 ```
