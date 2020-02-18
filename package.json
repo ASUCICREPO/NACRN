@@ -63,6 +63,7 @@
     "moment": "^2.19.1",
     "perfect-scrollbar": "^1.1.0",
     "popper.js": "^1.12.6",
+    "select2": "^4.0.13",
     "skycons": "^1.0.0"
   }
 }

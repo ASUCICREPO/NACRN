@@ -6,6 +6,7 @@
     <title>Send an Invite</title>
 
     <link href="https://fonts.googleapis.com/css?family=PT+Sans|Public+Sans|Source+Sans+Pro|Roboto&display=swap" rel="stylesheet">
+    <link href="node_modules\select2\dist\css\select2.min.css" rel="stylesheet">
     <style>
       #loader {
         transition: all 0.3s ease-in-out;
@@ -187,8 +188,9 @@
                   <div class="card-body">
                     <form id="invitationForm">
                         <input type="text" class="form-control" placeholder="Email or phone number" aria-label="Username" aria-describedby="basic-addon1">
+                        <p class="mT-10 mB-0">Invite your friends.  Standard text messaging rates may apply.</p>
                         <div class="text-right">
-                          <button type="button" class="btn btn-primary pull-right" id="sendInvitationButton">Send Invitation</button>
+                          <button type="button" class="btn btn-primary mT-0 mR-0 pull-right" id="sendInvitationButton">Send Invitation</button>
                         </div>
                     </form>
                   </div>
@@ -201,5 +203,6 @@
     </div>
 
     <script src="https://kit.fontawesome.com/bbf8fb8b35.js" crossorigin="anonymous"></script>
+    <script src="node_modules\select2\dist\js\select2.min.js" crossorigin="anonymous"></script>
   </body>
 </html>

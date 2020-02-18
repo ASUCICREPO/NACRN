@@ -17,12 +17,12 @@ const
 const devServer = {
   contentBase        : manifest.IS_PRODUCTION ? manifest.paths.build : manifest.paths.src,
   historyApiFallback : true,
-  port               : manifest.IS_PRODUCTION ? 3000 : 3000,
+  port               : manifest.IS_PRODUCTION ? 3001 : 3000,
   compress           : manifest.IS_PRODUCTION,
   inline             : !manifest.IS_PRODUCTION,
   watchContentBase: true,
   hot                : !manifest.IS_PRODUCTION,
-  host               : '0.0.0.0',
+  host               : 'localhost',
   disableHostCheck   : true, // [1]
   overlay            : true,
   stats: {

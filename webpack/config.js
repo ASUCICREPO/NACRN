@@ -41,9 +41,8 @@ const resolve = {
   modules: [
     path.join(__dirname, '../node_modules'),
     path.join(manifest.paths.src, ''),
-  ],
+  ]
 };
-
 
 // -----------------
 // @Exporting Module

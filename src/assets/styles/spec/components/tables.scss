@@ -86,6 +86,217 @@
     text-align: center !important;
 }
 
+/*POWER USER TABLE STYLES*/
+
+/*Set width for number column*/
+#powerUserTable tr td:nth-child() {
+    width: 4%;
+    text-align: center;
+    font-weight: normal;
+}
+
+/*Set width for name column*/
+#powerUserTable tr td:nth-child(2) {
+    width: 16.2%;
+    text-align: center;
+    font-weight: normal;
+}
+
+/*Set width for email column*/
+#powerUserTable tr td:nth-child(3) {
+    width: 16.2%;
+    text-align: center;
+    font-weight: normal;
+}
+
+/*Set width for phone column*/
+#powerUserTable tr td:nth-child(4) {
+    width: 16.2%;
+    text-align: center;
+    font-weight: normal;
+}
+
+/*Set width for NACRN ID column*/
+#powerUserTable tr td:nth-child(5) {
+    width: 16.2%;
+    text-align: center;
+    font-weight: normal;
+}
+
+/*Set width for groups column*/
+#powerUserTable tr td:nth-child(6) {
+    width: 31.2%;
+    text-align: center;
+    font-weight: normal;
+}
+
+/*Center the column head text*/
+#powerUserTable tr th {
+    text-align: center;
+}
+
+/*Center checkboxes in their column*/
+#powerUserTable td[scope="row"] {
+    text-align: center !important;
+}
+
+/*CARE COORDINATOR TABLE STYLES*/
+
+/*Set width for number column*/
+#careCoordinatorTable tr td:nth-child() {
+    width: 4%;
+    text-align: center;
+    font-weight: normal;
+}
+
+/*Set width for name column*/
+#careCoordinatorTable tr td:nth-child(2) {
+    width: 16.2%;
+    text-align: center;
+    font-weight: normal;
+}
+
+/*Set width for email column*/
+#careCoordinatorTable tr td:nth-child(3) {
+    width: 16.2%;
+    text-align: center;
+    font-weight: normal;
+}
+
+/*Set width for phone column*/
+#careCoordinatorTable tr td:nth-child(4) {
+    width: 16.2%;
+    text-align: center;
+    font-weight: normal;
+}
+
+/*Set width for NACRN ID column*/
+#careCoordinatorTable tr td:nth-child(5) {
+    width: 16.2%;
+    text-align: center;
+    font-weight: normal;
+}
+
+/*Set width for groups column*/
+#careCoordinatorTable tr td:nth-child(6) {
+    width: 31.2%;
+    text-align: center;
+    font-weight: normal;
+}
+
+/*Center the column head text*/
+#careCoordinatorTable tr th {
+    text-align: center;
+}
+
+/*Center checkboxes in their column*/
+#careCoordinatorTable td[scope="row"] {
+    text-align: center !important;
+}
+
+/*INTAKE MANAGER TABLE STYLES*/
+
+/*Set width for number column*/
+#intakeManagerTable tr td:nth-child() {
+    width: 4%;
+    text-align: center;
+    font-weight: normal;
+}
+
+/*Set width for name column*/
+#intakeManagerTable tr td:nth-child(2) {
+    width: 24%;
+    text-align: center;
+    font-weight: normal;
+}
+
+/*Set width for email column*/
+#intakeManagerTable tr td:nth-child(3) {
+    width: 24%;
+    text-align: center;
+    font-weight: normal;
+}
+
+/*Set width for phone column*/
+#intakeManagerTable tr td:nth-child(4) {
+    width: 24%;
+    text-align: center;
+    font-weight: normal;
+}
+
+/*Set width for NACRN ID column*/
+#intakeManagerTable tr td:nth-child(5) {
+    width: 24%;
+    text-align: center;
+    font-weight: normal;
+}
+
+/*Center the column head text*/
+#intakeManagerTable tr th {
+    text-align: center;
+}
+
+/*Center checkboxes in their column*/
+#intakeManagerTable td[scope="row"] {
+    text-align: center !important;
+}
+
+/*END USER TABLE STYLES*/
+
+/*Set width for number column*/
+#endUserTable tr td:nth-child() {
+    width: 4%;
+    text-align: center;
+    font-weight: normal;
+}
+
+/*Set width for name column*/
+#endUserTable tr td:nth-child(2) {
+    width: 16.2%;
+    text-align: center;
+    font-weight: normal;
+}
+
+/*Set width for email column*/
+#endUserTable tr td:nth-child(3) {
+    width: 16.2%;
+    text-align: center;
+    font-weight: normal;
+}
+
+/*Set width for phone column*/
+#endUserTable tr td:nth-child(4) {
+    width: 16.2%;
+    text-align: center;
+    font-weight: normal;
+}
+
+/*Set width for NACRN ID column*/
+#endUserTable tr td:nth-child(5) {
+    width: 16.2%;
+    text-align: center;
+    font-weight: normal;
+}
+
+/*Set width for groups column*/
+#endUserTable tr td:nth-child(6) {
+    width: 31.2%;
+    text-align: center;
+    font-weight: normal;
+}
+
+/*Center the column head text*/
+#endUserTable tr th {
+    text-align: center;
+}
+
+/*Center checkboxes in their column*/
+#endUserTable td[scope="row"] {
+    text-align: center !important;
+}
+
+/*OTHER*/
+
 /*Helper class for highlighted rows*/
 .currently-highlighted-row {
     background: #E6F3FF !important;

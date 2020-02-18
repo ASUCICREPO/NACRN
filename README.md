@@ -22,7 +22,7 @@ In order to run the NACRN project on your local machine, you'll need the followi
   - Git
   - libpng-dev (*Linux only*)
 
-#### Installing & Local Development
+#### Startup & Local Development
 To clone the repository and start the Webpack server, run the following commands:
 
 ```
@@ -32,6 +32,7 @@ To clone the repository and start the Webpack server, run the following commands
 > npm run dev
 ```
 
+Allow Webpack to compile.  If this happens successfully, the Node terminal window should display all the project files as green and labeled as "[emitted]" 
 
 ## Files/Folders Structure
 Here is a brief explanation of the template folder structure and some of its main files usage:
