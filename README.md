@@ -67,7 +67,6 @@ Here is a brief explanation of the template folder structure and some of its mai
 │   │       └── spec            # Contains custom SCSS files.
 │   │       │   └── components  # Contains all template components.
 │   │       │   └── generic     # Contains basic scaffolding styles.
-│   │       │   └── screens     # Contains views specific styles.
 │   │       │   └── settings    # Contains all template variables.
 │   │       │   └── tools       # Contains all mixins.
 │   │       │   └── utils       # Contains helper classes.
@@ -96,21 +95,6 @@ Here is a brief explanation of the template folder structure and some of its mai
 └── README.md                   # Manual file.
 └── webpack.config.js           # Webpack main config file.
 └── yarn.lock                   # Yarn metadata.
-```
-
-## Deployment
-In deployment process, you have two commands:
-
-1. Build command
-Used to generate the final result of compiling src files into build folder. This can be achieved by running the following command:
-```
-> npm run build
-```
-
-2. Preview command
-Used to create a local dev server in order to preview the final output of build process. This can be achieved by running the following command:
-```
-> npm run preview
 ```
 
 ## Built With
