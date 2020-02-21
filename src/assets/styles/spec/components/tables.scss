@@ -1,3 +1,10 @@
+span.programs {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
 /*All Programs table styles*/
 
 /*Style the number column for all-program table*/
@@ -50,30 +57,38 @@
 
 /*Set width for name column*/
 #adminTable tr td:nth-child(2) {
-    width: 24%;
+    width: 15%;
     text-align: center;
     font-weight: normal;
 }
 
 /*Set width for email column*/
 #adminTable tr td:nth-child(3) {
-    width: 24%;
+    width: 15%;
     text-align: center;
     font-weight: normal;
 }
 
 /*Set width for phone column*/
 #adminTable tr td:nth-child(4) {
-    width: 24%;
+    width: 15%;
     text-align: center;
     font-weight: normal;
 }
 
 /*Set width for NACRN ID column*/
 #adminTable tr td:nth-child(5) {
-    width: 24%;
+    width: 15%;
     text-align: center;
     font-weight: normal;
+}
+
+#adminTable tr td:nth-child(6) {
+    text-align: center;
+}
+
+#adminTable tr td:nth-child(7) {
+    text-align: center;
 }
 
 /*Center the column head text*/
@@ -97,35 +112,46 @@
 
 /*Set width for name column*/
 #powerUserTable tr td:nth-child(2) {
-    width: 16.2%;
+    width: 10%;
     text-align: center;
     font-weight: normal;
 }
 
 /*Set width for email column*/
 #powerUserTable tr td:nth-child(3) {
-    width: 16.2%;
+    width: 10%;
     text-align: center;
     font-weight: normal;
 }
 
 /*Set width for phone column*/
 #powerUserTable tr td:nth-child(4) {
-    width: 16.2%;
+    width: 10%;
     text-align: center;
     font-weight: normal;
 }
 
 /*Set width for NACRN ID column*/
 #powerUserTable tr td:nth-child(5) {
-    width: 16.2%;
+    width: 10%;
     text-align: center;
     font-weight: normal;
 }
 
 /*Set width for groups column*/
 #powerUserTable tr td:nth-child(6) {
-    width: 31.2%;
+    width: 26.2%;
+    text-align: center;
+    font-weight: normal;
+}
+
+#powerUserTable tr td:nth-child(7) {
+    text-align: center;
+}
+
+/*Set styles for auto export column*/
+#powerUserTable tr td:nth-child(8) {
+    width: 7%;
     text-align: center;
     font-weight: normal;
 }
@@ -151,38 +177,50 @@
 
 /*Set width for name column*/
 #careCoordinatorTable tr td:nth-child(2) {
-    width: 16.2%;
+    width: 12%;
     text-align: center;
     font-weight: normal;
 }
 
 /*Set width for email column*/
 #careCoordinatorTable tr td:nth-child(3) {
-    width: 16.2%;
+    width: 10%;
     text-align: center;
     font-weight: normal;
 }
 
 /*Set width for phone column*/
 #careCoordinatorTable tr td:nth-child(4) {
-    width: 16.2%;
+    width: 10%;
     text-align: center;
     font-weight: normal;
 }
 
 /*Set width for NACRN ID column*/
 #careCoordinatorTable tr td:nth-child(5) {
-    width: 16.2%;
+    width: 10%;
     text-align: center;
     font-weight: normal;
 }
 
 /*Set width for groups column*/
 #careCoordinatorTable tr td:nth-child(6) {
-    width: 31.2%;
+    width: 26.2%;
     text-align: center;
     font-weight: normal;
 }
+
+/*Set text-align for global intake question manager column*/
+#careCoordinatorTable tr td:nth-child(7) {
+    text-align: center;
+}
+
+/*Set text-align and width for data export column*/
+#careCoordinatorTable tr td:nth-child(8) {
+    width: 7%;
+    text-align: center;
+}
+
 
 /*Center the column head text*/
 #careCoordinatorTable tr th {
@@ -295,6 +333,22 @@
     text-align: center !important;
 }
 
+/*Groups Table*/
+#groupsTable tr td:nth-child(1) {
+    width: 4%;
+    text-align: center;
+}
+
+#groupsTable tr td:nth-child(2) {
+    width: 48%;
+    text-align: center;
+}
+
+#groupsTable tr td:nth-child(3) {
+    width: 48%;
+    text-align: center;
+}
+
 /*OTHER*/
 
 /*Helper class for highlighted rows*/
@@ -312,4 +366,9 @@
 /*Style override for selection tab borders*/
 .nav-tabs .nav-link {
     border: none;
+}
+
+/*Make sure the "Edit User" dropdowns are split 50/50*/
+div.dropdown.bootstrap-select {
+    width: 100% !important;
 }

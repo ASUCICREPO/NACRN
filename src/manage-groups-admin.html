@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Manage Users</title>
+    <title>Manage Organizations</title>
 
     <link href="https://fonts.googleapis.com/css?family=PT+Sans|Public+Sans|Source+Sans+Pro|Roboto&display=swap" rel="stylesheet">
     <style>
@@ -181,27 +181,24 @@
               <div class="col-md-12">
                 <div class="bgc-white bd bdrs-3 p-20 mB-20">
                   <div style="display: flex;justify-content: space-between;">
-                    <h4 class="c-grey-900 mB-20">Manage Groups</h4>
-                    <a style="padding-top: .5%" href=""><span>Bulk Group Upload</span></a>
+                    <h4 class="c-grey-900 mB-20">Manage Organizations</h4>
+                    <a style="padding-top: .5%" href=""><span>Bulk Organization Upload</span></a>
                   </div>
                   <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
-                    <div class="input-group">
-                      <input type="search" placeholder="What're you searching for?" aria-describedby="button-addon1" class="form-control border-0 bg-light">
-                      <div class="input-group-append">
+                    <div class="input-Organization">
+                      <div class="input-Organization-append">
                         <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
                       </div>
                     </div>
                   </div>
                   <div class="tab-content col-md-12">
-                    <div class="tab-pane fade show active" id="manageAdmins" role="tabpanel">
-                      <table class="table table-bordered" id="adminTable" style="margin-top: 10px;">
+                    <div class="tab-pane fade show active" id="manageGroups" role="tabpanel">
+                      <table class="table table-bordered" id="groupsTable" style="margin-top: 10px;">
                         <thead>
                           <tr>
                             <th scope="col"></th>
-                            <th scope="col">Administrator Name</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Phone</th>
-                            <th scope="col">NACRN ID</th>
+                            <th scope="col" style="text-align: center;">Organization Name</th>
+                            <th scope="col" style="text-align: center;">Associated Power Users</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -209,55 +206,43 @@
                             <td scope="row">
                               <input type="checkbox"></input>
                             </td>
-                            <td>Bob Jones</td>
-                            <td><a href="gmail.com" >b.jones@gmail.com</a></td>
-                            <td>602-313-9407</td>
-                            <td>85879</td>
+                            <td>St. Mary's Food Bank</td>
+                            <td><a href="">Bob Jones</a>, <a href="">George Hanson</a></td>
                           </tr>
                           <tr>
                             <td scope="row">
                               <input type="checkbox"></input>
                             </td>
-                            <td>James McMillan</td>
-                            <td><a href="gmail.com" >j.mcmillan@yahoo.com</a></td>
-                            <td>917-873-2159</td>
-                            <td>48306</td>
-                            </td>
+                            <td>Red Cross Health Insurance</td>
+                            <td><a href="">Bob Jones</a>, <a href="">Harry Davidson</a></td>
                           </tr>
                           <tr>
                             <td scope="row">
                               <input type="checkbox"></input>
                             </td>
-                            <td>Miles Jackson</td>
-                            <td><a href="gmail.com" >m.jackson@gmail.com</a></td>
-                            <td>623-385-9527</td>
-                            <td>36241</td>
+                            <td>Homeless Housing Assistance</td>
+                            <td><a href="">James McMillan</a>, <a href="">Harry Davidson</a></td>
                           </tr>
                           <tr>
                             <td scope="row">
                               <input type="checkbox"></input>
                             </td>
-                            <td>George Hanson</td>
-                            <td><a href="gmail.com" >g.hanson@gmail.com</a></td>
-                            <td>480-498-2631</td>
-                            <td>15729</td>
+                            <td>Free School Lunch Program</td>
+                            <td><a href="">Miles Jackson</a></td>
                           </tr>
                           <tr>
                             <td scope="row">
                               <input type="checkbox"></input>
                             </td>
-                            <td>Harry Davidson</td>
-                            <td><a href="gmail.com" >h.davidson@gmail.com</a></td>
-                            <td>623-434-9231</td>
-                            <td>29786</td>
+                            <td>Single Dads</td>
+                            <td><a href="">James McMillan</a>, <a href="">George Hanson</a></td>
                           </tr>
                         </tbody>
                       </table>
-                      <a href="add-user-admin.html">
-                        <button type="button" class="btn btn-primary mB-10" id="addAdministratorButton">Add a User</button>
+                      <a href="add-Organization-admin.html">
+                        <button type="button" class="btn btn-primary mB-10" id="addGroupButton">Add a Organization</button>
                       </a>
-                      <button type="button" class="btn btn-danger disabled mB-10 removal-button" id="adminTableRemovalButton">Remove Selected</button>
-                      <button type="button" class="btn btn-primary disabled mB-10 edit-button" id="adminTableEditButton" style="background-color: #8AD6D7; border-color:#8AD6D7">Edit Selected User</button>
+                      <button type="button" class="btn btn-danger disabled mB-10 removal-button" id="groupTableRemovalButton">Remove Selected</button>
                       <i class="fas fa-arrow-right fa-2x pull-right c-blue-500 mT-3"></i>
                       <span class="pull-right mL-10 mR-10 mT-3" style="line-height: 2.1;">Page 1/10</span>
                       <i class="fas fa-arrow-left fa-2x pull-right c-blue-500 mT-3"></i>
@@ -271,7 +256,7 @@
                             <th scope="col">Email</th>
                             <th scope="col">Phone</th>
                             <th scope="col">NACRN ID</th>
-                            <th scope="col">Groups</th>
+                            <th scope="col">Organizations</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -345,7 +330,7 @@
                             <th scope="col">Email</th>
                             <th scope="col">Phone</th>
                             <th scope="col">NACRN ID</th>
-                            <th scope="col">Groups</th>
+                            <th scope="col">Organizations</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -487,7 +472,7 @@
                             <th scope="col">Email</th>
                             <th scope="col">Phone</th>
                             <th scope="col">NACRN ID</th>
-                            <th scope="col">Groups</th>
+                            <th scope="col">Organizations</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -597,7 +582,7 @@
             <form>
               <div class="row">
                 <div class="col">
-                  <div class="form-group bmd-form-group">
+                  <div class="form-Organization bmd-form-Organization">
                     <label class="bmd-label-floating">User type</label>
                     <select id="userTypeSelect" class="form-control" data-role="select-dropdown">
                       <option disabled selected value>-- Select a type --</option>  
@@ -609,13 +594,13 @@
                   </div>
                 </div>
                 <div class="col">
-                  <div class="form-group bmd-form-group">
+                  <div class="form-Organization bmd-form-Organization">
                     <label class="bmd-label-floating">First name</label>
                     <input type="text" class="form-control">  
                   </div>
                 </div>
                 <div class="col">
-                  <div class="form-group bmd-form-group">
+                  <div class="form-Organization bmd-form-Organization">
                     <label class="bmd-label-floating">Last name</label>
                     <input type="text" class="form-control">  
                   </div>
@@ -623,19 +608,19 @@
               </div>
               <div class="row">
                 <div class="col">
-                  <div class="form-group bmd-form-group">
+                  <div class="form-Organization bmd-form-Organization">
                     <label class="bmd-label-floating">Email</label>
                     <input type="text" class="form-control">  
                   </div>
                 </div>
                 <div class="col">
-                  <div class="form-group bmd-form-group">
+                  <div class="form-Organization bmd-form-Organization">
                     <label class="bmd-label-floating">Phone Number</label>
                     <input type="text" class="form-control">  
                   </div>
                 </div>
                 <div class="col">
-                  <div class="form-group bmd-form-group">
+                  <div class="form-Organization bmd-form-Organization">
                     <select class="js-basic-multiple" multiple="multiple">
                       <option value="" disabled selected>Choose your country</option>
                       <option value="1">USA</option>

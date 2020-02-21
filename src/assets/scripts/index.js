@@ -17,3 +17,4 @@ import './googleMaps';
 import './utils';
 import './determineState';
 import './manageUsers';
+import './powerUserEdit';

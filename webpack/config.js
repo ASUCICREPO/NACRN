@@ -13,14 +13,12 @@
 // ---------------------
 // @Loading Dependencies
 // ---------------------
-
 const
   path      = require('path'),
   manifest  = require('./manifest'),
   devServer = require('./devServer'),
   rules     = require('./rules'),
   plugins   = require('./plugins');
-
 
 // ------------------
 // @Entry Point Setup

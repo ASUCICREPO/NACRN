@@ -6,6 +6,8 @@
     <title>Manage Users</title>
 
     <link href="https://fonts.googleapis.com/css?family=PT+Sans|Public+Sans|Source+Sans+Pro|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+
     <style>
       #loader {
         transition: all 0.3s ease-in-out;
@@ -198,12 +200,13 @@
                           <a class="nav-item nav-link active" id="selectManageAdmins" data-toggle="tab" href="#manageAdmins" role="tab">Administrators</a>
                           <a class="nav-item nav-link" id="selectManagePowerUsers" data-toggle="tab" href="#managePowerUsers" role="tab">Power Users</a>
                           <a class="nav-item nav-link" id="selectManageCareCoordinators" data-toggle="tab" href="#manageCareCoordinators" role="tab">Care Coordinators</a>
-                          <a class="nav-item nav-link" id="selectManageIntakeManagers" data-toggle="tab" href="#manageIntakeManagers" role="tab">Intake Managers</a>
                           <a class="nav-item nav-link" id="selectManageUsers" data-toggle="tab" href="#manageEndUsers" role="tab">End Users</a>
                       </div>
                     </nav>
                   </div>
                   <div class="tab-content col-md-12">
+
+                    <!--Administrator Table-->
                     <div class="tab-pane fade show active" id="manageAdmins" role="tabpanel">
                       <table class="table table-bordered" id="adminTable" style="margin-top: 10px;">
                         <thead>
@@ -213,6 +216,8 @@
                             <th scope="col">Email</th>
                             <th scope="col">Phone</th>
                             <th scope="col">NACRN ID</th>
+                            <th scope="col">Global Intake Question Manager</th>
+                            <th scope="col">Data Export</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -224,6 +229,8 @@
                             <td><a href="gmail.com" >b.jones@gmail.com</a></td>
                             <td>602-313-9407</td>
                             <td>85879</td>
+                            <td>Enabled</td>
+                            <td>Enabled</td>
                           </tr>
                           <tr>
                             <td scope="row">
@@ -233,7 +240,8 @@
                             <td><a href="gmail.com" >j.mcmillan@yahoo.com</a></td>
                             <td>917-873-2159</td>
                             <td>48306</td>
-                            </td>
+                            <td>Enabled</td>
+                            <td>Enabled</td>
                           </tr>
                           <tr>
                             <td scope="row">
@@ -243,6 +251,8 @@
                             <td><a href="gmail.com" >m.jackson@gmail.com</a></td>
                             <td>623-385-9527</td>
                             <td>36241</td>
+                            <td>Enabled</td>
+                            <td>Enabled</td>
                           </tr>
                           <tr>
                             <td scope="row">
@@ -252,6 +262,8 @@
                             <td><a href="gmail.com" >g.hanson@gmail.com</a></td>
                             <td>480-498-2631</td>
                             <td>15729</td>
+                            <td>Enabled</td>
+                            <td>Enabled</td>
                           </tr>
                           <tr>
                             <td scope="row">
@@ -261,6 +273,8 @@
                             <td><a href="gmail.com" >h.davidson@gmail.com</a></td>
                             <td>623-434-9231</td>
                             <td>29786</td>
+                            <td>Enabled</td>
+                            <td>Enabled</td>
                           </tr>
                         </tbody>
                       </table>
@@ -273,6 +287,8 @@
                       <span class="pull-right mL-10 mR-10 mT-3" style="line-height: 2.1;">Page 1/10</span>
                       <i class="fas fa-arrow-left fa-2x pull-right c-blue-500 mT-3"></i>
                     </div>
+
+                    <!--Power Users Table-->
                     <div class="tab-pane fade show" id="managePowerUsers" role="tabpanel">
                       <table class="table table-bordered" id="powerUserTable" style="margin-top: 10px;">
                         <thead>
@@ -282,7 +298,9 @@
                             <th scope="col">Email</th>
                             <th scope="col">Phone</th>
                             <th scope="col">NACRN ID</th>
-                            <th scope="col">Groups</th>
+                            <th scope="col">Organizations</th>
+                            <th scope="col">Global Intake Question Manager</th>
+                            <th scope="col">Data Export</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -294,7 +312,9 @@
                             <td><a href="gmail.com" >b.jones@gmail.com</a></td>
                             <td>602-313-9407</td>
                             <td>85879</td>
-                            <td><a href="">St. Mary's Food Bank</a>, <a href="">Red Cross Health Insurance</a></td>
+                            <td><span class="programs"><a href="">St. Mary's Food Bank</a>, <a href="">Red Cross Health Insurance</a></span></td>
+                            <td>Enabled</td>
+                            <td>Disabled</td>
                           </tr>
                           <tr>
                             <td scope="row">
@@ -304,7 +324,9 @@
                             <td><a href="gmail.com" >j.mcmillan@yahoo.com</a></td>
                             <td>917-873-2159</td>
                             <td>48306</td>
-                            <td><a href="">Single Dads</a>, <a href="">Homeless Housing Assistance</a></td>
+                            <td><span class="programs"><a href="">Single Dads</a>, <a href="">Homeless Housing Assistance</a></span></td>
+                            <td>Disabled</td>
+                            <td>Enabled</td>
                           </tr>
                           <tr>
                             <td scope="row">
@@ -314,7 +336,9 @@
                             <td><a href="gmail.com">m.jackson@gmail.com</a></td>
                             <td>623-385-9527</td>
                             <td>36241</td>
-                            <td><a href="">Free School Lunch Program</a></td>
+                            <td><span class="programs"><a href="">Free School Lunch Program</a></span></td>
+                            <td>Enabled</td>
+                            <td>Enabled</td>
                           </tr>
                           <tr>
                             <td scope="row">
@@ -324,7 +348,9 @@
                             <td><a href="gmail.com" >g.hanson@gmail.com</a></td>
                             <td>480-498-2631</td>
                             <td>15729</td>
-                            <td><a href="">Single Dads</a>, <a href="">St. Mary's Food Bank</a></td>
+                            <td><span class="programs"><a href="">Single Dads</a>, <a href="">St. Mary's Food Bank</a></span></td>
+                            <td>Disabled</td>
+                            <td>Disabled</td>
                           </tr>
                           <tr>
                             <td scope="row">
@@ -334,7 +360,9 @@
                             <td><a href="gmail.com" >h.davidson@gmail.com</a></td>
                             <td>623-434-9231</td>
                             <td>29786</td>
-                            <td><a href="">Homeless Housing Assistance</a>, <a href="">Red Cross Health Insurance</a></td>
+                            <td><span class="programs"><a href="">Homeless Housing Assistance</a>, <a href="">Red Cross Health Insurance</a></span></td>
+                            <td>Disabled</td>
+                            <td>Enabled</td>
                           </tr>
                         </tbody>
                       </table>
@@ -347,6 +375,8 @@
                       <span class="pull-right mL-10 mR-10 mT-3" style="line-height: 2.1;">Page 1/10</span>
                       <i class="fas fa-arrow-left fa-2x pull-right c-blue-500 mT-3"></i>
                     </div>
+
+                    <!--Care Coordinators Table-->
                     <div class="tab-pane fade show" id="manageCareCoordinators" role="tabpanel">
                       <table class="table table-bordered" id="careCoordinatorTable" style="margin-top: 10px;">
                         <thead>
@@ -356,7 +386,9 @@
                             <th scope="col">Email</th>
                             <th scope="col">Phone</th>
                             <th scope="col">NACRN ID</th>
-                            <th scope="col">Groups</th>
+                            <th scope="col">Organizations</th>
+                            <th scope="col">Global Intake Question Manager</th>
+                            <th scope="col">Data Export</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -368,7 +400,9 @@
                             <td><a href="gmail.com" >b.jones@gmail.com</a></td>
                             <td>602-313-9407</td>
                             <td>85879</td>
-                            <td><a href="">St. Mary's Food Bank</a>, <a href="">Red Cross Health Insurance</a></td>
+                            <td><span class="programs"><a href="">St. Mary's Food Bank</a>, <a href="">Red Cross Health Insurance</a></span></td>
+                            <td>Enabled</td>
+                            <td>Disabled</td>
                           </tr>
                           <tr>
                             <td scope="row">
@@ -378,7 +412,9 @@
                             <td><a href="gmail.com" >j.mcmillan@yahoo.com</a></td>
                             <td>917-873-2159</td>
                             <td>48306</td>
-                            <td><a href="">Single Dads</a>, <a href="">Homeless Housing Assistance</a></td>
+                            <td><span class="programs"><a href="">Single Dads</a>, <a href="">Homeless Housing Assistance</a></span></td>
+                            <td>Disabled</td>
+                            <td>Disabled</td>
                           </tr>
                           <tr>
                             <td scope="row">
@@ -388,7 +424,9 @@
                             <td><a href="gmail.com">m.jackson@gmail.com</a></td>
                             <td>623-385-9527</td>
                             <td>36241</td>
-                            <td><a href="">Free School Lunch Program</a></td>
+                            <td><span class="programs"><a href="">Free School Lunch Program</a></span></td>
+                            <td>Enabled</td>
+                            <td>Enabled</td>
                           </tr>
                           <tr>
                             <td scope="row">
@@ -398,7 +436,9 @@
                             <td><a href="gmail.com" >g.hanson@gmail.com</a></td>
                             <td>480-498-2631</td>
                             <td>15729</td>
-                            <td><a href="">Single Dads</a>, <a href="">St. Mary's Food Bank</a></td>
+                            <td><span class="programs"><a href="">Single Dads</a>, <a href="">St. Mary's Food Bank</a></span></td>
+                            <td>Enabled</td>
+                            <td>Disabled</td>
                           </tr>
                           <tr>
                             <td scope="row">
@@ -408,7 +448,9 @@
                             <td><a href="gmail.com" >h.davidson@gmail.com</a></td>
                             <td>623-434-9231</td>
                             <td>29786</td>
-                            <td><a href="">Homeless Housing Assistance</a>, <a href="">Red Cross Health Insurance</a></td>
+                            <td><span class="programs"><a href="">Homeless Housing Assistance</a>, <a href="">Red Cross Health Insurance</a></span></td>
+                            <td>Disabled</td>
+                            <td>Enabled</td>
                           </tr>
                         </tbody>
                       </table>
@@ -421,74 +463,8 @@
                       <span class="pull-right mL-10 mR-10 mT-3" style="line-height: 2.1;">Page 1/10</span>
                       <i class="fas fa-arrow-left fa-2x pull-right c-blue-500 mT-3"></i>
                     </div>
-                    <div class="tab-pane fade show" id="manageIntakeManagers" role="tabpanel">
-                      <table class="table table-bordered" id="intakeManagerTable" style="margin-top: 10px;">
-                        <thead>
-                          <tr>
-                            <th scope="col"></th>
-                            <th scope="col">Intake Manager Name</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Phone</th>
-                            <th scope="col">NACRN ID</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td scope="row">
-                              <input type="checkbox"></input>
-                            </td>
-                            <td>Bob Jones</td>
-                            <td><a href="gmail.com" >b.jones@gmail.com</a></td>
-                            <td>602-313-9407</td>
-                            <td>85879</td>
-                          </tr>
-                          <tr>
-                            <td scope="row">
-                              <input type="checkbox"></input>
-                            </td>
-                            <td>James McMillan</td>
-                            <td><a href="gmail.com" >j.mcmillan@yahoo.com</a></td>
-                            <td>917-873-2159</td>
-                            <td>48306</td>
-                          </tr>
-                          <tr>
-                            <td scope="row">
-                              <input type="checkbox"></input>
-                            </td>
-                            <td>Miles Jackson</td>
-                            <td><a href="gmail.com">m.jackson@gmail.com</a></td>
-                            <td>623-385-9527</td>
-                            <td>36241</td>
-                          </tr>
-                          <tr>
-                            <td scope="row">
-                              <input type="checkbox"></input>
-                            </td>
-                            <td>George Hanson</td>
-                            <td><a href="gmail.com" >g.hanson@gmail.com</a></td>
-                            <td>480-498-2631</td>
-                            <td>15729</td>
-                          </tr>
-                          <tr>
-                            <td scope="row">
-                              <input type="checkbox"></input>
-                            </td>
-                            <td>Harry Davidson</td>
-                            <td><a href="gmail.com" >h.davidson@gmail.com</a></td>
-                            <td>623-434-9231</td>
-                            <td>29786</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                      <a href="add-user-admin.html">
-                        <button type="button" class="btn btn-primary mB-10" id="addIntakeManagerButton">Add a User</button>
-                      </a>
-                      <button type="button" class="btn btn-danger disabled mB-10 removal-button" id="intakeManagerTableRemovalButton">Remove Selected</button>
-                      <button type="button" class="btn disabled mB-10 edit-button" id="intakeManagerTableEditButton" style="color: #fff; background-color: #8AD6D7; border-color:#8AD6D7">Edit Selected User</button>
-                      <i class="fas fa-arrow-right fa-2x pull-right c-blue-500 mT-3"></i>
-                      <span class="pull-right mL-10 mR-10 mT-3" style="line-height: 2.1;">Page 1/10</span>
-                      <i class="fas fa-arrow-left fa-2x pull-right c-blue-500 mT-3"></i>
-                    </div>
+
+                    <!--End Users Table-->
                     <div class="tab-pane fade show" id="manageEndUsers" role="tabpanel">
                       <table class="table table-bordered" id="endUserTable" style="margin-top: 10px;">
                         <thead>
@@ -498,7 +474,7 @@
                             <th scope="col">Email</th>
                             <th scope="col">Phone</th>
                             <th scope="col">NACRN ID</th>
-                            <th scope="col">Groups</th>
+                            <th scope="col">Organizations</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -647,16 +623,42 @@
                 </div>
                 <div class="col">
                   <div class="form-group bmd-form-group">
-                    <select class="js-basic-multiple" multiple="multiple">
-                      <option value="" disabled selected>Choose your country</option>
-                      <option value="1">USA</option>
-                      <option value="2">Germany</option>
-                      <option value="3">France</option>
-                      <option value="4">Poland</option>
-                      <option value="5">Japan</option>
+                    <label class="bmd-label-floating">Associated Organizations</label>
+                    <select id="organizationSelect" multiple data-role="select-dropdown">
+                      <option disabled value>Select the organizations the user is associated with</option>
+                      <option value="1">Not Applicable</option>
+                      <option value="2">Free School Lunch Program</option>
+                      <option value="3">Homeless Housing Assistance</option>
+                      <option value="4">Red Cross Health Insurance</option>
+                      <option value="5">Single Dads</option>
+                      <option value="6">St. Mary's Food Bank</option>
                     </select>
                   </div>
                 </div>                       
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="form-group bmd-form-group" style="display: block;">
+                    <label class="bmd-label-floating">Global Intake Question Manager Status</label>
+                  <select id="intakeQuestionManagerSelect" data-role="select-dropdown">
+                      <option disabled value>Set the G.I.Q.M status for the selected user</option>
+                      <option value="1">Not Applicable</option>
+                      <option value="2">Enabled</option>
+                      <option value="3">Disabled</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group bmd-form-group" style="display: block;">
+                    <label class="bmd-label-floating">Data Export</label>
+                  <select id="dataExportSelect" data-role="select-dropdown">
+                      <option disabled value>Set the data export capabilities for the selected user</option>
+                      <option value="1">Not Applicable</option>
+                      <option value="2">Enabled</option>
+                      <option value="3">Disabled</option>
+                    </select>
+                  </div>
+                </div>
               </div>
               <div class="row">
                 <div class="col"></div>
@@ -677,5 +679,6 @@
       </div>
     </div>
     <script src="https://kit.fontawesome.com/bbf8fb8b35.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
   </body>
 </html>

@@ -1,6 +1,13 @@
 var url = window.location.href;
 
-if(url.includes("add-remove-admin")) {
+if(url.includes("manage-users-admin")) {
+    // Set up multi-selection for organizations  
+    require('bootstrap-select');
+    $('#organizationSelect').selectpicker();
+    $('#intakeQuestionManagerSelect').selectpicker();
+    $('#dataExportSelect').selectpicker();
+    $('#addUserOrganizationSelect').selectpicker();
+
     // Get references to administrator table and rows
     var allAdminsTable = document.querySelector('#adminTable');
     var adminRows = allAdminsTable.tBodies[0].rows;

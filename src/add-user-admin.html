@@ -218,13 +218,21 @@
                               <label class="bmd-label-floating">Phone Number</label>
                               <input type="text" class="form-control">  
                             </div>
-                          </div>                      
+                          </div>
                           <div class="col">
                             <div class="form-group bmd-form-group">
-                              <label class="bmd-label-floating">NACRN ID</label>
-                              <input type="text" class="form-control">  
+                              <label class="bmd-label-floating">Associated Organizations</label>
+                              <select id="addUserOrganizationSelect" multiple data-role="select-dropdown">
+                                <option disabled value>Select the organizations the user is associated with</option>
+                                <option value="1">Not Applicable</option>
+                                <option value="2">Free School Lunch Program</option>
+                                <option value="3">Homeless Housing Assistance</option>
+                                <option value="4">Red Cross Health Insurance</option>
+                                <option value="5">Single Dads</option>
+                                <option value="6">St. Mary's Food Bank</option>
+                              </select>
                             </div>
-                          </div>
+                          </div>                      
                         </div>
                         <div class="row">
                           <div class="col"></div>
@@ -234,7 +242,7 @@
                           <div class="col"></div>
                           <div class="col"></div>
                           <div class="col" style="text-align: center;">
-                            <a href="add-remove-admin.html">
+                            <a href="manage-users-admin.html">
                               <button type="button" class="btn btn-primary" id="createUserButton" style="margin: 0px auto; padding-top: 5px;">Create User</button>
                             </a>
                           </div>
