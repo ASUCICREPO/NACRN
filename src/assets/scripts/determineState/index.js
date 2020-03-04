@@ -1,4 +1,4 @@
-let url = window.location.href;
+let url = window.location.href
 
 let adminBar = `<li class="nav-item mT-30 actived">
 <a class="sidebar-link" href="index-admin.html">
@@ -39,7 +39,7 @@ let adminBar = `<li class="nav-item mT-30 actived">
   </span>
   <span class="title">Manage Organizations</span>
 </a>
-</li>`;
+</li>`
 
 let endUserBar = `<li class="nav-item mT-30 actived">
 <a class="sidebar-link" href="index.html">
@@ -66,9 +66,8 @@ let endUserBar = `<li class="nav-item mT-30 actived">
 </a>
 </li>`
 
-if(url.includes("admin")) {
-    document.querySelector("#sideNavBar").innerHTML = adminBar;
-}
-else {
-    document.querySelector("#sideNavBar").innerHTML = endUserBar;
+if (url.includes('admin')) {
+  document.querySelector('#sideNavBar').innerHTML = adminBar
+}else {
+  document.querySelector('#sideNavBar').innerHTML = endUserBar
 }

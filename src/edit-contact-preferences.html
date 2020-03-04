@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Settings</title>
+    <title>All Programs</title>
 
     <link href="https://fonts.googleapis.com/css?family=PT+Sans|Public+Sans|Source+Sans+Pro|Roboto&display=swap" rel="stylesheet">
     <style>
@@ -84,12 +84,6 @@
           loader.classList.add('fadeOut');
         }, 300);
       });
-
-      window.onload(
-        $(document).ready(function(){
-          $("#contactPreferencesDropdown").dropdown('update');
-        })
-      )
     </script>
 
     <!-- @App Content -->
@@ -115,10 +109,66 @@
                   </div>
                 </a>
               </div>
+              <div class="peer">
+                <div class="mobile-toggle sidebar-toggle">
+                  <a href="" class="td-n">
+                    <i class="ti-arrow-circle-left"></i>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
+
           <!-- ### $Sidebar Menu ### -->
-          <ul class="sidebar-menu scrollable pos-r" id="sideNavBar">
+          <ul class="sidebar-menu scrollable pos-r">
+            <li class="nav-item mT-30 actived">
+              <a class="sidebar-link" href="index.html">
+                <span class="icon-holder">
+                  <i class="c-blue-500 ti-home"></i>
+                </span>
+                <span class="title">All Programs</span>
+              </a>
+            </li>
+            <li class="nav-item mT-30 actived">
+              <a class="sidebar-link" href="endUserprograms.html">
+                <span class="icon-holder">
+                  <i class="c-blue-500 ti-layout-list-thumb"></i>
+                </span>
+                <span class="title">Your Programs</span>
+              </a>
+            </li>
+            <li class="nav-item mT-30 actived">
+              <a class="sidebar-link" href="settings.html">
+                <span class="icon-holder">
+                  <i class="c-blue-500 ti-user"></i>
+                </span>
+                <span class="title">User Profile</span>
+              </a>
+            </li>
+            <li class="nav-item mT-30 actived">
+              <a class='sidebar-link' href="endUserChat.html">
+                <span class="icon-holder">
+                  <i class="c-blue-500 ti-email"></i>
+                </span>
+                <span class="title">Chat</span>
+              </a>
+            </li>
+            <li class="nav-item mT-30 actived">
+              <a class='sidebar-link' href="calendarEndUser.html">
+                <span class="icon-holder">
+                  <i class="c-blue-500 ti-calendar"></i>
+                </span>
+                <span class="title">Schedule Appointment</span>
+              </a>
+            </li>
+            <li class="nav-item mT-30 actived">
+              <a class="sidebar-link" href="invite.html">
+                <span class="icon-holder">
+                  <i class="c-blue-500 ti-share"></i>
+                </span>
+                <span class="title">Send an Invite</span>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -134,11 +184,141 @@
                   <i class="ti-menu"></i>
                 </a>
               </li>
+              <li class="search-box">
+                <a class="search-toggle no-pdd-right" href="javascript:void(0);">
+                  <i class="search-icon ti-search pdd-right-10"></i>
+                  <i class="search-icon-close ti-close pdd-right-10"></i>
+                </a>
+              </li>
               <li class="search-input">
                 <input class="form-control" type="text" placeholder="Search...">
               </li>
             </ul>
             <ul class="nav-right">
+              <li class="notifications dropdown">
+                <span class="counter bgc-red">3</span>
+                <a href="" class="dropdown-toggle no-after" data-toggle="dropdown">
+                  <i class="ti-bell"></i>
+                </a>
+
+                <ul class="dropdown-menu">
+                  <li class="pX-20 pY-15 bdB">
+                    <i class="ti-bell pR-10"></i>
+                    <span class="fsz-sm fw-600 c-grey-900">Notifications</span>
+                  </li>
+                  <li>
+                    <ul class="ovY-a pos-r scrollable lis-n p-0 m-0 fsz-sm">
+                      <li>
+                        <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+                          <div class="peer mR-15">
+                            <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/lego/5.jpg" alt="">
+                          </div>
+                          <div class="peer peer-greed">
+                            <span>
+                              <span class="fw-500">Reminder</span>
+                              <span class="c-grey-600"> You have your next approintment on  <span class="text-dark">March 5th</span>
+                              </span>
+                            </span>
+                            <p class="m-0">
+                              <small class="fsz-xs">5 mins ago</small>
+                            </p>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+                          <div class="peer mR-15">
+                            <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/lego/5.jpg" alt="">
+                          </div>
+                          <div class="peer peer-greed">
+                            <span>
+                              <span class="fw-500">Reminder</span>
+                              <span class="c-grey-600">Check our new programs launched. Verify if you are <span class="text-dark"> Eligible.</span>
+                              </span>
+                            </span>
+                            <p class="m-0">
+                              <small class="fsz-xs">7 mins ago</small>
+                            </p>
+                          </div>
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                  <li class="pX-20 pY-15 ta-c bdT">
+                    <span>
+                      <a href="" class="c-grey-600 cH-blue fsz-sm td-n">View All Notifications <i class="ti-angle-right fsz-xs mL-10"></i></a>
+                    </span>
+                  </li>
+                </ul>
+              </li>
+              <li class="notifications dropdown">
+                <span class="counter bgc-blue">3</span>
+                <a href="" class="dropdown-toggle no-after" data-toggle="dropdown">
+                  <i class="ti-email"></i>
+                </a>
+
+                <ul class="dropdown-menu">
+                  <li class="pX-20 pY-15 bdB">
+                    <i class="ti-email pR-10"></i>
+                    <span class="fsz-sm fw-600 c-grey-900">Messages</span>
+                  </li>
+                  <li>
+                    <ul class="ovY-a pos-r scrollable lis-n p-0 m-0 fsz-sm">
+                      <li>
+                        <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+                          <div class="peer mR-15">
+                            <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/men/1.jpg" alt="">
+                          </div>
+                          <div class="peer peer-greed">
+                            <div>
+                              <div class="peers jc-sb fxw-nw mB-5">
+                                <div class="peer">
+                                  <p class="fw-500 mB-0">John Doe(Care Co-ordinator)</p>
+                                </div>
+                                <div class="peer">
+                                  <small class="fsz-xs">5 mins ago</small>
+                                </div>
+                              </div>
+                              <span class="c-grey-600 fsz-sm">
+                                Yes you can claim your free health check up.
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                     
+                      <li>
+                        <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+                          <div class="peer mR-15">
+                            <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/men/3.jpg" alt="">
+                          </div>
+                          <div class="peer peer-greed">
+                            <div>
+                              <div class="peers jc-sb fxw-nw mB-5">
+                                <div class="peer">
+                                  <p class="fw-500 mB-0">Lee Doe(Care Co-ordinator)</p>
+                                </div>
+                                <div class="peer">
+                                  <small class="fsz-xs">25 mins ago</small>
+                                </div>
+                              </div>
+                              <span class="c-grey-600 fsz-sm">
+                                Please fill your survey so that we can improve our services.
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="pX-20 pY-15 ta-c bdT">
+                    <span>
+                      <a href="email.html" class="c-grey-600 cH-blue fsz-sm td-n">View All Messages <i class="fs-xs ti-angle-right mL-10"></i></a>
+                    </span>
+                  </li>
+                </ul>
+              </li>
               <li class="dropdown">
                 <a href="" class="dropdown-toggle no-after peers fxw-nw ai-c lh-1" data-toggle="dropdown">
                   <div class="peer mR-10">
@@ -150,15 +330,27 @@
                 </a>
                 <ul class="dropdown-menu fsz-sm">
                   <li>
-                    <a href="settings.html" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
-                      <i class="fas fa-user mR-10"></i>
+                    <a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
+                      <i class="ti-settings mR-10"></i>
+                      <span>Setting</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
+                      <i class="ti-user mR-10"></i>
                       <span>Profile</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="email.html" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
+                      <i class="ti-email mR-10"></i>
+                      <span>Messages</span>
                     </a>
                   </li>
                   <li role="separator" class="divider"></li>
                   <li>
-                    <a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
-                      <i class="fas fa-power-off mR-10"></i>
+                    <a href="signin.html" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
+                      <i class="ti-power-off mR-10"></i>
                       <span>Logout</span>
                     </a>
                   </li>
@@ -184,13 +376,13 @@
                           <div class="col-md-3">
                             <div class="form-group bmd-form-group">
                               <label class="bmd-label-floating">Email</label>
-                              <input type="text" class="form-control">
+                              <input type="text" class="form-control" name="email" id="email" value = "John_doe@gmail.com" readonly  >
                             </div>
                           </div>
                           <div class="col-md-3">
                             <div class="form-group bmd-form-group">
                               <label class="bmd-label-floating">Phone</label>
-                              <input type="text" class="form-control">
+                              <input type="text" class="form-control" name="phone" id="phone" value = "+1 480 480 4800" readonly  >
                             </div>
                           </div>
                           <div class="col-md-3">

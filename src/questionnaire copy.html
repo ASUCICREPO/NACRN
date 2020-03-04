@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Settings</title>
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Public+Sans|Source+Sans+Pro&display=swap" rel="stylesheet">
+    <style>
+      #loader {
+        transition: all 0.3s ease-in-out;
+        opacity: 1;
+        visibility: visible;
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background: #fff;
+        z-index: 90000;
+      }
+
+      #loader.fadeOut {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .spinner {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: calc(50% - 20px);
+        left: calc(50% - 20px);
+        background-color: #333;
+        border-radius: 100%;
+        -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+        animation: sk-scaleout 1.0s infinite ease-in-out;
+      }
+
+      @-webkit-keyframes sk-scaleout {
+        0% { -webkit-transform: scale(0) }
+        100% {
+          -webkit-transform: scale(1.0);
+          opacity: 0;
+        }
+      }
+
+      @keyframes sk-scaleout {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        } 100% {
+          -webkit-transform: scale(1.0);
+          transform: scale(1.0);
+          opacity: 0;
+        }
+      }
+
+    </style>
+  </head>
+
+  <body class="app">
+    <!-- @TOC -->
+    <!-- =================================================== -->
+    <!--
+      + @Page Loader
+      + @App Content
+          - #Left Sidebar
+              > $Sidebar Header
+              > $Sidebar Menu
+
+          - #Main
+              > $Topbar
+              > $App Screen Content
+    -->
+
+    <!-- @Page Loader -->
+    <!-- =================================================== -->
+    <div id='loader'>
+      <div class="spinner"></div>
+    </div>
+
+    <script>
+      window.addEventListener('load', function load() {
+        const loader = document.getElementById('loader');
+        setTimeout(function() {
+          loader.classList.add('fadeOut');
+        }, 300);
+      });
+
+      window.onload(
+        $(document).ready(function(){
+          $("#contactPreferencesDropdown").dropdown('update');
+        })
+      )
+      function yesnoCheck() {
+    if (document.getElementById('yesCheck').checked) {
+        document.getElementById('ifYes').style.visibility = 'visible';
+    } else {
+        document.getElementById('ifYes').style.visibility = 'hidden';
+    }
+      }
+    </script>
+
+    <!-- @App Content -->
+    <!-- =================================================== -->
+
+          <!-- ### $Sidebar Menu ### -->
+          
+        <!-- ### $App Screen Content ### -->
+        <main class='main-content bgc-grey-100'>
+          <div id='mainContent'>
+            <div class="container-fluid" id="profileCardContainer">
+                <div class="col-md-9" id="centeredCard">
+                  <div class="card">
+                    <div class="card-header card-header-secondary">
+                        <div>
+     <div class="sidebar-logo">
+            <div class="peers ai-c fxw-nw">
+              <div class="peer peer-greed">
+                <a class="sidebar-link td-n" href="index.html">
+                  <div class="peers ai-c fxw-nw">
+                    <div class="peer">
+                      <div class="logo">
+                        <img src="assets/static/images/navajologo.png" alt="">
+                      </div>
+                    </div>
+                    <div class="peer peer-greed">
+                      
+                      <h4>  We require few additional details to match you best with our programs available. Please fill the following details.</h4>
+                      
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            
+</div>
+                
+                      
+          
+                                      
+    
+                  
+                    
+                    <div class = "card-body">
+
+<div class="form-group w-50">
+          <label class="text-normal text-dark">Full Name</label>
+            <input type="text" class="form-control" name="username" id="username" value = "John Doe" readonly  >
+          </div>
+         <div class="form-group w-50">
+          <label class="text-normal text-dark">Username</label>
+            <input type="text" class="form-control" name="username" id="username" value = "JohnDoe" readonly >
+          </div>
+          <div class="form-group w-50">
+          <label class="text-normal text-dark">Email</label>
+            <input type="email" class="form-control" name="username" id="username" value = "John_doe@gmail.com" readonly >
+          </div>
+          <div class="form-group w-50">
+          <label class="text-normal text-dark">Permanent Phone</label>
+            <input type="tel" class="form-control" name="username" id="telephone" value = ""  >
+          </div>
+          <div class="form-group w-50">
+          <label class="text-normal text-dark">Cell Phone</label>
+            <input type="tel" class="form-control" name="username" id="telephone1" value = ""  >
+          </div>
+          <div class="form-group w-50">
+                        <label for="inputAddress">Address</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                      </div>
+                      <div class="form-group w-50">
+                        <label for="inputAddress2">Address 2</label>
+                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="inputCity">City</label>
+                          <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div class="form-group col-md-4">
+                          <label for="inputState">State</label>
+                          <select id="inputState" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="inputZip">Zip</label>
+                          <input type="text" class="form-control" id="inputZip">
+                        </div>
+          
+          
+          
+          <div class="form-group w-50">
+          <label class="text-normal text-dark">Date of Birth</label>
+            <input class="form-control" type="date" name="bday" required>
+          
+          <label class="text-normal text-dark">Sex</label>
+          
+          
+          <div class = "radio w-50">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="Male" required>
+  <label class="form-check-label" for="exampleRadios1">
+    Male
+  </label>
+  </div>
+  <div class = "radio">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="Female" >
+  <label class="form-check-label" for="exampleRadios1">
+    Female
+  </label>
+  </div>
+  <div class = "radio">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="Non Binary" >
+  <label class="form-check-label" for="exampleRadios1">
+    Non Binary
+  </label>
+  
+  
+</div>
+<div class="form-group w-50">
+                          <label for="inputState">Race</label>
+                          <select id="inputState" class="form-control">
+                            <option selected>White</option>
+                            <option>Hispanic or Latino</option>
+                            <option>Black or African American</option>
+                            <option>Native American or American Indian</option>
+                            <option>Asian / Pacific Islander</option>
+                            <option>Other</option>
+                          </select>
+                        </div>
+
+</div>
+<div class="form-group w-50">
+          <label class="text-normal text-dark">What is your Native Language?</label>
+            <input type="text" class="form-control" name="username" id="username" value = ""  >
+
+         
+          
+          <label class="text-normal text-dark">If Not English, is it difficult for you to speak, read, write, or understand English?</label>
+          
+          
+          <div class = "radio w-50">
+  <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios2" value="yes" required>
+  <label class="form-check-label" for="exampleRadios2">
+    Yes
+  </label>
+  </div>
+  <div class = "radio">
+  <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios2" value="No" >
+  <label class="form-check-label" for="exampleRadios2">
+    No
+  </label>
+  </div>
+
+  
+  
+</div>
+<div class="form-group w-50">
+          <label class="text-normal text-dark">Do you prefer to communicate in sign Language?</label>
+            
+
+         
+          
+          
+          
+          
+          <div class = "radio w-50">
+  <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios3" value="yes" required>
+  <label class="form-check-label" for="exampleRadios3">
+    Yes
+  </label>
+  </div>
+  <div class = "radio">
+  <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios3" value="No" >
+  <label class="form-check-label" for="exampleRadios3">
+    No
+  </label>
+  </div>
+
+  
+  
+</div>
+<div class="form-group w-50">
+          <label class="text-normal text-dark">Are you a single, separated, divorced or widowed individual with primary responsibility for one or more dependents under the age 18 (including single pregnant women)?</label>
+            
+
+         
+          
+          
+          
+          
+          <div class = "radio w-50">
+  <input class="form-check-input" type="radio" name="exampleRadios4" id="exampleRadios4" value="yes" required>
+  <label class="form-check-label" for="exampleRadios4">
+    Yes
+  </label>
+  </div>
+  <div class = "radio">
+  <input class="form-check-input" type="radio" name="exampleRadios4" id="exampleRadios4" value="No" >
+  <label class="form-check-label" for="exampleRadios4">
+    No
+  </label>
+  </div>
+
+  
+  
+</div>
+<div class="form-group w-50">
+          <label class="text-normal text-dark">Number of family members</label>
+            <input type="number" class="form-control" name="username" id="familyMembers" value = "3"  >
+</div>
+<div class="form-group w-50">
+          <label class="text-normal text-dark">Does a physical or mental impairment limit one or more major life activities? </label>
+            
+
+         
+          
+          
+          
+          
+          <div class = "radio w-50">
+  <input class="form-check-input" type="radio" name="exampleRadios5" id="exampleRadios5" value="yes" required>
+  <label class="form-check-label" for="exampleRadios5">
+    Yes
+  </label>
+  </div>
+  <div class = "radio">
+  <input class="form-check-input" type="radio" name="exampleRadios5" id="exampleRadios5" value="No" >
+  <label class="form-check-label" for="exampleRadios5">
+    No
+  </label>
+  </div>
+
+  
+  
+</div>
+<div class="form-group w-50">
+          <label class="text-normal text-dark">Highest Primary or Secondary Grade Completed ?</label>
+            
+
+         
+          
+          
+          
+          
+          <div class = "radio w-50">
+  <input class="form-check-input" type="radio" name="exampleRadios6" id="exampleRadios6" value="yes" required>
+  <label class="form-check-label" for="exampleRadios6">
+    Yes
+  </label>
+  </div>
+  <div class = "radio">
+  <input class="form-check-input" type="radio" name="exampleRadios6" id="exampleRadios6" value="No" >
+  <label class="form-check-label" for="exampleRadios6">
+    No
+  </label>
+  </div>
+
+  
+  
+</div>
+<div class="form-group w-50">
+          <label class="text-normal text-dark">Highest Credential or Postsecondary Level Completed ? </label>
+            
+
+         
+          
+          
+          
+          
+          <div class = "radio w-50">
+  <input class="form-check-input" type="radio" name="exampleRadios7" id="exampleRadios7" value="yes" required>
+  <label class="form-check-label" for="exampleRadios7">
+    Yes
+  </label>
+  </div>
+  <div class = "radio">
+  <input class="form-check-input" type="radio" name="exampleRadios7" id="exampleRadios7" value="No" >
+  <label class="form-check-label" for="exampleRadios7">
+    No
+  </label>
+  </div>
+
+  
+  
+</div>
+<div class="form-group w-50">
+          <label class="text-normal text-dark">Have you served on active duty with the armed forces of the United States? </label>
+            
+
+         
+          
+          
+          
+          
+          <div class = "radio w-50">
+  <input class="form-check-input" type="radio" name="exampleRadios8" id="exampleRadios8" value="yes" required>
+  <label class="form-check-label" for="exampleRadios8">
+    Yes
+  </label>
+  </div>
+  <div class = "radio">
+  <input class="form-check-input" type="radio" name="exampleRadios8" id="exampleRadios8" value="No" >
+  <label class="form-check-label" for="exampleRadios8">
+    No
+  </label>
+  </div>
+
+  
+  
+</div>
+<div class="form-group w-50">
+          <label class="text-normal text-dark">Are you the spouse of a Veteran?  </label>
+            
+
+         
+          
+          
+          
+          
+          <div class = "radio w-50">
+  <input class="form-check-input" type="radio" name="exampleRadios9" id="exampleRadios9" value="yes" required>
+  <label class="form-check-label" for="exampleRadios9">
+    Yes
+  </label>
+  </div>
+  <div class = "radio">
+  <input class="form-check-input" type="radio" name="exampleRadios9" id="exampleRadios9" value="No" >
+  <label class="form-check-label" for="exampleRadios9">
+    No
+  </label>
+  </div>
+
+  
+  
+</div>
+<div class="form-group w-50">
+          <label class="text-normal text-dark">Are you currently employed?</label>
+            
+
+         
+          
+          
+          
+          
+          <div class = "radio w-50">
+  <input class="form-check-input" type="radio" name="exampleRadios10" id="exampleRadios10" value="yes" required>
+  <label class="form-check-label" for="exampleRadios10">
+    Yes
+  </label>
+  </div>
+  <div class = "radio">
+  <input class="form-check-input" type="radio" name="exampleRadios10" id="exampleRadios10" value="No" >
+  <label class="form-check-label" for="exampleRadios10">
+    No
+  </label>
+  </div>
+
+  
+  
+</div>
+<div class="form-group w-50">
+          <label class="text-normal text-dark">How many total weeks have you been unemployed in the past 12 months</label>
+            <input type="number" class="form-control" name="username" id="UnemployedWeeks" value = "0"  >
+</div>
+<div class="form-group w-50">
+          <label class="text-normal text-dark">Are you employed and in need of additional training at your place of employment? </label>
+            
+
+         
+          
+          
+          
+          
+          <div class = "radio w-50">
+  <input class="form-check-input" type="radio" name="exampleRadios11" id="exampleRadios11" value="yes" required>
+  <label class="form-check-label" for="exampleRadios11">
+    Yes
+  </label>
+  </div>
+  <div class = "radio">
+  <input class="form-check-input" type="radio" name="exampleRadios11" id="exampleRadios11" value="No" >
+  <label class="form-check-label" for="exampleRadios11">
+    No
+  </label>
+  </div>
+
+  
+  
+</div>
+<div class="form-group w-50">
+          <label class="text-normal text-dark">Are you working less than full time or at jobs that do not meet your skills or economic needs? </label>
+            
+
+         
+          
+          
+          
+          
+          <div class = "radio w-50">
+  <input class="form-check-input" type="radio" name="exampleRadios12" id="exampleRadios12" value="yes" required>
+  <label class="form-check-label" for="exampleRadios12">
+    Yes
+  </label>
+  </div>
+  <div class = "radio">
+  <input class="form-check-input" type="radio" name="exampleRadios12" id="exampleRadios12" value="No" >
+  <label class="form-check-label" for="exampleRadios12">
+    No
+  </label>
+  </div>
+
+  
+  
+</div>
+<div class="form-group w-50">
+          <label class="text-normal text-dark">Are you currently in Subsidized housing?</label>
+            
+
+         
+          
+          
+          
+          
+          <div class = "radio w-50">
+  <input class="form-check-input" type="radio" name="exampleRadios13" id="exampleRadios13" value="yes" required>
+  <label class="form-check-label" for="exampleRadios13">
+    Yes
+  </label>
+  </div>
+  <div class = "radio">
+  <input class="form-check-input" type="radio" name="exampleRadios13" id="exampleRadios13" value="No" >
+  <label class="form-check-label" for="exampleRadios13">
+    No
+  </label>
+  </div>
+
+  
+  
+</div>
+<div class="form-group w-50">
+          <label class="text-normal text-dark">Are you currently receiving AHCCCS? </label>
+            
+
+         
+          
+          
+          
+          
+          <div class = "radio w-50">
+  <input class="form-check-input" type="radio" name="exampleRadios14" id="exampleRadios14" value="yes" required>
+  <label class="form-check-label" for="exampleRadios14">
+    Yes
+  </label>
+  </div>
+  <div class = "radio">
+  <input class="form-check-input" type="radio" name="exampleRadios14" id="exampleRadios14" value="No" >
+  <label class="form-check-label" for="exampleRadios14">
+    No
+  </label>
+  </div>
+
+  
+  
+</div>
+<div class="form-group w-50">
+          <label class="text-normal text-dark">Are you currently receiving Subsidized Child Care (Child Care Voucher)? </label>
+            
+
+         
+          
+          
+          
+          
+          <div class = "radio w-50">
+  <input class="form-check-input" type="radio" name="exampleRadios15" id="exampleRadios15" value="yes" required>
+  <label class="form-check-label" for="exampleRadios15">
+    Yes
+  </label>
+  </div>
+  <div class = "radio">
+  <input class="form-check-input" type="radio" name="exampleRadios15" id="exampleRadios15" value="No" >
+  <label class="form-check-label" for="exampleRadios15">
+    No
+  </label>
+  </div>
+
+  
+  
+</div>
+<div class="form-group w-50">
+          <label class="text-normal text-dark">Are you currently receiving Low Income Home Energy Assistance Program (LIHEAP)? </label>
+            
+
+         
+          
+          
+          
+          
+          <div class = "radio w-50">
+  <input class="form-check-input" type="radio" name="exampleRadios16" id="exampleRadios16" value="yes" required>
+  <label class="form-check-label" for="exampleRadios16">
+    Yes
+  </label>
+  </div>
+  <div class = "radio">
+  <input class="form-check-input" type="radio" name="exampleRadios16" id="exampleRadios16" value="No" >
+  <label class="form-check-label" for="exampleRadios16">
+    No
+  </label>
+  </div>
+
+  
+  
+</div>
+<div class="form-group w-50">
+          <label class="text-normal text-dark">Are you currently receiving Social Security Disability (SSDI) payments</label>
+            
+
+         
+          
+          
+          
+          
+          <div class = "radio w-50">
+  <input class="form-check-input" type="radio" name="exampleRadios17" id="exampleRadios17" value="yes" required>
+  <label class="form-check-label" for="exampleRadios17">
+    Yes
+  </label>
+  </div>
+  <div class = "radio">
+  <input class="form-check-input" type="radio" name="exampleRadios17" id="exampleRadios17" value="No" >
+  <label class="form-check-label" for="exampleRadios17">
+    No
+  </label>
+  </div>
+
+  
+  
+</div>
+<div class="form-group w-50">
+          <label class="text-normal text-dark">Are you pregnant? </label>
+            
+
+         
+          
+          
+          
+          
+          <div class = "radio w-50">
+  <input class="form-check-input" type="radio" name="exampleRadios18" id="exampleRadios18" value="yes" required>
+  <label class="form-check-label" for="exampleRadios18">
+    Yes
+  </label>
+  </div>
+  <div class = "radio">
+  <input class="form-check-input" type="radio" name="exampleRadios18" id="exampleRadios18" value="No" >
+  <label class="form-check-label" for="exampleRadios18">
+    No
+  </label>
+  </div>
+   <div class = "radio">
+  <input class="form-check-input" type="radio" name="exampleRadios18" id="exampleRadios18" value="No" >
+  <label class="form-check-label" for="exampleRadios18">
+    Not Applicable
+  </label>
+  </div>
+
+  
+  
+</div>
+<div class="form-group w-50">
+          <label class="text-normal text-dark">Have you ever been involved in any stage of the criminal justice system? </label>
+            
+
+         
+          
+          
+          
+          
+          <div class = "radio w-50">
+  <input class="form-check-input" type="radio" name="exampleRadios19" id="exampleRadios19" value="yes" required>
+  <label class="form-check-label" for="exampleRadios19">
+    Yes
+  </label>
+  </div>
+  <div class = "radio">
+  <input class="form-check-input" type="radio" name="exampleRadios19" id="exampleRadios19" value="No" >
+  <label class="form-check-label" for="exampleRadios19">
+    No
+  </label>
+  </div>
+
+  
+  
+</div>
+<div class="form-group w-50">
+          <label class="text-normal text-dark">Do you need help to find and keep a job? </label>
+            
+
+         
+          
+          
+          
+          
+          <div class = "radio w-50">
+  <input class="form-check-input" type="radio" name="exampleRadios20" id="exampleRadios20" value="yes" required>
+  <label class="form-check-label" for="exampleRadios20">
+    Yes
+  </label>
+  </div>
+  <div class = "radio">
+  <input class="form-check-input" type="radio" name="exampleRadios20" id="exampleRadios20" value="No" >
+  <label class="form-check-label" for="exampleRadios20">
+    No
+  </label>
+  </div>
+
+  
+  
+</div>
+<div class="form-group w-50">
+          <label class="text-normal text-dark">Do you need help to find and keep a job? </label>
+            
+
+         
+          
+          
+          
+          
+          <div class = "radio w-50">
+  <input class="form-check-input" type="radio" name="exampleRadios21" id="exampleRadios21" value="yes" required>
+  <label class="form-check-label" for="exampleRadios21">
+    Yes
+  </label>
+  </div>
+  <div class = "radio">
+  <input class="form-check-input" type="radio" name="exampleRadios21" id="exampleRadios21" value="No" >
+  <label class="form-check-label" for="exampleRadios21">
+    No
+  </label>
+  </div>
+
+  
+  
+</div>
+<div class="form-group w-50">
+          <label class="text-normal text-dark">Do you have access to reliable transportation?</label>
+            
+
+         
+          
+          
+          
+          
+          <div class = "radio w-50">
+  <input class="form-check-input" type="radio" name="exampleRadios22" id="exampleRadios22" value="yes" required>
+  <label class="form-check-label" for="exampleRadios22">
+    Yes
+  </label>
+  </div>
+  <div class = "radio">
+  <input class="form-check-input" type="radio" name="exampleRadios22" id="exampleRadios22" value="No" >
+  <label class="form-check-label" for="exampleRadios22">
+    No
+  </label>
+  </div>
+
+  
+  
+</div>
+<div class="form-group w-50">
+          <label class="text-normal text-dark">Is reliable child care a barrier to going to school and/or maintaining employment?</label>
+            
+
+         
+          
+          
+          
+          
+          <div class = "radio w-50">
+  <input class="form-check-input" type="radio" name="exampleRadios23" id="exampleRadios23" value="yes" required>
+  <label class="form-check-label" for="exampleRadios23">
+    Yes
+  </label>
+  </div>
+  <div class = "radio">
+  <input class="form-check-input" type="radio" name="exampleRadios23" id="exampleRadios23" value="No" >
+  <label class="form-check-label" for="exampleRadios23">
+    No
+  </label>
+  </div>
+
+  
+  
+</div>
+    
+    
+            
+          
+          
+
+          
+          
+<!-- Material unchecked -->
+
+
+<div class="form-group w-50">
+          <label class="text-normal text-dark">Please select "Yes" if  you possess SSN.</label>
+          <div class = "radio">
+          <input class="form-check-input" type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck" required/>
+          <label class="form-check-label" for="exampleRadios1">Yes</label>
+          </div>
+            
+  <div class = "radio">
+            <input class="form-check-input" type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="noCheck"/>
+            <label class="form-check-label" for="exampleRadios1">No</label>
+            </div>
+          <div id="ifYes" style="visibility:hidden"><label class="text-normal text-dark">Please enter your valid SSN ID</label>
+    <input type="text" class="form-control" name="username" id="username" placeholder = "ABC-DEF-EFGH" required>   
+</div>
+
+</div>
+
+          
+                            <div class="text-right">
+                            <a href="questionnaire2.html">
+                              <button type="button" class="btn btn-primary pull-right" id="saveProfileButton">Submit</button>
+                            </a>
+                          </div>
+                          
+      
+ 
+                    
+                   </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    
+
+    <script src="https://kit.fontawesome.com/bbf8fb8b35.js" crossorigin="anonymous"></script>
+  </body>
+</html>

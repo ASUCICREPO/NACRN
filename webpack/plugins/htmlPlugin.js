@@ -1,13 +1,53 @@
-const
-  path              = require('path'),
-  manifest          = require('../manifest'),
-  HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path'),
+  manifest = require('../manifest'),
+  HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const titles = {
-  'index': 'Global User Dashboard',
-  'index-admin': 'Administrator Dashboard',
+  'index': 'Dashboard',
+  'blank': 'Blank',
+  'buttons': 'Buttons',
+  'calendar': 'Calendar',
+  'charts': 'Charts',
+  'chat': 'Chat',
+  'compose': 'Compose',
+  'datatable': 'Datatable',
+  'email': 'Email',
+  'forms': 'Forms',
+  'google-maps': 'Google Maps',
+  'signin': 'Signin',
+  'signup': 'Signup',
+  'ui': 'UI',
+  'vector-maps': 'Vector Maps',
   '404': '404',
   '500': '500',
+  'basic-table': 'Basic Table',
+  'settings': 'Settings',
+  'invite': 'Invite',
+  'edit-profile': 'Edit Profile',
+  'edit-contact-preferences': 'Edit Contact Preferences',
+  'powerUser': 'powerUser',
+
+  'homelessMoms': 'homelessMoms',
+  'powerUserInvite': 'powerUserInvite',
+  'powerUserSettings': 'powerUserSettings',
+
+  'index_admin': 'index_admin',
+  'invite_admin': 'invite_admin',
+  'settings_admin': 'settings_admin',
+
+  'questionnaire': 'questionnaire',
+  'questionnaire1': 'questionnaire1',
+  'questionnaire2': 'questionnaire2',
+  'questionnaire3': 'questionnaire3',
+  'questionnaire4': 'questionnaire4',
+  'signupRedirect': 'signupRedirect',
+  'sampleIndex': 'sampleIndex',
+  'calendarEndUser': 'calendarEndUser',
+  'endUserChat': 'endUserChat',
+  'endUserprograms': 'endUserprograms',
+  'endUserprograms copy': 'endUserprograms copy',
+  'questionnaire copy': 'questionnaire copy',
+
   'settings': 'Settings',
   'settings-admin': 'Settings',
   'invite': 'Invite',
@@ -21,8 +61,8 @@ const titles = {
   'profile-image-selection-admin': 'Select Profile Image',
   'add-user-admin': 'Add a User',
   'manage-groups-admin': 'Manage Groups',
-  'add-group-admin': 'Add a Group',
-};
+  'add-group-admin': 'Add a Group'
+}
 
 module.exports = Object.keys(titles).map(title => {
   return new HtmlWebpackPlugin({
@@ -35,7 +75,7 @@ module.exports = Object.keys(titles).map(title => {
       minifyCSS: true,
       minifyJS: true,
       removeComments: true,
-      useShortDoctype: true,
-    },
-  });
-});
+      useShortDoctype: true
+    }
+  })
+})
