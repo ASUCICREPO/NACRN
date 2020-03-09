@@ -45,7 +45,7 @@ const titles = {
   'calendarEndUser': 'calendarEndUser',
   'endUserChat': 'endUserChat',
   'endUserprograms': 'endUserprograms',
-  'endUserprograms copy': 'endUserprograms copy',
+
   'questionnaire copy': 'questionnaire copy',
 
   'settings': 'Settings',
