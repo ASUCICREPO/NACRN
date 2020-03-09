@@ -22,8 +22,7 @@ const titles = {
   '500': '500',
   'basic-table': 'Basic Table',
   'settings': 'Settings',
-  'invite': 'Invite',
-  'edit-profile': 'Edit Profile',
+
   'edit-contact-preferences': 'Edit Contact Preferences',
   'powerUser': 'powerUser',
 
@@ -50,9 +49,9 @@ const titles = {
 
   'settings': 'Settings',
   'settings-admin': 'Settings',
-  'invite': 'Invite',
+  'invite_endUser': 'invite_endUser',
   'invite-admin': 'Invite',
-  'edit-profile': 'Edit Profile',
+  'edit-profile-endUser': 'edit-profile-endUser',
   'edit-profile-admin': 'Edit Profile',
   'edit-contact-preferences': 'Edit Contact Preferences',
   'edit-contact-preferences-admin': 'Edit Contact Preferences',

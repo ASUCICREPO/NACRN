@@ -42,23 +42,40 @@ let adminBar = `<li class="nav-item mT-30 actived">
 </li>`
 
 let endUserBar = `<li class="nav-item mT-30 actived">
-<a class="sidebar-link" href="index.html">
+<a class="sidebar-link" href="endUserprograms.html">
   <span class="icon-holder">
     <i class="c-blue-500 fas fa-search"></i>
   </span>
-  <span class="title">All Programs</span>
+  <span class="title">Programs</span>
 </a>
 </li>
 <li class="nav-item mT-30 actived">
-<a class="sidebar-link" href="settings.html">
+<a class="sidebar-link" href="edit-profile-endUser.html">
   <span class="icon-holder">
-    <i class="c-blue-500 fas fa-user"></i>  
+    <i class="c-blue-500 fas fa-user"></i>
   </span>
   <span class="title">User Profile</span>
 </a>
 </li>
+
 <li class="nav-item mT-30 actived">
-<a class="sidebar-link" href="invite.html">
+<a class='sidebar-link' href="endUserChat.html">
+  <span class="icon-holder">
+    <i class="c-blue-500 fas fa-comments"></i>
+  </span>
+  <span class="title">Chat</span>
+</a>
+</li>
+<li class="nav-item mT-30 actived">
+<a class='sidebar-link' href="calendarEndUser.html">
+  <span class="icon-holder">
+    <i class="c-blue-500 fas fa-calendar-check"></i>
+  </span>
+  <span class="title">Schedule Appointment</span>
+</a>
+</li>
+<li class="nav-item mT-30 actived">
+<a class="sidebar-link" href="invite_endUser.html">
   <span class="icon-holder">
     <i class="c-blue-500 fab fa-telegram-plane"></i>
   </span>
