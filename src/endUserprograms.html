@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>All Programs</title>
+    <title>Programs</title>
 
     <link href="https://fonts.googleapis.com/css?family=PT+Sans|Public+Sans|Source+Sans+Pro|Roboto&display=swap" rel="stylesheet">
+    <script src ="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <style>
       #loader {
         transition: all 0.3s ease-in-out;
@@ -84,6 +85,7 @@
           loader.classList.add('fadeOut');
         }, 300);
       });
+      
        function filter_type(box) {
     //alert("checked");
      var cbs = document.getElementsByTagName('input');
@@ -99,7 +101,7 @@
       }
 
      if (all_checked_types.length > 0) {
-         $('.datatbl tr:not(:has(th))').each(function (i, row) {
+         $('.table tr:not(:has(th))').each(function (i, row) {
              var $tds = $(this).find('td'),
              type = $tds.eq(2).text();
              if (type && all_checked_types.indexOf(type) >= 0) {
@@ -109,13 +111,18 @@
               }
           });
       }else {
-            $('.datatbl tr:not(:has(th))').each(function (i, row) {
+            $('.table tr:not(:has(th))').each(function (i, row) {
                 var $tds = $(this).find('td'),
                 type = $tds.eq(2).text();
                 $(this).show();
              });
     }
+
+    
+
+
     return true;
+
  }  
     </script>
 
@@ -154,26 +161,19 @@
 
           <!-- ### $Sidebar Menu ### -->
           <ul class="sidebar-menu scrollable pos-r">
-            <li class="nav-item mT-30 actived">
-              <a class="sidebar-link" href="index.html">
-                <span class="icon-holder">
-                  <i class="c-blue-500 ti-home"></i>
-                </span>
-                <span class="title">All Programs</span>
-              </a>
-            </li>
+            
             <li class="nav-item mT-30 actived">
               <a class="sidebar-link" href="endUserprograms.html">
                 <span class="icon-holder">
-                  <i class="c-blue-500 ti-layout-list-thumb"></i>
+                  <i class="c-blue-500 fas fa-search"></i>
                 </span>
-                <span class="title">Your Programs</span>
+                <span class="title">Programs</span>
               </a>
             </li>
             <li class="nav-item mT-30 actived">
-              <a class="sidebar-link" href="settings.html">
+              <a class="sidebar-link" href="edit-profile.html">
                 <span class="icon-holder">
-                  <i class="c-blue-500 ti-user"></i>
+                  <i class="c-blue-500 fas fa-user"></i>
                 </span>
                 <span class="title">User Profile</span>
               </a>
@@ -182,7 +182,7 @@
             <li class="nav-item mT-30 actived">
               <a class='sidebar-link' href="endUserChat.html">
                 <span class="icon-holder">
-                  <i class="c-blue-500 ti-email"></i>
+                  <i class="c-blue-500 fas fa-comments"></i>
                 </span>
                 <span class="title">Chat</span>
               </a>
@@ -190,7 +190,7 @@
             <li class="nav-item mT-30 actived">
               <a class='sidebar-link' href="calendarEndUser.html">
                 <span class="icon-holder">
-                  <i class="c-blue-500 ti-calendar"></i>
+                  <i class="c-blue-500 fas fa-calendar-check"></i>
                 </span>
                 <span class="title">Schedule Appointment</span>
               </a>
@@ -198,7 +198,7 @@
             <li class="nav-item mT-30 actived">
               <a class="sidebar-link" href="invite.html">
                 <span class="icon-holder">
-                  <i class="c-blue-500 ti-share"></i>
+                  <i class="c-blue-500 fab fa-telegram-plane"></i>
                 </span>
                 <span class="title">Send an Invite</span>
               </a>
@@ -401,63 +401,144 @@
              <div class="row">
                 <div class="col-md-12">
                   <div class="bgc-white bd bdrs-3 p-20">
-                    <h4 class="c-grey-900 mB-20">Please find the Programs you are eligible for</h4>
                     
-                    <table class="table table-hover">
-                      <thead>
-                        <tr>
-                          <th scope="col">#</th>
-                          <th scope="col">Program Name</th>
-                          <th scope="col">Services</th>
-                          <th scope="col">Description</th>
-                          <th scope="col">Share your program eligibity data with third party?</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>Single Dad's Organization</td>
-                          <td>Subsidy on house rent</td> 
-                          <td>Single dads' of Navajo County will be receiving certain perks.</td>
-                          <td><div class="col-sm-10">
+                    
+                    <table>
+    <tr>
+        <td>
+          <h4 class="c-grey-900 mB-20">Please click here to find  out the programs you are eligible for...
+            <input type="checkbox" onclick="return filter_type(this);" name="filter"  id="Eligible"  value= "Eligible" /></h4>
+            
+        </td>
+    
+    </tr>
+ </table>
+
+ <table class="table" style="width:100%" style="height:100%" >
+ 
+    <thead class = "thead-dark">
+        <tr>
+            <th>No.</th>
+            <th>Program Name</th>
+            <th>Eligibility</th>
+            <th>Basic Criteria</th>
+            <th>Description</th>
+            <th>Share your program eligibity data with third party?</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Single Moms Homelessness</td>
+            <td>Eligible</td>
+            <td>1.Must be a single mom with valid SSN</td>
+            <td> This initiative is taken by NACRN to prevent single mom's Homelessness.</td>
+            <td><div class="col-sm-10">
                           <div class="form-check">
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox" checked="checked" data-toggle="tooltip" data-placement="top" title="By selecting yes you are agreeing to share your data with oether organizations , which helps us to design better porgrams for you" disabled> Yes
+                              <input class="form-check-input" type="checkbox" checked="checked" data-toggle="tooltip" data-placement="top" title="By selecting yes you are agreeing to share your data with oether organizations , which helps us to design better programs for you" disabled> Yes
                             </label>
                           </div>
                         </div></td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Single Dad's Organization</td>
-                          <td>Subsidy on house rent</td>
-                          <td>Single dads' of Navajo County will be receiving certain perks.</td>
-                          <td><div class="col-sm-10">
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Homelessness</td>
+            <td>Not Eligible</td>
+            <td>1.Should not possess any property under your name.
+                2. Annual Income must be no greater than Ten Thousand USD.</td>
+            <td>This initiative is taken by NACRN to prevent Homelessness.</td>
+            <td><div class="col-sm-10">
                           <div class="form-check">
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox"  data-toggle="tooltip" data-placement="top" title="By selecting yes you are agreeing to share your data with oether organizations , which helps us to design better porgrams for you" > Yes
+                              <input class="form-check-input" type="checkbox"  data-toggle="tooltip" data-placement="top" title="By selecting yes you are agreeing to share your data with oether organizations , which helps us to design better programs for you" > Yes
                             </label>
                           </div>
                         </div></td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>Single Dad's Organization</td>
-                          <td>Subsidy on house rent</td>
-                          <td>Single dads' of Navajo County will be receiving certain perks.</td>
-                          <td><div class="col-sm-10">
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Bread and Butter</td>
+            <td>Not Eligible</td>
+            <td>1.Must possess valid SSN.
+                2. Annual Income must be no greater than Ten Thousand USD.</td>
+            <td> This initiative is taken by NACRN to provide nutritioned food for citizens in need.</td>
+            <td><div class="col-sm-10">
                           <div class="form-check">
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox" data-toggle="tooltip" data-placement="top" title="By selecting yes you are agreeing to share your data with oether organizations , which helps us to design better porgrams for you"> Yes
+                              <input class="form-check-input" type="checkbox"  data-toggle="tooltip" data-placement="top" title="By selecting yes you are agreeing to share your data with oether organizations , which helps us to design better programs for you" > Yes
                             </label>
                           </div>
                         </div></td>
-                        </tr>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Healthcare for Elderly</td>
+            <td>Eligible</td>
+             <td>1.Must possess valid SSN.
+                 2. Age must be minimum of 50 Years.
+                 3. Annual Income must be no greater than Ten Thousand USD.</td>
+            <td> This initiative is taken by NACRN to provide Healthcare  for  Senior citizens in need.</td>
+            <td><div class="col-sm-10">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox"  data-toggle="tooltip" data-placement="top" title="By selecting yes you are agreeing to share your data with oether organizations , which helps us to design better programs for you" > Yes
+                            </label>
+                          </div>
+                        </div></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Single Dad's Help</td>
+            <td>Not Eligible</td>
+            <td>1.Should not possess any property under your name.
+                2. Annual Income must be no greater than Ten Thousand USD.</td>
+            <td>This initiative is taken by NACRN to provide financial help for Single Dads.</td>
+            <td><div class="col-sm-10">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox"  data-toggle="tooltip" data-placement="top" title="By selecting yes you are agreeing to share your data with oether organizations , which helps us to design better programs for you" > Yes
+                            </label>
+                          </div>
+                        </div></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Employment for all</td>
+            <td>Eligible</td>
+            <td>1.Should not possess any property under your name.
+                2. Annual Income must be no greater than Ten Thousand USD.</td>
+            <td>This initiative is taken by NACRN to provide Employement opportunities.</td>
+            <td><div class="col-sm-10">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" data-toggle="tooltip" data-placement="top" id = "test8"title="By selecting yes you are agreeing to share your data with oether organizations , which helps us to design better programs for you">Yes
+                            </label>
+                          </div>
+                        </div></td>
                         
+        </tr>
+ 
+ <tr>
+            <td>7</td>
+            <td>Employment for all</td>
+            <td>Eligible</td>
+            <td>1.Should not possess any property under your name.
+                2. Annual Income must be no greater than Ten Thousand USD.</td>
+            <td>This initiative is taken by NACRN to provide Employement opportunities.</td>
+            <td><div class="col-sm-10">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" data-toggle="modal" data-placement="top" id = "test8" data-target="#myModal"title="By selecting yes you are agreeing to share your data with oether organizations , which helps us to design better programs for you">Yes
+                            </label>
+                          </div>
+                        </div></td>
                         
-                      </tbody>
-                       
-                    </table>
+        </tr>
+    </tbody>
+</table>
+ 
+
 
                     
                    
@@ -472,6 +553,29 @@
                     </div>
       </div>
     </div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+      <h4 class="modal-title" id="myModalLabel">Confirm your changes</h4>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        
+      </div>
+      <div class="modal-body">
+        By selecting YES you are agreeing to share your data with third party?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" >Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
     <script src="https://kit.fontawesome.com/bbf8fb8b35.js" crossorigin="anonymous"></script>
   </body>

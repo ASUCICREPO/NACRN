@@ -106,11 +106,11 @@
                   <div class="peers ai-c fxw-nw">
                     <div class="peer">
                       <div class="logo">
-                        <img src="assets/static/images/logo.png" alt="">
+                        <img src="assets/static/images/navajologo.png" alt="">
                       </div>
                     </div>
                     <div class="peer peer-greed">
-                      <h5 class="lh-1 mB-0 logo-text">Adminator</h5>
+                      <h5 class="lh-1 mB-0 logo-text">NACRN</h5>
                     </div>
                   </div>
                 </a>
@@ -127,26 +127,44 @@
 
           <!-- ### $Sidebar Menu ### -->
           <ul class="sidebar-menu scrollable pos-r">
+            
             <li class="nav-item mT-30 actived">
-              <a class="sidebar-link" href="index.html">
+              <a class="sidebar-link" href="endUserprograms.html">
                 <span class="icon-holder">
-                  <i class="c-blue-500 ti-search"></i>
+                  <i class="c-blue-500 fas fa-search"></i>
                 </span>
-                <span class="title">All Programs</span>
+                <span class="title">Programs</span>
               </a>
             </li>
             <li class="nav-item mT-30 actived">
-              <a class="sidebar-link" href="settings.html">
+              <a class="sidebar-link" href="edit-profile.html">
                 <span class="icon-holder">
-                  <i class="c-blue-500 ti-user"></i>
+                  <i class="c-blue-500 fas fa-user"></i>
                 </span>
                 <span class="title">User Profile</span>
+              </a>
+            </li>
+            
+            <li class="nav-item mT-30 actived">
+              <a class='sidebar-link' href="endUserChat.html">
+                <span class="icon-holder">
+                  <i class="c-blue-500 fas fa-comments"></i>
+                </span>
+                <span class="title">Chat</span>
+              </a>
+            </li>
+            <li class="nav-item mT-30 actived">
+              <a class='sidebar-link' href="calendarEndUser.html">
+                <span class="icon-holder">
+                  <i class="c-blue-500 fas fa-calendar-check"></i>
+                </span>
+                <span class="title">Schedule Appointment</span>
               </a>
             </li>
             <li class="nav-item mT-30 actived">
               <a class="sidebar-link" href="invite.html">
                 <span class="icon-holder">
-                  <i class="c-blue-500 ti-user"></i>
+                  <i class="c-blue-500 fab fa-telegram-plane"></i>
                 </span>
                 <span class="title">Send an Invite</span>
               </a>
@@ -362,7 +380,7 @@
                   </li>
                   <li role="separator" class="divider"></li>
                   <li>
-                    <a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
+                    <a href="signin.html" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
                       <i class="ti-power-off mR-10"></i>
                       <span>Logout</span>
                     </a>
@@ -375,53 +393,75 @@
 
         <!-- ### $App Screen Content ### -->
         <main class='main-content bgc-grey-100'>
-          <div id='mainContent'>
             <div class="container-fluid" id="profileCardContainer">
-                <div class="col-md-9" id="centeredCard">
+                
                   <div class="card">
                     <div class="card-header card-header-primary">
                       <h4 class="card-title">Edit Profile</h4>
                       <p class="card-category">Update or change your information</p>
                     </div>
-                    <div class="card-body">
+                     <div class="card-body">
                       <form>
                         <div class="row">
-                          <div class="col-md-3">
+                          <div class="col">
                             <div class="form-group bmd-form-group">
                               <label class="bmd-label-floating">First Name</label>
                               <input type="text" class="form-control">
                             </div>
                           </div>
-                          <div class="col-md-3">
+                          <div class="col">
                             <div class="form-group bmd-form-group">
                               <label class="bmd-label-floating">Last Name</label>
                               <input type="text" class="form-control">
                             </div>
                           </div>
-                          <div class="col-md-3">
+                          <div class="col">
                             <div class="form-group bmd-form-group">
                               <label class="bmd-label-floating">Password</label>
                               <input type="text" class="form-control">
                             </div>
                           </div>
-                          <div class="col-md-3" id="profileImageContainer">
-                              <a href="https://www.amazon.com">
-                                <img class="w-5r bdrs-50p img-fluid" src="https://randomuser.me/api/portraits/men/10.jpg" alt="" id="profileImageHoverable">
-                                <p id="hoverText">Change</p>
-                              </a> 
+                          <div class="col">
+                            <div class="form-group bmd-form-group">
+                              <label class="bmd-label-floating">Confirm Password</label>
+                              <input type="text" class="form-control">
+                            </div>
                           </div>
+                          <div class="col-md-3">
+                            <div class="form-group bmd-form-group">
+                                <label class="bmd-label-floating">Preferred Contact Method</label>
+                              <select id="contactPreferencesSelect" class="form-control" data-role="select-dropdown">
+                                  <option value="phone">Phone Only</option>
+                                  <option value="email">Email Only</option>
+                                  <option value="both">Email and Phone</option>
+                              </select>
+                            </div>
+                          </div>
+                          
+                          <div class="col" id="profileImageContainer">
+                            <a href="profile-image-selection-admin.html">
+                              <img class="w-5r bdrs-50p pT-10 img-fluid" src="https://randomuser.me/api/portraits/men/10.jpg" alt="" id="profileImageHoverable">
+                              <p id="hoverText">Change</p>
+                            </a> 
                         </div>
-                          <div class="text-right">
-                            <a href="settings.html">
-                              <button type="button" class="btn btn-primary pull-right" id="saveProfileButton">Save Profile</button>
+                        </div>
+                        <div class="row">
+                          <div class="col"></div>
+                          <div class="col"></div>
+                          <div class="col"></div>
+                          <div class="col"></div>
+                          <div class="col" style="text-align: center;">
+                            <a href="settings-admin.html">
+                              <button type="button" class="btn btn-primary" id="saveProfileButton" style="margin: 0px auto; padding-top: 5px;">Save Profile</button>
                             </a>
                           </div>
+                        </div>
                       </form>
                     </div>
-                  </div>
-                </div>
-            </div>
-          </div>
+                    </div>
+
+            
+          
         </main>
       </div>
     </div>
