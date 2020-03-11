@@ -60,7 +60,10 @@ const titles = {
   'profile-image-selection-admin': 'Select Profile Image',
   'add-user-admin': 'Add a User',
   'manage-groups-admin': 'Manage Groups',
-  'add-group-admin': 'Add a Group'
+  'add-group-admin': 'Add a Group',
+  'adminChat' : 'adminChat',
+  'calendarAdmin':'calendarAdmin'
+
 }
 
 module.exports = Object.keys(titles).map(title => {

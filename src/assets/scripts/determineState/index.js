@@ -9,11 +9,11 @@ let adminBar = `<li class="nav-item mT-30 actived">
 </a>
 </li>
 <li class="nav-item mT-30 actived">
-<a class="sidebar-link" href="settings-admin.html">
+<a class='sidebar-link' href="adminChat.html">
   <span class="icon-holder">
-    <i class="c-blue-500 fas fa-user"></i>  
+    <i class="c-blue-500 fas fa-comments"></i>
   </span>
-  <span class="title">User Profile</span>
+  <span class="title">Chat</span>
 </a>
 </li>
 <li class="nav-item mT-30 actived">
@@ -22,6 +22,14 @@ let adminBar = `<li class="nav-item mT-30 actived">
     <i class="c-blue-500 fab fa-telegram-plane"></i>
   </span>
   <span class="title">Send an Invite</span>
+</a>
+</li>
+<li class="nav-item mT-30 actived">
+<a class='sidebar-link' href="calendarAdmin.html">
+  <span class="icon-holder">
+    <i class="c-blue-500 fas fa-calendar-check"></i>
+  </span>
+  <span class="title">Schedule Appointment</span>
 </a>
 </li>
 <li class="nav-item mT-30 actived">
