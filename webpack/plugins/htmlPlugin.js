@@ -61,8 +61,8 @@ const titles = {
   'add-user-admin': 'Add a User',
   'manage-groups-admin': 'Manage Groups',
   'add-group-admin': 'Add a Group',
-  'adminChat' : 'adminChat',
-  'calendarAdmin':'calendarAdmin'
+  'adminChat': 'adminChat',
+  'calendarAdmin': 'calendarAdmin'
 
 }
 
