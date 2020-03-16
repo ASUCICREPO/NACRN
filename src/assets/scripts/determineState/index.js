@@ -25,7 +25,7 @@ let adminBar = `<li class="nav-item mT-30 actived">
 </a>
 </li>
 <li class="nav-item mT-30 actived">
-<a class='sidebar-link' href="calendarAdmin.html">
+<a class='sidebar-link' href="calendar_admin.html">
   <span class="icon-holder">
     <i class="c-blue-500 fas fa-calendar-check"></i>
   </span>
@@ -57,7 +57,6 @@ let endUserBar = `<li class="nav-item mT-30 actived">
   <span class="title">Programs</span>
 </a>
 </li>
-
 
 <li class="nav-item mT-30 actived">
 <a class='sidebar-link' href="endUserChat.html">
@@ -269,8 +268,7 @@ let admin_settings = `<div class="header-container">
 
 if (url.includes('admin')) {
   document.querySelector('#sideNavBar').innerHTML = adminBar
-document.querySelector('#topBar').innerHTML = admin_settings
-
+  document.querySelector('#topBar').innerHTML = admin_settings
 }else {
   document.querySelector('#sideNavBar').innerHTML = endUserBar
 }
