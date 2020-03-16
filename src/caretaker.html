@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Programs</title>
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Public+Sans|Source+Sans+Pro|Roboto&display=swap" rel="stylesheet">
+    <script src ="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <style>
+      #loader {
+        transition: all 0.3s ease-in-out;
+        opacity: 1;
+        visibility: visible;
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background: #fff;
+        z-index: 90000;
+      }
+
+      #loader.fadeOut {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .spinner {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: calc(50% - 20px);
+        left: calc(50% - 20px);
+        background-color: #333;
+        border-radius: 100%;
+        -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+        animation: sk-scaleout 1.0s infinite ease-in-out;
+      }
+
+      @-webkit-keyframes sk-scaleout {
+        0% { -webkit-transform: scale(0) }
+        100% {
+          -webkit-transform: scale(1.0);
+          opacity: 0;
+        }
+      }
+
+      @keyframes sk-scaleout {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        } 100% {
+          -webkit-transform: scale(1.0);
+          transform: scale(1.0);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="app">
+    <!-- @TOC -->
+    <!-- =================================================== -->
+    <!--
+      + @Page Loader
+      + @App Content
+          - #Left Sidebar
+              > $Sidebar Header
+              > $Sidebar Menu
+
+          - #Main
+              > $Topbar
+              > $App Screen Content
+    -->
+
+    <!-- @Page Loader -->
+    <!-- =================================================== -->
+    <div id='loader'>
+      <div class="spinner"></div>
+    </div>
+
+    <script>
+      window.addEventListener('load', function load() {
+        const loader = document.getElementById('loader');
+        setTimeout(function() {
+          loader.classList.add('fadeOut');
+        }, 300);
+      });
+      
+       function filter_type(box) {
+    //alert("checked");
+     var cbs = document.getElementsByTagName('input');
+     var all_checked_types = [];
+     for(var i=0; i < cbs.length; i++) {
+         if(cbs[i].type == "checkbox") {
+                 if(cbs[i].name.match(/^filter/)) {
+                         if(cbs[i].checked) {
+                             all_checked_types.push(cbs[i].value);
+                          }
+                      }
+               }
+      }
+
+     if (all_checked_types.length > 0) {
+         $('.table tr:not(:has(th))').each(function (i, row) {
+             var $tds = $(this).find('td'),
+             type = $tds.eq(2).text();
+             if (type && all_checked_types.indexOf(type) >= 0) {
+                 $(this).show();
+              }else{
+                 $(this).hide();
+              }
+          });
+      }else {
+            $('.table tr:not(:has(th))').each(function (i, row) {
+                var $tds = $(this).find('td'),
+                type = $tds.eq(2).text();
+                $(this).show();
+             });
+    }
+
+    return true;
+
+ }  
+    </script>
+
+    <!-- @App Content -->
+    <!-- =================================================== -->
+    <div>
+      <!-- #Left Sidebar ==================== -->
+      <div class="sidebar">
+        <div class="sidebar-inner">
+          <!-- ### $Sidebar Header ### -->
+          <div class="sidebar-logo">
+            <div class="peers ai-c fxw-nw">
+              <div class="peer peer-greed">
+                <a class="sidebar-link td-n" href="index.html">
+                  <div class="peers ai-c fxw-nw">
+                    <div class="peer">
+                      <div class="logo">
+                        <img src="assets/static/images/navajologo.png" alt="">
+                      </div>
+                    </div>
+                    <div class="peer peer-greed">
+                      <h5 class="lh-1 mB-0 logo-text">NACRN</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="peer">
+                <div class="mobile-toggle sidebar-toggle">
+                  <a href="" class="td-n">
+                    <i class="ti-arrow-circle-left"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ### $Sidebar Menu ### -->
+        <ul class="sidebar-menu scrollable pos-r" id="sideNavBar">
+          </ul>
+        </div>
+      </div>
+
+      <!-- #Main ============================ -->
+      <div class="page-container">
+        <!-- ### $Topbar ### -->
+        <div class="header navbar">
+          <div class="header-container">
+            <ul class="nav-left">
+              <li>
+                <a id='sidebar-toggle' class="sidebar-toggle" href="javascript:void(0);">
+                  <i class="ti-menu"></i>
+                </a>
+              </li>
+              <li class="search-box">
+                <a class="search-toggle no-pdd-right" href="javascript:void(0);">
+                  <i class="search-icon ti-search pdd-right-10"></i>
+                  <i class="search-icon-close ti-close pdd-right-10"></i>
+                </a>
+              </li>
+              <li class="search-input">
+                <input class="form-control" type="text" placeholder="Search...">
+              </li>
+            </ul>
+            <ul class="nav-right">
+              <li class="notifications dropdown">
+                <span class="counter bgc-red">3</span>
+                <a href="" class="dropdown-toggle no-after" data-toggle="dropdown">
+                  <i class="ti-bell"></i>
+                </a>
+
+                <ul class="dropdown-menu">
+                  <li class="pX-20 pY-15 bdB">
+                    <i class="ti-bell pR-10"></i>
+                    <span class="fsz-sm fw-600 c-grey-900">Notifications</span>
+                  </li>
+                  <li>
+                    <ul class="ovY-a pos-r scrollable lis-n p-0 m-0 fsz-sm">
+                      <li>
+                        <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+                          <div class="peer mR-15">
+                            <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/lego/5.jpg" alt="">
+                          </div>
+                          <div class="peer peer-greed">
+                            <span>
+                              <span class="fw-500">Reminder</span>
+                              <span class="c-grey-600"> You have your next approintment on  <span class="text-dark">March 5th</span>
+                              </span>
+                            </span>
+                            <p class="m-0">
+                              <small class="fsz-xs">5 mins ago</small>
+                            </p>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+                          <div class="peer mR-15">
+                            <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/lego/5.jpg" alt="">
+                          </div>
+                          <div class="peer peer-greed">
+                            <span>
+                              <span class="fw-500">Reminder</span>
+                              <span class="c-grey-600">Check our new programs launched. Verify if you are <span class="text-dark"> Eligible.</span>
+                              </span>
+                            </span>
+                            <p class="m-0">
+                              <small class="fsz-xs">7 mins ago</small>
+                            </p>
+                          </div>
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                  <li class="pX-20 pY-15 ta-c bdT">
+                    <span>
+                      <a href="" class="c-grey-600 cH-blue fsz-sm td-n">View All Notifications <i class="ti-angle-right fsz-xs mL-10"></i></a>
+                    </span>
+                  </li>
+                </ul>
+              </li>
+              <li class="notifications dropdown">
+                <span class="counter bgc-blue">3</span>
+                <a href="" class="dropdown-toggle no-after" data-toggle="dropdown">
+                  <i class="ti-email"></i>
+                </a>
+
+                <ul class="dropdown-menu">
+                  <li class="pX-20 pY-15 bdB">
+                    <i class="ti-email pR-10"></i>
+                    <span class="fsz-sm fw-600 c-grey-900">Messages</span>
+                  </li>
+                  <li>
+                    <ul class="ovY-a pos-r scrollable lis-n p-0 m-0 fsz-sm">
+                      <li>
+                        <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+                          <div class="peer mR-15">
+                            <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/men/1.jpg" alt="">
+                          </div>
+                          <div class="peer peer-greed">
+                            <div>
+                              <div class="peers jc-sb fxw-nw mB-5">
+                                <div class="peer">
+                                  <p class="fw-500 mB-0">John Doe(Care Co-ordinator)</p>
+                                </div>
+                                <div class="peer">
+                                  <small class="fsz-xs">5 mins ago</small>
+                                </div>
+                              </div>
+                              <span class="c-grey-600 fsz-sm">
+                                Yes you can claim your free health check up.
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                     
+                      <li>
+                        <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+                          <div class="peer mR-15">
+                            <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/men/3.jpg" alt="">
+                          </div>
+                          <div class="peer peer-greed">
+                            <div>
+                              <div class="peers jc-sb fxw-nw mB-5">
+                                <div class="peer">
+                                  <p class="fw-500 mB-0">Lee Doe(Care Co-ordinator)</p>
+                                </div>
+                                <div class="peer">
+                                  <small class="fsz-xs">25 mins ago</small>
+                                </div>
+                              </div>
+                              <span class="c-grey-600 fsz-sm">
+                                Please fill your survey so that we can improve our services.
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="pX-20 pY-15 ta-c bdT">
+                    <span>
+                      <a href="email.html" class="c-grey-600 cH-blue fsz-sm td-n">View All Messages <i class="fs-xs ti-angle-right mL-10"></i></a>
+                    </span>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="" class="dropdown-toggle no-after peers fxw-nw ai-c lh-1" data-toggle="dropdown">
+                  <div class="peer mR-10">
+                    <img class="w-2r bdrs-50p" src="https://randomuser.me/api/portraits/men/10.jpg" alt="">
+                  </div>
+                  <div class="peer">
+                    <span class="fsz-sm c-grey-900">John Doe</span>
+                  </div>
+                </a>
+                <ul class="dropdown-menu fsz-sm">
+                  <li>
+                    <a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
+                      <i class="ti-settings mR-10"></i>
+                      <span>Setting</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
+                      <i class="ti-user mR-10"></i>
+                      <span>Profile</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="email.html" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
+                      <i class="ti-email mR-10"></i>
+                      <span>Messages</span>
+                    </a>
+                  </li>
+                  <li role="separator" class="divider"></li>
+                  <li>
+                    <a href="signin.html" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
+                      <i class="ti-power-off mR-10"></i>
+                      <span>Logout</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ### $App Screen Content ### -->
+        <main class='main-content bgc-grey-100'>
+        
+          <div id='mainContent'>
+             <div class="row">
+                <div class="col-md-12">
+                  <div class="bgc-white bd bdrs-3 p-20">
+                    
+                    
+                    <!-- <table>
+    <tr>
+        <td>
+          <h4 class="c-grey-900 mB-20">Please click here to find  out the programs you are eligible for...
+            <input type="checkbox" onclick="return filter_type(this);" name="filter"  id="Eligible"  value= "Eligible" /></h4>
+            
+        </td>
+    
+    </tr>
+ </table> -->
+
+ <table id="sometable" class="table" style="width:100%" style="height:100%" >
+    <script>
+       var x =  [{"id":1,"Name":"Celia","Email":"ccaswell0@hp.com","Phone":"52-132-0657","NACRN ID":"03-9031792","Liaison":false},
+        {"id":2,"Name":"Aleta","Email":"abrazelton1@businessinsider.com","Phone":"85-071-7368","NACRN ID":"61-9353495","Liaison":false},
+        {"id":3,"Name":"Warner","Email":"wbernon2@de.vu","Phone":"47-944-6011","NACRN ID":"67-2990233","Liaison":true},
+        {"id":4,"Name":"Paxton","Email":"pmcfee3@microsoft.com","Phone":"50-690-9374","NACRN ID":"14-8107573","Liaison":false},
+        {"id":5,"Name":"Allayne","Email":"amarmyon4@imgur.com","Phone":"78-159-8261","NACRN ID":"59-1075839","Liaison":true},
+        {"id":6,"Name":"Elyssa","Email":"ecaulwell5@blogspot.com","Phone":"87-254-5128","NACRN ID":"70-1589633","Liaison":true},
+        {"id":7,"Name":"Karlik","Email":"kreith6@whitehouse.gov","Phone":"65-350-5468","NACRN ID":"38-6470718","Liaison":true},
+        {"id":8,"Name":"Kalina","Email":"kcrotty7@wisc.edu","Phone":"37-091-2790","NACRN ID":"70-0608006","Liaison":true},
+        {"id":9,"Name":"Tanhya","Email":"tbullivent8@cpanel.net","Phone":"25-438-2275","NACRN ID":"10-1837772","Liaison":true},
+        {"id":10,"Name":"Cassi","Email":"csilverston9@alexa.com","Phone":"96-294-2725","NACRN ID":"25-3012853","Liaison":true}];
+    function updateTable(tableId, jsonData){
+
+        var tableHTML = "<tr>";
+        for (var headers in jsonData[0]) {
+        tableHTML += "<th>" + headers + "</th>";
+        }
+        tableHTML += "</tr>";
+
+        for (var eachItem in jsonData) {
+        tableHTML += "<tr>";
+        var dataObj = jsonData[eachItem];
+        for (var eachValue in dataObj){
+            if (eachValue === 'Name'){
+                tableHTML += "<td> <a data-toggle='modal' data-target='#editusermodal' href='#editrecord'>" + dataObj[eachValue] + " </a> </td>";
+            }
+            else{
+                tableHTML += "<td>" + dataObj[eachValue] + "</td>";
+            }
+        }
+        tableHTML += "</tr>";
+        }
+
+        document.getElementById(tableId).innerHTML = tableHTML;
+        }
+        updateTable("sometable", x);
+    </script>
+
+</table>   
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" id="editusermodal" role="dialog" aria-labelledby="editusermodalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-body">
+            <div class="container">
+                <form>
+                <div class="row">
+                    <div class="col">
+                        
+                            <div class="form-group">
+                              <label for="exampleFormControlSelect1">Liaison</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                  <option>yes</option>
+                                  <option>No</option>
+                                </select>
+                            </div>
+                        
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <div class="row">
+                        <label for="username">Name</label>
+                        <input type="email" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Idhant">
+                    </div>
+<br>
+                    <div class="row">
+                        <label for="useremail">EMail</label>
+                        <input type="email" class="form-control" id="useremail" aria-describedby="emailHelp" placeholder="idhant123@gmail.com">
+                    </div>
+<br>
+                    <div class="row">
+                        <label for="userphone">Phone</label>
+                        <input type="email" class="form-control" id="userphone" aria-describedby="emailHelp" placeholder="9619463263">
+                    </div>
+<br>
+                    <div class="row">
+                        <label for="usernacrnid">NACRN ID</label>
+                        <input type="email" class="form-control" id="usernacrnid" aria-describedby="emailHelp" placeholder="9619463263">
+                    </div>
+
+                  </div>
+                  
+            </div>
+        </div>
+        <div class="row"> 
+            <div class="col">
+                <button type="button" data-toggle="modal" class="btn btn-primary" id="addnotebutton">Add Note</button>
+            </div>
+        
+        </div>
+        <br>
+     
+
+    </form>
+
+    <table id="editusernotes" class="table" style="width:100%" style="height:100%" >
+      <script>
+         var x =  [{"id":1,"User":"Vaclav","date":"1/14/2020","Visibility":true,"text":"montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus"},
+{"id":2,"User":"Teri","date":"2/9/2020","Visibility":false,"text":"ante vivamus tortor duis mattis egestas metus aenean fermentum donec"},
+{"id":3,"User":"Keenan","date":"7/27/2019","Visibility":false,"text":"iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl"},
+{"id":4,"User":"Roze","date":"7/13/2019","Visibility":false,"text":"morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis"},
+{"id":5,"User":"Antons","date":"8/6/2019","Visibility":false,"text":"mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac"},
+{"id":6,"User":"Conan","date":"11/18/2019","Visibility":false,"text":"bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu"},
+{"id":7,"User":"Tildie","date":"11/29/2019","Visibility":true,"text":"quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat"},
+{"id":8,"User":"Kali","date":"5/10/2019","Visibility":false,"text":"erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper"},
+{"id":9,"User":"Oralle","date":"10/29/2019","Visibility":true,"text":"in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit"},
+{"id":10,"User":"Ariel","date":"12/30/2019","Visibility":false,"text":"platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum"},
+{"id":11,"User":"Tiphanie","date":"11/30/2019","Visibility":true,"text":"integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla"},
+{"id":12,"User":"Avery","date":"5/18/2019","Visibility":true,"text":"id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien"},
+{"id":13,"User":"Randene","date":"4/2/2019","Visibility":false,"text":"vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut"},
+{"id":14,"User":"Mortie","date":"3/24/2019","Visibility":true,"text":"mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis"},
+{"id":15,"User":"Kaile","date":"5/12/2019","Visibility":true,"text":"aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum"},
+{"id":16,"User":"Wrennie","date":"1/13/2020","Visibility":false,"text":"nunc rhoncus dui vel sem sed sagittis nam congue risus semper"},
+{"id":17,"User":"Beatriz","date":"4/4/2019","Visibility":false,"text":"vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices"},
+{"id":18,"User":"Sheila-kathryn","date":"8/30/2019","Visibility":false,"text":"nisl nunc nisl duis bibendum felis sed interdum venenatis turpis"},
+{"id":19,"User":"Moishe","date":"4/16/2019","Visibility":false,"text":"quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut"},
+{"id":20,"User":"Allianora","date":"7/13/2019","Visibility":false,"text":"id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat"}]
+      function updateTable(tableId, jsonData){
+  
+          var tableHTML = "<tr>";
+          for (var headers in jsonData[0]) {
+          tableHTML += "<th>" + headers + "</th>";
+          }
+          tableHTML += "</tr>";
+  
+          for (var eachItem in jsonData) {
+          tableHTML += "<tr>";
+          var dataObj = jsonData[eachItem];
+          for (var eachValue in dataObj){
+              if (eachValue === 'Name'){
+                  tableHTML += "<td> <a data-toggle='modal' data-target='#editusermodal' href='#editrecord'>" + dataObj[eachValue] + " </a> </td>";
+              }
+              else{
+                  tableHTML += "<td>" + dataObj[eachValue] + "</td>";
+              }
+          }
+          tableHTML += "</tr>";
+          }
+  
+          document.getElementById(tableId).innerHTML = tableHTML;
+          }
+          updateTable("editusernotes", x);
+      </script>
+  
+  </table> 
+            
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+        </div>
+
+
+
+        <!-- Modal -->
+<div class="modal" id="addnotemodal" data-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Add Note Here</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="fluid">
+            
+          <label for="NoteText"></label>
+          <textarea class="form-control" id="NoteText" rows="3"></textarea>
+  
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary"  id="submitnotebutton">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+                  
+                </div>
+              </div>
+                <div class="text-right">
+                            <a href="endUserprograms.html">
+                              <button type="button" class="btn btn-primary pull-right" id="save">Save</button>
+                            </a>
+                    </div>
+      </div>
+    </div>
+
+
+
+
+<!-- Modal -->
+<!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+      <h4 class="modal-title" id="myModalLabel">Confirm your changes</h4>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        
+      </div>
+      <div class="modal-body">
+        By selecting YES you are agreeing to share your data with third party?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" >Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+    <!-- <script src="https://kit.fontawesome.com/bbf8fb8b35.js" crossorigin="anonymous"></script> -->
+
+    <script>
+    function updateTable(tableId, jsonData){
+
+        var tableHTML = "<tr>";
+        for (var headers in jsonData[0]) {
+        tableHTML += "<th>" + headers + "</th>";
+        }
+        tableHTML += "</tr>";
+
+        for (var eachItem in jsonData) {
+        tableHTML += "<tr>";
+        var dataObj = jsonData[eachItem];
+        for (var eachValue in dataObj){
+            tableHTML += "<td>" + dataObj[eachValue] + "</td>";
+        }
+        tableHTML += "</tr>";
+        }
+
+        document.getElementById(tableId).innerHTML = tableHTML;
+    }
+    </script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+
+      $(document).on("click","#addnotebutton",function(){
+      $('#editusermodal').modal('hide');
+      $('#addnotemodal').modal('show');
+    });
+
+    $(document).on("click","#submitnotebutton",function(){
+      $('#addnotemodal').modal('hide');
+      $('#editusermodal').modal('show');
+     
+    });
+    </script>
+  </body>
+</html>

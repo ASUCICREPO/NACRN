@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>All Programs</title>
+    <title>Settings</title>
 
     <link href="https://fonts.googleapis.com/css?family=PT+Sans|Public+Sans|Source+Sans+Pro|Roboto&display=swap" rel="stylesheet">
     <style>
@@ -84,6 +84,12 @@
           loader.classList.add('fadeOut');
         }, 300);
       });
+
+      window.onload(
+        $(document).ready(function(){
+          $("#contactPreferencesDropdown").dropdown('update');
+        })
+      )
     </script>
 
     <!-- @App Content -->
@@ -128,12 +134,6 @@
                   <i class="ti-menu"></i>
                 </a>
               </li>
-              <li class="search-box">
-                <a class="search-toggle no-pdd-right" href="javascript:void(0);">
-                  <i class="search-icon ti-search pdd-right-10"></i>
-                  <i class="search-icon-close ti-close pdd-right-10"></i>
-                </a>
-              </li>
               <li class="search-input">
                 <input class="form-control" type="text" placeholder="Search...">
               </li>
@@ -171,53 +171,86 @@
         <!-- ### $App Screen Content ### -->
         <main class='main-content bgc-grey-100'>
           <div id='mainContent'>
-            <div class="row">
-              <div class="col-md-12">
-                <div class="bgc-white bd bdrs-3 p-20 mB-20">
-                  <h4 class="c-grey-900 mB-20">All Programs</h4>
-                  <table class="table table-striped" id="allProgramTable">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Program Name</th>
-                        <th scope="col">Contact</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">Elegibility Criteria</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td scope="row">1</td>
-                        <td>Helping Homeless Moms</td>
-                        <td><a href="gmail.com" >Contact Us</a></td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor elit sed vulputate mi sit amet mauris. In est ante in nibh mauris cursus mattis molestie. Arcu ac tortor dignissim convallis aenean. Tortor consequat id porta nibh. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Pellentesque dignissim enim sit amet venenatis.</td>
-                        <td>Quam nulla porttitor massa id neque. Semper feugiat nibh sed pulvinar proin gravida. Augue ut lectus arcu bibendum at varius vel pharetra vel.</td>
-                      </tr>
-                      <tr>
-                        <td scope="row">2</td>
-                        <td>Single Dads Organization</td>
-                        <td><a href="gmail.com" >Contact Us</a></td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor elit sed vulputate mi sit amet mauris. In est ante in nibh mauris cursus mattis molestie. Arcu ac tortor dignissim convallis aenean. Tortor consequat id porta nibh. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Pellentesque dignissim enim sit amet venenatis.</td>
-                        <td>Quam nulla porttitor massa id neque. Semper feugiat nibh sed pulvinar proin gravida. Augue ut lectus arcu bibendum at varius vel pharetra vel.</td>
-                      </tr>
-                      <tr>
-                        <td scope="row">3</td>
-                        <td>Northern Arizona Food Bank</td>
-                        <td><a href="gmail.com" >Contact Us</a></td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor elit sed vulputate mi sit amet mauris. In est ante in nibh mauris cursus mattis molestie. Arcu ac tortor dignissim convallis aenean. Tortor consequat id porta nibh. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Pellentesque dignissim enim sit amet venenatis.</td>
-                        <td>Quam nulla porttitor massa id neque. Semper feugiat nibh sed pulvinar proin gravida. Augue ut lectus arcu bibendum at varius vel pharetra vel.</td>
-                      </tr>
-                      <tr>
-                        <td scope="row">4</td>
-                        <td>Northern Arizona Housing Assistance</td>
-                        <td><a href="gmail.com" >Contact Us</a></td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor elit sed vulputate mi sit amet mauris. In est ante in nibh mauris cursus mattis molestie. Arcu ac tortor dignissim convallis aenean. Tortor consequat id porta nibh. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Pellentesque dignissim enim sit amet venenatis.</td>
-                        <td>Quam nulla porttitor massa id neque. Semper feugiat nibh sed pulvinar proin gravida. Augue ut lectus arcu bibendum at varius vel pharetra vel.</td>
-                      </tr>
-                    </tbody>
-                  </table>
+            <div class="container-fluid" id="profileCardContainer">
+                <div class="col-md-9" id="centeredCard">
+                  <div class="card">
+                    <div class="card-header card-header-primary">
+                      <h4 class="card-title">Add a User</h4>
+                      <p class="card-category">Input new user information</p>
+                    </div>
+                    <div class="card-body">
+                      <form>
+                        <div class="row">
+                          <div class="col">
+                            <div class="form-group bmd-form-group">
+                              <label class="bmd-label-floating">User type</label>
+                              <select id="userTypeSelect" class="form-control" data-role="select-dropdown">
+                                <option disabled selected value>-- Select a type --</option>  
+                                <option value="administrator">Administrator</option>
+                                <option value="powerUser">Power User</option>
+                                <option value="careCoordinator">Care Coordinator</option>
+                                <option value="endUser">End User</option>
+                            </select>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group bmd-form-group">
+                              <label class="bmd-label-floating">First name</label>
+                              <input type="text" class="form-control">  
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group bmd-form-group">
+                              <label class="bmd-label-floating">Last name</label>
+                              <input type="text" class="form-control">  
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <div class="form-group bmd-form-group">
+                              <label class="bmd-label-floating">Email</label>
+                              <input type="text" class="form-control">  
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group bmd-form-group">
+                              <label class="bmd-label-floating">Phone Number</label>
+                              <input type="text" class="form-control">  
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group bmd-form-group">
+                              <label class="bmd-label-floating">Associated Organizations</label>
+                              <select id="addUserOrganizationSelect" multiple data-role="select-dropdown">
+                                <option disabled value>Select the organizations the user is associated with</option>
+                                <option value="1">Not Applicable</option>
+                                <option value="2">Free School Lunch Program</option>
+                                <option value="3">Homeless Housing Assistance</option>
+                                <option value="4">Red Cross Health Insurance</option>
+                                <option value="5">Single Dads</option>
+                                <option value="6">St. Mary's Food Bank</option>
+                              </select>
+                            </div>
+                          </div>                      
+                        </div>
+                        <div class="row">
+                          <div class="col"></div>
+                          <div class="col"></div>
+                          <div class="col"></div>
+                          <div class="col"></div>
+                          <div class="col"></div>
+                          <div class="col"></div>
+                          <div class="col" style="text-align: center;">
+                            <a href="manage-users-admin.html">
+                              <button type="button" class="btn btn-primary" id="createUserButton" style="margin: 0px auto; padding-top: 5px;">Create User</button>
+                            </a>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
                 </div>
-              </div>
             </div>
           </div>
         </main>

@@ -13,14 +13,12 @@
 // ---------------------
 // @Loading Dependencies
 // ---------------------
-
 const
   path      = require('path'),
   manifest  = require('./manifest'),
   devServer = require('./devServer'),
   rules     = require('./rules'),
   plugins   = require('./plugins');
-
 
 // ------------------
 // @Entry Point Setup
@@ -41,9 +39,8 @@ const resolve = {
   modules: [
     path.join(__dirname, '../node_modules'),
     path.join(manifest.paths.src, ''),
-  ],
+  ]
 };
-
 
 // -----------------
 // @Exporting Module

@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Manage Organizations</title>
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Public+Sans|Source+Sans+Pro|Roboto&display=swap" rel="stylesheet">
+    <style>
+      #loader {
+        transition: all 0.3s ease-in-out;
+        opacity: 1;
+        visibility: visible;
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background: #fff;
+        z-index: 90000;
+      }
+
+      #loader.fadeOut {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .spinner {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: calc(50% - 20px);
+        left: calc(50% - 20px);
+        background-color: #333;
+        border-radius: 100%;
+        -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+        animation: sk-scaleout 1.0s infinite ease-in-out;
+      }
+
+      @-webkit-keyframes sk-scaleout {
+        0% { -webkit-transform: scale(0) }
+        100% {
+          -webkit-transform: scale(1.0);
+          opacity: 0;
+        }
+      }
+
+      @keyframes sk-scaleout {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        } 100% {
+          -webkit-transform: scale(1.0);
+          transform: scale(1.0);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="app">
+    <!-- @TOC -->
+    <!-- =================================================== -->
+    <!--
+      + @Page Loader
+      + @App Content
+          - #Left Sidebar
+              > $Sidebar Header
+              > $Sidebar Menu
+
+          - #Main
+              > $Topbar
+              > $App Screen Content
+    -->
+
+    <!-- @Page Loader -->
+    <!-- =================================================== -->
+    <div id='loader'>
+      <div class="spinner"></div>
+    </div>
+
+    <script>
+      window.addEventListener('load', function load() {
+        const loader = document.getElementById('loader');
+        setTimeout(function() {
+          loader.classList.add('fadeOut');
+        }, 300);
+      });
+
+      window.onload(
+        $(document).ready(function(){
+          $("#contactPreferencesDropdown").dropdown('update');
+        })
+      )
+    </script>
+
+    <!-- @App Content -->
+    <!-- =================================================== -->
+    <div>
+      <!-- #Left Sidebar ==================== -->
+      <div class="sidebar">
+        <div class="sidebar-inner">
+          <!-- ### $Sidebar Header ### -->
+          <div class="sidebar-logo">
+            <div class="peers ai-c fxw-nw">
+              <div class="peer peer-greed">
+                <a class="sidebar-link td-n" href="index.html">
+                  <div class="peers ai-c fxw-nw">
+                    <div class="peer">
+                      <div class="logo">
+                        <img src="assets/static/images/navajologo.png" alt="">
+                      </div>
+                    </div>
+                    <div class="peer peer-greed">
+                      <h5 class="lh-1 mB-0 logo-text">NACRN</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- ### $Sidebar Menu ### -->
+          <ul class="sidebar-menu scrollable pos-r" id="sideNavBar">
+          </ul>
+        </div>
+      </div>
+
+      <!-- #Main ============================ -->
+      <div class="page-container">
+        <!-- ### $Topbar ### -->
+    
+        <div class="header navbar" id = "topBar">
+          
+        </div>
+          
+
+        <!-- ### $App Screen Content ### -->
+        <main class='main-content bgc-grey-100'>
+          <div id='mainContent'>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="bgc-white bd bdrs-3 p-20 mB-20">
+                  <div style="display: flex;justify-content: space-between;">
+                    <h4 class="c-grey-900 mB-20">Manage Organizations</h4>
+                    <a style="padding-top: .5%" href=""><span>Bulk Organization Upload</span></a>
+                  </div>
+                  <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
+                    <div class="input-Organization">
+                      <div class="input-Organization-append">
+                        <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-content col-md-12">
+                    <div class="tab-pane fade show active" id="manageGroups" role="tabpanel">
+                      <table class="table table-bordered" id="groupsTable" style="margin-top: 10px;">
+                        <thead>
+                          <tr>
+                            <th scope="col"></th>
+                            <th scope="col" style="text-align: center;">Organization Name</th>
+                            <th scope="col" style="text-align: center;">Associated Power Users</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>St. Mary's Food Bank</td>
+                            <td><a href="">Bob Jones</a>, <a href="">George Hanson</a></td>
+                          </tr>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>Red Cross Health Insurance</td>
+                            <td><a href="">Bob Jones</a>, <a href="">Harry Davidson</a></td>
+                          </tr>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>Homeless Housing Assistance</td>
+                            <td><a href="">James McMillan</a>, <a href="">Harry Davidson</a></td>
+                          </tr>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>Free School Lunch Program</td>
+                            <td><a href="">Miles Jackson</a></td>
+                          </tr>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>Single Dads</td>
+                            <td><a href="">James McMillan</a>, <a href="">George Hanson</a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <a href="add-Organization-admin.html">
+                        <button type="button" class="btn btn-primary mB-10" id="addGroupButton">Add a Organization</button>
+                      </a>
+                      <button type="button" class="btn btn-danger disabled mB-10 removal-button" id="groupTableRemovalButton">Remove Selected</button>
+                      <i class="fas fa-arrow-right fa-2x pull-right c-blue-500 mT-3"></i>
+                      <span class="pull-right mL-10 mR-10 mT-3" style="line-height: 2.1;">Page 1/10</span>
+                      <i class="fas fa-arrow-left fa-2x pull-right c-blue-500 mT-3"></i>
+                    </div>
+                    <div class="tab-pane fade show" id="managePowerUsers" role="tabpanel">
+                      <table class="table table-bordered" id="powerUserTable" style="margin-top: 10px;">
+                        <thead>
+                          <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Power User Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">NACRN ID</th>
+                            <th scope="col">Organizations</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>Bob Jones</td>
+                            <td><a href="gmail.com" >b.jones@gmail.com</a></td>
+                            <td>602-313-9407</td>
+                            <td>85879</td>
+                            <td><a href="">St. Mary's Food Bank</a>, <a href="">Red Cross Health Insurance</a></td>
+                          </tr>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>James McMillan</td>
+                            <td><a href="gmail.com" >j.mcmillan@yahoo.com</a></td>
+                            <td>917-873-2159</td>
+                            <td>48306</td>
+                            <td><a href="">Single Dads</a>, <a href="">Homeless Housing Assistance</a></td>
+                          </tr>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>Miles Jackson</td>
+                            <td><a href="gmail.com">m.jackson@gmail.com</a></td>
+                            <td>623-385-9527</td>
+                            <td>36241</td>
+                            <td><a href="">Free School Lunch Program</a></td>
+                          </tr>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>George Hanson</td>
+                            <td><a href="gmail.com" >g.hanson@gmail.com</a></td>
+                            <td>480-498-2631</td>
+                            <td>15729</td>
+                            <td><a href="">Single Dads</a>, <a href="">St. Mary's Food Bank</a></td>
+                          </tr>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>Harry Davidson</td>
+                            <td><a href="gmail.com" >h.davidson@gmail.com</a></td>
+                            <td>623-434-9231</td>
+                            <td>29786</td>
+                            <td><a href="">Homeless Housing Assistance</a>, <a href="">Red Cross Health Insurance</a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <a href="add-user-admin.html">
+                        <button type="button" class="btn btn-primary mB-10" id="addPowerUserButton">Add a User</button>
+                      </a>
+                      <button type="button" class="btn btn-danger disabled mB-10 removal-button" id="powerUserTableRemovalButton">Remove Selected</button>
+                      <button type="button" class="btn disabled mB-10 edit-button" id="powerUserTableEditButton" style="color: #fff; background-color: #8AD6D7; border-color:#8AD6D7">Edit Selected User</button>
+                      <i class="fas fa-arrow-right fa-2x pull-right c-blue-500 mT-3"></i>
+                      <span class="pull-right mL-10 mR-10 mT-3" style="line-height: 2.1;">Page 1/10</span>
+                      <i class="fas fa-arrow-left fa-2x pull-right c-blue-500 mT-3"></i>
+                    </div>
+                    <div class="tab-pane fade show" id="manageCareCoordinators" role="tabpanel">
+                      <table class="table table-bordered" id="careCoordinatorTable" style="margin-top: 10px;">
+                        <thead>
+                          <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Care Coordinator Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">NACRN ID</th>
+                            <th scope="col">Organizations</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>Bob Jones</td>
+                            <td><a href="gmail.com" >b.jones@gmail.com</a></td>
+                            <td>602-313-9407</td>
+                            <td>85879</td>
+                            <td><a href="">St. Mary's Food Bank</a>, <a href="">Red Cross Health Insurance</a></td>
+                          </tr>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>James McMillan</td>
+                            <td><a href="gmail.com" >j.mcmillan@yahoo.com</a></td>
+                            <td>917-873-2159</td>
+                            <td>48306</td>
+                            <td><a href="">Single Dads</a>, <a href="">Homeless Housing Assistance</a></td>
+                          </tr>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>Miles Jackson</td>
+                            <td><a href="gmail.com">m.jackson@gmail.com</a></td>
+                            <td>623-385-9527</td>
+                            <td>36241</td>
+                            <td><a href="">Free School Lunch Program</a></td>
+                          </tr>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>George Hanson</td>
+                            <td><a href="gmail.com" >g.hanson@gmail.com</a></td>
+                            <td>480-498-2631</td>
+                            <td>15729</td>
+                            <td><a href="">Single Dads</a>, <a href="">St. Mary's Food Bank</a></td>
+                          </tr>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>Harry Davidson</td>
+                            <td><a href="gmail.com" >h.davidson@gmail.com</a></td>
+                            <td>623-434-9231</td>
+                            <td>29786</td>
+                            <td><a href="">Homeless Housing Assistance</a>, <a href="">Red Cross Health Insurance</a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <a href="add-user-admin.html">
+                        <button type="button" class="btn btn-primary mB-10" id="addCareCoordinatorButton">Add a User</button>
+                      </a>
+                      <button type="button" class="btn btn-danger disabled mB-10 removal-button" id="careCoordinatorTableRemovalButton">Remove Selected</button>
+                      <button type="button" class="btn disabled mB-10 edit-button" id="careCoordinatorTableEditButton" style="color: #fff; background-color: #8AD6D7; border-color:#8AD6D7">Edit Selected User</button>
+                      <i class="fas fa-arrow-right fa-2x pull-right c-blue-500 mT-3"></i>
+                      <span class="pull-right mL-10 mR-10 mT-3" style="line-height: 2.1;">Page 1/10</span>
+                      <i class="fas fa-arrow-left fa-2x pull-right c-blue-500 mT-3"></i>
+                    </div>
+                    <div class="tab-pane fade show" id="manageIntakeManagers" role="tabpanel">
+                      <table class="table table-bordered" id="intakeManagerTable" style="margin-top: 10px;">
+                        <thead>
+                          <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Intake Manager Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">NACRN ID</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>Bob Jones</td>
+                            <td><a href="gmail.com" >b.jones@gmail.com</a></td>
+                            <td>602-313-9407</td>
+                            <td>85879</td>
+                          </tr>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>James McMillan</td>
+                            <td><a href="gmail.com" >j.mcmillan@yahoo.com</a></td>
+                            <td>917-873-2159</td>
+                            <td>48306</td>
+                          </tr>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>Miles Jackson</td>
+                            <td><a href="gmail.com">m.jackson@gmail.com</a></td>
+                            <td>623-385-9527</td>
+                            <td>36241</td>
+                          </tr>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>George Hanson</td>
+                            <td><a href="gmail.com" >g.hanson@gmail.com</a></td>
+                            <td>480-498-2631</td>
+                            <td>15729</td>
+                          </tr>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>Harry Davidson</td>
+                            <td><a href="gmail.com" >h.davidson@gmail.com</a></td>
+                            <td>623-434-9231</td>
+                            <td>29786</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <a href="add-user-admin.html">
+                        <button type="button" class="btn btn-primary mB-10" id="addIntakeManagerButton">Add a User</button>
+                      </a>
+                      <button type="button" class="btn btn-danger disabled mB-10 removal-button" id="intakeManagerTableRemovalButton">Remove Selected</button>
+                      <button type="button" class="btn disabled mB-10 edit-button" id="intakeManagerTableEditButton" style="color: #fff; background-color: #8AD6D7; border-color:#8AD6D7">Edit Selected User</button>
+                      <i class="fas fa-arrow-right fa-2x pull-right c-blue-500 mT-3"></i>
+                      <span class="pull-right mL-10 mR-10 mT-3" style="line-height: 2.1;">Page 1/10</span>
+                      <i class="fas fa-arrow-left fa-2x pull-right c-blue-500 mT-3"></i>
+                    </div>
+                    <div class="tab-pane fade show" id="manageEndUsers" role="tabpanel">
+                      <table class="table table-bordered" id="endUserTable" style="margin-top: 10px;">
+                        <thead>
+                          <tr>
+                            <th scope="col"></th>
+                            <th scope="col">End User Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">NACRN ID</th>
+                            <th scope="col">Organizations</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>Bob Jones</td>
+                            <td><a href="gmail.com" >b.jones@gmail.com</a></td>
+                            <td>602-313-9407</td>
+                            <td>85879</td>
+                            <td><a href="">St. Mary's Food Bank</a>, <a href="">Red Cross Health Insurance</a></td>
+                          </tr>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>James McMillan</td>
+                            <td><a href="gmail.com" >j.mcmillan@yahoo.com</a></td>
+                            <td>917-873-2159</td>
+                            <td>48306</td>
+                            <td><a href="">Single Dads</a>, <a href="">Homeless Housing Assistance</a></td>
+                          </tr>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>Miles Jackson</td>
+                            <td><a href="gmail.com">m.jackson@gmail.com</a></td>
+                            <td>623-385-9527</td>
+                            <td>36241</td>
+                            <td><a href="">Free School Lunch Program</a></td>
+                          </tr>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>George Hanson</td>
+                            <td><a href="gmail.com" >g.hanson@gmail.com</a></td>
+                            <td>480-498-2631</td>
+                            <td>15729</td>
+                            <td><a href="">Single Dads</a>, <a href="">St. Mary's Food Bank</a></td>
+                          </tr>
+                          <tr>
+                            <td scope="row">
+                              <input type="checkbox"></input>
+                            </td>
+                            <td>Harry Davidson</td>
+                            <td><a href="gmail.com" >h.davidson@gmail.com</a></td>
+                            <td>623-434-9231</td>
+                            <td>29786</td>
+                            <td><a href="">Homeless Housing Assistance</a>, <a href="">Red Cross Health Insurance</a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <a href="add-user-admin.html">
+                        <button type="button" class="btn btn-primary mB-10" id="addEndUserButton">Add a User</button>
+                      </a>
+                      <button type="button" class="btn btn-danger disabled mB-10 removal-button" id="endUserTableRemovalButton">Remove Selected</button>
+                      <button type="button" class="btn disabled mB-10 edit-button" id="endUserTableEditButton" style="color: #fff; background-color: #8AD6D7; border-color:#8AD6D7">Edit Selected User</button>
+                      <i class="fas fa-arrow-right fa-2x pull-right c-blue-500 mT-3"></i>
+                      <span class="pull-right mL-10 mR-10 mT-3" style="line-height: 2.1;">Page 1/10</span>
+                      <i class="fas fa-arrow-left fa-2x pull-right c-blue-500 mT-3"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+    
+    <!--Confirm Deletion Modal-->
+    <div class="modal fade" id="confirmDeletionModal" tabindex="-1" role="dialog" aria-labelledby="confirmDeletionModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="confirmDeletionModalLabel">Confirm Administrator Removal</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p id="confirmModalText">Are you sure you want to remove the selected administrators?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" id="confirmAdminDelete">Confirm Removal</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal" id="closeConfirmationModalButton">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Edit User Modal-->
+    <div class="modal fade" id="editUserModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editUserModalLabel">Edit User</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="row">
+                <div class="col">
+                  <div class="form-Organization bmd-form-Organization">
+                    <label class="bmd-label-floating">User type</label>
+                    <select id="userTypeSelect" class="form-control" data-role="select-dropdown">
+                      <option disabled selected value>-- Select a type --</option>  
+                      <option value="administrator">Administrator</option>
+                      <option value="powerUser">Power User</option>
+                      <option value="careCoordinator">Care Coordinator</option>
+                      <option value="endUser">End User</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-Organization bmd-form-Organization">
+                    <label class="bmd-label-floating">First name</label>
+                    <input type="text" class="form-control">  
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-Organization bmd-form-Organization">
+                    <label class="bmd-label-floating">Last name</label>
+                    <input type="text" class="form-control">  
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="form-Organization bmd-form-Organization">
+                    <label class="bmd-label-floating">Email</label>
+                    <input type="text" class="form-control">  
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-Organization bmd-form-Organization">
+                    <label class="bmd-label-floating">Phone Number</label>
+                    <input type="text" class="form-control">  
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-Organization bmd-form-Organization">
+                    <select class="js-basic-multiple" multiple="multiple">
+                      <option value="" disabled selected>Choose your country</option>
+                      <option value="1">USA</option>
+                      <option value="2">Germany</option>
+                      <option value="3">France</option>
+                      <option value="4">Poland</option>
+                      <option value="5">Japan</option>
+                    </select>
+                  </div>
+                </div>                       
+              </div>
+              <div class="row">
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col" style="text-align: center;">
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" id="confirmAdminDelete">Confirm Changes</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal" id="closeConfirmationModalButton">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://kit.fontawesome.com/bbf8fb8b35.js" crossorigin="anonymous"></script>
+  </body>
+</html>

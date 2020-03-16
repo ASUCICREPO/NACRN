@@ -1,13 +1,5 @@
-# Adminator HTML5 Admin Template
-**Adminator** is a responsive Bootstrap 4 Admin Template. It provides you with a collection of ready to use code snippets and utilities, custom pages, a collection of applications and some useful widgets. Preview of this awesome admin template available here: https://colorlib.com/polygon/adminator/index.html
-
-# Preview
-
-### Screenshot
-
-![Adminator admin dashboard template preview](https://colorlib.com/wp/wp-content/uploads/sites/2/adminator-free-admin-dashboard-template.jpg)
-
-### Demo Site: [Here](https://colorlib.com/polygon/adminator/index.html)
+# NACRN Prototype Application
+This project is based on the Bootstrap 4 **Adminator** dashboard theme, seen [here](https://github.com/puikinsh/Adminator-admin-dashboard).  Note that some of the functionality brought by the dashboard theme is not used, like calendar plugins, Google Maps integration, etc.  
 
 ## TOC
 - [Getting Started](#getting-started)
@@ -22,24 +14,25 @@
 
 
 ## Getting Started
-In order to run **Adminator** on your local machine all what you need to do is to have the prerequisites stated below installed on your machine and follow the installation steps down below.
+In order to run the NACRN project on your local machine, you'll need the following prerequesite software installed.  After installing the necessary software, follow the startup instructions given below to host the project and start development.
 
 #### Prerequisites
   - Node.js
   - Yarn or NPM
   - Git
-  - libpng-dev *linux only*
+  - libpng-dev (*Linux only*)
 
-#### Installing & Local Development
-Start by typing the following commands in your terminal in order to get **Adminator** full package on your machine and starting a local development server with live reload feature.
+#### Startup & Local Development
+To clone the repository and start the Webpack server, run the following commands:
 
 ```
-> git clone https://github.com/puikinsh/Adminator-admin-dashboard.git adminator
-> cd adminator
+> git clone https://github.com/ASUCICREPO/NACRN.git NACRN
+> cd NACRN
 > npm install
 > npm run dev
 ```
 
+Allow Webpack to compile.  If this happens successfully, the Node terminal window should display all the project files as green and labeled as "[emitted]" 
 
 ## Files/Folders Structure
 Here is a brief explanation of the template folder structure and some of its main files usage:
@@ -74,7 +67,6 @@ Here is a brief explanation of the template folder structure and some of its mai
 │   │       └── spec            # Contains custom SCSS files.
 │   │       │   └── components  # Contains all template components.
 │   │       │   └── generic     # Contains basic scaffolding styles.
-│   │       │   └── screens     # Contains views specific styles.
 │   │       │   └── settings    # Contains all template variables.
 │   │       │   └── tools       # Contains all mixins.
 │   │       │   └── utils       # Contains helper classes.
@@ -103,21 +95,6 @@ Here is a brief explanation of the template folder structure and some of its mai
 └── README.md                   # Manual file.
 └── webpack.config.js           # Webpack main config file.
 └── yarn.lock                   # Yarn metadata.
-```
-
-## Deployment
-In deployment process, you have two commands:
-
-1. Build command
-Used to generate the final result of compiling src files into build folder. This can be achieved by running the following command:
-```
-> npm run build
-```
-
-2. Preview command
-Used to create a local dev server in order to preview the final output of build process. This can be achieved by running the following command:
-```
-> npm run preview
 ```
 
 ## Built With

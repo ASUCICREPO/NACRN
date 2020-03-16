@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Settings</title>
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Public+Sans|Source+Sans+Pro&display=swap" rel="stylesheet">
+    <style>
+      #loader {
+        transition: all 0.3s ease-in-out;
+        opacity: 1;
+        visibility: visible;
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background: #fff;
+        z-index: 90000;
+      }
+
+      #loader.fadeOut {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .spinner {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: calc(50% - 20px);
+        left: calc(50% - 20px);
+        background-color: #333;
+        border-radius: 100%;
+        -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+        animation: sk-scaleout 1.0s infinite ease-in-out;
+      }
+
+      @-webkit-keyframes sk-scaleout {
+        0% { -webkit-transform: scale(0) }
+        100% {
+          -webkit-transform: scale(1.0);
+          opacity: 0;
+        }
+      }
+
+      @keyframes sk-scaleout {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        } 100% {
+          -webkit-transform: scale(1.0);
+          transform: scale(1.0);
+          opacity: 0;
+        }
+      }
+
+    </style>
+  </head>
+
+  <body class="app">
+    <!-- @TOC -->
+    <!-- =================================================== -->
+    <!--
+      + @Page Loader
+      + @App Content
+          - #Left Sidebar
+              > $Sidebar Header
+              > $Sidebar Menu
+
+          - #Main
+              > $Topbar
+              > $App Screen Content
+    -->
+
+    <!-- @Page Loader -->
+    <!-- =================================================== -->
+    <div id='loader'>
+      <div class="spinner"></div>
+    </div>
+
+    <script>
+      window.addEventListener('load', function load() {
+        const loader = document.getElementById('loader');
+        setTimeout(function() {
+          loader.classList.add('fadeOut');
+        }, 300);
+      });
+
+      window.onload(
+        $(document).ready(function(){
+          $("#contactPreferencesDropdown").dropdown('update');
+        })
+      )
+      function yesnoCheck() {
+    if (document.getElementById('yesCheck').checked) {
+        document.getElementById('ifYes').style.visibility = 'visible';
+    } else {
+        document.getElementById('ifYes').style.visibility = 'hidden';
+    }
+      }
+    </script>
+
+    <!-- @App Content -->
+    <!-- =================================================== -->
+
+          <!-- ### $Sidebar Menu ### -->
+          
+        <!-- ### $App Screen Content ### -->
+        <main class='main-content bgc-grey-100'>
+          <div id='mainContent'>
+            <div class="container-fluid" id="profileCardContainer">
+                <div class="col-md-9" id="centeredCard">
+                  <div class="card">
+                    <div class="card-header card-header-secondary">
+                        <div>
+     <div class="sidebar-logo">
+            <div class="peers ai-c fxw-nw">
+              <div class="peer peer-greed">
+                <a class="sidebar-link td-n" href="index.html">
+                  <div class="peers ai-c fxw-nw">
+                    <div class="peer">
+                      <div class="logo">
+                        <img src="assets/static/images/navajologo.png" alt="">
+                      </div>
+                    </div>
+                    <div class="peer peer-greed">
+                      
+                      <h4>  We require few additional details to match you best with our programs available. Please fill the following details.</h4>
+                      
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            
+</div>
+                
+                      
+          
+                                      
+    
+                  
+                    
+                    <div class = "card-body">
+
+<div class="form-group w-50">
+          <label class="text-normal text-dark">Full Name</label>
+            <input type="text" class="form-control" name="username" id="username" value = "John Doe" readonly  >
+          </div>
+         <div class="form-group w-50">
+          <label class="text-normal text-dark">Username</label>
+            <input type="text" class="form-control" name="username" id="username" value = "JohnDoe" readonly >
+          </div>
+          <div class="form-group w-50">
+          <label class="text-normal text-dark">Email</label>
+            <input type="email" class="form-control" name="username" id="username" value = "John_doe@gmail.com" readonly >
+          </div>
+          <div class="form-group w-50">
+          <label class="text-normal text-dark">Date of Birth</label>
+            <input class="form-control" type="date" name="bday" required>
+          </div>
+          <div class="form-group w-50">
+          <label class="text-normal text-dark">Sex</label>
+          
+          
+          <div class = "radio">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="Male" required>
+  <label class="form-check-label" for="exampleRadios1">
+    Male
+  </label>
+  </div>
+  <div class = "radio">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="Female" >
+  <label class="form-check-label" for="exampleRadios1">
+    Female
+  </label>
+  </div>
+  <div class = "radio">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="Non Binary" >
+  <label class="form-check-label" for="exampleRadios1">
+    Non Binary
+  </label>
+  
+  
+</div>
+</div>
+            
+          
+          
+
+          
+          
+<!-- Material unchecked -->
+
+<div class = "form-group">
+<div class="form-check checkbox-warning-filled">
+<div class ="row">
+<label class="text-normal text-dark">Please check the programs your are currently enrolled into</label>
+</div>
+
+<div class ="row">
+<div class="checkbox checkbox-Square checkbox-info peers ai-c"><input type="checkbox" id="inputCall1" name="inputCheckboxesCall" class="peer"> <label for="inputCall1" class="peers peer-greed js-sb ai-c"><span class="peer peer-greed">Single Moms Homelessness</span></label></div>
+
+</div>
+<div class ="row">
+<div class="checkbox checkbox-Square checkbox-info peers ai-c"><input type="checkbox" id="inputCall1" name="inputCheckboxesCall" class="peer"> <label for="inputCall1" class="peers peer-greed js-sb ai-c"><span class="peer peer-greed">Single Dads Organization</span></label></div>
+</div>
+<div class ="row">
+<div class="form-check form-check-inline">
+  <div class="checkbox checkbox-Square checkbox-info peers ai-c"><input type="checkbox" id="inputCall1" name="inputCheckboxesCall" class="peer"> <label for="inputCall1" class="peers peer-greed js-sb ai-c"><span class="peer peer-greed">Senior Citizens Benefits Program</span></label></div>
+</div>
+</div>
+<div class ="row">
+<div class="form-check form-check-inline">
+  <div class="checkbox checkbox-Square checkbox-info peers ai-c"><input type="checkbox" id="inputCall1" name="inputCheckboxesCall" class="peer"> <label for="inputCall1" class="peers peer-greed js-sb ai-c"><span class="peer peer-greed">Youth for Work</span></label></div>
+</div>
+</div>
+</div>
+</div>
+<div class="form-group w-50">
+          <label class="text-normal text-dark">Please select "Yes" if  you possess SSN.</label>
+          <div class = "radio">
+          <input class="form-check-input" type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck" required/>
+          <label class="form-check-label" for="exampleRadios1">Yes</label>
+          </div>
+            
+  <div class = "radio">
+            <input class="form-check-input" type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="noCheck"/>
+            <label class="form-check-label" for="exampleRadios1">No</label>
+            </div>
+          <div id="ifYes" style="visibility:hidden"><label class="text-normal text-dark">Please enter your valid SSN ID</label>
+    <input type="text" class="form-control" name="username" id="username" placeholder = "ABC-DEF-EFGH" required>   
+</div>
+</div>
+
+          
+                            <div class="text-right">
+                            <a href="questionnaire2.html">
+                              <button type="button" class="btn btn-primary pull-right" id="saveProfileButton">Submit</button>
+                            </a>
+                          </div>
+                          
+      
+ 
+                    
+                   </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    
+
+    <script src="https://kit.fontawesome.com/bbf8fb8b35.js" crossorigin="anonymous"></script>
+  </body>
+</html>

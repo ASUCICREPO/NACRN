@@ -1,6 +1,5 @@
 const
   manifest          = require('../manifest');
-
 const plugins = [];
 
 plugins.push(
@@ -8,7 +7,8 @@ plugins.push(
   ...(require('./htmlPlugin')),
   ...(require('./internal')),
   require('./caseSensitivePlugin'),
-  require('./extractPlugin')
+  require('./extractPlugin'),
+  require('./jquery'),
 );
 
 if (manifest.IS_DEVELOPMENT) {

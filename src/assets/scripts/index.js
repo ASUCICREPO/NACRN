@@ -16,4 +16,5 @@ import './fullcalendar';
 import './googleMaps';
 import './utils';
 import './determineState';
-import './manage-admin';
+import './manageUsers';
+import './powerUserEdit';
