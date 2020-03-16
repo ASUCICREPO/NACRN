@@ -62,7 +62,8 @@ const titles = {
   'manage-groups-admin': 'Manage Groups',
   'add-group-admin': 'Add a Group',
   'adminChat': 'adminChat',
-  'calendar_admin': 'calendar_admin'
+  'calendar_admin': 'calendar_admin',
+  'caretaker': 'caretaker'
 }
 
 module.exports = Object.keys(titles).map(title => {
