@@ -65,6 +65,7 @@
           loader.classList.add('fadeOut');
         }, 300);
       });
+
     </script>
     <div class="peers ai-s fxw-nw h-100vh">
       <div class="peer peer-greed h-100 pos-r bgr-n bgpX-c bgpY-c bgsz-cv" style='background-image: url("assets/static/images/navajo.jpg")'>
@@ -96,8 +97,8 @@
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">Share my data with related third parties</label>
           </div>
-          <a href="signupRedirect.html"> <button type="submit" class="btn btn-primary">Submit</button> </a>
-             <div class="d-flex justify-content-center links">Already have an account?<a class='sidebar-link' href="signin.html">Login</a>
+          <button type="submit" class="btn btn-primary" onclick="window.open('http://localhost:3000/signupRedirect.html');">Submit</button>
+             <div class="d-flex justify-content-center links">Already have an account?<a>Login</a>
           </div>
           </form>
       </div>
