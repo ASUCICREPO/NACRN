@@ -358,7 +358,7 @@
                   <div class="bgc-white bd bdrs-3 p-20">
                     
                     
-                    <!-- <table>
+                    <table>
     <tr>
         <td>
           <h4 class="c-grey-900 mB-20">Please click here to find  out the programs you are eligible for...
@@ -367,20 +367,20 @@
         </td>
     
     </tr>
- </table> -->
+ </table>
 
  <table id="sometable" class="table" style="width:100%" style="height:100%" >
     <script>
-       var x =  [{"id":1,"Name":"Celia","Email":"ccaswell0@hp.com","Phone":"52-132-0657","NACRN ID":"03-9031792","Liaison":false},
-        {"id":2,"Name":"Aleta","Email":"abrazelton1@businessinsider.com","Phone":"85-071-7368","NACRN ID":"61-9353495","Liaison":false},
-        {"id":3,"Name":"Warner","Email":"wbernon2@de.vu","Phone":"47-944-6011","NACRN ID":"67-2990233","Liaison":true},
-        {"id":4,"Name":"Paxton","Email":"pmcfee3@microsoft.com","Phone":"50-690-9374","NACRN ID":"14-8107573","Liaison":false},
-        {"id":5,"Name":"Allayne","Email":"amarmyon4@imgur.com","Phone":"78-159-8261","NACRN ID":"59-1075839","Liaison":true},
-        {"id":6,"Name":"Elyssa","Email":"ecaulwell5@blogspot.com","Phone":"87-254-5128","NACRN ID":"70-1589633","Liaison":true},
-        {"id":7,"Name":"Karlik","Email":"kreith6@whitehouse.gov","Phone":"65-350-5468","NACRN ID":"38-6470718","Liaison":true},
-        {"id":8,"Name":"Kalina","Email":"kcrotty7@wisc.edu","Phone":"37-091-2790","NACRN ID":"70-0608006","Liaison":true},
-        {"id":9,"Name":"Tanhya","Email":"tbullivent8@cpanel.net","Phone":"25-438-2275","NACRN ID":"10-1837772","Liaison":true},
-        {"id":10,"Name":"Cassi","Email":"csilverston9@alexa.com","Phone":"96-294-2725","NACRN ID":"25-3012853","Liaison":true}];
+       var x =  [{"Name":"Bob Marley","Email":"cc@gmail.com","Phone":"52-132-0657","NACRN ID":"03-9031792","Liaison":'John Smith, Tommy Forrest'},
+        {"Name":"Red Wellington","Email":"abrazelton1@busin@gmail.com","Phone":"85-071-7368","NACRN ID":"61-9353495","Liaison":'John Smith, Tommy Forrest'},
+        {"Name":"Harley Watson","Email":"wbernon2@de.yahoo.com","Phone":"47-944-6011","NACRN ID":"67-2990233","Liaison":'Bob Dylan'},
+        {"Name":"Margret Robson","Email":"pmcfee3@gmail.com","Phone":"50-690-9374","NACRN ID":"14-8107573","Liaison":'John Smith, Tommy Forrest'},
+        {"Name":"Kevin Mcalister","Email":"amarm@gmail.com","Phone":"78-159-8261","NACRN ID":"59-1075839","Liaison":'Bob Dylan'},
+        {"Name":"Elyssa Reddington","Email":"ecaulwell@gmail.com","Phone":"87-254-5128","NACRN ID":"70-1589633","Liaison":'Bob Dylan'},
+        {"Name":"Karlik Thompson","Email":"kreith6@whitehouse.hotmail.com","Phone":"65-350-5468","NACRN ID":"38-6470718","Liaison":'Bob Dylan'},
+        {"Name":"Kalina Kalrson","Email":"kcrotty7@hotmail.com","Phone":"37-091-2790","NACRN ID":"70-0608006","Liaison":'Bob Dylan'},
+        {"Name":"Tanhya Maxton","Email":"tbullivent8@hotmail.com","Phone":"25-438-2275","NACRN ID":"10-1837772","Liaison":'Bob Dylan'},
+        {"Name":"Rose Red","Email":"csilvers@gmail.com","Phone":"96-294-2725","NACRN ID":"25-3012853","Liaison":'Bob Dylan'}];
     function updateTable(tableId, jsonData){
 
         var tableHTML = "<tr>";
@@ -409,89 +409,116 @@
     </script>
 
 </table>   
-
+</div>
+                </div>
+              </div>
+                </main>
 
   
-  <!-- Modal -->
+  <!-- Edit User Modal -->
   <div class="modal fade bd-example-modal-lg" tabindex="-1" id="editusermodal" role="dialog" aria-labelledby="editusermodalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-body">
             <div class="container">
-                <form>
-                <div class="row">
-                    <div class="col">
-                        
-                            <div class="form-group">
-                              <label for="exampleFormControlSelect1">Liaison</label>
-                                <select class="form-control" id="exampleFormControlSelect1">
-                                  <option>yes</option>
-                                  <option>No</option>
-                                </select>
+             
+                  <div class="row">
+                    <div class="col-8">
+                      <form>
+                          <h5> Associated Care Co-ordinator</h5>
+                                <div class="row">
+                                  <div class="col-6">
+                                    <div class="list-group">
+                                      <p id="userslist" class="list-group-item">Idhant</p>       
+                                    </div>                
+                                  </div>
+                                  <div class="col-6">
+                                    <button type="button" onclick="inserttext();" class="btn btn-light">Add Me</button>
+                                  </div>
+                                </div>
+
+                          <div class="row">
+                          
+                            <div class="col-6">
+                              
+                                <div class="form-group">
+                                  <label for="firstname">First Name</label>
+                                  <input type="email" class="form-control" id="firstname" aria-describedby="emailHelp" placeholder="Bob">
                             </div>
+                            </div>
+                            <div class="col-6">
+                                    <div class="form-group">
+                                      <label for="Lastname">Last Name</label>
+                                      <input type="email" class="form-control" id="Lastname" aria-describedby="emailHelp" placeholder="Marley">
+                                </div>
+                            </div>
+                          </div>
+
+
+
+                          <div class="row">
+                          
+                            <div class="col-6">
+                              
+                                    <div class="form-group">
+                                      <label for="phonenumber">Phone Number</label>
+                                      <input type="email" class="form-control" id="phonenumber" aria-describedby="emailHelp" placeholder="4806163942">
+                                </div>
+                                <button type="button" id="addalertbutton" class="btn btn-light">Add Alert</button>
+                            </div>
+                            <div class="col-6">
+                                    <div class="form-group">
+                                      <label for="email">Email</label>
+                                      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="cc@gmail.com">
+                                </div>
+                                <button type="button" id="addnotebutton" class="btn btn-light">Add Note</button>
+                            </div>
+                          </div>
+                        </form>
+
+                        </div>
+
+                        <div class="col-4">
+                          <h5>Last 3 alerts</h5>
+                          <div class="list-group">
+
+                            <a href="#" class="list-group-item list-group-item-action list-group-item-danger" data-placement="right" title="On 14th Feb he was misbehaving." data-toggle="tooltip">Misbehavior</a>
+                            <a href="#" class="list-group-item list-group-item-action list-group-item-danger"data-placement="right" title="From childhood he was having bipolar symptoms." data-toggle="tooltip">Bipolar Disorder</a>
+                            <a href="#" class="list-group-item list-group-item-action list-group-item-danger"data-placement="right" title="He was a bad person, he did not share his food with me." data-toggle="tooltip">Bad Person</a>
+                            
+                            
+                            <div class="collapse" id="collapseExample">
+                              <a href="#" class="list-group-item list-group-item-action list-group-item-danger"data-placement="right" title="He was not sharing his personal contact with me." data-toggle="tooltip">Really Bad Person</a>
+                              <a href="#" class="list-group-item list-group-item-action list-group-item-danger"data-placement="right" title="He was not sharing his personal contact with me." data-toggle="tooltip">Really Bad Bad Person</a>
+                            </div>
+
+                          </div><br>
+                          <button type="button" aria-expanded="false" aria-controls="collapseExample" data-toggle="collapse" href="#collapseExample" class="btn btn-light">Show more</butuon>
+                        </div>
                         
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="form-group">
-                    <div class="row">
-                        <label for="username">Name</label>
-                        <input type="email" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Idhant">
-                    </div>
-<br>
-                    <div class="row">
-                        <label for="useremail">EMail</label>
-                        <input type="email" class="form-control" id="useremail" aria-describedby="emailHelp" placeholder="idhant123@gmail.com">
-                    </div>
-<br>
-                    <div class="row">
-                        <label for="userphone">Phone</label>
-                        <input type="email" class="form-control" id="userphone" aria-describedby="emailHelp" placeholder="9619463263">
-                    </div>
-<br>
-                    <div class="row">
-                        <label for="usernacrnid">NACRN ID</label>
-                        <input type="email" class="form-control" id="usernacrnid" aria-describedby="emailHelp" placeholder="9619463263">
-                    </div>
+           
+            </div><br>
+<div class="row">
+  <div class="col-4">
+    <h5>Last 3 Notes</h5> 
+    </div>
+      <div class="col-8">
+            <form class="form-inline">
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" >Search</button>
+            </form>
+      </div>
+      </div>
 
-                  </div>
-                  
-            </div>
-        </div>
-        <div class="row"> 
-            <div class="col">
-                <button type="button" data-toggle="modal" class="btn btn-primary" id="addnotebutton">Add Note</button>
-            </div>
-        
-        </div>
-        <br>
-     
 
-    </form>
+<div class="row">
+
 
     <table id="editusernotes" class="table" style="width:100%" style="height:100%" >
       <script>
-         var x =  [{"id":1,"User":"Vaclav","date":"1/14/2020","Visibility":true,"text":"montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus"},
-{"id":2,"User":"Teri","date":"2/9/2020","Visibility":false,"text":"ante vivamus tortor duis mattis egestas metus aenean fermentum donec"},
-{"id":3,"User":"Keenan","date":"7/27/2019","Visibility":false,"text":"iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl"},
-{"id":4,"User":"Roze","date":"7/13/2019","Visibility":false,"text":"morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis"},
-{"id":5,"User":"Antons","date":"8/6/2019","Visibility":false,"text":"mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac"},
-{"id":6,"User":"Conan","date":"11/18/2019","Visibility":false,"text":"bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu"},
-{"id":7,"User":"Tildie","date":"11/29/2019","Visibility":true,"text":"quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat"},
-{"id":8,"User":"Kali","date":"5/10/2019","Visibility":false,"text":"erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper"},
-{"id":9,"User":"Oralle","date":"10/29/2019","Visibility":true,"text":"in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit"},
-{"id":10,"User":"Ariel","date":"12/30/2019","Visibility":false,"text":"platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum"},
-{"id":11,"User":"Tiphanie","date":"11/30/2019","Visibility":true,"text":"integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla"},
-{"id":12,"User":"Avery","date":"5/18/2019","Visibility":true,"text":"id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien"},
-{"id":13,"User":"Randene","date":"4/2/2019","Visibility":false,"text":"vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut"},
-{"id":14,"User":"Mortie","date":"3/24/2019","Visibility":true,"text":"mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis"},
-{"id":15,"User":"Kaile","date":"5/12/2019","Visibility":true,"text":"aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum"},
-{"id":16,"User":"Wrennie","date":"1/13/2020","Visibility":false,"text":"nunc rhoncus dui vel sem sed sagittis nam congue risus semper"},
-{"id":17,"User":"Beatriz","date":"4/4/2019","Visibility":false,"text":"vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices"},
-{"id":18,"User":"Sheila-kathryn","date":"8/30/2019","Visibility":false,"text":"nisl nunc nisl duis bibendum felis sed interdum venenatis turpis"},
-{"id":19,"User":"Moishe","date":"4/16/2019","Visibility":false,"text":"quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut"},
-{"id":20,"User":"Allianora","date":"7/13/2019","Visibility":false,"text":"id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat"}]
+         var x =  [{"User":"Vaclav","date":"1/14/2020","Visibility":'Global',"text":"montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus"},
+            {"User":"Teri","date":"2/9/2020","Visibility":'Organizational',"text":"ante vivamus tortor duis mattis egestas metus aenean fermentum donec"},
+            {"User":"Keenan","date":"7/27/2019","Visibility":'Organizational',"text":"iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl"}]
       function updateTable(tableId, jsonData){
   
           var tableHTML = "<tr>";
@@ -520,19 +547,22 @@
       </script>
   
   </table> 
+  </div>
             
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+          <button type="button" class="btn btn-light float-left" data-dismiss="modal">Show More</button>
+          <button type="button" class="btn btn-light" data-dismiss="modal">Save changes</butuon>
         </div>
       </div>
     </div>
   </div>
-        </div>
+  </div>
+   
 
 
 
-        <!-- Modal -->
+        <!-- Add Note Modal -->
 <div class="modal" id="addnotemodal" data-backdrop="static">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
@@ -545,91 +575,107 @@
       <div class="modal-body">
         <div class="container">
           <div class="fluid">
-            
-          <label for="NoteText"></label>
-          <textarea class="form-control" id="NoteText" rows="3"></textarea>
+
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Subject</span>
+              </div>
+              <input type="text" class="form-control" placeholder="Note Title" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+
+
+            <label for="NoteText">Body</label>
+              <textarea class="form-control" id="NoteText" rows="3"></textarea>
   
           </div>
         </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary"  id="submitnotebutton">Save changes</button>
+      <div class="modal-footer float-left">
+
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Do not share globally</label>
+        </div>
+
+        <button type="button" class="btn btn-light"  id="submitnotebutton">Add Note</button>
       </div>
     </div>
   </div>
 </div>
-                  
+
+
+
+        <!-- Add Alert Modal -->
+        <div class="modal" id="addalertmodal" data-backdrop="static">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Add Alert Here</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                  <div class="fluid">
+        
+        
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Subject</span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Alert Title" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+        
+        
+                    <label for="NoteText">Body</label>
+                      <textarea class="form-control" id="NoteText" rows="3"></textarea>
+          
+                  </div>
                 </div>
               </div>
-                <div class="text-right">
-                            <a href="endUserprograms.html">
-                              <button type="button" class="btn btn-primary pull-right" id="save">Save</button>
-                            </a>
-                    </div>
-      </div>
-    </div>
+              <div class="modal-footer">        
+                <button type="button" class="btn btn-light pull-left" id="submitalertbutton">Add Alert</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
 
-
-
-<!-- Modal -->
-<!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-      <h4 class="modal-title" id="myModalLabel">Confirm your changes</h4>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        
-      </div>
-      <div class="modal-body">
-        By selecting YES you are agreeing to share your data with third party?
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal" >Close</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-    <!-- <script src="https://kit.fontawesome.com/bbf8fb8b35.js" crossorigin="anonymous"></script> -->
-
-    <script>
-    function updateTable(tableId, jsonData){
-
-        var tableHTML = "<tr>";
-        for (var headers in jsonData[0]) {
-        tableHTML += "<th>" + headers + "</th>";
-        }
-        tableHTML += "</tr>";
-
-        for (var eachItem in jsonData) {
-        tableHTML += "<tr>";
-        var dataObj = jsonData[eachItem];
-        for (var eachValue in dataObj){
-            tableHTML += "<td>" + dataObj[eachValue] + "</td>";
-        }
-        tableHTML += "</tr>";
-        }
-
-        document.getElementById(tableId).innerHTML = tableHTML;
-    }
-    </script>
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script>
+   
+   
+   <script>
+
+      function inserttext(){
+        let target = document.getElementById('userslist');
+        let value = target.value;
+        target.innerHTML += ', Bob Marley';
+      }
 
       $(document).on("click","#addnotebutton",function(){
       $('#editusermodal').modal('hide');
       $('#addnotemodal').modal('show');
     });
 
+    $(document).on("click","#addalertbutton",function(){
+      $('#editusermodal').modal('hide');
+      $('#addalertmodal').modal('show');
+    });
+
+    $(document).on("click","#submitalertbutton",function(){
+      $('#addalertmodal').modal('hide');
+      $('#editusermodal').modal('show');
+    });
+
     $(document).on("click","#submitnotebutton",function(){
       $('#addnotemodal').modal('hide');
       $('#editusermodal').modal('show');
-     
     });
+
     </script>
   </body>
 </html>
