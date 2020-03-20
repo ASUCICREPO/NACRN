@@ -371,16 +371,16 @@
 
  <table id="sometable" class="table" style="width:100%" style="height:100%" >
     <script>
-       var x =  [{"id":1,"Name":"Celia","Email":"ccaswell0@hp.com","Phone":"52-132-0657","NACRN ID":"03-9031792","Liaison":false},
-        {"id":2,"Name":"Aleta","Email":"abrazelton1@businessinsider.com","Phone":"85-071-7368","NACRN ID":"61-9353495","Liaison":false},
-        {"id":3,"Name":"Warner","Email":"wbernon2@de.vu","Phone":"47-944-6011","NACRN ID":"67-2990233","Liaison":true},
-        {"id":4,"Name":"Paxton","Email":"pmcfee3@microsoft.com","Phone":"50-690-9374","NACRN ID":"14-8107573","Liaison":false},
-        {"id":5,"Name":"Allayne","Email":"amarmyon4@imgur.com","Phone":"78-159-8261","NACRN ID":"59-1075839","Liaison":true},
-        {"id":6,"Name":"Elyssa","Email":"ecaulwell5@blogspot.com","Phone":"87-254-5128","NACRN ID":"70-1589633","Liaison":true},
-        {"id":7,"Name":"Karlik","Email":"kreith6@whitehouse.gov","Phone":"65-350-5468","NACRN ID":"38-6470718","Liaison":true},
-        {"id":8,"Name":"Kalina","Email":"kcrotty7@wisc.edu","Phone":"37-091-2790","NACRN ID":"70-0608006","Liaison":true},
-        {"id":9,"Name":"Tanhya","Email":"tbullivent8@cpanel.net","Phone":"25-438-2275","NACRN ID":"10-1837772","Liaison":true},
-        {"id":10,"Name":"Cassi","Email":"csilverston9@alexa.com","Phone":"96-294-2725","NACRN ID":"25-3012853","Liaison":true}];
+       var x =  [{"Name":"Bob Marley","Email":"cc@gmail.com","Phone":"52-132-0657","NACRN ID":"03-9031792","Liaison":'John Smith, Tommy Forrest'},
+        {"Name":"Red Wellington","Email":"abrazelton1@busin@gmail.com","Phone":"85-071-7368","NACRN ID":"61-9353495","Liaison":'John Smith, Tommy Forrest'},
+        {"Name":"Harley Watson","Email":"wbernon2@de.yahoo.com","Phone":"47-944-6011","NACRN ID":"67-2990233","Liaison":'Bob Dylan'},
+        {"Name":"Margret Robson","Email":"pmcfee3@gmail.com","Phone":"50-690-9374","NACRN ID":"14-8107573","Liaison":'John Smith, Tommy Forrest'},
+        {"Name":"Kevin Mcalister","Email":"amarm@gmail.com","Phone":"78-159-8261","NACRN ID":"59-1075839","Liaison":'Bob Dylan'},
+        {"Name":"Elyssa Reddington","Email":"ecaulwell@gmail.com","Phone":"87-254-5128","NACRN ID":"70-1589633","Liaison":'Bob Dylan'},
+        {"Name":"Karlik Thompson","Email":"kreith6@whitehouse.hotmail.com","Phone":"65-350-5468","NACRN ID":"38-6470718","Liaison":'Bob Dylan'},
+        {"Name":"Kalina Kalrson","Email":"kcrotty7@hotmail.com","Phone":"37-091-2790","NACRN ID":"70-0608006","Liaison":'Bob Dylan'},
+        {"Name":"Tanhya Maxton","Email":"tbullivent8@hotmail.com","Phone":"25-438-2275","NACRN ID":"10-1837772","Liaison":'Bob Dylan'},
+        {"Name":"Rose Red","Email":"csilvers@gmail.com","Phone":"96-294-2725","NACRN ID":"25-3012853","Liaison":'Bob Dylan'}];
     function updateTable(tableId, jsonData){
 
         var tableHTML = "<tr>";
@@ -443,13 +443,13 @@
                               
                                 <div class="form-group">
                                   <label for="firstname">First Name</label>
-                                  <input type="email" class="form-control" id="firstname" aria-describedby="emailHelp" placeholder="first name">
+                                  <input type="email" class="form-control" id="firstname" aria-describedby="emailHelp" placeholder="Bob">
                             </div>
                             </div>
                             <div class="col-6">
                                     <div class="form-group">
                                       <label for="Lastname">Last Name</label>
-                                      <input type="email" class="form-control" id="Lastname" aria-describedby="emailHelp" placeholder="Last name">
+                                      <input type="email" class="form-control" id="Lastname" aria-describedby="emailHelp" placeholder="Marley">
                                 </div>
                             </div>
                           </div>
@@ -462,14 +462,14 @@
                               
                                     <div class="form-group">
                                       <label for="phonenumber">Phone Number</label>
-                                      <input type="email" class="form-control" id="phonenumber" aria-describedby="emailHelp" placeholder="">
+                                      <input type="email" class="form-control" id="phonenumber" aria-describedby="emailHelp" placeholder="4806163942">
                                 </div>
                                 <button type="button" id="addalertbutton" class="btn btn-light">Add Alert</button>
                             </div>
                             <div class="col-6">
                                     <div class="form-group">
                                       <label for="email">Email</label>
-                                      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="idhant@somthing.com">
+                                      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="cc@gmail.com">
                                 </div>
                                 <button type="button" id="addnotebutton" class="btn btn-light">Add Note</button>
                             </div>
@@ -485,10 +485,15 @@
                             <a href="#" class="list-group-item list-group-item-action list-group-item-danger" data-placement="right" title="On 14th Feb he was misbehaving." data-toggle="tooltip">Misbehavior</a>
                             <a href="#" class="list-group-item list-group-item-action list-group-item-danger"data-placement="right" title="From childhood he was having bipolar symptoms." data-toggle="tooltip">Bipolar Disorder</a>
                             <a href="#" class="list-group-item list-group-item-action list-group-item-danger"data-placement="right" title="He was a bad person, he did not share his food with me." data-toggle="tooltip">Bad Person</a>
-                            <a href="#" class="list-group-item list-group-item-action list-group-item-danger"data-placement="right" title="He was not sharing his personal contact with me." data-toggle="tooltip">Really Bad Person</a>
+                            
+                            
+                            <div class="collapse" id="collapseExample">
+                              <a href="#" class="list-group-item list-group-item-action list-group-item-danger"data-placement="right" title="He was not sharing his personal contact with me." data-toggle="tooltip">Really Bad Person</a>
+                              <a href="#" class="list-group-item list-group-item-action list-group-item-danger"data-placement="right" title="He was not sharing his personal contact with me." data-toggle="tooltip">Really Bad Bad Person</a>
+                            </div>
 
                           </div><br>
-                          <button type="button" class="btn btn-light">Show more</butuon>
+                          <button type="button" aria-expanded="false" aria-controls="collapseExample" data-toggle="collapse" href="#collapseExample" class="btn btn-light">Show more</butuon>
                         </div>
                         
            
