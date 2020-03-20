@@ -482,7 +482,7 @@
                           <h5>Last 3 alerts</h5>
                           <div class="list-group">
 
-                            <a href="#" class="list-group-item list-group-item-action list-group-item-danger" data-placement="right" title="On 14th Feb he was misbehaving." data-toggle="tooltip">Pervert</a>
+                            <a href="#" class="list-group-item list-group-item-action list-group-item-danger" data-placement="right" title="On 14th Feb he was misbehaving." data-toggle="tooltip">Misbehavior</a>
                             <a href="#" class="list-group-item list-group-item-action list-group-item-danger"data-placement="right" title="From childhood he was having bipolar symptoms." data-toggle="tooltip">Bipolar Disorder</a>
                             <a href="#" class="list-group-item list-group-item-action list-group-item-danger"data-placement="right" title="He was a bad person, he did not share his food with me." data-toggle="tooltip">Bad Person</a>
                             <a href="#" class="list-group-item list-group-item-action list-group-item-danger"data-placement="right" title="He was not sharing his personal contact with me." data-toggle="tooltip">Really Bad Person</a>
@@ -493,20 +493,27 @@
                         
            
             </div><br>
-
-            <form class="form-inline ">
+<div class="row">
+  <div class="col-4">
+    <h5>Last 3 Notes</h5> 
+    </div>
+      <div class="col-8">
+            <form class="form-inline">
               <input class="form-control" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" >Search</button>
             </form>
+      </div>
+      </div>
+
+
+<div class="row">
 
 
     <table id="editusernotes" class="table" style="width:100%" style="height:100%" >
       <script>
-         var x =  [{"id":1,"User":"Vaclav","date":"1/14/2020","Visibility":true,"text":"montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus"},
-{"id":2,"User":"Teri","date":"2/9/2020","Visibility":false,"text":"ante vivamus tortor duis mattis egestas metus aenean fermentum donec"},
-{"id":3,"User":"Keenan","date":"7/27/2019","Visibility":false,"text":"iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl"},
-{"id":4,"User":"Roze","date":"7/13/2019","Visibility":false,"text":"morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis"},
-{"id":5,"User":"Antons","date":"8/6/2019","Visibility":false,"text":"mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac"}];
+         var x =  [{"User":"Vaclav","date":"1/14/2020","Visibility":'Global',"text":"montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus"},
+            {"User":"Teri","date":"2/9/2020","Visibility":'Organizational',"text":"ante vivamus tortor duis mattis egestas metus aenean fermentum donec"},
+            {"User":"Keenan","date":"7/27/2019","Visibility":'Organizational',"text":"iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl"}]
       function updateTable(tableId, jsonData){
   
           var tableHTML = "<tr>";
@@ -535,6 +542,7 @@
       </script>
   
   </table> 
+  </div>
             
         </div>
         <div class="modal-footer">
