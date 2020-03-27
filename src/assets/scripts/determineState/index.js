@@ -195,7 +195,7 @@ let admin_settings = `<div class="header-container">
           </li>
          
           <li>
-            <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+            <a href="adminChat.html" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
               <div class="peer mR-15">
                 <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/men/3.jpg" alt="">
               </div>
