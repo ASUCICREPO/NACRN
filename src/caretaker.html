@@ -351,36 +351,39 @@
 
         <!-- ### $App Screen Content ### -->
         <main class='main-content bgc-grey-100'>
-        
-          <div id='mainContent'>
-             <div class="row">
-                <div class="col-md-12">
-                  <div class="bgc-white bd bdrs-3 p-20">
-                    
-                    
-                    <table>
-    <tr>
-        <td>
-          <h4 class="c-grey-900 mB-20">Please click here to find  out the programs you are eligible for...
-            <input type="checkbox" onclick="return filter_type(this);" name="filter"  id="Eligible"  value= "Eligible" /></h4>
-            
-        </td>
-    
-    </tr>
- </table>
+
+          <div class="row">
+            <div class="col-9">
+              <h4 class="c-grey-900 mB-20">Please click here to find  out the programs you are eligible for...
+                <input type="checkbox" onclick="return filter_type(this);" name="filter"  id="Eligible"  value= "Eligible" /></h4>
+            </div>
+            <div class="col-3">
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Organization
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <button class="dropdown-item" type="button">All</button>
+                  <button class="dropdown-item" type="button">Org-1</button>
+                  <button class="dropdown-item" type="button">Org-2</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
 
  <table id="sometable" class="table" style="width:100%" style="height:100%" >
     <script>
-       x =  [{"Name":"Bob Marley","Email":"cc@gmail.com","Phone":"52-132-0657","NACRN ID":"03-9031792","care coordinator":'John Smith, Tommy Forrest'},
-        {"Name":"Red Wellington","Email":"abrazelton1@busin@gmail.com","Phone":"85-071-7368","NACRN ID":"61-9353495","care coordinator":'John Smith, Tommy Forrest'},
-        {"Name":"Harley Watson","Email":"wbernon2@de.yahoo.com","Phone":"47-944-6011","NACRN ID":"67-2990233","care coordinator":'Bob Dylan'},
-        {"Name":"Margret Robson","Email":"pmcfee3@gmail.com","Phone":"50-690-9374","NACRN ID":"14-8107573","care coordinator":'John Smith, Tommy Forrest'},
-        {"Name":"Kevin Mcalister","Email":"amarm@gmail.com","Phone":"78-159-8261","NACRN ID":"59-1075839","care coordinator":'Bob Dylan'},
-        {"Name":"Elyssa Reddington","Email":"ecaulwell@gmail.com","Phone":"87-254-5128","NACRN ID":"70-1589633","care coordinator":'Bob Dylan'},
-        {"Name":"Karlik Thompson","Email":"kreith6@whitehouse.hotmail.com","Phone":"65-350-5468","NACRN ID":"38-6470718","care coordinator":'Bob Dylan'},
-        {"Name":"Kalina Kalrson","Email":"kcrotty7@hotmail.com","Phone":"37-091-2790","NACRN ID":"70-0608006","care coordinator":'Bob Dylan'},
-        {"Name":"Tanhya Maxton","Email":"tbullivent8@hotmail.com","Phone":"25-438-2275","NACRN ID":"10-1837772","care coordinator":'Bob Dylan'},
-        {"Name":"Rose Red","Email":"csilvers@gmail.com","Phone":"96-294-2725","NACRN ID":"25-3012853","care coordinator":'Bob Dylan'}];
+       x =  [{"Name":"Bob Marley","Email":"cc@gmail.com","Phone":"480-616-3942","NACRN ID":"61-9353495","care coordinator":'John Smith, Tommy Forrest'},
+        {"Name":"Red Wellington","Email":"abrazelton1@gmail.com","Phone":"480-616-3942","NACRN ID":"61-9353495","care coordinator":'John Smith, Tommy Forrest'},
+        {"Name":"Harley Watson","Email":"wbernon2@de.yahoo.com","Phone":"480-616-3942","NACRN ID":"67-2990233","care coordinator":'Bob Dylan'},
+        {"Name":"Margret Robson","Email":"pmcfee3@gmail.com","Phone":"480-616-3942","NACRN ID":"14-8107573","care coordinator":'John Smith, Tommy Forrest'},
+        {"Name":"Kevin Mcalister","Email":"amarm@gmail.com","Phone":"480-616-3942","NACRN ID":"59-1075839","care coordinator":'Bob Dylan'},
+        {"Name":"Elyssa Reddington","Email":"ecaulwell@gmail.com","Phone":"480-616-3942","NACRN ID":"70-1589633","care coordinator":'Bob Dylan'},
+        {"Name":"Karlik Thompson","Email":"kreith6hotmail.com","Phone":"480-616-3942","NACRN ID":"38-6470718","care coordinator":'Bob Dylan'},
+        {"Name":"Kalina Kalrson","Email":"kcrotty7@hotmail.com","Phone":"480-616-3942","NACRN ID":"70-0608006","care coordinator":'Bob Dylan'},
+        {"Name":"Tanhya Maxton","Email":"tbullivent8@hotmail.com","Phone":"480-616-3942","NACRN ID":"10-1837772","care coordinator":'Bob Dylan'},
+        {"Name":"Rose Red","Email":"csilvers@gmail.com","Phone":"480-616-3942","NACRN ID":"25-3012853","care coordinator":'Bob Dylan'}];
     function updateTable(tableId, jsonData){
 
         var tableHTML = "<tr>";
@@ -442,16 +445,10 @@
                             <div class="col">
                               
                                 <div class="form-group">
-                                  <label for="firstname">First Name</label>
+                                  <label for="firstname">Name</label>
                                   <input id="Name" type="email" class="form-control" id="firstname" aria-describedby="emailHelp" placeholder="Bob">
                             </div>
                             </div>
-                            <!-- <div class="col-6">
-                                    <div class="form-group">
-                                      <label for="Lastname">Last Name</label>
-                                      <input id="lastnameid" type="email" class="form-control" id="Lastname" aria-describedby="emailHelp" placeholder="Marley">
-                                </div>
-                            </div> -->
                           </div>
 
 
@@ -504,7 +501,7 @@
     </div>
       <div class="col-8">
             <form class="form-inline">
-              <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+              <input class="form-control" type="search" placeholder="Search Alerts and Notes.." aria-label="Search">
               <button class="btn btn-outline-success" >Search</button>
             </form>
       </div>
@@ -516,9 +513,9 @@
 
     <table id="editusernotes" class="table" style="width:100%" style="height:100%" >
       <script>
-         var y =  [{"User":"Vaclav","date":"1/14/2020","Visibility":'Global',"text":"montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus"},
-            {"User":"Teri","date":"2/9/2020","Visibility":'Organizational',"text":"ante vivamus tortor duis mattis egestas metus aenean fermentum donec"},
-            {"User":"Keenan","date":"7/27/2019","Visibility":'Organizational',"text":"iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl"}]
+         var y =  [{"User":"Vaclav","date":"1/14/2020","Visibility":'Global',"Subject":"montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus"},
+            {"User":"Teri","date":"2/9/2020","Visibility":'Organizational',"Subject":"ante vivamus tortor duis mattis egestas metus aenean fermentum donec"},
+            {"User":"Keenan","date":"7/27/2019","Visibility":'Organizational',"Subject":"iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl"}]
       function updateTable(tableId, jsonData){
   
           var tableHTML = "<tr>";
@@ -526,13 +523,13 @@
           tableHTML += "<th>" + headers + "</th>";
           }
           tableHTML += "</tr>";
-  
+          let i = 0;
           for (var eachItem in jsonData) {
-          tableHTML += "<tr>";
+          tableHTML += "<tr data-toggle='modal' id='openrowmodal' data-target='#rowmodal'>";
           var dataObj = jsonData[eachItem];
           for (var eachValue in dataObj){
               if (eachValue === 'Name'){
-                  tableHTML += "<td> <a data-toggle='modal' data-target='#editusermodal' href='#editrecord'>" + dataObj[eachValue] + " </a> </td>";
+                  tableHTML += "<td>" + dataObj[eachValue] + " </td>";
               }
               else{
                   tableHTML += "<td>" + dataObj[eachValue] + "</td>";
@@ -558,9 +555,31 @@
     </div>
   </div>
   </div>
+
+
+
+  <!-- view row modal -->
+  <div class="modal" id="rowmodal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Note</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">User - Robinson Cruiso</li>
+              <li class="list-group-item">Date - 1/14/2020</li>
+              <li class="list-group-item">Subject - montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus</li>
+            </ul>
+        <div class="modal-footer">
+          <button type="button" id="closerowmdoal" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
    
-
-
 
         <!-- Add Note Modal -->
 <div class="modal" id="addnotemodal" data-backdrop="static">
@@ -683,10 +702,22 @@
       $('#editusermodal').modal('show');
     });
 
-    $(document).on("click","#submitnotebutton",function(){
-      $('#addnotemodal').modal('hide');
+    $(document).on("click","#submitalertbutton",function(){
+      $('#addalertmodal').modal('hide');
       $('#editusermodal').modal('show');
     });
+
+    $(document).on("click","#openrowmodal",function(){
+      $('#editusermodal').modal('hide');
+      $('#rowmodal').modal('show');
+    });
+
+    $(document).on("click","#closerowmdoal",function(){
+      $('#editusermodal').modal('show');
+      $('#rowmodal').modal('hide');
+    });
+
+    $('.dropdown-toggle').dropdown()
 
     </script>
   </body>
