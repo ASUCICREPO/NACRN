@@ -154,18 +154,28 @@
                 <div class="col-md-12">
                   <div class="bgc-white bd bdrs-3 p-20">
                     
-      
+     <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
+                    <div class="input-group">
+                      <input type="search" placeholder="Enter your log search query here" aria-describedby="button-addon1" class="form-control border-0 bg-light">
+                      <div class="input-group-append">
+                        <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search c-black-500"></i></button>
+                      </div>
+                    </div>
+                  </div> 
 
  <table class="table" style="width:100%" style="height:100%" >
  
     <thead class = "thead-dark">
-        <tr>
-            <th><label for="inputState">S.No</label>
+        <tr><th>Log No.</th>
+            <th><label for="inputState">Time Frame</label>
                           <select id="inputState" class="form-control" aria-expanded="false">
-                            <option selected>Daily</option>
-                            <option>Weekly</option>
+                            <option selected>Today</option>
+                            <option>This Week</option>
+                            <option>This Month</option>
+                            <option>This Year</option>
+                            <option>All Time</option>
                           </select></th>
-            <th><label for="inputState">TimeStamp</label>
+            <th><label for="inputState">Time Stamp</label>
                           <select id="inputState" class="form-control" aria-expanded="false">
                             <option selected>New to Old</option>
                             <option>Old to New</option>
@@ -184,15 +194,25 @@
                             <option>Homelessness</option>
                             <option>Single Moms</option>
                             <option>Care for Elderly</option>
-                            <option>Youth for workr</option>
+                            <option>Youth for work</option>
                           </select></th>
             <th><label for="inputState">Operation Type</label>
                           <select id="inputState" class="form-control" aria-expanded="false">
                             <option selected>All</option>
-                            <option>Add</option>
+                            <option>Add Organization</option>
+                            <option>Delete Organization</option>
+                             <option>Add User</option>
+                            <option>Delete User</option>
                             <option>Request</option>
                             <option>Approval</option>
                             <option>Schedule Appointment</option>
+                            <option>Manage Availability</option>
+                            <option>Changed User Permissions</option>
+                           
+                            
+                            
+                            
+                       
                           </select></th>
             <th><label for="inputState">Message</label>
                           <select id="inputState" class="form-control" aria-expanded="false">
@@ -205,92 +225,103 @@
     <tbody>
         <tr>
             <td>1</td>
-            <td>2017-07-04*13:23:55</td>
+            <td>This Week</td>
+            <td>2019-07-04*13:23:55</td>
             <td>Admin</td>
-            <td>Global</td>
-            <td>New Organization addition</td>
+            <td>Youth for work</td>
+            <td>Add New Organization</td>
             <td>Suzan Lee(Admin) added "Youth for work" Organization</td>
             
         </tr>
         <tr>
             <td>2</td>
-            <td>2017-07-05*13:23:55</td>
+            <td>This Week</td>
+            <td>2019-07-03*10:03:51</td>
             <td>Power User</td>
-            <td>Homeless</td>
-            <td>New question addition</td>
+            <td>Homelessness</td>
+            <td>Add New Question</td>
             <td>John Say (Power User) added new Question(ID 457) "Homelessness" Organization</td>
             
         </tr>
         <tr>
             <td>3</td>
-            <td>2017-07-04*13:23:55</td>
+            <td>This Week</td>
+            <td>2019-07-03*01:13:55</td>
             <td>Care coordinator</td>
             <td>Single Moms</td>
-            <td>New Appointment Schedule</td>
+            <td>Schedule Appointment</td>
             <td>Suzy Lee(Care coordinator) added  new Appointment with Sarah Lee(NACRN user)</td>
             
         </tr>
         <tr>
             <td>4</td>
-            <td>2017-07-04*13:23:55</td>
+            <td>This Week</td>
+            <td>2019-07-03*13:13:00</td>
             <td>Admin</td>
-            <td>Global</td>
-            <td>New Organization addition</td>
-            <td>Suzan Lee(Admin) added "Youth for work" Organization</td>
+            <td>Child Care</td>
+            <td>Add User</td>
+            <td>Suzan Lee(Admin) added Tim Thomas(Power User) as Power User To Child Care</td>
             
         </tr>
         <tr>
             <td>5</td>
-            <td>2017-07-05*13:23:55</td>
+            <td>This Week</td>
+            <td>2019-07-03*13:11:55</td>
             <td>Power User</td>
-            <td>Homeless</td>
-            <td>New question addition</td>
-            <td>John Say (Power User) added new Question(ID 457) "Homelessness" Organization</td>
+            <td>Single Moms</td>
+            <td>Add New Question</td>
+            <td>John Say (Power User) added new Question(ID 444) "Single Moms" Program</td>
             
         </tr>
         <tr>
             <td>6</td>
-            <td>2017-07-04*13:23:55</td>
+            <td>This Week</td>
+            <td>2019-07-02*13:05:25</td>
             <td>Care coordinator</td>
-            <td>Single Moms</td>
-            <td>New Appointment Schedule</td>
-            <td>Suzy Lee(Care coordinator) added  new Appointment with Sarah Lee(NACRN user)</td>
+            <td>Employement for all</td>
+            <td>Schedule Appointment</td>
+            <td>Suzy Lee(Care coordinator) added  new Appointment with Britney Swift(NACRN user)</td>
             
         </tr>
         <tr>
+
             <td>7</td>
-            <td>2017-07-04*13:23:55</td>
+            <td>This Week</td>
+            <td>2019-07-02*13:01:28</td>
             <td>Admin</td>
-            <td>Global</td>
-            <td>New Organization addition</td>
-            <td>Suzan Lee(Admin) added "Youth for work" Organization</td>
+            <td>Single Dad's</td>
+            <td>Add New Organization</td>
+            <td>Bretty Mor(Admin) added "Single Dad's" Organization</td>
             
         </tr>
         <tr>
             <td>8</td>
-            <td>2017-07-05*13:23:55</td>
+            <td>This Week</td>
+            <td>2019-07-01*17:23:17</td>
             <td>Power User</td>
-            <td>Homeless</td>
-            <td>New question addition</td>
-            <td>John Say (Power User) added new Question(ID 457) "Homelessness" Organization</td>
+            <td>Care for Elderly</td>
+            <td>Add New Question</td>
+            <td>John Say (Power User) added new Question(ID 47) "Care for Elderly" Organization</td>
             
         </tr>
         <tr>
             <td>9</td>
-            <td>2017-07-04*13:23:55</td>
+            <td>This Week</td>
+            <td>2019-07-01*16:17:14</td>
             <td>Care coordinator</td>
-            <td>Single Moms</td>
-            <td>New Appointment Schedule</td>
-            <td>Suzy Lee(Care coordinator) added  new Appointment with Sarah Lee(NACRN user)</td>
+            <td>Child Care</td>
+            <td>Schedule Appointment</td>
+            <td>Suzy Lee(Care coordinator) added  new Appointment with  Findler May(NACRN user)</td>
             
         </tr>
         <tr>
             <td>10</td>
-            <td>2017-07-04*13:23:55</td>
+            <td>This Week</td>
+            <td>2019-07-01*13:21:46</td>
             <td>Admin</td>
-            <td>Global</td>
+            <td>Small Business Empowerment</td>
             <td>New Organization add</td>
-            <td>Suzan Lee(Admin) added "Youth for work" Organization</td>
+            <td>Rosa Reign(Admin) added "Small Business Empowerment" Organization</td>
             
         </tr>
        
