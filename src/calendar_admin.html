@@ -144,10 +144,26 @@
             <div class="container-fluid">
              <form>
           <div class="form-group" aria-expanded="false">
-                          <label for="inputState">Please select the Program you would like to manage the calendar for</label>
+                          <label for="inputState">Please select the Program you would like to manage the calendar for?</label>
                           <select id="inputState" class="form-control" aria-expanded="false">
                             <option selected>Homelessness</option>
                             <option>Child Care</option>
+                          </select>
+                        </div>
+                         <div class="form-group" aria-expanded="false">
+                          <label for="inputState">Please select User Type you would like to manage Calendar for?</label>
+                          <select id="inputState" class="form-control" aria-expanded="false">
+                            <option selected>Power User</option>
+                            <option>Care Co-ordinator</option>
+                            <option>End User</option>
+                          </select>
+                        </div>
+                        <div class="form-group" aria-expanded="false">
+                          <label for="inputState">Please select User you would like to manage Calendar for?</label>
+                          <select id="inputState" class="form-control" aria-expanded="false">
+                            <option selected>Lucy Kerr</option>
+                            <option>Amenda Brown</option>
+                            <option>Macy Holmes</option>
                           </select>
                         </div>
           </form>
@@ -162,15 +178,16 @@
                     
   <a class="td-n p-20 peers fxw-nw mR-20 peer-greed c-grey-900" href="javascript:void(0);" data-toggle="modal" data-target="#calendar-edit">
                       
-                      <button type="button" class="btn btn-primary pull-right" align="center" >Schedule an Appointment</button>
+                      <button type="button" class="btn btn-primary pull-right" align="center" >Manage Availability</button>
                       
      
-                      </a>
+                      </a> 
+                     <a class="nav-link" data-toggle="modal" href="#signinModal">Sign In</a>
                       
                       <ul class="m-0 p-0 mT-20">
                         
                         <li class="bdB peers ai-c jc-sb fxw-nw">
-                          <a class="td-n p-20 peers fxw-nw mR-20 peer-greed c-grey-900" href="javascript:void(0);" data-toggle="modal" data-target="#calendar-edit">
+                          <a class="td-n p-20 peers fxw-nw mR-20 peer-greed c-grey-900"  data-toggle="modal" data-target="#calendar-edit">
                             <div class="peer mR-15">
                               <i class="fa fa-fw fa-clock-o c-blue-500"></i>
                             </div>
@@ -195,7 +212,7 @@
                           </div>
                         </li>
                         <li class="bdB peers ai-c jc-sb fxw-nw">
-                          <a class="td-n p-20 peers fxw-nw mR-20 peer-greed c-grey-900" href="javascript:void(0);" data-toggle="modal" data-target="#calendar-edit">
+                          <a class="td-n p-20 peers fxw-nw mR-20 peer-greed c-grey-900" href="javascript:void(0);" data-toggle="modal fade" data-target="#calendar-edit">
                             <div class="peer mR-15">
                               <i class="fa fa-fw fa-clock-o c-blue-500"></i>
                             </div>
@@ -237,16 +254,10 @@
                     <div class="modal-body">
                       <form>
                         <div class="form-group">
-                          <label class="fw-500">Appointment title</label>
-                          <input class="form-control bdc-grey-200" placeholder = "Enter your program name">
+                          <label class="fw-500">Subject</label>
+                          <input class="form-control bdc-grey-200" placeholder = "Enter your Subject">
                         </div>
-                        <div class="form-group ">
-                          <label for="inputState">Care Co-ordinator</label>
-                          <select id="inputState" class="form-control">
-                            <option selected>Deenas Doe</option>
-                            <option>Lucy Kerr</option>
-                          </select>
-                        </div>
+                        
                         <div class="row">
                           <div class="col-md-6">
                             <label class="fw-500">Start</label>
@@ -260,8 +271,21 @@
                             </div>
                           </div>
                           </div>
+                          <div class="row">
+                          <div class="col-md-6">
+                            <label class="fw-500">End</label>
+                            <div class="timepicker-input input-icon form-group">
+                              <div class="input-group">
+                                <div class="input-group-addon bgc-white bd bdwR-0">
+                                  <i class="ti-calendar"></i>
+                                </div>
+                                <input type="text" class="form-control bdc-grey-200 start-date" placeholder="Datepicker" data-provide="datepicker">
+                              </div>
+                            </div>
+                          </div>
+                          </div>
       <div class="form-group ">
-                          <label for="inputState">Timings</label>
+                          <label for="inputState">Open Timings</label>
                           <select id="inputState" class="form-control">
                             <option selected>10 AM - 11AM</option>
                             <option>11 AM - 12PM</option>
@@ -273,8 +297,8 @@
                           
                         
                         <div class="form-group">
-                          <label class="fw-500">Appointment Information</label>
-                          <textarea class="form-control bdc-grey-200" rows='5'placeholder = "Enter your questions "></textarea>
+                          <label class="fw-500">Comments</label>
+                          <textarea class="form-control bdc-grey-200" rows='5'placeholder = "Enter your comments"></textarea>
                         </div>
                        <div class="form-group">
   
@@ -286,6 +310,25 @@
   <div class="col-md-8">
   <button id="cancel" name="cancel" class="btn btn-secondary" value="1" data-dismiss = "modal">Cancel</button> <button id="submit" name="submit" class="btn btn-primary" value="1" data-dismiss = "modal">Save</button>
     
+  </div>
+</div>
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModelLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
   </div>
 </div>
                       </form>

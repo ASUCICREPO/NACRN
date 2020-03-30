@@ -235,12 +235,7 @@ let admin_settings = `<div class="header-container">
       </div>
     </a>
     <ul class="dropdown-menu fsz-sm">
-    <li>
-        <a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
-          <i class="ti-settings mR-10"></i>
-          <span>Setting</span>
-        </a>
-      </li>
+    
       <li>
         <a href="settings-admin.html" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
           <i class="ti-user mR-10"></i>
