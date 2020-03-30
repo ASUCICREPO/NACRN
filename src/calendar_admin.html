@@ -84,6 +84,11 @@
           loader.classList.add('fadeOut');
         }, 300);
       });
+      $('input[type="checkbox"]').on('change', function(e){
+   if(e.target.checked){
+     $('#myModal').modal();
+   }
+});
       
     </script>
 
@@ -126,6 +131,10 @@
         </div>
       </div>
 
+
+
+
+ 
       <!-- #Main ============================ -->
       <div class="page-container">
         <!-- ### $Topbar ### -->
@@ -143,14 +152,14 @@
  
             <div class="container-fluid">
              <form>
-          <div class="form-group" aria-expanded="false">
+          <div class="form-group w-50">
                           <label for="inputState">Please select the Program you would like to manage the calendar for?</label>
                           <select id="inputState" class="form-control" aria-expanded="false">
                             <option selected>Homelessness</option>
                             <option>Child Care</option>
                           </select>
                         </div>
-                         <div class="form-group" aria-expanded="false">
+                         <div class="form-group w-50">
                           <label for="inputState">Please select User Type you would like to manage Calendar for?</label>
                           <select id="inputState" class="form-control" aria-expanded="false">
                             <option selected>Power User</option>
@@ -158,7 +167,7 @@
                             <option>End User</option>
                           </select>
                         </div>
-                        <div class="form-group" aria-expanded="false">
+                        <div class="form-group w-50" aria-expanded="false">
                           <label for="inputState">Please select User you would like to manage Calendar for?</label>
                           <select id="inputState" class="form-control" aria-expanded="false">
                             <option selected>Lucy Kerr</option>
@@ -178,16 +187,17 @@
                     
   <a class="td-n p-20 peers fxw-nw mR-20 peer-greed c-grey-900" href="javascript:void(0);" data-toggle="modal" data-target="#calendar-edit">
                       
-                      <button type="button" class="btn btn-primary pull-right" align="center" >Manage Availability</button>
+                      <button type="button" class="btn btn-primary pull-right" align="left" >Manage Availability</button>
                       
      
                       </a> 
-                     <a class="nav-link" data-toggle="modal" href="#signinModal">Sign In</a>
+                      
+                     <a class="td-n p-20 peers fxw-nw mR-20 peer-greed c-grey-900" data-toggle="modal" href="#signinModal"><button type="button" class="btn btn-primary pull-right" align="left" >Manage Schedule</button></a>
                       
                       <ul class="m-0 p-0 mT-20">
                         
                         <li class="bdB peers ai-c jc-sb fxw-nw">
-                          <a class="td-n p-20 peers fxw-nw mR-20 peer-greed c-grey-900"  data-toggle="modal" data-target="#calendar-edit">
+                          <a class="td-n p-20 peers fxw-nw mR-20 peer-greed c-grey-900"  href="javascript:void(0);"  data-toggle="modal" data-target="#calendar-edit">
                             <div class="peer mR-15">
                               <i class="fa fa-fw fa-clock-o c-blue-500"></i>
                             </div>
@@ -245,6 +255,80 @@
                   <div id='full-calendar'></div>
                 </div>
               </div>
+
+
+<div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="signinModelLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+    <div class="bd p-15">
+                      <h5 class="m-0">Add Appointment</h5>
+                    </div>
+      
+      
+      <div class="modal-body">
+           <form>
+                        <div class="form-group">
+                          <label class="fw-500">NACRN User Name</label>
+                          <input class="form-control bdc-grey-200" placeholder = "Enter NACRN user's name">
+                        </div>
+                        <div class="form-group">
+                          <label class="fw-500">NACRN ID</label>
+                          <input class="form-control bdc-grey-200" placeholder = "Enter user's NACRN ID">
+                        </div>
+                        <div class="form-group">
+                          <label class="fw-500">Subject</label>
+                          <input class="form-control bdc-grey-200" placeholder = "Enter Subject for the Appointment">
+                        </div>
+                        
+                        <div class="row">
+                          <div class="col-md-6">
+                            <label class="fw-500">Date</label>
+                            <div class="timepicker-input input-icon form-group">
+                              <div class="input-group">
+                                <div class="input-group-addon bgc-white bd bdwR-0">
+                                  <i class="ti-calendar"></i>
+                                </div>
+                                <input type="text" class="form-control bdc-grey-200 start-date" placeholder="mm/dd/yyyy" data-provide="datepicker">
+                              </div>
+                            </div>
+                          </div>
+                          </div>
+                          
+      <div class="form-group ">
+                          <label for="inputState">Available Timings</label>
+                          <select id="inputState" class="form-control">
+                            <option selected>10 AM - 11AM</option>
+                            <option>11 AM - 12PM</option>
+                             <option>12 PM - 01 PM</option>
+                            <option>01 PM - 02 PM</option>
+                            <option>02 PM - 03 PM</option>
+                          </select>
+                        </div>
+                          
+                        
+                        <div class="form-group">
+                          <label class="fw-500">Appointment Information</label>
+                          <textarea class="form-control bdc-grey-200" rows='5'placeholder = "Enter your comments"></textarea>
+                        </div>
+                       <div class="form-group">
+  
+
+<!-- Button (Double) -->
+
+<div class="btn-toolbar">
+ 
+  <div class="col-md-8">
+  <button id="cancel" name="cancel" class="btn btn-secondary" value="1" data-dismiss = "modal">Cancel</button> <button id="submit" name="submit" class="btn btn-primary" value="1" data-dismiss = "modal">Save</button>
+    
+  </div>
+</div>
+
+                      </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
               <div class="modal fade" id="calendar-edit">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
@@ -260,31 +344,21 @@
                         
                         <div class="row">
                           <div class="col-md-6">
-                            <label class="fw-500">Start</label>
+                            <label class="fw-500">Date</label>
                             <div class="timepicker-input input-icon form-group">
                               <div class="input-group">
                                 <div class="input-group-addon bgc-white bd bdwR-0">
                                   <i class="ti-calendar"></i>
                                 </div>
-                                <input type="text" class="form-control bdc-grey-200 start-date" placeholder="Datepicker" data-provide="datepicker">
+                                <input type="text" class="form-control bdc-grey-200 start-date" placeholder="mm/dd/yyyy" data-provide="datepicker">
                               </div>
                             </div>
                           </div>
                           </div>
-                          <div class="row">
-                          <div class="col-md-6">
-                            <label class="fw-500">End</label>
-                            <div class="timepicker-input input-icon form-group">
-                              <div class="input-group">
-                                <div class="input-group-addon bgc-white bd bdwR-0">
-                                  <i class="ti-calendar"></i>
-                                </div>
-                                <input type="text" class="form-control bdc-grey-200 start-date" placeholder="Datepicker" data-provide="datepicker">
-                              </div>
-                            </div>
-                          </div>
-                          </div>
+<button type="button" class="btn btn-primary" data-toggle="modal"      data-target="#test2">Reccurence Settings</button>
+                          
       <div class="form-group ">
+
                           <label for="inputState">Open Timings</label>
                           <select id="inputState" class="form-control">
                             <option selected>10 AM - 11AM</option>
@@ -295,7 +369,10 @@
                           </select>
                         </div>
                           
-                        
+
+
+
+
                         <div class="form-group">
                           <label class="fw-500">Comments</label>
                           <textarea class="form-control bdc-grey-200" rows='5'placeholder = "Enter your comments"></textarea>
@@ -312,24 +389,223 @@
     
   </div>
 </div>
-<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModelLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+<div id="test2" class="modal fade" role="dialog" style="z-index: 1600;">
+  <div class="modal-dialog">
+    <!-- Modal content-->
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
+      <div class="bd p-15">
+                      <h5 class="m-0">Add Reccurence deatils</h5>
+                    </div>
       <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
+ 
+   
+ 
+  
+      <div class="form-group w-20 ">
+                          <label class = "text-normal text-dark">Start Time</label>
+                          <select id="inputState" class="form-control">
+                            <option selected>10:00 AM</option>
+                            <option>11:00 AM</option>
+                             <option>12:00 PM</option>
+                            <option>01:00 PM</option>
+                            <option>02:00 PM</option>
+                            <option>...</option>
+
+                          </select>
+                        </div>
+        <div class="form-group w-20 ">
+                          <label class = "text-normal text-dark">End Time</label>
+                          <select id="inputState" class="form-control">
+                            <option selected>11:00 AM</option>
+                            <option>11:00 AM</option>
+                             <option>12:00 PM</option>
+                            <option>01:00 PM</option>
+                            <option>02:00 PM</option>
+                            <option>...</option>
+
+                          </select>
+                        </div>
+ <div class="form-group w-20 ">
+                          <label class = "text-normal text-dark">Duration</label>
+                          <select id="inputState" class="form-control">
+                            <option selected>30 Minutes</option>
+                            <option>60 Minutes</option>
+                             <option>2 Hours</option>
+                            <option>3 Hours</option>
+                            <option>4 hours</option>
+                            <option>...</option>
+
+                          </select>
+                        </div>
+                        
+      
+        
+          <fieldset class="form-group">
+                        <div class="row">
+                         <label class="text-normal text-dark">Reccurence Pattern</label>
+                          <div class="col-sm-10">
+                          <div class="form-check">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios0" value="option0" >
+                               Non Reccurring
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" >
+                               Daily
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" checked>
+                                Weekly
+                              </label>
+                            
+                            <div class="form-group row">
+                      
+                        <div class="col-sm-10">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox"> Sunday
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-sm-10">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox"> Monday
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-sm-10">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox"> Tuesday
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-sm-10">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox"> Wednesday
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-sm-10">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox"> Thursday
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-sm-10">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox"> Friday
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-sm-10">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox"> Saturday
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                            <div class="form-check disabled">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" >
+                                Monthly
+                              </label>
+                            </div>
+                            <div class="form-check disabled">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="option4">
+                                Yearly
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+          
+          
+
+  
+
+
+        <label class="text-normal text-dark"> Range of Reccurence</label>
+        <div class="form-group">
+                         <label class="text-normal">Start</label>
+                          <select id="inputState" class="form-control">
+                            <option selected>Tue March 31</option>
+                            <option>Wed April 01</option>
+                             <option>Thur  April 02</option>
+                            <option>Fri April 02</option>
+                            
+                            <option>...</option>
+
+                          </select>
+                        
+                          <fieldset class="form-group">
+                        <div class="row">
+                          
+                          <div class="col-sm-100">
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios1" id="gridRadios6" value="option1" checked>
+                                No End date
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios1" id="gridRadios7" value="option2">
+                               End after following occurances
+                        
+                        <input type="text" class="form-control" id="inputAddress" placeholder="1">
+                     
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios1" id="gridRadios9" value="option3" >
+                                End By following date 
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+                      <div class="form-group" style="display:inline;">
+                          
+                          <select id="inputState" class="form-control">
+                            <option selected>Tue March 31</option>
+                            <option>Wed April 01</option>
+                             <option>Thur  April 02</option>
+                            <option>Fri April 02</option>
+                            
+                          </select>
+                        </div>
+                        </div>
+                         
+       <div class="btn-toolbar">
+ 
+  <div class="col-md-8">
+   <button id="cancel" name="cancel" class="btn btn-secondary" value="1" data-dismiss = "modal">Cancel</button>&nbsp;&nbsp;&nbsp;&nbsp;<button id="submit" name="submit" class="btn btn-primary" value="1" data-dismiss = "modal">Save</button>
+    
+  </div>     
+</div>
+      	
+      </div> 
+      
   </div>
+</div>
+  
+    </div> 
+     
+   
+
 </div>
                       </form>
                     </div>
