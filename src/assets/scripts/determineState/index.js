@@ -47,6 +47,13 @@ let adminBar = `<li class="nav-item mT-30 actived">
   </span>
   <span class="title">Manage Organizations</span>
 </a>
+<li class="nav-item mT-30 actived">
+<a class="sidebar-link" href="logs-admin.html">
+  <span class="icon-holder">
+    <i class="c-blue-500 fas fa-database"></i>
+  </span>
+  <span class="title">Logs</span>
+</a>
 </li>`
 
 let endUserBar = `<li class="nav-item mT-30 actived">
@@ -82,6 +89,7 @@ let endUserBar = `<li class="nav-item mT-30 actived">
   <span class="title">Send an Invite</span>
 </a>
 </li>`
+
 
 let admin_settings = `<div class="header-container">
 <ul class="nav-left">
@@ -264,6 +272,6 @@ let admin_settings = `<div class="header-container">
 if (url.includes('admin')) {
   document.querySelector('#sideNavBar').innerHTML = adminBar
   document.querySelector('#topBar').innerHTML = admin_settings
-}else {
+} else {
   document.querySelector('#sideNavBar').innerHTML = endUserBar
 }
