@@ -5,54 +5,171 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Form Management</title>
     <link href="assets/styles/sortable.css" rel="stylesheet">
+    <link href="assets/styles/loader.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Public+Sans|Source+Sans+Pro|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
 
 </head>
-  <body>
 
-<ol class='example'>
-  <li>
-    <div class="card" style="width: 18rem;">
-      <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
-      <div class="card-body">
-        <h5 class="card-title">Card 1</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </li>
-  <li>
-    <div class="card" style="width: 18rem;">
-      <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
-      <div class="card-body">
-        <h5 class="card-title">Card 2</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </li>
-  <li><div class="card" style="width: 18rem;">
-    <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
-    <div class="card-body">
-      <h5 class="card-title">Card 3</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
+<script>
+  user = 'admin';
+</script>
+
+<body class="app">
+  <!-- @TOC -->
+  <!-- =================================================== -->
+  <!--
+    + @Page Loader
+    + @App Content
+        - #Left Sidebar
+            > $Sidebar Header
+            > $Sidebar Menu
+
+        - #Main
+            > $Topbar
+            > $App Screen Content
+  -->
+
+  <!-- @Page Loader -->
+  <!-- =================================================== -->
+  <div id='loader'>
+    <div class="spinner"></div>
   </div>
-</li>
-</ol>
+
+
+
+  <!-- @App Content -->
+  <!-- =================================================== -->
+    <!-- #Left Sidebar ==================== -->
+    <div class="sidebar">
+      <div class="sidebar-inner">
+        <!-- ### $Sidebar Header ### -->
+        <div class="sidebar-logo">
+          <div class="peers ai-c fxw-nw">
+            <div class="peer peer-greed">
+              <a class="sidebar-link td-n" href="index.html">
+                <div class="peers ai-c fxw-nw">
+                  <div class="peer">
+                    <div class="logo">
+                      <img src="assets/static/images/navajologo.png" alt="">
+                    </div>
+                  </div>
+                  <div class="peer peer-greed">
+                    <h5 class="lh-1 mB-0 logo-text">NACRN</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- ### $Sidebar Menu ### -->
+        <ul class="sidebar-menu scrollable pos-r" id="sideNavBar">
+        </ul>
+      </div>
+    </div>
+
+    <!-- #Main ============================ -->
+    <div class="page-container">
+      <!-- ### $Topbar ### -->
+      
+      <div class="header navbar" id = "topBar">
+        
+      </div>
+
+
+    <div class="row">
+    <div class="col-2">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Organization
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <button class="dropdown-item" type="button">All</button>
+          <button class="dropdown-item" type="button">Org-1</button>
+          <button class="dropdown-item" type="button">Org-2</button>
+        </div>
+      </div>
+      </div>
+      <div class="col-5">
+
+      </div>
+      <div class="col-5">
+        <button type="button" class="btn btn-light">Questions Needing approval- 6</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- <div class="container"> -->
+          <ol class='cards'>
+            <li>
+              <div class="card" style="width: 18rem;">
+                <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                <div class="card-body">
+                  <h5 class="card-title">Card 1</h5>
+                  <p class="card-text">Some quick cards text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card" style="width: 18rem;">
+                <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                <div class="card-body">
+                  <h5 class="card-title">Card 2</h5>
+                  <p class="card-text">Some quick cards text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </li>
+            <li><div class="card" style="width: 18rem;">
+              <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+              <div class="card-body">
+                <h5 class="card-title">Card 3</h5>
+                <p class="card-text">Some quick cards text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </li>
+          </ol>
+          </div>
+        <!-- </div> -->
+  
+
+</body>
+
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
 <script src='assets/scripts/sortable.js'></script>
 
 
-  </body>
+<script>
+  window.addEventListener('load', function load() {
+    const loader = document.getElementById('loader');
+    setTimeout(function() {
+      loader.classList.add('fadeOut');
+    }, 300);
+  });
 
+  window.onload(
+    $(document).ready(function(){
+      $("#contactPreferencesDropdown").dropdown('update');
+    })
+  )
+</script>
 
 <script>
 
-
-
 $(function  () {
-  $("ol.example").sortable();
+  $("ol.cards").sortable();
 });
+
+$('.dropdown-toggle').dropdown()
 </script>
+
 </html>
