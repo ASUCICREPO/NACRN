@@ -64,7 +64,8 @@ const titles = {
   'adminChat': 'adminChat',
   'calendar_admin': 'calendar_admin',
   'add-remove-admin': 'add-remove-admin',
-  'caretaker': 'caretaker'
+  'caretaker': 'caretaker',
+  'form-management': 'form-management'
 }
 
 module.exports = Object.keys(titles).map(title => {
