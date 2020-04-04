@@ -90,7 +90,6 @@ let endUserBar = `<li class="nav-item mT-30 actived">
 </a>
 </li>`
 
-
 let admin_settings = `<div class="header-container">
 <ul class="nav-left">
   <li>
