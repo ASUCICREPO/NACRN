@@ -210,7 +210,58 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    <p>Modal body text goes here.</p>
+                      <div class="row">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">Question</span>
+                          </div>
+                          <textarea class="form-control" aria-label="With textarea"></textarea>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <div class="input-group-text">
+                            <input type="radio" aria-label="Radio button for following text input">
+                            </div>
+                          </div>
+                          <input type="text" class="form-control" aria-label="Text input with radio button">
+                        </div>
+                      </div>  
+
+                      <div class="row">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <div class="input-group-text">
+                            <input type="radio" aria-label="Radio button for following text input">
+                            </div>
+                          </div>
+                          <input type="text" class="form-control" aria-label="Text input with radio button">
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <div class="input-group-text">
+                            <input type="radio" aria-label="Radio button for following text input">
+                            </div>
+                          </div>
+                          <input type="text" class="form-control" aria-label="Text input with radio button">
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <div class="input-group-text">
+                            <input type="radio" aria-label="Radio button for following text input">
+                            </div>
+                          </div>
+                          <input type="text" class="form-control" aria-label="Text input with radio button">
+                        </div>
+                      </div>
+
                   </div>
                   <div class="modal-footer">
                     <button type="button" data-toggle="modal"  data-dismiss="modal"  data-target="#addquestionmodal" id="savequestionbutton" class="btn btn-primary">Save changes</button>
@@ -232,8 +283,59 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    <p>Modal body text goes here.</p>
-                  </div>
+                    <div class="row">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Question</span>
+                        </div>
+                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                          <input type="checkbox" aria-label="checkbox button for following text input">
+                          </div>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Text input with checkbox button">
+                      </div>
+                    </div>  
+
+                    <div class="row">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                          <input type="checkbox" aria-label="checkbox button for following text input">
+                          </div>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Text input with checkbox button">
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                          <input type="checkbox" aria-label="checkbox button for following text input">
+                          </div>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Text input with checkbox button">
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                          <input type="checkbox" aria-label="checkbox button for following text input">
+                          </div>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Text input with radio button">
+                      </div>
+                    </div>
+
+                </div>
                   <div class="modal-footer">
                     <button type="button" data-toggle="modal"  data-dismiss="modal"  data-target="#addquestionmodal" id="savequestionbutton" class="btn btn-primary">Save changes</button>
                     <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
@@ -254,7 +356,7 @@
 <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
 <script src='assets/scripts/sortable.js'></script>
 
-
+<script src="https://kit.fontawesome.com/bbf8fb8b35.js" crossorigin="anonymous"></script>
 <script>
   window.addEventListener('load', function load() {
     const loader = document.getElementById('loader');
@@ -273,8 +375,9 @@
 <script>
 
   function togglemodals(){
+    $("#addquestionmodal").modal("hide");
     let target_check = document.getElementById('multiselectcheck');
-    if (target_check.checked){
+    if (target_check.checked){ 
       $('#multiselectquestionmodal').modal();
     }
     else if(document.getElementById('checkboxcheck').checked){
@@ -285,7 +388,6 @@
 
 function togglechecks(obj){
       let target_check = ''
-      console.log(obj.id)
       if (obj.id == 'checkboxcheck'){
         target_check = document.getElementById('multiselectcheck');
       }
@@ -293,7 +395,6 @@ function togglechecks(obj){
         target_check = document.getElementById('checkboxcheck');
       }
       if (target_check.checked){
-        console.log('reached');
         target_check.checked = false;
       }
     }

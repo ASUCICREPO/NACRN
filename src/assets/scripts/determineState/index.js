@@ -266,9 +266,75 @@ let admin_settings = `<div class="header-container">
 </ul>
 </div>`
 
-if (url.includes('admin')) {
+
+let form_management_sidenav =  `<li class="nav-item mT-30 actived">
+<a class="sidebar-link" href="index_admin.html">
+  <span class="icon-holder">
+    <i class="c-blue-500 fas fa-search"></i>
+  </span>
+  <span class="title">All Programs</span>
+</a>
+</li>
+<li class="nav-item mT-30 actived">
+<a class='sidebar-link' href="adminChat.html">
+  <span class="icon-holder">
+    <i class="c-blue-500 fas fa-comments"></i>
+  </span>
+  <span class="title">Chat</span>
+</a>
+</li>
+<li class="nav-item mT-30 actived">
+<a class="sidebar-link" href="invite-admin.html">
+  <span class="icon-holder">
+    <i class="c-blue-500 fab fa-telegram-plane"></i>
+  </span>
+  <span class="title">Send an Invite</span>
+</a>
+</li>
+
+<li class="nav-item mT-30 actived">
+  <a class="sidebar-link" href="form-management-admin.html">
+    <span class="icon-holder">
+    <i class="c-blue-500 fab fa-wpforms"></i>
+    </span>
+    <span class="title">Form Management</span>
+  </a>
+</li>
+
+<li class="nav-item mT-30 actived">
+<a class='sidebar-link' href="calendar_admin.html">
+  <span class="icon-holder">
+    <i class="c-blue-500 fas fa-calendar-check"></i>
+  </span>
+  <span class="title">Schedule Appointment</span>
+</a>
+</li>
+<li class="nav-item mT-30 actived">
+<a class="sidebar-link" href="manage-users-admin.html">
+  <span class="icon-holder">
+    <i class="c-blue-500 fas fa-plus"></i>
+  </span>
+  <span class="title">Manage Users</span>
+</a>
+</li>
+<li class="nav-item mT-30 actived">
+<a class="sidebar-link" href="manage-groups-admin.html">
+  <span class="icon-holder">
+    <i class="c-blue-500 fas fa-users"></i>
+  </span>
+  <span class="title">Manage Organizations</span>
+</a>
+</li>`
+
+
+
+if (url.includes('form')) {
+  document.querySelector('#sideNavBar').innerHTML = form_management_sidenav;
+  document.querySelector('#topBar').innerHTML = admin_settings;
+} else if (url.includes('admin')){
   document.querySelector('#sideNavBar').innerHTML = adminBar
   document.querySelector('#topBar').innerHTML = admin_settings
-}else {
+}
+else {
   document.querySelector('#sideNavBar').innerHTML = endUserBar
 }
