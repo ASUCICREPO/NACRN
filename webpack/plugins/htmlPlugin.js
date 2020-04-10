@@ -64,7 +64,10 @@ const titles = {
   'adminChat': 'adminChat',
   'calendar_admin': 'calendar_admin',
   'add-remove-admin': 'add-remove-admin',
-  'logs-admin': 'logs-admin'
+  'logs-admin': 'logs-admin',
+  'calendarEndUser2': 'calendarEndUser2',
+
+  'calendarEndUser3': 'calendarEndUser3'
 }
 
 module.exports = Object.keys(titles).map(title => {

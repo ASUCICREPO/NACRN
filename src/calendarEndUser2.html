@@ -148,11 +148,185 @@ $(document).ready(function(){
 
  
       <!-- #Main ============================ -->
-      <div class="page-container">
+         <div class="page-container">
         <!-- ### $Topbar ### -->
-    
-        <div class="header navbar" id = "topBar">
-          
+        <div class="header navbar">
+          <div class="header-container">
+            <ul class="nav-left">
+              <li>
+                <a id='sidebar-toggle' class="sidebar-toggle" href="javascript:void(0);">
+                  <i class="ti-menu"></i>
+                </a>
+              </li>
+              <li class="search-box">
+                <a class="search-toggle no-pdd-right" href="javascript:void(0);">
+                  <i class="search-icon ti-search pdd-right-10"></i>
+                  <i class="search-icon-close ti-close pdd-right-10"></i>
+                </a>
+              </li>
+              <li class="search-input">
+                <input class="form-control" type="text" placeholder="Search...">
+              </li>
+            </ul>
+            <ul class="nav-right">
+              <li class="notifications dropdown">
+                <span class="counter bgc-red">3</span>
+                <a href="" class="dropdown-toggle no-after" data-toggle="dropdown">
+                  <i class="ti-bell"></i>
+                </a>
+
+                <ul class="dropdown-menu">
+                  <li class="pX-20 pY-15 bdB">
+                    <i class="ti-bell pR-10"></i>
+                    <span class="fsz-sm fw-600 c-grey-900">Notifications</span>
+                  </li>
+                  <li>
+                    <ul class="ovY-a pos-r scrollable lis-n p-0 m-0 fsz-sm">
+                      <li>
+                        <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+                          <div class="peer mR-15">
+                            <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/lego/5.jpg" alt="">
+                          </div>
+                          <div class="peer peer-greed">
+                            <span>
+                              <span class="fw-500">Reminder</span>
+                              <span class="c-grey-600"> You have your next approintment on  <span class="text-dark">March 5th</span>
+                              </span>
+                            </span>
+                            <p class="m-0">
+                              <small class="fsz-xs">5 mins ago</small>
+                            </p>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+                          <div class="peer mR-15">
+                            <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/lego/5.jpg" alt="">
+                          </div>
+                          <div class="peer peer-greed">
+                            <span>
+                              <span class="fw-500">Reminder</span>
+                              <span class="c-grey-600">Check our new programs launched. Verify if you are <span class="text-dark"> Eligible.</span>
+                              </span>
+                            </span>
+                            <p class="m-0">
+                              <small class="fsz-xs">7 mins ago</small>
+                            </p>
+                          </div>
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                  <li class="pX-20 pY-15 ta-c bdT">
+                    <span>
+                      <a href="" class="c-grey-600 cH-blue fsz-sm td-n">View All Notifications <i class="ti-angle-right fsz-xs mL-10"></i></a>
+                    </span>
+                  </li>
+                </ul>
+              </li>
+              <li class="notifications dropdown">
+                <span class="counter bgc-blue">3</span>
+                <a href="" class="dropdown-toggle no-after" data-toggle="dropdown">
+                  <i class="ti-email"></i>
+                </a>
+
+                <ul class="dropdown-menu">
+                  <li class="pX-20 pY-15 bdB">
+                    <i class="ti-email pR-10"></i>
+                    <span class="fsz-sm fw-600 c-grey-900">Messages</span>
+                  </li>
+                  <li>
+                    <ul class="ovY-a pos-r scrollable lis-n p-0 m-0 fsz-sm">
+                      <li>
+                        <a href="endUserChat.html" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+                          <div class="peer mR-15">
+                            <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/men/1.jpg" alt="">
+                          </div>
+                          <div class="peer peer-greed">
+                            <div>
+                              <div class="peers jc-sb fxw-nw mB-5">
+                                <div class="peer">
+                                  <p class="fw-500 mB-0">John Doe(Care Co-ordinator)</p>
+                                </div>
+                                <div class="peer">
+                                  <small class="fsz-xs">5 mins ago</small>
+                                </div>
+                              </div>
+                              <span class="c-grey-600 fsz-sm">
+                                Yes you can claim your free health check up.
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                     
+                      <li>
+                        <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+                          <div class="peer mR-15">
+                            <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/men/3.jpg" alt="">
+                          </div>
+                          <div class="peer peer-greed">
+                            <div>
+                              <div class="peers jc-sb fxw-nw mB-5">
+                                <div class="peer">
+                                  <p class="fw-500 mB-0">Lee Doe(Care Co-ordinator)</p>
+                                </div>
+                                <div class="peer">
+                                  <small class="fsz-xs">25 mins ago</small>
+                                </div>
+                              </div>
+                              <span class="c-grey-600 fsz-sm">
+                                Please fill your survey so that we can improve our services.
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="pX-20 pY-15 ta-c bdT">
+                    <span>
+                      <a href="email.html" class="c-grey-600 cH-blue fsz-sm td-n">View All Messages <i class="fs-xs ti-angle-right mL-10"></i></a>
+                    </span>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="" class="dropdown-toggle no-after peers fxw-nw ai-c lh-1" data-toggle="dropdown">
+                  <div class="peer mR-10">
+                    <img class="w-2r bdrs-50p" src="https://randomuser.me/api/portraits/men/10.jpg" alt="">
+                  </div>
+                  <div class="peer">
+                    <span class="fsz-sm c-grey-900">John Doe</span>
+                  </div>
+                </a>
+                <ul class="dropdown-menu fsz-sm">
+                
+                  <li>
+                    <a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
+                      <i class="ti-user mR-10"></i>
+                      <span>Profile</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="email.html" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
+                      <i class="ti-email mR-10"></i>
+                      <span>Messages</span>
+                    </a>
+                  </li>
+                  <li role="separator" class="divider"></li>
+                  <li>
+                    <a href="signin.html" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
+                      <i class="ti-power-off mR-10"></i>
+                      <span>Logout</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
           
 
@@ -168,35 +342,33 @@ $(document).ready(function(){
                   <div class="mT-30">
                     <form>
                  
+                
+
+ 
                       
                       <div class="form-group">
-                        <label for="inputState">Please select the Program you would like to manage the calendar for?</label>
+                        <label for="inputState">Please select the Program you would like to Schedule Appointment for?</label>
                           <select id="inputState" class="form-control" aria-expanded="false">
                             <option selected>Homelessness</option>
                             <option>Child Care</option>
                           </select>
                       </div>
                       <div class="form-group">
-                        <label for="inputState">Please select Care Coordinator you would like to manage Calendar for?</label>
+                        <label for="inputState">Please select Care Coordinator you would like to Schedule Appointment with?</label>
                           <select id="nputState" class="form-control" aria-expanded="false">
                             <option selected>Lucy Kerr</option>
                             <option>Amenda Brown</option>
                             <option>Macy Holmes</option>
                           </select>
                         </div>
-
                       </div>
-                       <div class="form-group">
-                      
-                          
-                            <button type="button" class="btn btn-primary pull-left" align="center" width = "50p" data-toggle="modal" data-target="#manageAvailability" >Manage Availability</button>  &nbsp;&nbsp;&nbsp;
-                             <button type="button" class="btn btn-primary pull-left" align="center" witdh = "50p" data-toggle="modal" data-target="#manageSchedule" >Manage Schedule &nbsp;</button>
-                          
+                         <div class="form-group">
+                         <a class="td-n p-20 peers fxw-nw mR-20 peer-greed c-grey-900" href="javascript:void(0);" data-toggle="modal" data-target="#manageSchedule">
+                             
+                        <button type="button" class="btn btn-primary pull-center" align="center" witdh = "50p" >Schedule Appointment </button>
+                          </select>
+                         
                       </div>
-
- 
-                        
-
                         <div class="modal fade" id="manageSchedule" tabindex="-1" role="dialog" aria-labelledby="signupModelLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -208,13 +380,7 @@ $(document).ready(function(){
       </div>
       <div class="modal-body">
       <form>
-                      <div class="form-group ">
-                          <label for="inputState">NACRN User</label>
-                          <select id="inputState" class="form-control">
-                            <option selected>Erika Noah</option>
-                            <option>Tom Sawyer</option>
-                          </select>
-                        </div>
+                    
                         <div class="form-group">
                           <label class="fw-500">Appointment Subject</label>
                           <input class="form-control bdc-grey-200" placeholder = "Enter subject for the Appointment">
@@ -260,7 +426,7 @@ $(document).ready(function(){
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" >Save changes</button>
       </div>
     </div>
   </div>
@@ -490,7 +656,7 @@ $(document).ready(function(){
                 </div>
                 <div class="masonry-item col-md-6">
                 <div class="bgc-white p-20 bd">
-                  <h6 class="c-grey-900">Manage Availability</h6>
+                  <h6 class="c-grey-900">Your Appoinments</h6>
                  
 
                   <ul class="m-0 p-0 mT-20">
@@ -550,63 +716,7 @@ $(document).ready(function(){
                         
                       </ul>
 
-                      <div class="form-group ">
-                          <label for="inputState">Open Timings</label>
-                          <select id="inputState" class="form-control">
-                            <option selected>10 AM - 11AM</option>
-                            <option>11 AM - 12PM</option>
-                             <option>12 PM - 01 PM</option>
-                            <option>01 PM - 02 PM</option>
-                            <option>02 PM - 03 PM</option>
-                          </select>
-                        </div>
-                         
-
-
-  <div class="form-group ">
-                          <label for="inputState">Start Time</label>
-                          <select id="inputState" class="form-control">
-                            <option selected>10.00AM</option>
-                            <option>10.15AM</option>
-                            <option>10.30AM</option>
-                            <option>10.45AM</option>
-                            <option>11.00AM</option>
-                            <option>11.15AM</option>
-                            <option>11.30AM</option>
-                          </select>
-                        </div>
-                        <div class="form-group ">
-                          <label for="inputState">End Time</label>
-                          <select id="inputState" class="form-control">
-                            <option selected>10.15AM</option>
-                            
-                            <option>10.30AM</option>
-                            <option>10.45AM</option>
-                            <option>11.00AM</option>
-                            <option>11.15AM</option>
-                            <option>11.30AM</option>
-                            <option>11.45AM</option>
-                          </select>
-                        </div>
-
-
-
-                  
-                      <div class="form-group row">
-                        <div class="col-sm-10">
-                         
-                         <button class="btn btn-primary pull-Left" data-toggle="modal" data-target="#manageAvailability">Add Recurrence</button>
-                        
-                      
-                         
-                          <button class="btn btn-primary pull-right">Save</button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-              
+                     
                 </div>
                 </div>
 
