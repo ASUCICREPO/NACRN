@@ -4,6 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Form Management</title>
+<!-- multiselect dependancies -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/css/bootstrap-select.css">
+
+
+
+
     <link href="assets/styles/sortable.css" rel="stylesheet">
     <link href="assets/styles/loader.css" rel="stylesheet">
 
@@ -72,38 +82,59 @@
     <!-- #Main ============================ -->
     <div class="page-container">
       <!-- ### $Topbar ### -->
-      
-      <div class="header navbar" id = "topBar">
-        
-      </div>
-
-
-    <div class="row">
-    <div class="col-2">
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Organization
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-          <button class="dropdown-item" type="button">All</button>
-          <button class="dropdown-item" type="button">Org-1</button>
-          <button class="dropdown-item" type="button">Org-2</button>
+      <div class="row">
+        <div class="header navbar" id = "topBar">
+          
         </div>
-      </div>
-      </div>
-      <div class="col-5">
-
-      </div>
-      <div class="col-5">
-        <button type="button" class="btn btn-primary">
-          Questions Needing Approval <span class="badge badge-light">6</span>
-        </button>
-      </div>
-    </div>
+        </div>
+<br><br><br><br>
 
     <div class="row">
+      <div class="col-8">
       <!-- <div class="container"> -->
           <ol class='cards'>
+            <li>
+              <div class="card" style="width: 18rem;">
+                <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                <div class="card-body">
+                  <h5 class="card-title">Is this Checkbox question?</h5>
+                  <div class="list-group checkbox-list-group">
+                    <div class="list-group-item">&nbsp;<label><input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Yes</span></label></div>
+                    <div class="list-group-item "><label>&nbsp;<input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Ofcourse not</span></label></div>
+                    <div class="list-group-item "><label>&nbsp;<input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Maybe</span></label></div>
+                    <div class="list-group-item "><label>&nbsp;<input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Default</span></label></div>
+                    <!-- <div class="list-group-item "><label>&nbsp;<input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Default</span></label></div> -->
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Is this Radio question?</h5>
+                  <input type="radio" id="male" name="gender" value="male">
+                  <label for="male">Male</label><br>
+                  <input type="radio" id="female" name="gender" value="female">
+                  <label for="female">Female</label><br>
+                  <input type="radio" id="other" name="gender" value="other">
+                  <label for="other">Other</label>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Is this a multiselect question?</h5>
+                    <select class="selectpicker" multiple data-live-search="true">
+                      <option>Mustard</option>
+                      <option>Ketchup</option>
+                      <option>Relish</option>
+                    </select>
+                </div>
+              </div>
+            </li>
             <li>
               <div class="card" style="width: 18rem;">
                 <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
@@ -135,10 +166,34 @@
           </li>
           </ol>
           </div>
-
-          <div class="row">
-            <button type="button" data-toggle="modal" data-target="#addquestionmodal" class="btn btn-primary">Add</button>
-          </div>
+          <div class="col-3">
+            <div class="position-fixed">
+            <div class="row">
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Organization
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <button class="dropdown-item" type="button">All</button>
+                  <button class="dropdown-item" type="button">Org-1</button>
+                  <button class="dropdown-item" type="button">Org-2</button>
+                </div>
+              </div>
+            </div>
+<br>
+            <div class="row">
+              <button type="button" class="btn btn-primary">
+                Questions Needing Approval <span class="badge badge-light">6</span>
+              </button>
+            </div>
+<br>
+            <div class="row">
+                <button type="button" data-toggle="modal" data-target="#addquestionmodal" class="btn btn-primary">Add Question</button>
+              </div>
+            </div>
+            </div>
+           
+            </div>
 
 
                 <!-- add questiib modal -->
@@ -347,8 +402,11 @@
 
 </body>
 
+<!-- multiselect dependancies -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/js/bootstrap-select.js"></script>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
@@ -405,6 +463,9 @@ $(function  () {
 });
 
 $('.dropdown-toggle').dropdown()
+
+$('select').selectpicker();
+
 </script>
 
 </html>
