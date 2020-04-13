@@ -65,7 +65,7 @@ const titles = {
   'calendar_admin': 'calendar_admin',
   'add-remove-admin': 'add-remove-admin',
   'logs-admin': 'logs-admin',
-  'calendarEndUser2': 'calendarEndUser2',
+  'calendar_admin_add_availability': 'calendar_admin_add_availability',
 
   'calendarEndUser3': 'calendarEndUser3'
 }

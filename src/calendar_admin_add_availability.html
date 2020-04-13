@@ -189,7 +189,7 @@ $(document).ready(function(){
                        <div class="form-group">
                       
                           
-                            <button type="button" class="btn btn-primary pull-left" align="center" width = "50p"  onclick="window.location.href='calendar_admin.html'">Manage Availability</button>  &nbsp;&nbsp;&nbsp;&nbsp;
+                              <button type="button" class="btn btn-primary pull-left" align="center" width = "50p"  onclick="window.location.href='calendar_admin.html'">Manage Availability</button>  &nbsp;&nbsp;&nbsp;&nbsp;
                              <button type="button" class="btn btn-primary pull-right" align="center" witdh = "50p"  onclick="window.location.href='calendar_admin_add_availability.html'" >Add an Appointment</button>
                           
                       </div>
@@ -266,7 +266,7 @@ $(document).ready(function(){
   </div>
 </div>
 
-<div class="modal fade" id="manageAvailability" tabindex="-1" role="dialog" aria-labelledby="signupModelLabel" aria-hidden="true" width = "768px" max-height= calc(100vh - 210px)>
+<div class="modal fade" id="manageAvailability" tabindex="-1" role="dialog" aria-labelledby="signupModelLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -276,13 +276,13 @@ $(document).ready(function(){
         </button>
       </div>
       <div class="modal-body">
-          <div class="mT-30">
+    
       <form>
-      <div class="form-group col-md ">
-                    <label class="text-normal text-dark">Appointment Time</label>
-                      <div class="form-group row" >
+      <div class="form-group col-md">
+                    <label class="text-normal text-dark">Appointment Pattern</label>
+                      <div class="form-group ">
                           <label for="inputState">Start Time</label>
-                        <div class="col-sm-10">  <select id="inputState" class="form-control">
+                          <select id="inputState" class="form-control">
                             <option selected>10.00AM</option>
                             <option>10.15AM</option>
                             <option>10.30AM</option>
@@ -292,10 +292,8 @@ $(document).ready(function(){
                             <option>11.30AM</option>
                           </select>
                         </div>
-                        </div>
-                        <div class="form-group row">
-                          <label for="inputState">End Time &nbsp;</label>
-                          <div class="col-sm-10"> 
+                        <div class="form-group ">
+                          <label for="inputState">End Time</label>
                           <select id="inputState" class="form-control">
                             <option selected>10.15AM</option>
                             
@@ -307,10 +305,8 @@ $(document).ready(function(){
                             <option>11.45AM</option>
                           </select>
                         </div>
-                        </div>
-                        <div class="form-group row">
-                          <label for="inputState">Duration &nbsp;</label>
-                          <div class="col-sm-10"> 
+                        <div class="form-group ">
+                          <label for="inputState">Duration Time</label>
                           <select id="inputState" class="form-control">
                             <option selected>15 Minutes</option>
                             
@@ -321,14 +317,12 @@ $(document).ready(function(){
                             <option>1 Hour 30 Minutes</option>
                             <option>1 Hour 45 Minutes</option>
                             <option>2 Hours</option>
+
+                            
+                        
                           </select>
                         </div>
                         </div>
-                        
-                        </div>
-                        </form>
-                         </div>
-                        <form>
                       
                         <div class="form-group col-md">
                        
@@ -358,7 +352,7 @@ $(document).ready(function(){
   </td>
   <td width = "50%">
  <div>
-  <label class="fw-500">Recur for</label><input class="form-control " width = "5%" placeholder = "1"><label class="fw-500">week(s) On:</label>
+  <label class="fw-500">Recur for</label><input class="form-control" width = "10%" placeholder = "1"><label class="fw-500">week(s) On:</label>
                           
   </div>                     
 
@@ -492,75 +486,56 @@ $(document).ready(function(){
                   </div>
                 </div>
               
-                <div class="masonry-item col-md-6">
+                <div class="masonry-item col-md-4">
                 <div class="bgc-white p-20 bd">
                 <div id='full-calendar'></div>
                 </div>
                 </div>
                 <div class="masonry-item col-md-6">
                 <div class="bgc-white p-20 bd">
-                  <h6 class="c-grey-900">Manage Availability</h6>
+                  <h6 class="c-grey-900">Add an Appointment</h6>
                  
 
-                  <ul class="m-0 p-0 mT-20">
+                  
                         
-                        <li class="bdB peers ai-c jc-sb fxw-nw">
-                          <a class="td-n p-20 peers fxw-nw mR-20 peer-greed c-grey-900" href="javascript:void(0);" data-toggle="modal" data-target="#calendar-edit">
-                            <div class="peer mR-15">
-                              <i class="fa fa-fw fa-clock-o c-blue-500"></i>
-                            </div>
                          
                         
-                            <div class="peer">
-                              <span class="fw-600">Quaterly consultation</span>
-                              <div class="c-blue-600">
-                                <span class="c-grey-700">March 01 - </span>
-                                <i>10:00 AM - 11:00 AM</i>
-                            </div>
-                          </a>
-                          <div class="peers mR-15">
-                            <div class="peer">
-                              <a href="" class="td-n c-deep-purple-500 cH-blue-500 fsz-md p-5">
-                                <i class="ti-pencil"></i>
-                              </a>
-                            </div>
-                            <div class="peer">
-                              <a href="" class="td-n c-red-500 cH-blue-500 fsz-md p-5">
-                                <i class="ti-trash"></i>
-                              </a>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="bdB peers ai-c jc-sb fxw-nw">
-                          <a class="td-n p-20 peers fxw-nw mR-20 peer-greed c-grey-900" href="javascript:void(0);" data-toggle="modal" data-target="#calendar-edit">
-                            <div class="peer mR-15">
-                              <i class="fa fa-fw fa-clock-o c-blue-500"></i>
-                            </div>
-                            <div class="peer">
-                              <span class="fw-600">Medical scheme Questions</span>
-                              <div class="c-blue-600">
-                                <span class="c-grey-700">March 01 - </span>
-                                <i>12:00 PM - 01:00 PM</i>
-                            </div>
-                          </a>
-                          <div class="peers mR-15">
-                            <div class="peer">
-                              <a href="" class="td-n c-deep-purple-500 cH-blue-500 fsz-md p-5">
-                                <i class="ti-pencil"></i>
-                              </a>
-                            </div>
-                            <div class="peer">
-                              <a href="" class="td-n c-red-500 cH-blue-500 fsz-md p-5">
-                                <i class="ti-trash"></i>
-                              </a>
-                            </div>
-                          </div>
-                        </li>
-                        
-                      </ul>
-
+                           
+                       <form>
                       <div class="form-group ">
-                          <label for="inputState">Open Timings</label>
+                          <label for="inputState">NACRN User</label>
+                          <input class="form-control bdc-grey-200" list="names" placeholder="Start typing...">
+                                <datalist id="names">
+                                <option>Eric Noah</option>
+                                <option>Trevor Noah</option>
+                                <option>Noam Kevinsky</option>
+                                <option>Ted Mosby</option>
+                                <option>Barney Chompsky</option>
+                                <option>Peter Pete</option>
+                             
+                                
+                                </datalist>
+                        </div>
+                        <div class="form-group">
+                          <label class="fw-500">Appointment Subject</label>
+                          <input class="form-control bdc-grey-200" placeholder = "Enter subject for the Appointment">
+                        </div>
+                        
+                        <div class="row">
+                          <div class="col-md-6">
+                            <label class="fw-500">Date</label>
+                            <div class="timepicker-input input-icon form-group">
+                              <div class="input-group">
+                                <div class="input-group-addon bgc-white bd bdwR-0">
+                                  <i class="ti-calendar"></i>
+                                </div>
+                                <input type="text" class="form-control bdc-grey-200 start-date" placeholder="Select the Appointment Date" data-provide="datepicker">
+                              </div>
+                            </div>
+                          </div>
+                          </div>
+      <div class="form-group ">
+                          <label for="inputState">Timings</label>
                           <select id="inputState" class="form-control">
                             <option selected>10 AM - 11AM</option>
                             <option>11 AM - 12PM</option>
@@ -569,49 +544,19 @@ $(document).ready(function(){
                             <option>02 PM - 03 PM</option>
                           </select>
                         </div>
-                         
-
-
-  <div class="form-group ">
-                          <label for="inputState">Start Time</label>
-                          <select id="inputState" class="form-control">
-                            <option selected>10.00AM</option>
-                            <option>10.15AM</option>
-                            <option>10.30AM</option>
-                            <option>10.45AM</option>
-                            <option>11.00AM</option>
-                            <option>11.15AM</option>
-                            <option>11.30AM</option>
-                          </select>
-                        </div>
-                        <div class="form-group ">
-                          <label for="inputState">End Time</label>
-                          <select id="inputState" class="form-control">
-                            <option selected>10.15AM</option>
-                            
-                            <option>10.30AM</option>
-                            <option>10.45AM</option>
-                            <option>11.00AM</option>
-                            <option>11.15AM</option>
-                            <option>11.30AM</option>
-                            <option>11.45AM</option>
-                          </select>
-                        </div>
-
-
-
-                  
-                      <div class="form-group row">
-                        <div class="col-sm-10">
-                         <i class="c-blue-500 fas fa-sync"></i> &nbsp;
-                         <button class="btn btn-primary pull-Left" data-toggle="modal" data-target="#manageAvailability">Add Recurrence</button>
+                          
                         
-                      
-                         
-                          <button class="btn btn-primary pull-right">Add Availability</button>
-                        </div>
-                      </div>
-                    </form>
+                        <div class="form-group">
+                          <label class="fw-500">Appointment Information</label>
+                          <textarea class="form-control bdc-grey-200" rows='5'placeholder = "Enter Additional Information"></textarea>
+                        
+                      <button class="btn btn-primary pull-right">Save Appointment</button>
+  </div>
+
+<!-- Button (Double) -->
+
+
+</form>
                   </div>
                 </div>
               </div>
