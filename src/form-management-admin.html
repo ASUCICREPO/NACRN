@@ -204,15 +204,15 @@
               <div class="row">
                 <div class="col-4">
                   <div class="list-group" id="list-tab" role="tablist">
-                    <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Single Select</a>
-                    <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Multi Select</a>
-                    <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Dropdown</a>
-                    <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Description</a>
+                    <a class="list-group-item list-group-item-action active"  id="singleselectid" data-toggle="list" onclick='updateid(this);' href="#list-home" role="tab" aria-controls="home">Single Select</a>
+                    <a class="list-group-item list-group-item-action" id="multiselectid" data-toggle="list" onclick='updateid(this);' href="#list-profile" role="tab" aria-controls="profile">Multi Select</a>
+                    <a class="list-group-item list-group-item-action" id="dropdownid" data-toggle="list" onclick='updateid(this);' href="#list-messages" role="tab" aria-controls="messages">Dropdown</a>
+                    <a class="list-group-item list-group-item-action" id="descriptionid" data-toggle="list" onclick='updateid(this);' href="#list-settings" role="tab" aria-controls="settings">Description</a>
                   </div>
                 </div>
                 <div class="col-8">
                   <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                    <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="singleselectid">
                       <input type="radio" id="male" name="gender" value="male">
                       <label for="male">Male</label><br>
                       <input type="radio" id="female" name="gender" value="female">
@@ -220,7 +220,7 @@
                       <input type="radio" id="other" name="gender" value="other">
                       <label for="other">Other</label>
                     </div>
-                    <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                    <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="multiselectid">
                       <div class="list-group checkbox-list-group">
                         <div class="list-group-item">&nbsp;<label><input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Yes</span></label></div>
                         <div class="list-group-item "><label>&nbsp;<input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Ofcourse not</span></label></div>
@@ -228,7 +228,7 @@
                         <div class="list-group-item "><label>&nbsp;<input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Default</span></label></div>
                       </div>
                     </div>
-                    <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                    <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="dropdownid">
                       <select class="custom-select" id="inputGroupSelect02">
                         <option selected>Choose...</option>
                         <option value="1">One</option>
@@ -236,7 +236,7 @@
                         <option value="3">Three</option>
                       </select>
                     </div>
-                    <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+                    <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="descriptionid">
                       <h5 class="card-title">Can I have Descriptive Question?</h5>
                       <label for="exampleFormControlTextarea1"></label>
                       <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
@@ -256,8 +256,8 @@
 
 
 
-            <!-- add question content -->
-            <div class="modal" id="radioquestionmodal" tabindex="-1" role="dialog">
+            <!-- SINGLE SELECT MODAL -->
+            <div class="modal" id="singleselectmodal" tabindex="-1" role="dialog">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -275,49 +275,35 @@
                           <textarea class="form-control" aria-label="With textarea"></textarea>
                         </div>
                       </div>
-                      <div class="row">
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <div class="input-group-text">
-                            <input type="radio" aria-label="Radio button for following text input">
+                      <div class='row'>
+                        <ul class="list-group">
+                          <li class="list-group-item">
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">@</span>
+                              </div>
+                              <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
                             </div>
-                          </div>
-                          <input type="text" class="form-control" aria-label="Text input with radio button">
-                        </div>
-                      </div>  
-
-                      <div class="row">
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <div class="input-group-text">
-                            <input type="radio" aria-label="Radio button for following text input">
+                        </li>
+                        <li class="list-group-item">
+                          <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="basic-addon1">@</span>
                             </div>
+                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
                           </div>
-                          <input type="text" class="form-control" aria-label="Text input with radio button">
+                      </li>
+                      <li class="list-group-item">
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">@</span>
+                          </div>
+                          <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
                         </div>
+                    </li>
+                        </ul>
                       </div>
 
-                      <div class="row">
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <div class="input-group-text">
-                            <input type="radio" aria-label="Radio button for following text input">
-                            </div>
-                          </div>
-                          <input type="text" class="form-control" aria-label="Text input with radio button">
-                        </div>
-                      </div>
-
-                      <div class="row">
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <div class="input-group-text">
-                            <input type="radio" aria-label="Radio button for following text input">
-                            </div>
-                          </div>
-                          <input type="text" class="form-control" aria-label="Text input with radio button">
-                        </div>
-                      </div>
 
                   </div>
                   <div class="modal-footer">
@@ -328,8 +314,150 @@
             </div>
 
 
-             <!-- add question content -->
-             <div class="modal" id="multiselectquestionmodal" tabindex="-1" role="dialog">
+             <!-- Milti select modal -->
+             <div class="modal" id="miltiselectmodal" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Multi Select Options</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Question</span>
+                        </div>
+                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                          <input type="checkbox" aria-label="checkbox button for following text input">
+                          </div>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Text input with checkbox button">
+                      </div>
+                    </div>  
+
+                    <div class="row">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                          <input type="checkbox" aria-label="checkbox button for following text input">
+                          </div>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Text input with checkbox button">
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                          <input type="checkbox" aria-label="checkbox button for following text input">
+                          </div>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Text input with checkbox button">
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                          <input type="checkbox" aria-label="checkbox button for following text input">
+                          </div>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Text input with radio button">
+                      </div>
+                    </div>
+
+                </div>
+                  <div class="modal-footer">
+                    <button type="button" data-toggle="modal"  data-dismiss="modal"  data-target="#addquestionmodal" id="savequestionbutton" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+                     <!-- dropdown  modal -->
+                     <div class="modal" id="dropdownmodal" tabindex="-1" role="dialog">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">Multi Select Options</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="row">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">Question</span>
+                                </div>
+                                <textarea class="form-control" aria-label="With textarea"></textarea>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <div class="input-group-text">
+                                  <input type="checkbox" aria-label="checkbox button for following text input">
+                                  </div>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Text input with checkbox button">
+                              </div>
+                            </div>  
+        
+                            <div class="row">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <div class="input-group-text">
+                                  <input type="checkbox" aria-label="checkbox button for following text input">
+                                  </div>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Text input with checkbox button">
+                              </div>
+                            </div>
+        
+                            <div class="row">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <div class="input-group-text">
+                                  <input type="checkbox" aria-label="checkbox button for following text input">
+                                  </div>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Text input with checkbox button">
+                              </div>
+                            </div>
+        
+                            <div class="row">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <div class="input-group-text">
+                                  <input type="checkbox" aria-label="checkbox button for following text input">
+                                  </div>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Text input with radio button">
+                              </div>
+                            </div>
+        
+                        </div>
+                          <div class="modal-footer">
+                            <button type="button" data-toggle="modal"  data-dismiss="modal"  data-target="#addquestionmodal" id="savequestionbutton" class="btn btn-primary">Save changes</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+      <!-- Description modal -->
+             <div class="modal" id="descriptionmodal" tabindex="-1" role="dialog">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -427,18 +555,28 @@
 </script>
 
 <script>
+selectedtab = "singleselectid"
+
+function updateid(currenttab){
+  selectedtab = currenttab.id
+}
 
   function togglemodals(){
+    // console.log(selectedtab)
     $("#addquestionmodal").modal("hide");
-    let target_check = document.getElementById('multiselectcheck');
-    if (target_check.checked){ 
-      $('#multiselectquestionmodal').modal();
+    if (selectedtab == 'singleselectid'){
+        $('#singleselectmodal').modal();
+      }
+      else if(selectedtab == 'miltiselectid'){
+        $('#miltiselectmodal').modal();
+      }
+      else if (selectedtab == 'dropdownid'){
+        $('#dropdownmodal').modal();
+      }
+      else{
+        $('#descriptionmodal').modal();
+      }
     }
-    else if(document.getElementById('checkboxcheck').checked){
-      $('#radioquestionmodal').modal();
-    }
-    else{ alert('Please select a Question Type!');}
-  }
 
 function togglechecks(obj){
       let target_check = ''
@@ -464,6 +602,8 @@ $('#myList a').on('click', function (e) {
   e.preventDefault()
   $(this).tab('show')
 })
+
+
 
 </script>
 
