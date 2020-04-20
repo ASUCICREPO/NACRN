@@ -437,7 +437,9 @@
                                     </div>                
                                   </div>
                                   <div class="col-6">
-                                    <button type="button" onclick="inserttext();" class="btn btn-light">Add Me</button>
+                                    <button type="button"  data-toggle="modal" data-target="#addnewnamemodal" class="btn btn-light">Add</button>
+                                    <button type="button"  data-toggle="modal" data-target="#removenamemodal" class="btn btn-light">Remove</button>
+
                                   </div>
                                 </div>
 
@@ -623,6 +625,64 @@
     </div>
   </div>
 </div>
+
+<!-- add new name -->
+<div class="modal" tabindex="-1" role="dialog" id="addnewnamemodal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add Care coordinator</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="addnameform">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="nameinput" aria-describedby="emailHelp" placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your preferences with anyone.</small>
+            </div>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" onclick="addName(document.getElementById('addnameform').elements.nameinput.value)" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- remove name modal -->
+<div class="modal" tabindex="-1" role="dialog" id="removenamemodal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Select Name to remove</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="selectInput">Options</label>
+          </div>
+          <select class="custom-select" id="selectInput">
+            <option selected>Choose...</option>
+            <option value="1">John Smith</option>
+            <option value="2">Tommy Forest</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 
