@@ -627,23 +627,23 @@
 </div>
 
 <!-- add new name -->
-<div class="modal" tabindex="-1" role="dialog" id="addnewnamemodal">
-  <div class="modal-dialog" role="document">
+<div class="modal fade" id="addnewnamemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Add Care coordinator</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Add Care coordinator</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
         <form id="addnameform">
-            <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" id="nameinput" aria-describedby="emailHelp" placeholder="Enter email">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your preferences with anyone.</small>
-            </div>
-          </form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="nameinput" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your preferences with anyone.</small>
+          </div>
+        </form>
       </div>
       <div class="modal-footer">
         <button type="button" onclick="addName(document.getElementById('addnameform').elements.nameinput.value)" class="btn btn-primary">Save changes</button>
@@ -654,7 +654,7 @@
 </div>
 
 <!-- remove name modal -->
-<div class="modal" tabindex="-1" role="dialog" id="removenamemodal">
+<div class="modal" tabindex="2" role="dialog" id="removenamemodal">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -731,7 +731,22 @@
    
    
    <script>
+     namelist = []
 
+     function addName(name){
+       namelist.push(name);
+       updatebox(namelist);
+     }
+
+     function updatebox(namelist){
+      let target = document.getElementById('userslist');
+      target.innerHTML = namelist.toString();
+     }
+
+     
+
+
+     
      function updatefields(thisobj){
       
       x.forEach(x_obj => {
