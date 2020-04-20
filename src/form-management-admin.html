@@ -275,38 +275,24 @@
                           <textarea class="form-control" aria-label="With textarea"></textarea>
                         </div>
                       </div>
-                      <div class='row'>
-                        <ul class="list-group">
-                          <li class="list-group-item">
-                            <div class="input-group mb-3">
-                              <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon1">@</span>
-                              </div>
-                              <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                          <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text" id="basic-addon1">@</span>
-                            </div>
-                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                          </div>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="input-group mb-3">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">@</span>
-                          </div>
-                          <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                        </div>
-                    </li>
-                        </ul>
+                          <div class='row'>
+                            <ul class="list-group" id="singleselectlist">
+                                  <li class="list-group-item" id="copyli">
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Option 1">
+                                </li>
+                                <li class="list-group-item">
+                                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Option 2">
+                              </li>
+                              <li class="list-group-item">
+                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Option 3">
+                            </li>
+                            </ul>
                       </div>
 
 
                   </div>
                   <div class="modal-footer">
+                    <button type="button" onclick="additem();" id="addoption" class="btn btn-primary">Add Option</button>
                     <button type="button" data-toggle="modal"  data-dismiss="modal"  data-target="#addquestionmodal" id="savequestionbutton" class="btn btn-primary">Save changes</button>
                   </div>
                 </div>
@@ -559,6 +545,17 @@ selectedtab = "singleselectid"
 
 function updateid(currenttab){
   selectedtab = currenttab.id
+}
+
+function additem(){
+  ul = document.getElementById('singleselectlist')
+  var li = document.createElement("li");
+  li.className = "list-group-item";
+  var itm = document.getElementById("copyli").lastChild;
+  itm.placeholder = 'new option'
+  var cln = itm.cloneNode(true);
+  li.appendChild(cln);
+  ul.appendChild(li);
 }
 
   function togglemodals(){
