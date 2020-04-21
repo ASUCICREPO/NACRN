@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Form Management</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+
+
+
+    <link href="assets/styles/sortable.css" rel="stylesheet">
+    <link href="assets/styles/loader.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Public+Sans|Source+Sans+Pro|Roboto&display=swap" rel="stylesheet">
+
+</head>
+
+<script>
+  user = 'admin';
+</script>
+
+<body class="app">
+  <!-- @TOC -->
+  <!-- =================================================== -->
+  <!--
+    + @Page Loader
+    + @App Content
+        - #Left Sidebar
+            > $Sidebar Header
+            > $Sidebar Menu
+
+        - #Main
+            > $Topbar
+            > $App Screen Content
+  -->
+
+  <!-- @Page Loader -->
+  <!-- =================================================== -->
+  <div id='loader'>
+    <div class="spinner"></div>
+  </div>
+
+
+
+  <!-- @App Content -->
+  <!-- =================================================== -->
+    <!-- #Left Sidebar ==================== -->
+    <div class="sidebar">
+      <div class="sidebar-inner">
+        <!-- ### $Sidebar Header ### -->
+        <div class="sidebar-logo">
+          <div class="peers ai-c fxw-nw">
+            <div class="peer peer-greed">
+              <a class="sidebar-link td-n" href="index.html">
+                <div class="peers ai-c fxw-nw">
+                  <div class="peer">
+                    <div class="logo">
+                      <img src="assets/static/images/navajologo.png" alt="">
+                    </div>
+                  </div>
+                  <div class="peer peer-greed">
+                    <h5 class="lh-1 mB-0 logo-text">NACRN</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- ### $Sidebar Menu ### -->
+        <ul class="sidebar-menu scrollable pos-r" id="sideNavBar">
+        </ul>
+      </div>
+    </div>
+
+    <!-- #Main ============================ -->
+    <div class="page-container">
+      <!-- ### $Topbar ### -->
+      <div class="row">
+        <div class="header navbar" id = "topBar">
+          
+        </div>
+        </div>
+<br><br><br><br>
+
+    <div class="row">
+      <div class="col-8">
+      <!-- <div class="container"> -->
+          <ol class='cards'>
+            <li>
+              <div class="card" style="width: 18rem;">
+                <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                <div class="card-body">
+                  <h5 class="card-title">Is this Checkbox question?</h5>
+                  <div class="list-group checkbox-list-group">
+                    <div class="list-group-item">&nbsp;<label><input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Yes</span></label></div>
+                    <div class="list-group-item "><label>&nbsp;<input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Ofcourse not</span></label></div>
+                    <div class="list-group-item "><label>&nbsp;<input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Maybe</span></label></div>
+                    <div class="list-group-item "><label>&nbsp;<input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Default</span></label></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Is this Radio question?</h5>
+                  <input type="radio" id="male" name="gender" value="male">
+                  <label for="male">Male</label><br>
+                  <input type="radio" id="female" name="gender" value="female">
+                  <label for="female">Female</label><br>
+                  <input type="radio" id="other" name="gender" value="other">
+                  <label for="other">Other</label>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Is this a multiselect question?</h5>
+                  <select class="custom-select" id="inputGroupSelect02">
+                    <option selected>Choose...</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card" style="width: 18rem;">
+                <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                <div class="card-body">
+                  <h5 class="card-title">Can I have Descriptive Question?</h5>
+                      <label for="exampleFormControlTextarea1"></label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card" style="width: 18rem;">
+                <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                <div class="card-body">
+                  <h5 class="card-title">Card 2</h5>
+                  <p class="card-text">Some quick cards text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </li>
+            <li><div class="card" style="width: 18rem;">
+              <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+              <div class="card-body">
+                <h5 class="card-title">Card 3</h5>
+                <p class="card-text">Some quick cards text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </li>
+          </ol>
+          </div>
+          <div class="col-3">
+            <div class="position-fixed">
+            <div class="row">
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Organization
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <button class="dropdown-item" type="button">All</button>
+                  <button class="dropdown-item" type="button">Org-1</button>
+                  <button class="dropdown-item" type="button">Org-2</button>
+                </div>
+              </div>
+            </div>
+<br>
+            <div class="row">
+              <button type="button" class="btn btn-primary">
+                Questions Needing Approval <span class="badge badge-light">6</span>
+              </button>
+            </div>
+<br>
+            <div class="row">
+                <button type="button" data-toggle="modal" data-target="#addquestionmodal" class="btn btn-primary">Add Question</button>
+              </div>
+            </div>
+            </div>
+           
+            </div>
+
+
+                <!-- add questiib modal -->
+      <div class="modal fade bd-example-modal-lg" id="addquestionmodal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Question Type</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-4">
+                  <div class="list-group" id="list-tab" role="tablist">
+                    <a class="list-group-item list-group-item-action active"  id="singleselectid" data-toggle="list" onclick='updateid(this);' href="#list-home" role="tab" aria-controls="home">Single Select</a>
+                    <a class="list-group-item list-group-item-action" id="multiselectid" data-toggle="list" onclick='updateid(this);' href="#list-profile" role="tab" aria-controls="profile">Multi Select</a>
+                    <a class="list-group-item list-group-item-action" id="dropdownid" data-toggle="list" onclick='updateid(this);' href="#list-messages" role="tab" aria-controls="messages">Dropdown</a>
+                    <a class="list-group-item list-group-item-action" id="descriptionid" data-toggle="list" onclick='updateid(this);' href="#list-settings" role="tab" aria-controls="settings">Description</a>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="singleselectid">
+                      <input type="radio" id="male" name="gender" value="male">
+                      <label for="male">Male</label><br>
+                      <input type="radio" id="female" name="gender" value="female">
+                      <label for="female">Female</label><br>
+                      <input type="radio" id="other" name="gender" value="other">
+                      <label for="other">Other</label>
+                    </div>
+                    <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="multiselectid">
+                      <div class="list-group checkbox-list-group">
+                        <div class="list-group-item">&nbsp;<label><input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Yes</span></label></div>
+                        <div class="list-group-item "><label>&nbsp;<input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Ofcourse not</span></label></div>
+                        <div class="list-group-item "><label>&nbsp;<input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Maybe</span></label></div>
+                        <div class="list-group-item "><label>&nbsp;<input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Default</span></label></div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="dropdownid">
+                      <select class="custom-select" id="inputGroupSelect02">
+                        <option selected>Choose...</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                    <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="descriptionid">
+                      <h5 class="card-title">Can I have Descriptive Question?</h5>
+                      <label for="exampleFormControlTextarea1"></label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" type="button" onclick="togglemodals()" class="btn btn-primary">Add Question</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+            <!-- SINGLE SELECT MODAL -->
+            <div class="modal" id="singleselectmodal" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Single Select Options</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                      <div class="row">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">Question</span>
+                          </div>
+                          <textarea class="form-control" aria-label="With textarea"></textarea>
+                        </div>
+                      </div>
+                          <div class='row'>
+                            <ul class="list-group" id="singleselectlist">
+                                  <li class="list-group-item" id="copyli">
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Option 1">
+                                </li>
+                                <li class="list-group-item">
+                                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Option 2">
+                              </li>
+                              <li class="list-group-item">
+                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Option 3">
+                            </li>
+                            </ul>
+                      </div>
+
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" onclick="additem();" id="addoption" class="btn btn-primary">Add Option</button>
+                    <button type="button" data-toggle="modal"  data-dismiss="modal"  data-target="#addquestionmodal" id="savequestionbutton" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+             <!-- Milti select modal -->
+             <div class="modal" id="miltiselectmodal" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Multi Select Options</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Question</span>
+                        </div>
+                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                          <input type="checkbox" aria-label="checkbox button for following text input">
+                          </div>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Text input with checkbox button">
+                      </div>
+                    </div>  
+
+                    <div class="row">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                          <input type="checkbox" aria-label="checkbox button for following text input">
+                          </div>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Text input with checkbox button">
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                          <input type="checkbox" aria-label="checkbox button for following text input">
+                          </div>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Text input with checkbox button">
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                          <input type="checkbox" aria-label="checkbox button for following text input">
+                          </div>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Text input with radio button">
+                      </div>
+                    </div>
+
+                </div>
+                  <div class="modal-footer">
+                    <button type="button" data-toggle="modal"  data-dismiss="modal"  data-target="#addquestionmodal" id="savequestionbutton" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+                     <!-- dropdown  modal -->
+                     <div class="modal" id="dropdownmodal" tabindex="-1" role="dialog">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">Multi Select Options</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="row">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">Question</span>
+                                </div>
+                                <textarea class="form-control" aria-label="With textarea"></textarea>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <div class="input-group-text">
+                                  <input type="checkbox" aria-label="checkbox button for following text input">
+                                  </div>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Text input with checkbox button">
+                              </div>
+                            </div>  
+        
+                            <div class="row">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <div class="input-group-text">
+                                  <input type="checkbox" aria-label="checkbox button for following text input">
+                                  </div>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Text input with checkbox button">
+                              </div>
+                            </div>
+        
+                            <div class="row">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <div class="input-group-text">
+                                  <input type="checkbox" aria-label="checkbox button for following text input">
+                                  </div>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Text input with checkbox button">
+                              </div>
+                            </div>
+        
+                            <div class="row">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <div class="input-group-text">
+                                  <input type="checkbox" aria-label="checkbox button for following text input">
+                                  </div>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Text input with radio button">
+                              </div>
+                            </div>
+        
+                        </div>
+                          <div class="modal-footer">
+                            <button type="button" data-toggle="modal"  data-dismiss="modal"  data-target="#addquestionmodal" id="savequestionbutton" class="btn btn-primary">Save changes</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+      <!-- Description modal -->
+             <div class="modal" id="descriptionmodal" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Multi Select Options</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Question</span>
+                        </div>
+                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                          <input type="checkbox" aria-label="checkbox button for following text input">
+                          </div>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Text input with checkbox button">
+                      </div>
+                    </div>  
+
+                    <div class="row">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                          <input type="checkbox" aria-label="checkbox button for following text input">
+                          </div>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Text input with checkbox button">
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                          <input type="checkbox" aria-label="checkbox button for following text input">
+                          </div>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Text input with checkbox button">
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                          <input type="checkbox" aria-label="checkbox button for following text input">
+                          </div>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Text input with radio button">
+                      </div>
+                    </div>
+
+                </div>
+                  <div class="modal-footer">
+                    <button type="button" data-toggle="modal"  data-dismiss="modal"  data-target="#addquestionmodal" id="savequestionbutton" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<script src='assets/scripts/sortable.js'></script>
+
+<script src="https://kit.fontawesome.com/bbf8fb8b35.js" crossorigin="anonymous"></script>
+<script>
+  window.addEventListener('load', function load() {
+    const loader = document.getElementById('loader');
+    setTimeout(function() {
+      loader.classList.add('fadeOut');
+    }, 300);
+  });
+
+  window.onload(
+    $(document).ready(function(){
+      $("#contactPreferencesDropdown").dropdown('update');
+    })
+  )
+</script>
+
+<script>
+selectedtab = "singleselectid"
+
+function updateid(currenttab){
+  selectedtab = currenttab.id
+}
+
+function additem(){
+  ul = document.getElementById('singleselectlist')
+  var li = document.createElement("li");
+  li.className = "list-group-item";
+  var itm = document.getElementById("copyli").lastChild;
+  itm.placeholder = 'new option'
+  var cln = itm.cloneNode(true);
+  li.appendChild(cln);
+  ul.appendChild(li);
+}
+
+  function togglemodals(){
+    // console.log(selectedtab)
+    $("#addquestionmodal").modal("hide");
+    if (selectedtab == 'singleselectid'){
+        $('#singleselectmodal').modal();
+      }
+      else if(selectedtab == 'miltiselectid'){
+        $('#miltiselectmodal').modal();
+      }
+      else if (selectedtab == 'dropdownid'){
+        $('#dropdownmodal').modal();
+      }
+      else{
+        $('#descriptionmodal').modal();
+      }
+    }
+
+function togglechecks(obj){
+      let target_check = ''
+      if (obj.id == 'checkboxcheck'){
+        target_check = document.getElementById('multiselectcheck');
+      }
+      else{
+        target_check = document.getElementById('checkboxcheck');
+      }
+      if (target_check.checked){
+        target_check.checked = false;
+      }
+    }
+
+
+$(function  () {
+  $("ol.cards").sortable();
+});
+
+$('.dropdown-toggle').dropdown()
+
+$('#myList a').on('click', function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+
+
+
+</script>
+
+</html>
