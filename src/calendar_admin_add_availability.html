@@ -39,7 +39,7 @@
 				title: $.trim($(this).text())
           // use the element's text as the event title
 			};
-  alert(eventObject.title); 
+  
         //document.getElementById("eventDate").innerHTML = eventObject.title;
 			// store the Event Object in the DOM element so we can get to it later
 			$(this).data('eventObject', eventObject);
@@ -85,18 +85,31 @@
 			allDaySlot: false,
 			selectHelper: true,
 			select: function(start, end, allDay) {
-				var title = prompt('Event Title:');
-				if (title) {
+
+   
+
+        document.getElementById("dateField").value = "4/22/2020";
+      
+
+
+       
+
+				//var title = prompt('Event Title:');
+				if (true) {
 					calendar.fullCalendar('renderEvent',
 						{
-							title: title,
+							//title: title,
 							start: start,
 							end: end,
 							allDay: allDay
 						},
 						true // make the event "stick"
 					);
+
+          
 				}
+
+
 				calendar.fullCalendar('unselect');
 			},
 			droppable: true, // this allows things to be dropped onto the calendar !!!
@@ -166,7 +179,6 @@
 					title: 'Click for Google',
 					start: new Date(y, m, 28),
 					end: new Date(y, m, 29),
-					url: 'http://google.com/',
 					className: 'success'
 				}
 			],
@@ -447,7 +459,7 @@ $(document).ready(function(){
                           <label class="fw-500">Appointment Subject</label>
                           <input class="form-control bdc-grey-200" placeholder = "Enter subject for the Appointment">
                         </div>
-                        
+                       
                         <div class="row">
                           <div class="col-md-6">
                             <label class="fw-500">Date</label>
@@ -757,20 +769,12 @@ $(document).ready(function(){
                           <label class="fw-500">Appointment Subject</label>
                           <input class="form-control bdc-grey-200" placeholder = "Enter subject for the Appointment">
                         </div>
+                        <div class="form-group">
+                          <label class="fw-500">Date</label>
+                          <input class="form-control bdc-grey-200" placeholder = "Select the Date from date picker or Enter the Date" id = "dateField">
+                        </div>
                         
-                        <div class="row">
-                          <div class="col-md-6">
-                            <label class="fw-500">Date</label>
-                            <div class="timepicker-input input-icon form-group">
-                              <div class="input-group">
-                                <div class="input-group-addon bgc-white bd bdwR-0">
-                                  <i class="ti-calendar"></i>
-                                </div>
-                                <input type="text" id = "eventDate" class="form-control bdc-grey-200 start-date" placeholder="Select the Appointment Date" data-provide="datepicker">
-                              </div>
-                            </div>
-                          </div>
-                          </div>
+                       
       <div class="form-group ">
                           <label for="inputState">Timings</label>
                           <select id="inputState" class="form-control">
