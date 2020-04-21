@@ -8,6 +8,16 @@ let adminBar = `<li class="nav-item mT-30 actived">
   <span class="title">All Programs</span>
 </a>
 </li>
+
+<li class="nav-item mT-30 actived">
+<a class='sidebar-link' href="caretaker-admin.html">
+  <span class="icon-holder">
+  <i class="c-blue-500 fas fa-hand-holding-medical"></i>
+  </span>
+  <span class="title">Care Coordinator</span>
+</a>
+</li>
+
 <li class="nav-item mT-30 actived">
 <a class='sidebar-link' href="adminChat.html">
   <span class="icon-holder">
