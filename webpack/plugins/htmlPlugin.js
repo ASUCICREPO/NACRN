@@ -66,6 +66,7 @@ const titles = {
   'add-remove-admin': 'add-remove-admin',
   'caretaker-admin': 'caretaker',
   'form-management-admin': 'form-management-admin'
+
 }
 
 module.exports = Object.keys(titles).map(title => {
