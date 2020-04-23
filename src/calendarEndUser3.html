@@ -3,9 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>All Programs</title>
+    <title>End User Calendar</title>
 
     <link href="https://fonts.googleapis.com/css?family=PT+Sans|Public+Sans|Source+Sans+Pro|Roboto&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Public+Sans|Source+Sans+Pro|Roboto&display=swap" rel="stylesheet">
+<link href='assets/css/fullcalendar.css' rel='stylesheet' />
+<link href='assets/css/fullcalendar.print.css' rel='stylesheet' media='print' />
+<script src='assets/js/jquery-1.10.2.js' type="text/javascript"></script>
+<script src='assets/js/jquery-ui.custom.min.js' type="text/javascript"></script>
+<script src='assets/js/fullcalendar.js' type="text/javascript"></script>
+<script>
+
     <style>
       #loader {
         transition: all 0.3s ease-in-out;
@@ -65,7 +74,6 @@
           - #Left Sidebar
               > $Sidebar Header
               > $Sidebar Menu
-
           - #Main
               > $Topbar
               > $App Screen Content
@@ -422,11 +430,18 @@ $(document).ready(function(){
                   </div>
                 </div>
               
-                <div class="masonry-item col-md-6">
+                
+                       <div class="masonry-item col-md-6">
                 <div class="bgc-white p-20 bd">
-                <div id='full-calendar'></div>
+               
+                <div id='wrap'>
+
+<div id='calendar'></div>
+
+<div style='clear:both'></div>
+</div>
                 </div>
-                </div>
+              </div>
                 <div class="masonry-item col-md-6">
                 <div class="bgc-white p-20 bd">
                   <h6 class="c-grey-900">Your Appoinments</h6>

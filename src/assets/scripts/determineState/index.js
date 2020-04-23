@@ -1,6 +1,14 @@
 let url = window.location.href
 
 let adminBar = `<li class="nav-item mT-30 actived">
+<a class="sidebar-link" href="admin_home.html">
+  <span class="icon-holder">
+    <i class="c-blue-500 fas fa-home"></i>
+  </span>
+  <span class="title">Home</span>
+</a>
+</li>
+<li class="nav-item mT-30 actived">
 <a class="sidebar-link" href="index_admin.html">
   <span class="icon-holder">
     <i class="c-blue-500 fas fa-search"></i>
