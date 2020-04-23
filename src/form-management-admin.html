@@ -88,7 +88,7 @@
       <!-- <div class="container"> -->
           <ol class='cards'>
             <li>
-              <div class="card" style="width: 18rem;">
+              <div class="card">
                 <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
                 <div class="card-body">
                   <h5 class="card-title">Is this Checkbox question?</h5>
@@ -103,7 +103,7 @@
             </li>
 
             <li>
-              <div class="card" style="width: 18rem;">
+              <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">Is this Radio question?</h5>
                   <input type="radio" id="male" name="gender" value="male">
@@ -117,7 +117,7 @@
             </li>
 
             <li>
-              <div class="card" style="width: 18rem;">
+              <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">Is this a multiselect question?</h5>
                   <select class="custom-select" id="inputGroupSelect02">
@@ -130,7 +130,7 @@
               </div>
             </li>
             <li>
-              <div class="card" style="width: 18rem;">
+              <div class="card">
                 <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
                 <div class="card-body">
                   <h5 class="card-title">Can I have Descriptive Question?</h5>
@@ -139,25 +139,6 @@
                 </div>
               </div>
             </li>
-            <li>
-              <div class="card" style="width: 18rem;">
-                <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
-                <div class="card-body">
-                  <h5 class="card-title">Card 2</h5>
-                  <p class="card-text">Some quick cards text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </li>
-            <li><div class="card" style="width: 18rem;">
-              <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
-              <div class="card-body">
-                <h5 class="card-title">Card 3</h5>
-                <p class="card-text">Some quick cards text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </li>
           </ol>
           </div>
           <div class="col-3">
@@ -279,12 +260,15 @@
                             <ul class="list-group" id="singleselectlist">
                                   <li class="list-group-item" id="copyli">
                                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Option 1">
+                                    <button>delete</button>
                                 </li>
                                 <li class="list-group-item">
                                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Option 2">
+                                  <button>delete</button>
                               </li>
                               <li class="list-group-item">
                               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Option 3">
+                              <button>delete</button>
                             </li>
                             </ul>
                       </div>
@@ -507,6 +491,10 @@ $('#myList a').on('click', function (e) {
   $(this).tab('show')
 })
 
+$("ul").on("click", "button", function(e) {
+    e.preventDefault();
+    $(this).parent().remove();
+});
 
 
 </script>
