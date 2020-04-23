@@ -91,25 +91,27 @@
               <div class="card">
                 <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
                 <div class="card-body">
-                  <h5 class="card-title">Is this Checkbox question?</h5>
+                  <h5 class="card-title">What things have you received assistance with in the past?</h5>
                   <div class="list-group checkbox-list-group">
-                    <div class="list-group-item">&nbsp;<label><input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Yes</span></label></div>
-                    <div class="list-group-item "><label>&nbsp;<input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Ofcourse not</span></label></div>
-                    <div class="list-group-item "><label>&nbsp;<input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Maybe</span></label></div>
-                    <div class="list-group-item "><label>&nbsp;<input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Default</span></label></div>
+                    <div class="list-group-item">&nbsp;<label><input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Evictions </span></label></div>
+                    <div class="list-group-item "><label>&nbsp;<input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Nutrition Assistance</span></label></div>
+                    <div class="list-group-item "><label>&nbsp;<input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Healthcare assistance</span></label></div>
+                    <div class="list-group-item "><label>&nbsp;<input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Child Care assistance</span></label></div>
+                    <div class="list-group-item "><label>&nbsp;<input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Other</span></label></div>
                   </div>
                 </div>
               </div>
             </li>
-
             <li>
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title">Is this Radio question?</h5>
+                  <h5 class="card-title">What is your primary method of transportation?</h5>
                   <input type="radio" id="male" name="gender" value="male">
-                  <label for="male">Male</label><br>
+                  <label for="male">Personal Car</label><br>
                   <input type="radio" id="female" name="gender" value="female">
-                  <label for="female">Female</label><br>
+                  <label for="female">Public transportation</label><br>
+                  <input type="radio" id="female" name="gender" value="female">
+                  <label for="female">Magical Unicorn</label><br>
                   <input type="radio" id="other" name="gender" value="other">
                   <label for="other">Other</label>
                 </div>
@@ -119,12 +121,14 @@
             <li>
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title">Is this a multiselect question?</h5>
+                  <h5 class="card-title">What is your current household income?</h5>
                   <select class="custom-select" id="inputGroupSelect02">
                     <option selected>Choose...</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option value="1">> $10,000</option>
+                    <option value="2">$10,001 - $20,000</option>
+                    <option value="3">$20,001 - $35,000</option>
+                    <option value="3">$35,001 - $75,000</option>
+                    <option value="3">$75,001 + </option>
                   </select>
                 </div>
               </div>
@@ -133,7 +137,7 @@
               <div class="card">
                 <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
                 <div class="card-body">
-                  <h5 class="card-title">Can I have Descriptive Question?</h5>
+                  <h5 class="card-title">Please describe in your own words your current situation?</h5>
                       <label for="exampleFormControlTextarea1"></label>
                       <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
@@ -171,7 +175,7 @@
             </div>
 
 
-                <!-- add questiib modal -->
+    <!-- add questiib modal -->
       <div class="modal fade bd-example-modal-lg" id="addquestionmodal" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
@@ -239,7 +243,7 @@
 
             <!-- SINGLE SELECT MODAL -->
             <div class="modal" id="singleselectmodal" tabindex="-1" role="dialog">
-              <div class="modal-dialog" role="document">
+              <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
                     <h5 class="modal-title">Single Select Options</h5>
@@ -258,25 +262,49 @@
                       </div>
                           <div class='row'>
                             <ul class="list-group" id="singleselectlist">
-                                  <li class="list-group-item" id="copyli">
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Option 1">
-                                    <button>delete</button>
-                                </li>
-                                <li class="list-group-item">
-                                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Option 2">
-                                  <button>delete</button>
+                              <li class="list-group-item" id="reference">
+                                <div class="row">
+                                  <div class="col-10">
+                                    <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Option">
+                                  </div>
+                                  <div class="col-2">
+                                    <button style="float: right;"><span style="color: Tomato;"><i class="fas fa-minus-circle "></i> </span></button>
+                                  </div>
+
+                                </div>
+                         
                               </li>
                               <li class="list-group-item">
-                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Option 3">
-                              <button>delete</button>
-                            </li>
-                            </ul>
+                                <div class="row">
+                                  <div class="col-10">
+                                    <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Option">
+                                  </div>
+                                  <div class="col-2">
+                                    <button style="float: right;"><span style="color: Tomato;"><i class="fas fa-minus-circle "></i> </span></button>
+                                  </div>
+
+                                </div>
+                         
+                              </li>
+
+                              <li class="list-group-item">
+                                <div class="row">
+                                  <div class="col-10">
+                                    <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Option">
+                                  </div>
+                                  <div class="col-2">
+                                    <button style="float: right;"><span style="color: Tomato;"><i class="fas fa-minus-circle "></i> </span></button>
+                                  </div>
+
+                                </div>
+                         
+                              </li>
+                          </ul>
+
                       </div>
-
-
                   </div>
                   <div class="modal-footer">
-                    <button type="button" onclick="additem('singleselectlist');" id="addoption" class="btn btn-primary">Add Option</button>
+                    <button type="button" onclick="additem('singleselectlist');"  class="btn btn-primary">Add Option</button>
                     <button type="button" data-toggle="modal"  data-dismiss="modal"  data-target="#addquestionmodal" id="savequestionbutton" class="btn btn-primary">Save changes</button>
                   </div>
                 </div>
@@ -432,25 +460,21 @@
 </script>
 
 <script>
-selectedtab = "singleselectid"
+selectedtab = "singleselectid";
+
+clone_item = document.getElementById('reference').cloneNode(true);
 
 function updateid(currenttab){
   selectedtab = currenttab.id
 }
 
 function additem(listid){
-  ul = document.getElementById(listid)
-  var li = document.createElement("li");
-  li.className = "list-group-item";
-  var itm = document.getElementById("copyli").lastChild;
-  itm.placeholder = 'new option'
-  var cln = itm.cloneNode(true);
-  li.appendChild(cln);
-  ul.appendChild(li);
+  ul = document.getElementById(listid);
+  
+  ul.appendChild(clone_item);
 }
 
   function togglemodals(){
-    // console.log(selectedtab)
     $("#addquestionmodal").modal("hide");
     if (selectedtab == 'singleselectid'){
         $('#singleselectmodal').modal();
@@ -484,6 +508,10 @@ $(function  () {
   $("ol.cards").sortable();
 });
 
+$(function  () {
+  $("ul.list-group").sortable();
+});
+
 $('.dropdown-toggle').dropdown()
 
 $('#myList a').on('click', function (e) {
@@ -493,7 +521,7 @@ $('#myList a').on('click', function (e) {
 
 $("ul").on("click", "button", function(e) {
     e.preventDefault();
-    $(this).parent().remove();
+    $(this).parent().parent().parent().remove();
 });
 
 
