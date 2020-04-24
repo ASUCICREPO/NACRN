@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Form Management</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Form Management</title>
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
 
 
 
-    <link href="assets/styles/sortable.css" rel="stylesheet">
-    <link href="assets/styles/loader.css" rel="stylesheet">
+  <link href="assets/styles/sortable.css" rel="stylesheet">
+  <link href="assets/styles/loader.css" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Public+Sans|Source+Sans+Pro|Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans|Public+Sans|Source+Sans+Pro|Roboto&display=swap"
+    rel="stylesheet">
 
 </head>
 
@@ -45,427 +48,564 @@
 
   <!-- @App Content -->
   <!-- =================================================== -->
-    <!-- #Left Sidebar ==================== -->
-    <div class="sidebar">
-      <div class="sidebar-inner">
-        <!-- ### $Sidebar Header ### -->
-        <div class="sidebar-logo">
-          <div class="peers ai-c fxw-nw">
-            <div class="peer peer-greed">
-              <a class="sidebar-link td-n" href="index.html">
-                <div class="peers ai-c fxw-nw">
-                  <div class="peer">
-                    <div class="logo">
-                      <img src="assets/static/images/navajologo.png" alt="">
-                    </div>
-                  </div>
-                  <div class="peer peer-greed">
-                    <h5 class="lh-1 mB-0 logo-text">NACRN</h5>
+  <!-- #Left Sidebar ==================== -->
+  <div class="sidebar">
+    <div class="sidebar-inner">
+      <!-- ### $Sidebar Header ### -->
+      <div class="sidebar-logo">
+        <div class="peers ai-c fxw-nw">
+          <div class="peer peer-greed">
+            <a class="sidebar-link td-n" href="index.html">
+              <div class="peers ai-c fxw-nw">
+                <div class="peer">
+                  <div class="logo">
+                    <img src="assets/static/images/navajologo.png" alt="">
                   </div>
                 </div>
-              </a>
-            </div>
+                <div class="peer peer-greed">
+                  <h5 class="lh-1 mB-0 logo-text">NACRN</h5>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
-        <!-- ### $Sidebar Menu ### -->
-        <ul class="sidebar-menu scrollable pos-r" id="sideNavBar">
-        </ul>
+      </div>
+      <!-- ### $Sidebar Menu ### -->
+      <ul class="sidebar-menu scrollable pos-r" id="sideNavBar">
+      </ul>
+    </div>
+  </div>
+
+  <!-- #Main ============================ -->
+  <div class="page-container">
+    <!-- ### $Topbar ### -->
+    <div class="row">
+      <div class="header navbar" id="topBar">
+
       </div>
     </div>
-
-    <!-- #Main ============================ -->
-    <div class="page-container">
-      <!-- ### $Topbar ### -->
-      <div class="row">
-        <div class="header navbar" id = "topBar">
-          
-        </div>
-        </div>
-<br><br><br><br>
+    <br><br><br><br>
 
     <div class="row">
       <div class="col-8">
-          <ol class='cards'>
-            <li>
-              <div class="card">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-10">
-                      <h5 class="card-title">What things have you received assistance with in the past?</h5>
-                    </div>
-                    <div class="col-2" style="float: right;">
-                      <i class="fas fa-arrows-alt"></i>
-                    </div>
+        <ol class='cards'>
+          <li>
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-10">
+                    <h5 class="card-title">What things have you received assistance with in the past?</h5>
                   </div>
-                  
-                  <div class="list-group checkbox-list-group">
-                    <div class="list-group-item">&nbsp;<label><input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Evictions </span></label></div>
-                    <div class="list-group-item "><label>&nbsp;<input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Nutrition Assistance</span></label></div>
-                    <div class="list-group-item "><label>&nbsp;<input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Healthcare assistance</span></label></div>
-                    <div class="list-group-item "><label>&nbsp;<input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Child Care assistance</span></label></div>
-                    <div class="list-group-item "><label>&nbsp;<input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Other</span></label></div>
+                  <div class="col-2" style="float: right;">
+                    <i class="fas fa-arrows-alt"></i>
                   </div>
                 </div>
-              </div>
-            </li>
-            <li>
-              <div class="card">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-10">
-                      <h5 class="card-title">What is your primary method of transportation?</h5>
-                    </div>
-                    <div class="col-2" style="float: right;">
-                      <i class="fas fa-arrows-alt"></i>
-                    </div>
-                  </div>
-                  <input type="radio" id="male" name="gender" value="male">
-                  <label for="male">Personal Car</label><br>
-                  <input type="radio" id="female" name="gender" value="female">
-                  <label for="female">Public transportation</label><br>
-                  <input type="radio" id="female" name="gender" value="female">
-                  <label for="female">Magical Unicorn</label><br>
-                  <input type="radio" id="other" name="gender" value="other">
-                  <label for="other">Other</label>
-                </div>
-              </div>
-            </li>
 
-            <li>
-              <div class="card">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-10">
-                      <h5 class="card-title">What is your current household income?</h5>
-                    </div>
-                    <div class="col-2" style="float: right;">
-                      <i class="fas fa-arrows-alt"></i>
-                    </div>
+                <div class="list-group checkbox-list-group">
+                  <div class="list-group-item">&nbsp;<label><input type="checkbox"><span class="list-group-item-text"><i
+                          class="fa fa-fw"></i> Evictions </span></label></div>
+                  <div class="list-group-item "><label>&nbsp;<input type="checkbox"><span
+                        class="list-group-item-text"><i class="fa fa-fw"></i> Nutrition Assistance</span></label></div>
+                  <div class="list-group-item "><label>&nbsp;<input type="checkbox"><span
+                        class="list-group-item-text"><i class="fa fa-fw"></i> Healthcare assistance</span></label></div>
+                  <div class="list-group-item "><label>&nbsp;<input type="checkbox"><span
+                        class="list-group-item-text"><i class="fa fa-fw"></i> Child Care assistance</span></label></div>
+                  <div class="list-group-item "><label>&nbsp;<input type="checkbox"><span
+                        class="list-group-item-text"><i class="fa fa-fw"></i> Other</span></label></div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-10">
+                    <h5 class="card-title">What is your primary method of transportation?</h5>
                   </div>
+                  <div class="col-2" style="float: right;">
+                    <i class="fas fa-arrows-alt"></i>
+                  </div>
+                </div>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Personal Car</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Public transportation</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Magical Unicorn</label><br>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+              </div>
+            </div>
+          </li>
 
-                  <select class="custom-select" id="inputGroupSelect02">
-                    <option selected>Choose...</option>
-                    <option value="1">> $10,000</option>
-                    <option value="2">$10,001 - $20,000</option>
-                    <option value="3">$20,001 - $35,000</option>
-                    <option value="3">$35,001 - $75,000</option>
-                    <option value="3">$75,001 + </option>
-                  </select>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="card">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-10">
-                      <h5 class="card-title">Please describe in your own words your current situation?</h5>
-                    </div>
-                    <div class="col-2" style="float: right;">
-                      <i class="fas fa-arrows-alt"></i>
-                    </div>
+          <li>
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-10">
+                    <h5 class="card-title">What is your current household income?</h5>
                   </div>
-                      <label for="exampleFormControlTextarea1"></label>
-                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  <div class="col-2" style="float: right;">
+                    <i class="fas fa-arrows-alt"></i>
+                  </div>
                 </div>
+
+                <select class="custom-select" id="inputGroupSelect02">
+                  <option selected>Choose...</option>
+                  <option value="1">> $10,000</option>
+                  <option value="2">$10,001 - $20,000</option>
+                  <option value="3">$20,001 - $35,000</option>
+                  <option value="3">$35,001 - $75,000</option>
+                  <option value="3">$75,001 + </option>
+                </select>
               </div>
-            </li>
-          </ol>
+            </div>
+          </li>
+          <li>
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-10">
+                    <h5 class="card-title">Please describe in your own words your current situation?</h5>
+                  </div>
+                  <div class="col-2" style="float: right;">
+                    <i class="fas fa-arrows-alt"></i>
+                  </div>
+                </div>
+                <label for="exampleFormControlTextarea1"></label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <div class="col-3">
+        <div class="position-fixed">
+          <div class="row">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Organization
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <button class="dropdown-item" type="button">All (Global Intake)</button>
+                <button class="dropdown-item" type="button">Org-1</button>
+                <button class="dropdown-item" type="button">Org-2</button>
+              </div>
+            </div>
           </div>
-          <div class="col-3">
-            <div class="position-fixed">
-            <div class="row">
-              <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Organization
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                  <button class="dropdown-item" type="button">All (Global Intake)</button>
-                  <button class="dropdown-item" type="button">Org-1</button>
-                  <button class="dropdown-item" type="button">Org-2</button>
-                </div>
-              </div>
-            </div>
-<br>
-            <div class="row">
-              <button type="button" class="btn btn-primary">
-                Questions Needing Approval <span class="badge badge-light">6</span>
-              </button>
-            </div>
-<br>
-            <div class="row">
-                <button type="button" data-toggle="modal" data-target="#addquestionmodal" class="btn btn-primary">Add Question</button>
-              </div>
-            </div>
-            </div>
-           
-            </div>
-
-
-    <!-- add questiib modal -->
-      <div class="modal fade bd-example-modal-lg" id="addquestionmodal" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-lg" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Question Type</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="row">
-                <div class="col-4">
-                  <div class="list-group" id="list-tab" role="tablist">
-                    <a class="list-group-item list-group-item-action active"  id="singleselectid" data-toggle="list" onclick='updateid(this);' href="#list-home" role="tab" aria-controls="home">Single Select</a>
-                    <a class="list-group-item list-group-item-action" id="multiselectid" data-toggle="list" onclick='updateid(this);' href="#list-profile" role="tab" aria-controls="profile">Multi Select</a>
-                    <a class="list-group-item list-group-item-action" id="dropdownid" data-toggle="list" onclick='updateid(this);' href="#list-messages" role="tab" aria-controls="messages">Dropdown</a>
-                    <a class="list-group-item list-group-item-action" id="descriptionid" data-toggle="list" onclick='updateid(this);' href="#list-settings" role="tab" aria-controls="settings">Description</a>
-                  </div>
-                </div>
-                <div class="col-8">
-                  <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="singleselectid">
-                      <input type="radio" id="male" name="gender" value="male">
-                      <label for="male">Male</label><br>
-                      <input type="radio" id="female" name="gender" value="female">
-                      <label for="female">Female</label><br>
-                      <input type="radio" id="other" name="gender" value="other">
-                      <label for="other">Other</label>
-                    </div>
-                    <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="multiselectid">
-                      <div class="list-group checkbox-list-group">
-                        <div class="list-group-item">&nbsp;<label><input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Yes</span></label></div>
-                        <div class="list-group-item "><label>&nbsp;<input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Ofcourse not</span></label></div>
-                        <div class="list-group-item "><label>&nbsp;<input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Maybe</span></label></div>
-                        <div class="list-group-item "><label>&nbsp;<input type="checkbox"><span class="list-group-item-text"><i class="fa fa-fw"></i> Default</span></label></div>
-                      </div>
-                    </div>
-                    <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="dropdownid">
-                      <select class="custom-select" id="inputGroupSelect02">
-                        <option selected>Choose...</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
-                    </div>
-                    <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="descriptionid">
-                      <h5 class="card-title">Can I have Descriptive Question?</h5>
-                      <label for="exampleFormControlTextarea1"></label>
-                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" type="button" onclick="togglemodals()" class="btn btn-primary">Add Question</button>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
+          <br>
+          <div class="row">
+            <button type="button" class="btn btn-primary">
+              Questions Needing Approval <span class="badge badge-light">6</span>
+            </button>
+          </div>
+          <br>
+          <div class="row">
+            <button type="button" data-toggle="modal" data-target="#addquestionmodal" class="btn btn-primary">Add
+              Question</button>
           </div>
         </div>
       </div>
 
+    </div>
 
 
-            <!-- SINGLE SELECT MODAL -->
-            <div class="modal" id="singleselectmodal" tabindex="-1" role="dialog">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title">Single Select Options</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
+    <!-- add questiib modal -->
+    <div class="modal fade bd-example-modal-lg" id="addquestionmodal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Question Type</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-4">
+                <div class="list-group" id="list-tab" role="tablist">
+                  <a class="list-group-item list-group-item-action active" id="singleselectid" data-toggle="list"
+                    onclick='updateid(this);' href="#list-home" role="tab" aria-controls="home">Single Select</a>
+                  <a class="list-group-item list-group-item-action" id="multiselectid" data-toggle="list"
+                    onclick='updateid(this);' href="#list-profile" role="tab" aria-controls="profile">Multi Select</a>
+                  <a class="list-group-item list-group-item-action" id="dropdownid" data-toggle="list"
+                    onclick='updateid(this);' href="#list-messages" role="tab" aria-controls="messages">Dropdown</a>
+                  <a class="list-group-item list-group-item-action" id="descriptionid" data-toggle="list"
+                    onclick='updateid(this);' href="#list-settings" role="tab" aria-controls="settings">Description</a>
+                </div>
+              </div>
+              <div class="col-8">
+                <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade show active" id="list-home" role="tabpanel"
+                    aria-labelledby="singleselectid">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label><br>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label><br>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
                   </div>
-                  <div class="modal-body">
-                      <div class="row">
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text">Question</span>
-                          </div>
-                          <textarea class="form-control" aria-label="With textarea"></textarea>
-                        </div>
-                      </div>
-                          <div class='row'>
-                            <ul class="list-group" id="singleselectlist">
-                              <li class="list-group-item" id="reference">
-                                <div class="row">
-                                  <div class="col-10">
-                                    <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Option">
-                                  </div>
-                                  <div class="col-2">
-                                    <button style="float: right;"><span style="color: Tomato;"><i class="fas fa-minus-circle "></i> </span></button>
-                                  </div>
-
-                                </div>
-                         
-                              </li>
-                              <li class="list-group-item">
-                                <div class="row">
-                                  <div class="col-10">
-                                    <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Option">
-                                  </div>
-                                  <div class="col-2">
-                                    <button style="float: right;"><span style="color: Tomato;"><i class="fas fa-minus-circle "></i> </span></button>
-                                  </div>
-
-                                </div>
-                         
-                              </li>
-
-                              <li class="list-group-item">
-                                <div class="row">
-                                  <div class="col-10">
-                                    <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Option">
-                                  </div>
-                                  <div class="col-2">
-                                    <button style="float: right;"><span style="color: Tomato;"><i class="fas fa-minus-circle "></i> </span></button>
-                                  </div>
-
-                                </div>
-                         
-                              </li>
-                          </ul>
-
-                      </div>
+                  <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="multiselectid">
+                    <div class="list-group checkbox-list-group">
+                      <div class="list-group-item">&nbsp;<label><input type="checkbox"><span
+                            class="list-group-item-text"><i class="fa fa-fw"></i> Yes</span></label></div>
+                      <div class="list-group-item "><label>&nbsp;<input type="checkbox"><span
+                            class="list-group-item-text"><i class="fa fa-fw"></i> Ofcourse not</span></label></div>
+                      <div class="list-group-item "><label>&nbsp;<input type="checkbox"><span
+                            class="list-group-item-text"><i class="fa fa-fw"></i> Maybe</span></label></div>
+                      <div class="list-group-item "><label>&nbsp;<input type="checkbox"><span
+                            class="list-group-item-text"><i class="fa fa-fw"></i> Default</span></label></div>
+                    </div>
                   </div>
-                  <div class="modal-footer">
-                    <button type="button" onclick="additem('singleselectlist');"  class="btn btn-primary">Add Option</button>
-                    <button type="button" data-toggle="modal"  data-dismiss="modal"  data-target="#addquestionmodal" id="savequestionbutton" class="btn btn-primary">Save changes</button>
+                  <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="dropdownid">
+                    <select class="custom-select" id="inputGroupSelect02">
+                      <option selected>Choose...</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="descriptionid">
+                    <h5 class="card-title">Can I have Descriptive Question?</h5>
+                    <label for="exampleFormControlTextarea1"></label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" type="button" onclick="togglemodals()" class="btn btn-primary">Add Question</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
-        <!-- Milti select modal -->
-            <div class="modal fade" id="multiselectmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Add Care coordinator</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
+
+    <!-- SINGLE SELECT MODAL -->
+    <div class="modal fade" id="singleselectmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Add Care coordinator</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Question</span>
+              </div>
+              <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
+          </div>
+          <div class='row'>
+            <ul class="list-group" id="singleselectlist">
+              <li class="list-group-item">
+                
+                <div class="row">
+                  <div class="col-1">
+                    <i class="fas fa-arrows-alt"></i>
                   </div>
-                  <div class="modal-body">
-                    <div class="row">
-                      <div class="input-group">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text">Question</span>
-                        </div>
-                        <textarea class="form-control" aria-label="With textarea"></textarea>
-                      </div>
-                    </div>
-                    <div class='row'>
-                      <ul class="list-group" id="multiselectlist">
-                            <li class="list-group-item" id="copyli">
-                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Option 1">
-                          </li>
-                          <li class="list-group-item">
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Option 2">
-                        </li>
-                        <li class="list-group-item">
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Option 3">
-                      </li>
-                      </ul>
+                  <div class="col-9">
+                    <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Option">
+                  </div>
+                  <div class="col-2">
+                    <button style="float: right;"><span style="color: Tomato;"><i class="fas fa-minus-circle "></i>
+                      </span></button>
+                  </div>
+
                 </div>
 
+              </li>
+
+              <li class="list-group-item">
+                
+                <div class="row">
+                  <div class="col-1">
+                    <i class="fas fa-arrows-alt"></i>
                   </div>
-                  <div class="modal-footer">
-                    <button type="button" onclick="additem('multiselectlist');" id="addoption" class="btn btn-primary">Add Option</button>
-                    <button type="button" data-toggle="modal"  data-dismiss="modal"  data-target="#addquestionmodal" id="savequestionbutton" class="btn btn-primary">Save changes</button>
+                  <div class="col-9">
+                    <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Option">
                   </div>
+                  <div class="col-2">
+                    <button style="float: right;"><span style="color: Tomato;"><i class="fas fa-minus-circle "></i>
+                      </span></button>
+                  </div>
+
                 </div>
+
+              </li>
+
+              <li class="list-group-item">
+                
+                <div class="row">
+                  <div class="col-1">
+                    <i class="fas fa-arrows-alt"></i>
+                  </div>
+                  <div class="col-9">
+                    <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Option">
+                  </div>
+                  <div class="col-2">
+                    <button style="float: right;"><span style="color: Tomato;"><i class="fas fa-minus-circle "></i>
+                      </span></button>
+                  </div>
+
+                </div>
+
+              </li>
+
+
+
+            </ul>
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" onclick="additem('singleselectlist');" id="addoption" class="btn btn-primary">Add
+            Option</button>
+          <button type="button" data-toggle="modal" data-dismiss="modal" data-target="#addquestionmodal"
+            id="savequestionbutton" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- Milti select modal -->
+    <div class="modal fade" id="multiselectmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Add Care coordinator</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Question</span>
+                </div>
+                <textarea class="form-control" aria-label="With textarea"></textarea>
               </div>
             </div>
-
-
-
-             <!--Drop down modal -->
-             <div class="modal fade" id="dropdownmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Add Care coordinator</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="row">
-                      <div class="input-group">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text">Question</span>
-                        </div>
-                        <textarea class="form-control" aria-label="With textarea"></textarea>
-                      </div>
+            <div class='row'>
+              <ul class="list-group" id="multiselectlist">
+                <li class="list-group-item">
+                
+                  <div class="row">
+                    <div class="col-1">
+                      <i class="fas fa-arrows-alt"></i>
                     </div>
-                    <div class='row'>
-                      <ul class="list-group" id="dropdownlist">
-                            <li class="list-group-item" id="copyli">
-                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Option 1">
-                          </li>
-                          <li class="list-group-item">
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Option 2">
-                        </li>
-                        <li class="list-group-item">
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Option 3">
-                      </li>
-                      </ul>
-                </div>
-
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" onclick="additem('dropdownlist');" id="addoption" class="btn btn-primary">Add Option</button>
-                    <button type="button" data-toggle="modal"  data-dismiss="modal"  data-target="#addquestionmodal" id="savequestionbutton" class="btn btn-primary">Save changes</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-
-              <!--Description  modal -->
-              <div class="modal fade" id="descriptionmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLongTitle">Add Care coordinator</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
+                    <div class="col-9">
+                      <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Option">
                     </div>
-                    <div class="modal-body">
-                      <div class="row">
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text">Question</span>
-                          </div>
-                          <textarea class="form-control" aria-label="With textarea"></textarea>
-                        </div>
-                      </div>
-
+                    <div class="col-2">
+                      <button style="float: right;"><span style="color: Tomato;"><i class="fas fa-minus-circle "></i>
+                        </span></button>
+                    </div>
   
-                    </div>
-                    <div class="modal-footer">
-                      <!-- <button type="button" onclick="additem('None');" id="addoption" class="btn btn-primary">Add Option</button> -->
-                      <button type="button" data-toggle="modal"  data-dismiss="modal"  data-target="#addquestionmodal" id="savequestionbutton" class="btn btn-primary">Save changes</button>
-                    </div>
                   </div>
-                </div>
-              </div>
-
-            
   
+                </li>
+  
+                <li class="list-group-item">
+                  
+                  <div class="row">
+                    <div class="col-1">
+                      <i class="fas fa-arrows-alt"></i>
+                    </div>
+                    <div class="col-9">
+                      <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Option">
+                    </div>
+                    <div class="col-2">
+                      <button style="float: right;"><span style="color: Tomato;"><i class="fas fa-minus-circle "></i>
+                        </span></button>
+                    </div>
+  
+                  </div>
+  
+                </li>
+  
+                <li class="list-group-item">
+                  
+                  <div class="row">
+                    <div class="col-1">
+                      <i class="fas fa-arrows-alt"></i>
+                    </div>
+                    <div class="col-9">
+                      <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Option">
+                    </div>
+                    <div class="col-2">
+                      <button style="float: right;"><span style="color: Tomato;"><i class="fas fa-minus-circle "></i>
+                        </span></button>
+                    </div>
+  
+                  </div>
+  
+                </li>
+              </ul>
+
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" onclick="additem('multiselectlist');" id="addoption" class="btn btn-primary">Add
+              Option</button>
+            <button type="button" data-toggle="modal" data-dismiss="modal" data-target="#addquestionmodal"
+              id="savequestionbutton" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!--Drop down modal -->
+    <div class="modal fade" id="dropdownmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Add Care coordinator</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Question</span>
+                </div>
+                <textarea class="form-control" aria-label="With textarea"></textarea>
+              </div>
+            </div>
+            <div class='row'>
+              <ul class="list-group" id="dropdownlist">
+                <li class="list-group-item">
+                
+                  <div class="row">
+                    <div class="col-1">
+                      <i class="fas fa-arrows-alt"></i>
+                    </div>
+                    <div class="col-9">
+                      <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Option">
+                    </div>
+                    <div class="col-2">
+                      <button style="float: right;"><span style="color: Tomato;"><i class="fas fa-minus-circle "></i>
+                        </span></button>
+                    </div>
+  
+                  </div>
+  
+                </li>
+  
+                <li class="list-group-item">
+                  
+                  <div class="row">
+                    <div class="col-1">
+                      <i class="fas fa-arrows-alt"></i>
+                    </div>
+                    <div class="col-9">
+                      <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Option">
+                    </div>
+                    <div class="col-2">
+                      <button style="float: right;"><span style="color: Tomato;"><i class="fas fa-minus-circle "></i>
+                        </span></button>
+                    </div>
+  
+                  </div>
+  
+                </li>
+  
+                <li class="list-group-item">
+                  
+                  <div class="row">
+                    <div class="col-1">
+                      <i class="fas fa-arrows-alt"></i>
+                    </div>
+                    <div class="col-9">
+                      <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Option">
+                    </div>
+                    <div class="col-2">
+                      <button style="float: right;"><span style="color: Tomato;"><i class="fas fa-minus-circle "></i>
+                        </span></button>
+                    </div>
+  
+                  </div>
+  
+                </li>
+              </ul>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" onclick="additem('dropdownlist');" id="addoption" class="btn btn-primary">Add
+              Option</button>
+            <button type="button" data-toggle="modal" data-dismiss="modal" data-target="#addquestionmodal"
+              id="savequestionbutton" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!--Description  modal -->
+    <div class="modal fade" id="descriptionmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Add Care coordinator</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Question</span>
+                </div>
+                <textarea class="form-control" aria-label="With textarea"></textarea>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="modal-footer">
+            <!-- <button type="button" onclick="additem('None');" id="addoption" class="btn btn-primary">Add Option</button> -->
+            <button type="button" data-toggle="modal" data-dismiss="modal" data-target="#addquestionmodal"
+              id="savequestionbutton" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
 
 </body>
 
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
 <script src='assets/scripts/sortable.js'></script>
@@ -474,82 +614,83 @@
 <script>
   window.addEventListener('load', function load() {
     const loader = document.getElementById('loader');
-    setTimeout(function() {
+    setTimeout(function () {
       loader.classList.add('fadeOut');
     }, 300);
   });
 
   window.onload(
-    $(document).ready(function(){
+    $(document).ready(function () {
       $("#contactPreferencesDropdown").dropdown('update');
     })
   )
 </script>
 
 <script>
-selectedtab = "singleselectid";
+  selectedtab = "singleselectid";
 
-clone_item = document.getElementById('reference').cloneNode(true);
+  clone_item = document.getElementById('singleselectlist').lastChild.cloneNode(true);
 
-function updateid(currenttab){
-  selectedtab = currenttab.id
-}
+  function updateid(currenttab) {
+    selectedtab = currenttab.id
+  }
 
-function additem(listid){
-  ul = document.getElementById(listid);
-  
-  ul.appendChild(clone_item);
-}
+  function additem(listid) {
+    clone_item = document.getElementById(listid).lastChild.cloneNode(true);
+    ul = document.getElementById(listid);
 
-  function togglemodals(){
+    ul.appendChild(clone_item);
+  }
+
+  function togglemodals() {
     $("#addquestionmodal").modal("hide");
-    if (selectedtab == 'singleselectid'){
-        $('#singleselectmodal').modal();
-      }
-      else if(selectedtab == 'multiselectid'){
-        $('#multiselectmodal').modal();
-      }
-      else if (selectedtab == 'dropdownid'){
-        $('#dropdownmodal').modal();
-      }
-      else{
-        $('#descriptionmodal').modal();
-      }
+    if (selectedtab == 'singleselectid') {
+      $('#singleselectmodal').modal();
     }
-
-function togglechecks(obj){
-      let target_check = ''
-      if (obj.id == 'checkboxcheck'){
-        target_check = document.getElementById('multiselectcheck');
-      }
-      else{
-        target_check = document.getElementById('checkboxcheck');
-      }
-      if (target_check.checked){
-        target_check.checked = false;
-      }
+    else if (selectedtab == 'multiselectid') {
+      $('#multiselectmodal').modal();
     }
+    else if (selectedtab == 'dropdownid') {
+      $('#dropdownmodal').modal();
+    }
+    else {
+      $('#descriptionmodal').modal();
+    }
+  }
+
+  function togglechecks(obj) {
+    let target_check = ''
+    if (obj.id == 'checkboxcheck') {
+      target_check = document.getElementById('multiselectcheck');
+    }
+    else {
+      target_check = document.getElementById('checkboxcheck');
+    }
+    if (target_check.checked) {
+      target_check.checked = false;
+    }
+  }
 
 
-$(function  () {
-  $("ol.cards").sortable();
-});
+  $(function () {
+    $("ol.cards").sortable();
+  });
 
-$(function  () {
-  $("ul.list-group").sortable();
-});
+  $(function () {
+    $("ul.list-group").sortable();
+  });
 
-$('.dropdown-toggle').dropdown()
+  $('.dropdown-toggle').dropdown()
 
-$('#myList a').on('click', function (e) {
-  e.preventDefault()
-  $(this).tab('show')
-})
+  $('#myList a').on('click', function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+  })
 
-$("ul").on("click", "button", function(e) {
+  $("ul").on("click", "button", function (e) {
     e.preventDefault();
     $(this).parent().parent().parent().remove();
-});
+  });
 
 
 </script>
