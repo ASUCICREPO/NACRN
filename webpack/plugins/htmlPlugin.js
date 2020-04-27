@@ -69,10 +69,15 @@ const titles = {
   'logs-admin': 'logs-admin',
   'calendar_careCoordinator_add_availability': 'calendar_careCoordinator_add_availability',
   'calendar_careCoordinator': 'calendar_careCoordinator',
+<<<<<<< Updated upstream
     'add-remove-admin': 'add-remove-admin',
   'caretaker-admin': 'caretaker',
   'form-management-admin': 'form-management-admin'
 
+=======
+  'notifications-admin': 'notifications-admin',
+  'edit_programs_admin': 'edit_programs_admin'
+>>>>>>> Stashed changes
 
 }
 

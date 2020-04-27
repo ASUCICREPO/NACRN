@@ -65,6 +65,7 @@ let adminBar = `<li class="nav-item mT-30 actived">
   </span>
   <span class="title">Manage Organizations</span>
 </a>
+</li>
 <li class="nav-item mT-30 actived">
 <a class="sidebar-link" href="logs-admin.html">
   <span class="icon-holder">
@@ -72,7 +73,9 @@ let adminBar = `<li class="nav-item mT-30 actived">
   </span>
   <span class="title">Logs</span>
 </a>
-</li>`
+</li>
+
+`
 
 let endUserBar = `<li class="nav-item mT-30 actived">
 <a class="sidebar-link" href="endUserprograms.html">
@@ -140,7 +143,7 @@ let admin_settings = `<div class="header-container">
       <li>
         <ul class="ovY-a pos-r scrollable lis-n p-0 m-0 fsz-sm">
           <li>
-            <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+            <a href="notifications-admin.html" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
               <div class="peer mR-15">
                 <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/lego/5.jpg" alt="">
               </div>
@@ -157,7 +160,7 @@ let admin_settings = `<div class="header-container">
             </a>
           </li>
           <li>
-            <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+            <a href="notifications-admin.html" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
               <div class="peer mR-15">
                 <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/lego/5.jpg" alt="">
               </div>
@@ -178,7 +181,7 @@ let admin_settings = `<div class="header-container">
       </li>
       <li class="pX-20 pY-15 ta-c bdT">
         <span>
-          <a href="" class="c-grey-600 cH-blue fsz-sm td-n">View All Notifications <i class="ti-angle-right fsz-xs mL-10"></i></a>
+          <a href="notifications-admin.html" class="c-grey-600 cH-blue fsz-sm td-n">View All Notifications <i class="ti-angle-right fsz-xs mL-10"></i></a>
         </span>
       </li>
     </ul>
