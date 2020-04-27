@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>All Programs</title>
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Public+Sans|Source+Sans+Pro|Roboto&display=swap" rel="stylesheet">
+    <style>
+      #loader {
+        transition: all 0.3s ease-in-out;
+        opacity: 1;
+        visibility: visible;
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background: #fff;
+        z-index: 90000;
+      }
+
+      #loader.fadeOut {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .spinner {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: calc(50% - 20px);
+        left: calc(50% - 20px);
+        background-color: #333;
+        border-radius: 100%;
+        -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+        animation: sk-scaleout 1.0s infinite ease-in-out;
+      }
+
+      @-webkit-keyframes sk-scaleout {
+        0% { -webkit-transform: scale(0) }
+        100% {
+          -webkit-transform: scale(1.0);
+          opacity: 0;
+        }
+      }
+
+      @keyframes sk-scaleout {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        } 100% {
+          -webkit-transform: scale(1.0);
+          transform: scale(1.0);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="app">
+    <!-- @TOC -->
+    <!-- =================================================== -->
+    <!--
+      + @Page Loader
+      + @App Content
+          - #Left Sidebar
+              > $Sidebar Header
+              > $Sidebar Menu
+
+          - #Main
+              > $Topbar
+              > $App Screen Content
+    -->
+
+    <!-- @Page Loader -->
+    <!-- =================================================== -->
+    <div id='loader'>
+      <div class="spinner"></div>
+    </div>
+
+    <script>
+      window.addEventListener('load', function load() {
+        const loader = document.getElementById('loader');
+        setTimeout(function() {
+          loader.classList.add('fadeOut');
+        }, 300);
+      });
+      $('input[type="checkbox"]').on('change', function(e){
+   if(e.target.checked){
+     $('#myModal').modal();
+   }
+});
+      
+    </script>
+
+    <!-- @App Content -->
+    <!-- =================================================== -->
+    <div>
+      <!-- #Left Sidebar ==================== -->
+      <div class="sidebar">
+        <div class="sidebar-inner">
+          <!-- ### $Sidebar Header ### -->
+          <div class="sidebar-logo">
+            <div class="peers ai-c fxw-nw">
+              <div class="peer peer-greed">
+                <a class="sidebar-link td-n" href="index.html">
+                  <div class="peers ai-c fxw-nw">
+                    <div class="peer">
+                      <div class="logo">
+                        <img src="assets/static/images/navajologo.png" alt="">
+                      </div>
+                    </div>
+                    <div class="peer peer-greed">
+                      <h5 class="lh-1 mB-0 logo-text">NACRN</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="peer">
+                <div class="mobile-toggle sidebar-toggle">
+                  <a href="" class="td-n">
+                    <i class="ti-arrow-circle-left"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ### $Sidebar Menu ### -->
+          <ul class="sidebar-menu scrollable pos-r" id="sideNavBar">
+          </ul>
+        </div>
+      </div>
+
+
+
+
+ 
+      <!-- #Main ============================ -->
+      <div class="page-container">
+        <!-- ### $Topbar ### -->
+    
+        <div class="header navbar" id = "topBar">
+          
+        </div>
+          
+
+        <!-- ### $App Screen Content ### -->
+         <!-- ### $App Screen Content ### -->
+         <!-- ### $App Screen Content ### -->
+        <main class='main-content bgc-grey-100'>
+        
+          <div id='mainContent'>
+         
+
+ <table class="table" style="width:100%" style="height:100%" >
+ 
+    <thead class = "thead-dark">
+        <tr><th>Log No.</th>
+            <th><label for="inputState">Time Frame</label>
+                          <select id="inputState" class="form-control" aria-expanded="false">
+                            <option selected>Today</option>
+                            <option>This Week</option>
+                            <option>This Month</option>
+                            <option>This Year</option>
+                            <option>All Time</option>
+                          </select></th>
+            <th><label for="inputState">Time Stamp</label>
+                          <select id="inputState" class="form-control" aria-expanded="false">
+                            <option selected>New to Old</option>
+                            <option>Old to New</option>
+                          </select></th>
+
+                    
+            <th><label for="inputState">Log Level</label>
+                          <select id="inputState" class="form-control" aria-expanded="false">
+                            <option selected>All</option>
+                            <option>Admin</option>
+                            <option>Power User</option>
+                            <option>Care Coordinator</option>
+                            <option>End User</option>
+                          </select></th>
+            <th><label for="inputState">Program Name </label>
+                          <select id="inputState" class="form-control" aria-expanded="false">
+                            <option selected>All</option>
+                            <option>Homelessness</option>
+                            <option>Single Moms</option>
+                            <option>Care for Elderly</option>
+                            <option>Youth for work</option>
+                          </select></th>
+            <th><label for="inputState">Operation Type</label>
+                          <select id="inputState" class="form-control" aria-expanded="false">
+                            <option selected>All</option>
+                            <option>Add Organization</option>
+                            <option>Delete Organization</option>
+                             <option>Add User</option>
+                            <option>Delete User</option>
+                            <option>Request</option>
+                            <option>Approval</option>
+                            <option>Schedule Appointment</option>
+                            <option>Manage Availability</option>
+                            <option>Changed User Permissions</option>
+                           
+                            
+                            
+                            
+                       
+                          </select></th>
+            <th><label for="inputState">Message</label>
+                          <select id="inputState" class="form-control" aria-expanded="false">
+                            <option selected>All</option>
+                            
+                          </select></th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>This Week</td>
+            <td>2019-07-04*13:23:55</td>
+            <td>Admin</td>
+            <td>Youth for work</td>
+            <td>Add New Organization</td>
+            <td>Suzan Lee(Admin) added "Youth for work" Organization</td>
+            
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>This Week</td>
+            <td>2019-07-03*10:03:51</td>
+            <td>Power User</td>
+            <td>Homelessness</td>
+            <td>Add New Question</td>
+            <td>John Say (Power User) added new Question(ID 457) "Homelessness" Organization</td>
+            
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>This Week</td>
+            <td>2019-07-03*01:13:55</td>
+            <td>Care coordinator</td>
+            <td>Single Moms</td>
+            <td>Schedule Appointment</td>
+            <td>Suzy Lee(Care coordinator) added  new Appointment with Sarah Lee(NACRN user)</td>
+            
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>This Week</td>
+            <td>2019-07-03*13:13:00</td>
+            <td>Admin</td>
+            <td>Child Care</td>
+            <td>Add User</td>
+            <td>Suzan Lee(Admin) added Tim Thomas(Power User) as Power User To Child Care</td>
+            
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>This Week</td>
+            <td>2019-07-03*13:11:55</td>
+            <td>Power User</td>
+            <td>Single Moms</td>
+            <td>Add New Question</td>
+            <td>John Say (Power User) added new Question(ID 444) "Single Moms" Program</td>
+            
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>This Week</td>
+            <td>2019-07-02*13:05:25</td>
+            <td>Care coordinator</td>
+            <td>Employement for all</td>
+            <td>Schedule Appointment</td>
+            <td>Suzy Lee(Care coordinator) added  new Appointment with Britney Swift(NACRN user)</td>
+            
+        </tr>
+        <tr>
+
+            <td>7</td>
+            <td>This Week</td>
+            <td>2019-07-02*13:01:28</td>
+            <td>Admin</td>
+            <td>Single Dad's</td>
+            <td>Add New Organization</td>
+            <td>Bretty Mor(Admin) added "Single Dad's" Organization</td>
+            
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>This Week</td>
+            <td>2019-07-01*17:23:17</td>
+            <td>Power User</td>
+            <td>Care for Elderly</td>
+            <td>Add New Question</td>
+            <td>John Say (Power User) added new Question(ID 47) "Care for Elderly" Organization</td>
+            
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>This Week</td>
+            <td>2019-07-01*16:17:14</td>
+            <td>Care coordinator</td>
+            <td>Child Care</td>
+            <td>Schedule Appointment</td>
+            <td>Suzy Lee(Care coordinator) added  new Appointment with  Findler May(NACRN user)</td>
+            
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>This Week</td>
+            <td>2019-07-01*13:21:46</td>
+            <td>Admin</td>
+            <td>Small Business Empowerment</td>
+            <td>New Organization add</td>
+            <td>Rosa Reign(Admin) added "Small Business Empowerment" Organization</td>
+            
+        </tr>
+       
+       
+    </tbody>
+</table>
+ 
+
+                    
+                   
+                  </div>
+  <a style="padding-top: .5%" href=""><span>Export CSV</span></a>                
+<i class="fas fa-arrow-right fa-2x pull-right c-black-500 mT-3"></i>
+                      <span class="pull-right mL-10 mR-10 mT-3" style="line-height: 2.1;">Page 1/10</span>
+                      <i class="fas fa-arrow-left fa-2x pull-right c-black-500 mT-3"></i>
+                </div>
+              </div>
+
+
+    <script src="https://kit.fontawesome.com/bbf8fb8b35.js" crossorigin="anonymous"></script>
+  </body>
+</html>

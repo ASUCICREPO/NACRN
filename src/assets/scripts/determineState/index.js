@@ -1,6 +1,14 @@
 let url = window.location.href
 
 let adminBar = `<li class="nav-item mT-30 actived">
+<a class="sidebar-link" href="admin_home.html">
+  <span class="icon-holder">
+    <i class="c-blue-500 fas fa-home"></i>
+  </span>
+  <span class="title">Home</span>
+</a>
+</li>
+<li class="nav-item mT-30 actived">
 <a class="sidebar-link" href="index_admin.html">
   <span class="icon-holder">
     <i class="c-blue-500 fas fa-search"></i>
@@ -56,6 +64,13 @@ let adminBar = `<li class="nav-item mT-30 actived">
     <i class="c-blue-500 fas fa-users"></i>
   </span>
   <span class="title">Manage Organizations</span>
+</a>
+<li class="nav-item mT-30 actived">
+<a class="sidebar-link" href="logs-admin.html">
+  <span class="icon-holder">
+    <i class="c-blue-500 fas fa-database"></i>
+  </span>
+  <span class="title">Logs</span>
 </a>
 </li>`
 
@@ -205,7 +220,7 @@ let admin_settings = `<div class="header-container">
           </li>
          
           <li>
-            <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+            <a href="adminChat.html" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
               <div class="peer mR-15">
                 <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/men/3.jpg" alt="">
               </div>
@@ -245,12 +260,7 @@ let admin_settings = `<div class="header-container">
       </div>
     </a>
     <ul class="dropdown-menu fsz-sm">
-    <li>
-        <a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
-          <i class="ti-settings mR-10"></i>
-          <span>Setting</span>
-        </a>
-      </li>
+    
       <li>
         <a href="settings-admin.html" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
           <i class="ti-user mR-10"></i>
@@ -344,7 +354,7 @@ if (url.includes('form')) {
 } else if (url.includes('admin')){
   document.querySelector('#sideNavBar').innerHTML = adminBar
   document.querySelector('#topBar').innerHTML = admin_settings
-}
-else {
+
+} else {
   document.querySelector('#sideNavBar').innerHTML = endUserBar
 }

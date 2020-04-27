@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home</title>
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Public+Sans|Source+Sans+Pro|Roboto&display=swap" rel="stylesheet">
+    <style>
+      #loader {
+        transition: all 0.3s ease-in-out;
+        opacity: 1;
+        visibility: visible;
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background: #fff;
+        z-index: 90000;
+      }
+
+      #loader.fadeOut {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .spinner {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: calc(50% - 20px);
+        left: calc(50% - 20px);
+        background-color: #333;
+        border-radius: 100%;
+        -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+        animation: sk-scaleout 1.0s infinite ease-in-out;
+      }
+
+      @-webkit-keyframes sk-scaleout {
+        0% { -webkit-transform: scale(0) }
+        100% {
+          -webkit-transform: scale(1.0);
+          opacity: 0;
+        }
+      }
+
+      @keyframes sk-scaleout {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        } 100% {
+          -webkit-transform: scale(1.0);
+          transform: scale(1.0);
+          opacity: 0;
+        }
+      }
+      body {
+    color: #fff;
+    overflow-x: hidden;
+    height: 100%;
+    background-color: #CFD8DC;
+    background-repeat: no-repeat
+}
+
+.card {
+    background-image: url('assets/static/images/Sunny Days - Seamless.jpg');
+    background-size: cover;
+    width: 600px;
+    height: 350px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 16px 4px #9E9E9E;
+    margin-top: 50px;
+    margin-bottom: 50px
+   color : black
+}
+
+.time-font {
+    font-size: 50px
+}
+
+.sm-font {
+    font-size: 18px
+}
+
+.med-font {
+    font-size: 28px
+}
+
+.large-font {
+    font-size: 60px
+}
+    </style>
+  </head>
+
+  <body class="app">
+    <!-- @TOC -->
+    <!-- =================================================== -->
+    <!--
+      + @Page Loader
+      + @App Content
+          - #Left Sidebar
+              > $Sidebar Header
+              > $Sidebar Menu
+
+          - #Main
+              > $Topbar
+              > $App Screen Content
+    -->
+
+    <!-- @Page Loader -->
+    <!-- =================================================== -->
+    <div id='loader'>
+      <div class="spinner"></div>
+    </div>
+
+    <script>
+      window.addEventListener('load', function load() {
+        const loader = document.getElementById('loader');
+        setTimeout(function() {
+          loader.classList.add('fadeOut');
+        }, 300);
+      });
+      $('input[type="checkbox"]').on('change', function(e){
+   if(e.target.checked){
+     $('#myModal').modal();
+   }
+});
+
+    </script>
+
+    <!-- @App Content -->
+    <!-- =================================================== -->
+    <div>
+      <!-- #Left Sidebar ==================== -->
+      <div class="sidebar">
+        <div class="sidebar-inner">
+          <!-- ### $Sidebar Header ### -->
+          <div class="sidebar-logo">
+            <div class="peers ai-c fxw-nw">
+              <div class="peer peer-greed">
+                <a class="sidebar-link td-n" href="index.html">
+                  <div class="peers ai-c fxw-nw">
+                    <div class="peer">
+                      <div class="logo">
+                        <img src="assets/static/images/navajologo.png" alt="">
+                      </div>
+                    </div>
+                    <div class="peer peer-greed">
+                      <h5 class="lh-1 mB-0 logo-text">NACRN</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="peer">
+                <div class="mobile-toggle sidebar-toggle">
+                  <a href="" class="td-n">
+                    <i class="ti-arrow-circle-left"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ### $Sidebar Menu ### -->
+          <ul class="sidebar-menu scrollable pos-r" id="sideNavBar">
+          </ul>
+        </div>
+      </div>
+
+
+
+
+ 
+      <!-- #Main ============================ -->
+      <div class="page-container">
+        <!-- ### $Topbar ### -->
+    
+        <div class="header navbar" id = "topBar">
+          
+        </div>
+          
+
+        <!-- ### $App Screen Content ### -->
+         <!-- ### $App Screen Content ### -->
+         <!-- ### $App Screen Content ### -->
+        <main class='main-content bgc-grey-100'>
+        
+          <div id='mainContent'>
+
+          <h3>Good Morning John Doe!</h3>
+               <form class="form-inline">
+            
+  
+ <div class="form-group">
+                        <label for="inputState">Organization</label>
+                        &nbsp;&nbsp;
+                          <select id="inputState" class="form-control" aria-expanded="false">
+                          <option selected>All</option>
+                            <option>Homelessness</option>
+                            <option>Child Care</option>
+                          </select>
+                      </div>
+ &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                      <div class="form-group">
+                        <label for="inputState">Time Frame</label>  &nbsp;&nbsp;
+                          <select id="nputState" class="form-control" aria-expanded="false">
+                            <option selected>Today</option>
+                            <option>This Week</option>
+                            <option>This Month</option>
+                            <option>YTD</option>
+                            <option>All</option>
+                          </select>
+                        </div>
+                        </form>
+ 
+
+ <table class="table" style="width:100%" style="height:100%" >
+ 
+    <thead class = "thead-dark">
+        <tr><th>S. No.</th>
+            <th>User Activity</th>
+            <th>Case Referrals</th>
+
+
+                    
+            <th>Total Organizations</th>
+         
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>200 Active users today</td>
+            <td>50 users had referrals today</td>
+            <td>40 Organizations</td>
+          
+            
+        </tr>
+       
+        
+       
+       
+    </tbody>
+</table>
+                   
+                  </div>
+                  <div class="container-fluid px-1 px-md-4 py-5 mx-auto pull-left">
+    <div class="row d-flex justify-content-left px-3">
+        <div class="card">
+            <h2 class="ml-auto mr-4 mt-3 mb-0">Tempe</h2>
+            
+            <p class="ml-auto mr-4 mb-0 med-font">Mostly Sunny</p>
+            <h1 class="ml-auto mr-4 large-font">73&#176;</h1>
+            <p class="time-font mb-0 ml-4 mt-auto">08:30 <span class="sm-font">AM</span></p>
+            <p class="ml-4 mb-4">Monday, 20 April 2020</p>
+        </div>
+    </div>
+</div>
+  
+
+
+    <script src="https://kit.fontawesome.com/bbf8fb8b35.js" crossorigin="anonymous"></script>
+  </body>
+</html>
