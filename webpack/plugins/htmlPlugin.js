@@ -61,17 +61,17 @@ const titles = {
   'add-user-admin': 'Add a User',
   'manage-groups-admin': 'Manage Groups',
   'add-group-admin': 'Add a Group',
-  adminChat: 'adminChat',
-  calendar_admin: 'calendar_admin',
-  'add-remove-admin': 'add-remove-admin',
-  caretaker: 'caretaker',
   admin_home: 'admin_home',
   'calendarEndUser2': 'calendarEndUser2',
   'calendarEndUser3': 'calendarEndUser3',
   'calendar_admin_add_availability': 'calendar_admin_add_availability',
   'logs-admin': 'logs-admin',
   'calendar_careCoordinator_add_availability': 'calendar_careCoordinator_add_availability',
-  'calendar_careCoordinator': 'calendar_careCoordinator'
+  'calendar_careCoordinator': 'calendar_careCoordinator',
+    'add-remove-admin': 'add-remove-admin',
+  'caretaker-admin': 'caretaker',
+  'form-management-admin': 'form-management-admin'
+
 
 }
 

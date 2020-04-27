@@ -57,6 +57,7 @@
     </style>
   </head>
 
+
   <body class="app">
     <!-- @TOC -->
     <!-- =================================================== -->
@@ -432,11 +433,13 @@
                                 <div class="row">
                                   <div class="col-6">
                                     <div class="list-group">
-                                      <p id="userslist" class="list-group-item">Idhant</p>       
+                                      <p id="userslist" class="list-group-item">John Smith, Tommy Forrest</p>       
                                     </div>                
                                   </div>
                                   <div class="col-6">
-                                    <button type="button" onclick="inserttext();" class="btn btn-light">Add Me</button>
+                                    <button type="button"  data-toggle="modal" data-target="#addnewnamemodal" class="btn btn-light">Add</button>
+                                    <button type="button" onclick="addOptions();"  data-toggle="modal" data-target="#removenamemodal" class="btn btn-light">Remove</button>
+
                                   </div>
                                 </div>
 
@@ -623,6 +626,64 @@
   </div>
 </div>
 
+<!-- add new name -->
+<div class="modal fade" id="addnewnamemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Add Care coordinator</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="addnameform">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Care coordinator name</label>
+            <input type="email" class="form-control" id="nameinput" aria-describedby="emailHelp">
+            <small id="emailHelp" class="form-text text-muted"></small>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" onclick="addName(document.getElementById('addnameform').elements.nameinput.value)" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- remove name modal -->
+<div class="modal fade" id="removenamemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Add Care coordinator</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="selectInput">Options</label>
+          </div>
+          <select class="custom-select" id="selectInput">
+            <!-- <option selected>Choose...</option>
+            <option value="1">John Smith</option>
+            <option value="2">Tommy Forest</option> -->
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" onclick="deleteName($('#selectInput').find(':selected').text())" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 
         <!-- Add Alert Modal -->
@@ -660,7 +721,9 @@
             </div>
           </div>
         </div>
-<script src="https://kit.fontawesome.com/bbf8fb8b35.js" crossorigin="anonymous"></script>
+
+        <script src="https://kit.fontawesome.com/bbf8fb8b35.js" crossorigin="anonymous"></script>
+
 
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -668,7 +731,40 @@
    
    
    <script>
+     namelist = ["John Smith"," Tommy Forrest"];
+     
+     function addName(name){
+       namelist.push(name);
+       updatebox(namelist);
+     }
 
+     function updatebox(namelist){
+      let target = document.getElementById('userslist');
+      target.innerHTML = namelist.toString();
+     }
+     
+     function addOptions(){
+      let = option=null;
+      let select_target = document.getElementById("selectInput");
+      namelist.forEach(element => {
+        option = document.createElement('option');
+        option.text = element;
+        option.value = element;
+        select_target.appendChild(option);
+        option = null;
+      });
+     }
+
+    function deleteName(name){
+      namelist = namelist.filter(e => e !== name);
+      // if needed i can add a update select function here...
+      updatebox(namelist);
+     }
+
+     
+
+
+     
      function updatefields(thisobj){
       
       x.forEach(x_obj => {

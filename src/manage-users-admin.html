@@ -156,10 +156,10 @@
                   <div style="display: flex; padding-left: 0px; padding-right: 0px;" class="col-md-12">
                     <nav class="col-md-12">
                       <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-                          <a class="nav-item nav-link active" onclick="changeuser(this);" id="selectManageAdmins" data-toggle="tab" href="#manageAdmins" role="tab">Administrators</a>
-                          <a class="nav-item nav-link" onclick="changeuser(this);" id="selectManagePowerUsers" data-toggle="tab" href="#managePowerUsers" role="tab">Power Users</a>
-                          <a class="nav-item nav-link" onclick="changeuser(this);" id="selectManageCareCoordinators" data-toggle="tab" href="#manageCareCoordinators" role="tab">Care Coordinators</a>
-                          <a class="nav-item nav-link" onclick="changeuser(this);" id="selectManageUsers" data-toggle="tab" href="#manageEndUsers" role="tab">End Users</a>
+                          <a class="nav-item nav-link active" id="selectManageAdmins" data-toggle="tab" href="#manageAdmins" role="tab">Administrators</a>
+                          <a class="nav-item nav-link" id="selectManagePowerUsers" data-toggle="tab" href="#managePowerUsers" role="tab">Power Users</a>
+                          <a class="nav-item nav-link" id="selectManageCareCoordinators" data-toggle="tab" href="#manageCareCoordinators" role="tab">Care Coordinators</a>
+                          <a class="nav-item nav-link" id="selectManageUsers" data-toggle="tab" href="#manageEndUsers" role="tab">End Users</a>
                       </div>
                     </nav>
                   </div>
@@ -241,7 +241,7 @@
                         <button type="button" class="btn btn-primary mB-10" id="addAdministratorButton">Add a User</button>
                       </a>
                       <button type="button" class="btn btn-danger disabled mB-10 removal-button" id="adminTableRemovalButton">Remove Selected</button>
-                      <button type="button" onclick="dosome(user);" class="btn btn-primary disabled mB-10 edit-button" id="adminTableEditButton" style="background-color: #8AD6D7; border-color:#8AD6D7">Edit Selected User</button>
+                      <button type="button" data-toggle="modal" data-target="#adminusermodal" class="btn btn-primary disabled mB-10 edit-button" id="editbutton1" style="background-color: #8AD6D7; border-color:#8AD6D7">Edit Selected User</button>
                       <i class="fas fa-arrow-right fa-2x pull-right c-blue-500 mT-3"></i>
                       <span class="pull-right mL-10 mR-10 mT-3" style="line-height: 2.1;">Page 1/10</span>
                       <i class="fas fa-arrow-left fa-2x pull-right c-blue-500 mT-3"></i>
@@ -329,7 +329,7 @@
                         <button type="button" class="btn btn-primary mB-10" id="addPowerUserButton">Add a User</button>
                       </a>
                       <button type="button" class="btn btn-danger disabled mB-10 removal-button" id="powerUserTableRemovalButton">Remove Selected</button>
-                      <button type="button" class="btn disabled mB-10 edit-button" id="powerUserTableEditButton" style="color: #fff; background-color: #8AD6D7; border-color:#8AD6D7">Edit Selected User</button>
+                      <button type="button" data-toggle="modal" data-target="#powerusermodal"  class="btn disabled mB-10 edit-button" id="editbutton2" style="color: #fff; background-color: #8AD6D7; border-color:#8AD6D7">Edit Selected User</button>
                       <i class="fas fa-arrow-right fa-2x pull-right c-blue-500 mT-3"></i>
                       <span class="pull-right mL-10 mR-10 mT-3" style="line-height: 2.1;">Page 1/10</span>
                       <i class="fas fa-arrow-left fa-2x pull-right c-blue-500 mT-3"></i>
@@ -417,7 +417,7 @@
                         <button type="button" class="btn btn-primary mB-10" id="addCareCoordinatorButton">Add a User</button>
                       </a>
                       <button type="button" class="btn btn-danger disabled mB-10 removal-button" id="careCoordinatorTableRemovalButton">Remove Selected</button>
-                      <button type="button" class="btn disabled mB-10 edit-button" id="careCoordinatorTableEditButton" style="color: #fff; background-color: #8AD6D7; border-color:#8AD6D7">Edit Selected User</button>
+                      <button type="button" data-toggle="modal" data-target="#caretakermodal"  class="btn disabled mB-10 edit-button" id="editbutton3" style="color: #fff; background-color: #8AD6D7; border-color:#8AD6D7">Edit Selected User</button>
                       <i class="fas fa-arrow-right fa-2x pull-right c-blue-500 mT-3"></i>
                       <span class="pull-right mL-10 mR-10 mT-3" style="line-height: 2.1;">Page 1/10</span>
                       <i class="fas fa-arrow-left fa-2x pull-right c-blue-500 mT-3"></i>
@@ -493,7 +493,7 @@
                         <button type="button" class="btn btn-primary mB-10" id="addEndUserButton">Add a User</button>
                       </a>
                       <button type="button" class="btn btn-danger disabled mB-10 removal-button" id="endUserTableRemovalButton">Remove Selected</button>
-                      <button type="button" class="btn disabled mB-10 edit-button" id="endUserTableEditButton" style="color: #fff; background-color: #8AD6D7; border-color:#8AD6D7">Edit Selected User</button>
+                      <button type="button" data-toggle="modal" data-target="#endusermodal" class="btn disabled mB-10 edit-button" id="editbutton4" style="color: #fff; background-color: #8AD6D7; border-color:#8AD6D7">Edit Selected User</button>
                       <i class="fas fa-arrow-right fa-2x pull-right c-blue-500 mT-3"></i>
                       <span class="pull-right mL-10 mR-10 mT-3" style="line-height: 2.1;">Page 1/10</span>
                       <i class="fas fa-arrow-left fa-2x pull-right c-blue-500 mT-3"></i>
@@ -529,7 +529,7 @@
       </div>
     </div>
 
-    <!--Edit User Modal-->
+    <!--Edit admin Modal-->
     <div class="modal fade" id="adminusermodal" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -596,20 +596,24 @@
               </div>
               <div class="row">
                 <div class="col">
-                  <select  id="intakeQuestionManagerSelect">
-                    <option disabled value>Enabled</option>
+                  <div class="form-group bmd-form-group">
+                    <label class="bmd-label-floating">Global Question Intake Management (GQIM) Status</label>
+                    <select disabled id="globalintakeselect1" class="form-control" data-role="select-dropdown">
+                      <option selected value="1">Enabled</option>
                   </select>
+                </div>
                 </div>
                 <div class="col">
                   <div class="form-group bmd-form-group" style="display: block;">
-                    <label class="bmd-label-floating">Data Export</label>
-                  <select id="dataExportSelect" data-role="select-dropdown">
-                      <option disabled value>Set the data export capabilities for the selected user</option>
-                      <option value="1">Not Applicable</option>
-                      <option value="2">Enabled</option>
-                      <option value="3">Disabled</option>
+                    <div class="form-group bmd-form-group">
+                      <label class="bmd-label-floating">Data Export</label>
+                      <select id="dataexportselect1" class="form-control" data-role="select-dropdown">
+                        <option value="1">Not Applicable</option>
+                        <option value="2">Enabled</option>
+                        <option value="3">Disabled</option>
                     </select>
                   </div>
+                </div>
                 </div>
               </div>
               <div class="row">
@@ -631,7 +635,7 @@
       </div>
     </div>
 
-Power user modal
+<!-- Power user modal -->
 <div class="modal fade" id="powerusermodal" tabindex="-1" role="dialog">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
@@ -698,22 +702,25 @@ Power user modal
           </div>
           <div class="row">
             <div class="col">
-              <select  id="intakeQuestionManagerSelect">
-                <option value="3">Disabled</option>
-                <option value="2">Enabled</option>
-                
+              <div class="form-group bmd-form-group">
+                <label class="bmd-label-floating">Global Question Intake Management (GQIM) Status</label>
+                <select id="globalintakeselect2" class="form-control" data-role="select-dropdown">
+                  <option value="1">Enabled</option>
+                  <option selected value="2">Disabled</option>
               </select>
+            </div>
             </div>
             <div class="col">
               <div class="form-group bmd-form-group" style="display: block;">
-                <label class="bmd-label-floating">Data Export</label>
-              <select id="dataExportSelect" data-role="select-dropdown">
-                  <option disabled value>Set the data export capabilities for the selected user</option>
-                  <option value="1">Not Applicable</option>
-                  <option value="2">Enabled</option>
-                  <option value="3">Disabled</option>
+                <div class="form-group bmd-form-group">
+                  <label class="bmd-label-floating">Data Export</label>
+                  <select id="dataexportselect2" class="form-control" data-role="select-dropdown">
+                    <option value="1">Not Applicable</option>
+                    <option value="2">Enabled</option>
+                    <option value="3">Disabled</option>
                 </select>
               </div>
+            </div>
             </div>
           </div>
           <div class="row">
@@ -734,8 +741,9 @@ Power user modal
     </div>
   </div>
 </div>
-Care taker
 
+
+<!-- Care taker -->
 
 <div class="modal fade" id="caretakermodal" tabindex="-1" role="dialog">
   <div class="modal-dialog modal-lg" role="document">
@@ -751,12 +759,12 @@ Care taker
           <div class="row">
             <div class="col">
               <div class="form-group bmd-form-group">
-                <label class="bmd-label-floating">User type</label>
-                <select id="userTypeSelect" class="form-control" data-role="select-dropdown">
-                  <option value="admin">Administrator</option>
-                  <option value="power">Power User</option>
-                  <option value="caretaker">Care Coordinator</option>
-                  <option value="enduser">End User</option>
+                <label for='caretakertypeselect' class="bmd-label-floating">User type</label>
+                    <select id="caretakertypeselect" class="form-control" data-role="select-dropdown">
+                        <option value="admin">Administrator</option>
+                        <option value="power">Power User</option>
+                        <option value="caretaker">Care Coordinator</option>
+                        <option value="enduser">End User</option>
                 </select>
               </div>
             </div>
@@ -803,22 +811,26 @@ Care taker
           </div>
           <div class="row">
             <div class="col">
-              <select  id="intakeQuestionManagerSelect">
-                <option value="1">Not Applicable</option>
-                <option value="2">Enabled</option>
-                <option value="3">Disabled</option>
+              <div class="form-group bmd-form-group">
+                <label class="bmd-label-floating">Global Question Intake Management (GQIM) Status</label>
+                <select id="globalintakeselect3" class="form-control" data-role="select-dropdown">
+                  <option value="1">Enabled</option>
+                  <option selected value="2">Disabled</option>
               </select>
             </div>
+            </div>
+            <!-- </div> -->
             <div class="col">
               <div class="form-group bmd-form-group" style="display: block;">
-                <label class="bmd-label-floating">Data Export</label>
-              <select id="dataExportSelect" data-role="select-dropdown">
-                  <option disabled value>Set the data export capabilities for the selected user</option>
-                  <option value="1">Not Applicable</option>
-                  <option value="2">Enabled</option>
-                  <option value="3">Disabled</option>
+                <div class="form-group bmd-form-group">
+                  <label class="bmd-label-floating">Data Export</label>
+                  <select id="dataexportselect3" class="form-control" data-role="select-dropdown">
+                    <option value="1">Not Applicable</option>
+                    <option value="2">Enabled</option>
+                    <option value="3">Disabled</option>
                 </select>
               </div>
+            </div>
             </div>
           </div>
           <div class="row">
@@ -840,7 +852,7 @@ Care taker
   </div>
 </div>
 
-end users
+<!-- end users -->
 <div class="modal fade" id="endusermodal" tabindex="-1" role="dialog">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
@@ -907,18 +919,21 @@ end users
           </div>
           <div class="row">
             <div class="col">
-              <select  id="intakeQuestionManagerSelect">
-                <option disabled value="1">Not Applicable</option>
+              <div class="form-group bmd-form-group">
+                <label class="bmd-label-floating">Global Question Intake Management (GQIM) Status</label>
+                <select disabled id="globalintakeselect4" class="form-control" data-role="select-dropdown">
+                  <option selected value="1">Not Applicable</option>
               </select>
+            </div>
             </div>
             <div class="col">
               <div class="form-group bmd-form-group" style="display: block;">
-                <label class="bmd-label-floating">Data Export</label>
-              <select id="dataExportSelect" data-role="select-dropdown">
-                  <!-- <option disabled value>Set the data export capabilities for the selected user</option> -->
-                  <option value="1">Not Applicable</option>
-                  <option value="2">Enabled</option>
-                  <option value="3">Disabled</option>
+                <div class="form-group bmd-form-group">
+                  <label class="bmd-label-floating">Data Export</label>
+                  <select id="dataexportselect4" class="form-control" data-role="select-dropdown">
+                    <option value="1">Not Applicable</option>
+                    <option value="2">Enabled</option>
+                    <option value="3">Disabled</option>
                 </select>
               </div>
             </div>
@@ -947,62 +962,13 @@ end users
 
     <script src="https://kit.fontawesome.com/bbf8fb8b35.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
-    <script type="text/javascript">
-      var roles = {};
-      roles['admin'] = ['enabled'];
-      roles['power'] = ['enabled', 'disabled'];
-      roles['caretaker'] = ['enable', 'disable'];
-      roles['enduser'] = ['not applicable']
-      function changeuser(obj){
-        if (obj.id === 'selectManageAdmins'){
-          user = 'admin';
-          console.log(obj.id);
-        }
-        else if (obj.id === 'selectManagePowerUsers'){
-          user = 'power';
-          console.log(obj.id);
-        }
-       else if (obj.id === 'selectManageCareCoordinators'){
-         user = 'care';
-          console.log(obj.id);
-        }
-        else{
-          user = 'enduser';  
-          console.log(obj.id);
-        }
-      }
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
       
-      function dosome(obj) {
-    //     var user_select = document.getElementById("userTypeSelect");
-    //     var target_select = document.getElementById("intakeQuestionManagerSelect");
-    //     var selected_user = user_select.options[user_select.selectedIndex].value;
-    //     while (target_select.options.length) {
-    //       target_select.remove(0);
-    //     }
-    //     var option_list = roles[selected_user];
-    //     console.log(option_list)
-    //     for (var i = 0; i < option_list.length; i++) {
-    //         newOption = document.createElement('option');
-    //         newOption.value = option_list[i];
-    //         newOption.text = option_list[i];
-    //         try {
-    //           target_select.add(newOption);  // this will fail in DOM browsers but is needed for IE
-    //         }
-    //         catch (e) {
-    //           target_select.appendChild(newOption);
-
-		// }
-          
-    //     }
-    //     console.log(target_select)
-    var target_select = document.getElementById(obj.id);
-    
-      } 
-
-      $(document).on("click","#addnotebutton",function(){
-      // $('#editusermodal').modal('hide');
-      $('#addnotemodal').modal('show');
-    });
-      </script>
   </body>
 </html>
