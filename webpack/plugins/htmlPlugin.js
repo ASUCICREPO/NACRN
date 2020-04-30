@@ -72,7 +72,8 @@ const titles = {
   'form-management-admin': 'form-management-admin',
 
   'notifications-admin': 'notifications-admin',
-  'edit_programs_admin': 'edit_programs_admin'
+  'edit_programs_admin': 'edit_programs_admin',
+  'adminChat': 'adminChat'
 
 }
 
