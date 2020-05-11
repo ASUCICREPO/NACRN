@@ -35,17 +35,12 @@ const titles = {
   settings_admin: 'settings_admin',
 
   questionnaire: 'questionnaire',
-  questionnaire1: 'questionnaire1',
-  questionnaire2: 'questionnaire2',
-  questionnaire3: 'questionnaire3',
-  questionnaire4: 'questionnaire4',
+
   signupRedirect: 'signupRedirect',
   sampleIndex: 'sampleIndex',
   calendarEndUser: 'calendarEndUser',
   endUserChat: 'endUserChat',
   endUserprograms: 'endUserprograms',
-
-  'questionnaire copy': 'questionnaire copy',
 
   settings: 'Settings',
   'settings-admin': 'Settings',
@@ -73,7 +68,21 @@ const titles = {
 
   'notifications-admin': 'notifications-admin',
   'edit_programs_admin': 'edit_programs_admin',
-  'adminChat': 'adminChat'
+  'adminChat': 'adminChat',
+  'endUser_home': 'endUser_home',
+  'powerUser_home': 'powerUser_home',
+  'careCoordinator_home': 'careCoordinator_home',
+  'notifications-endUser': 'notifications-endUser',
+  'powerUserChat': 'powerUserChat',
+  'notifications-powerUser': 'notifications-powerUser',
+  'index_powerUser': 'index_powerUser',
+  'invite_powerUser': 'invite_powerUser',
+  'calendar_powerUser_add_availability': 'calendar_powerUser_add_availability',
+  'calendar_powerUser': 'calendar_powerUser',
+  'settings_powerUser': 'settings_powerUser',
+  'edit_programs_powerUser': 'edit_programs_powerUser',
+  'caretaker-powerUser': 'caretaker-powerUser',
+
 
 }
 

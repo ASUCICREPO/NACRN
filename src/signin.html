@@ -75,9 +75,9 @@ function validate(){
 var username = document.getElementById("username").value;
 var password = document.getElementById("password").value;
 if (username == "poweruser" && password == "poweruser"){
-var redirectPage = 'http://localhost:3000/powerUser.html'
+var redirectPage = 'http://localhost:3000/powerUser_home.html'
 try{
-  setTimeout(function(){document.location.href = "http://localhost:3000/powerUser.html"},500); 
+  setTimeout(function(){document.location.href = "http://localhost:3000/powerUser_home.html"},500); 
 alert ("Login successful");
 
 }
@@ -91,9 +91,9 @@ catch(err){
  // Redirecting to other page.
 
 }else if (username == "user" && password == "user"){
-var redirectPage = "http://localhost:3000/endUserprograms.html"
+var redirectPage = "http://localhost:3000/endUser_home.html"
 try{
-  setTimeout(function(){document.location.href = "http://localhost:3000/endUserprograms.html"},500); 
+  setTimeout(function(){document.location.href = "http://localhost:3000/endUser_home.html"},500); 
 alert ("Login successful");
 
 }
@@ -107,9 +107,9 @@ catch(err){
  // Redirecting to other page.
 
 }else if (username == "admin" && password == "admin"){
-var redirectPage = 'http://localhost:3000/index_admin.html'
+var redirectPage = 'http://localhost:3000/admin_home.html'
 try{
-  setTimeout(function(){document.location.href = "http://localhost:3000/index_admin.html"},500); 
+  setTimeout(function(){document.location.href = "http://localhost:3000/admin_home.html"},500); 
 alert ("Login successful");
 
 }

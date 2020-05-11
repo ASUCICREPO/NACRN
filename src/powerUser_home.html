@@ -3,181 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>All Programs</title>
+    <title>Power User Home</title>
 
     <link href="https://fonts.googleapis.com/css?family=PT+Sans|Public+Sans|Source+Sans+Pro|Roboto&display=swap" rel="stylesheet">
-    <script>
-    $(document).ready(function() {
-	  var date = new Date();
-		var d = date.getDate();
-		var m = date.getMonth();
-		var y = date.getFullYear();
-
-		/*  className colors
-		className: default(transparent), important(red), chill(pink), success(green), info(blue)
-		*/
-
-
-		/* initialize the external events
-		-----------------------------------------------------------------*/
-
-		$('#external-events div.external-event').each(function() {
-
-			// create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
-			// it doesn't need to have a start or end
-			var eventObject = {
-				title: $.trim($(this).text())
-          // use the element's text as the event title
-			};
-  
-        //document.getElementById("eventDate").innerHTML = eventObject.title;
-			// store the Event Object in the DOM element so we can get to it later
-			$(this).data('eventObject', eventObject);
-
-      
-
-			// make the event draggable using jQuery UI
-			$(this).draggable({
-				zIndex: 999,
-				revert: true,      // will cause the event to go back to its
-				revertDuration: 0  //  original position after the drag
-			});
-
-		});
-
-
-		/* initialize the calendar
-		-----------------------------------------------------------------*/
-
-		var calendar =  $('#calendar').fullCalendar({
-			header: {
-				left: 'title',
-				center: 'agendaDay,agendaWeek,month',
-				right: 'prev,next'
-			},
-			editable: true,
-			firstDay: 1, //  1(Monday) this can be changed to 0(Sunday) for the USA system
-			selectable: true,
-			defaultView: 'month',
-
-			axisFormat: 'h:mm',
-			columnFormat: {
-                month: 'ddd',    // Mon
-                week: 'ddd d', // Mon 7
-                day: 'dddd M/d',  // Monday 9/7
-                agendaDay: 'dddd d'
-            },
-            titleFormat: {
-                month: 'MMMM yyyy', // September 2009
-                week: "MMMM yyyy", // September 2009
-                day: 'MMMM yyyy'                  // Tuesday, Sep 8, 2009
-            },
-			allDaySlot: false,
-			selectHelper: true,
-			select: function(start, end, allDay) {
-
-   
-
-        document.getElementById("dateField").value = "4/22/2020";
-      
-
-
-       
-
-				//var title = prompt('Event Title:');
-				if (true) {
-					calendar.fullCalendar('renderEvent',
-						{
-							//title: title,
-							start: start,
-							end: end,
-							allDay: allDay
-						},
-						true // make the event "stick"
-					);
-
-          
-				}
-
-
-				calendar.fullCalendar('unselect');
-			},
-			droppable: true, // this allows things to be dropped onto the calendar !!!
-			drop: function(date, allDay) { // this function is called when something is dropped
-
-				// retrieve the dropped element's stored Event Object
-				var originalEventObject = $(this).data('eventObject');
-
-				// we need to copy it, so that multiple events don't have a reference to the same object
-				var copiedEventObject = $.extend({}, originalEventObject);
-
-				// assign it the date that was reported
-				copiedEventObject.start = date;
-				copiedEventObject.allDay = allDay;
-
-				// render the event on the calendar
-				// the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
-				$('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
-
-				// is the "remove after drop" checkbox checked?
-				if ($('#drop-remove').is(':checked')) {
-					// if so, remove the element from the "Draggable Events" list
-					$(this).remove();
-				}
-
-			},
-
-			events: [
-				{
-					title: 'All Day Event',
-					start: new Date(y, m, 1)
-				},
-				{
-					id: 999,
-					title: 'Repeating Event',
-					start: new Date(y, m, d-3, 16, 0),
-					allDay: false,
-					className: 'info'
-				},
-				{
-					id: 999,
-					title: 'Repeating Event',
-					start: new Date(y, m, d+4, 16, 0),
-					allDay: false,
-					className: 'info'
-				},
-				{
-					title: 'Meeting',
-					start: new Date(y, m, d, 10, 30),
-					allDay: false,
-					className: 'important'
-				},
-				{
-					title: 'Lunch',
-					start: new Date(y, m, d, 12, 0),
-					end: new Date(y, m, d, 14, 0),
-					allDay: false,
-					className: 'important'
-				},
-				{
-					title: 'Birthday Party',
-					start: new Date(y, m, d+1, 19, 0),
-					end: new Date(y, m, d+1, 22, 30),
-					allDay: false,
-				},
-				{
-					title: 'Click for Google',
-					start: new Date(y, m, 28),
-					end: new Date(y, m, 29),
-					className: 'success'
-				}
-			],
-		});
-
-
-	});
-
-</script>
     <style>
       #loader {
         transition: all 0.3s ease-in-out;
@@ -225,6 +53,41 @@
           opacity: 0;
         }
       }
+      body {
+    color: #fff;
+    overflow-x: hidden;
+    height: 100%;
+    background-color: #CFD8DC;
+    background-repeat: no-repeat
+}
+
+.card {
+    background-image: url('assets/static/images/Sunny Days - Seamless.jpg');
+    background-size: cover;
+    width: 600px;
+    height: 350px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 16px 4px #9E9E9E;
+    margin-top: 50px;
+    margin-bottom: 50px
+   color : black
+}
+
+.time-font {
+    font-size: 50px
+}
+
+.sm-font {
+    font-size: 18px
+}
+
+.med-font {
+    font-size: 28px
+}
+
+.large-font {
+    font-size: 60px
+}
     </style>
   </head>
 
@@ -260,20 +123,16 @@
    if(e.target.checked){
      $('#myModal').modal();
    }
-
 });
+function myFunction() {
+  var x = document.getElementById("calendarID");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
 
-$(document).ready(function(){
-    $('input[type="radio"]').click(function(){
-        var inputValue = $(this).attr("value");
-        var targetBox = $("." + inputValue);
-        $(".box").not(targetBox).hide();
-        $(targetBox).show();
-    });
-});
-
-
-      
     </script>
 
     <!-- @App Content -->
@@ -330,8 +189,314 @@ $(document).ready(function(){
 
         <!-- ### $App Screen Content ### -->
          <!-- ### $App Screen Content ### -->
+         <!-- ### $App Screen Content ### -->
         <main class='main-content bgc-grey-100'>
-        <div id='mainContent'>
+        
+          <div id='mainContent'>
+          <div class="masonry-item col-md-4">
+        
+          <h3>Good Morning John Doe!</h3>
+          </div>
+        
+        <div class="form-group" float = "right">
+                <!-- #Weather ==================== -->
+                <div class="bd bgc-white p-20">
+                  <div class="layers">
+                    <!-- Widget Title -->
+                    <div class="layer w-100 mB-20">
+                      <h6 class="lh-1">Weather</h6>
+                    </div>
+
+                    <!-- Today Weather -->
+                    <div class="layer w-100">
+                      <div class="peers ai-c jc-sb fxw-nw">
+                        <div class="peer peer-greed">
+                          <div class="layers">
+                            <!-- Temprature -->
+                            <div class="layer w-100">
+                              <div class="peers fxw-nw ai-c">
+                                <div class="peer mR-20">
+                                  <h3>32<sup>°F</sup></h3>
+                                </div>
+                                <div class="peer">
+                                  <canvas class="sleet" width="44" height="44"></canvas>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- Condition -->
+                            <div class="layer w-100">
+                              <span class="fw-600 c-grey-600">Partly Clouds</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="peer">
+                          <div class="layers ai-fe">
+                            <div class="layer">
+                              <h5 class="mB-5">Fri</h5>
+                            </div>
+                            <div class="layer">
+                              <span class="fw-600 c-grey-600">May, 01 2020</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Today Weather Extended -->
+                    <div class="layer w-100 mY-30">
+                      <div class="layers bdB">
+                        <div class="layer w-100 bdT pY-5">
+                          <div class="peers ai-c jc-sb fxw-nw">
+                            <div class="peer">
+                              <span>Wind</span>
+                            </div>
+                            <div class="peer ta-r">
+                              <span class="fw-600 c-grey-800">10km/h</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="layer w-100 bdT pY-5">
+                          <div class="peers ai-c jc-sb fxw-nw">
+                            <div class="peer">
+                              <span>Sunrise</span>
+                            </div>
+                            <div class="peer ta-r">
+                              <span class="fw-600 c-grey-800">05:00 AM</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="layer w-100 bdT pY-5">
+                          <div class="peers ai-c jc-sb fxw-nw">
+                            <div class="peer">
+                              <span>Pressure</span>
+                            </div>
+                            <div class="peer ta-r">
+                              <span class="fw-600 c-grey-800">1B</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Week Forecast -->
+                    <div class="layer w-100">
+                      <div class="peers peers-greed ai-fs ta-c">
+                        <div class="peer">
+                          <h6 class="mB-10">MON</h6>
+                          <canvas class="sleet" width="30" height="30"></canvas>
+                          <span class="d-b fw-600">32<sup>°F</sup></span>
+                        </div>
+                        <div class="peer">
+                          <h6 class="mB-10">TUE</h6>
+                          <canvas class="clear-day" width="30" height="30"></canvas>
+                          <span class="d-b fw-600">30<sup>°F</sup></span>
+                        </div>
+                        <div class="peer">
+                          <h6 class="mB-10">WED</h6>
+                          <canvas class="partly-cloudy-day" width="30" height="30"></canvas>
+                          <span class="d-b fw-600">28<sup>°F</sup></span>
+                        </div>
+                        <div class="peer">
+                          <h6 class="mB-10">THR</h6>
+                          <canvas class="cloudy" width="30" height="30"></canvas>
+                          <span class="d-b fw-600">32<sup>°F</sup></span>
+                        </div>
+                        <div class="peer">
+                          <h6 class="mB-10">FRI</h6>
+                          <canvas class="snow" width="30" height="30"></canvas>
+                          <span class="d-b fw-600">24<sup>°F</sup></span>
+                        </div>
+                        <div class="peer">
+                          <h6 class="mB-10">SAT</h6>
+                          <canvas class="wind" width="30" height="30"></canvas>
+                          <span class="d-b fw-600">28<sup>°F</sup></span>
+                        </div>
+                        <div class="peer">
+                          <h6 class="mB-10">SUN</h6>
+                          <canvas class="sleet" width="30" height="30"></canvas>
+                          <span class="d-b fw-600">32<sup>°F</sup></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+  <form class="form-inline">
+            
+  
+ <div class="form-group">
+                        <label for="inputState">Organization</label>
+                        &nbsp;&nbsp;
+                          <select id="inputState" class="form-control" aria-expanded="false">
+                          <option selected>All</option>
+                            <option>Homelessness</option>
+                            <option>Child Care</option>
+                          </select>
+                      </div>
+ &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                      <div class="form-group">
+                        <label for="inputState">Time Frame</label>  &nbsp;&nbsp;
+                          <select id="nputState" class="form-control" aria-expanded="false">
+                            <option selected>Today</option>
+                            <option>This Week</option>
+                            <option>This Month</option>
+                            <option>YTD</option>
+                            <option>All</option>
+                          </select>
+                        </div>
+                        </form>
+ 
+
+ <table class="table" style="width:100%" style="height:100%" >
+ 
+    <thead class = "thead-dark">
+        <tr><th>S. No.</th>
+            <th>User Activity</th>
+            <th>Case Referrals</th>
+
+
+                    
+            <th>NACRN User - Care Coordinator Pairings</th>
+         
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>200 Active users today</td>
+            <td>50 users had referrals today</td>
+            <td><ul>
+            <li>Amenda Brown(18239) - Lucy Kerr</li>
+            <li>Thomas Day(18240) - Lucy Kerr</li>
+            <li>Mercy Green(18241) - Lucy Kerr</li>
+            <li> Grace Mc'guire(18242) - Lucy Kerr</li>
+            <li>Rachel Raven(18243) - Lucy Kerr</li>
+            
+            
+            </ul></td>
+          
+            
+        </tr>
+       
+        
+       
+       
+    </tbody>
+</table>
+</form>
+<div class = "form-group">
+         <table class="table" style="width:100%" style="height:100%" >
+ 
+    <thead class = "thead-dark">
+        <tr><th>SUN</th>
+            <th>MON</th>
+            <th>TUES</th>
+            <th>WED</th>       
+            <th>THUR</th>
+            <th>FRI</th>
+            <th>SAT</th>  
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> 
+            
+                              <span class="fw-600">Quaterly consultation</span>
+                              <div class="c-blue-600">
+                                <span class="c-grey-700">April 26 - </span>
+                                <i>10:00 AM - 11:00 AM</i>
+                          
+
+            
+            </td>
+            <td> 
+            
+                              <span class="fw-600">Quaterly consultation</span>
+                              <div class="c-blue-600">
+                                <span class="c-grey-700">April 27 - </span>
+                                <i>10:00 AM - 11:00 AM</i>
+                          
+
+            
+            </td>
+            <td> 
+            
+                              <span class="fw-600">Quaterly consultation</span>
+                              <div class="c-blue-600">
+                                <span class="c-grey-700">April 28 - </span>
+                                <i>10:00 AM - 11:00 AM</i>
+                          
+
+            
+            </td>
+            <td> 
+            
+                              <span class="fw-600">Quaterly consultation</span>
+                              <div class="c-blue-600">
+                                <span class="c-grey-700">April 29 - </span>
+                                <i>10:00 AM - 11:00 AM</i>
+                          
+
+            
+            </td>
+            <td> 
+            
+                              <span class="fw-600">Quaterly consultation</span>
+                              <div class="c-blue-600">
+                                <span class="c-grey-700">April 30 - </span>
+                                <i>10:00 AM - 11:00 AM</i>
+                          
+
+            
+            </td>
+            <td> 
+            
+                              <span class="fw-600">Quaterly consultation</span>
+                              <div class="c-blue-600">
+                                <span class="c-grey-700">May 01 - </span>
+                                <i>10:00 AM - 11:00 AM</i>
+                          
+
+            
+            </td>
+            <td> 
+            
+                              <span class="fw-600">Quaterly consultation</span>
+                              <div class="c-blue-600">
+                                <span class="c-grey-700">May 02 - </span>
+                                <i>10:00 AM - 11:00 AM</i>
+                                </div>
+                                <span class="fw-600">Quaterly consultation</span>
+                              <div class="c-blue-600">
+                                <span class="c-grey-700">May 02 - </span>
+                                <i>10:00 AM - 11:00 AM</i>
+                                </div>
+                          
+
+            
+            </td>
+          
+            
+        </tr>
+       
+        
+       
+       
+    </tbody>
+</table>
+</div>
+
+<div class = "form-group"> 
+ <button class="btn btn-primary" float = "left" onclick="window.location.href='calendar_admin.html#Appoinments'">Show more</button>
+
+ <button class="btn btn-primary" onclick="myFunction()" float = "right">Cancel Scheduled Appointments</button>
+ </div>
+
+<div id="calendarID" style="display:none;">
+ <div id='mainContent'>
             <div class="row gap-20 masonry pos-r">
               <div class="masonry-sizer col-md-6"></div>
               <div class="masonry-item col-md-6">
@@ -669,7 +834,7 @@ $(document).ready(function(){
                 <div id='full-calendar'></div>
                 </div>
                 </div>
-                <div class="masonry-item col-md-6" id = "Appointments">
+                <div class="masonry-item col-md-6">
                 <div class="bgc-white p-20 bd">
                   <h6 class="c-grey-900">Manage Availability</h6>
                  
@@ -794,7 +959,13 @@ $(document).ready(function(){
 
                 </main>
               
+       
   
+</div>
+
+    
+  
+
 
     <script src="https://kit.fontawesome.com/bbf8fb8b35.js" crossorigin="anonymous"></script>
   </body>
