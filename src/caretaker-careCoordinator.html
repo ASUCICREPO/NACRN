@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Programs</title>
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Public+Sans|Source+Sans+Pro|Roboto&display=swap" rel="stylesheet">
+    <script src ="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <style>
+      #loader {
+        transition: all 0.3s ease-in-out;
+        opacity: 1;
+        visibility: visible;
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background: #fff;
+        z-index: 90000;
+      }
+
+      #loader.fadeOut {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .spinner {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: calc(50% - 20px);
+        left: calc(50% - 20px);
+        background-color: #333;
+        border-radius: 100%;
+        -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+        animation: sk-scaleout 1.0s infinite ease-in-out;
+      }
+
+      @-webkit-keyframes sk-scaleout {
+        0% { -webkit-transform: scale(0) }
+        100% {
+          -webkit-transform: scale(1.0);
+          opacity: 0;
+        }
+      }
+
+      @keyframes sk-scaleout {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        } 100% {
+          -webkit-transform: scale(1.0);
+          transform: scale(1.0);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+
+
+  <body class="app">
+    <!-- @TOC -->
+    <!-- =================================================== -->
+    <!--
+      + @Page Loader
+      + @App Content
+          - #Left Sidebar
+              > $Sidebar Header
+              > $Sidebar Menu
+
+          - #Main
+              > $Topbar
+              > $App Screen Content
+    -->
+
+    <!-- @Page Loader -->
+    <!-- =================================================== -->
+    <div id='loader'>
+      <div class="spinner"></div>
+    </div>
+
+    <script>
+      window.addEventListener('load', function load() {
+        const loader = document.getElementById('loader');
+        setTimeout(function() {
+          loader.classList.add('fadeOut');
+        }, 300);
+      });
+      
+       function filter_type(box) {
+    //alert("checked");
+     var cbs = document.getElementsByTagName('input');
+     var all_checked_types = [];
+     for(var i=0; i < cbs.length; i++) {
+         if(cbs[i].type == "checkbox") {
+                 if(cbs[i].name.match(/^filter/)) {
+                         if(cbs[i].checked) {
+                             all_checked_types.push(cbs[i].value);
+                          }
+                      }
+               }
+      }
+
+     if (all_checked_types.length > 0) {
+         $('.table tr:not(:has(th))').each(function (i, row) {
+             var $tds = $(this).find('td'),
+             type = $tds.eq(2).text();
+             if (type && all_checked_types.indexOf(type) >= 0) {
+                 $(this).show();
+              }else{
+                 $(this).hide();
+              }
+          });
+      }else {
+            $('.table tr:not(:has(th))').each(function (i, row) {
+                var $tds = $(this).find('td'),
+                type = $tds.eq(2).text();
+                $(this).show();
+             });
+    }
+
+    return true;
+
+ }  
+    </script>
+
+    <!-- @App Content -->
+    <!-- =================================================== -->
+    <div>
+      <!-- #Left Sidebar ==================== -->
+      <div class="sidebar">
+        <div class="sidebar-inner">
+          <!-- ### $Sidebar Header ### -->
+          <div class="sidebar-logo">
+            <div class="peers ai-c fxw-nw">
+              <div class="peer peer-greed">
+                <a class="sidebar-link td-n" href="index.html">
+                  <div class="peers ai-c fxw-nw">
+                    <div class="peer">
+                      <div class="logo">
+                        <img src="assets/static/images/navajologo.png" alt="">
+                      </div>
+                    </div>
+                    <div class="peer peer-greed">
+                      <h5 class="lh-1 mB-0 logo-text">NACRN</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="peer">
+                <div class="mobile-toggle sidebar-toggle">
+                  <a href="" class="td-n">
+                    <i class="ti-arrow-circle-left"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ### $Sidebar Menu ### -->
+        <ul class="sidebar-menu scrollable pos-r" id="sideNavBar">
+          </ul>
+        </div>
+      </div>
+
+      <!-- #Main ============================ -->
+       <div class="page-container">
+        <!-- ### $Topbar ### -->
+     <div class="header navbar" id = "topBar">
+        </div>
+          
+        <!-- ### $App Screen Content ### -->
+        <main class='main-content bgc-grey-100'>
+
+         
+           
+           
+              <div class="dropdown">
+                <button class="btn btn-secondary pull-right dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Organization
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <button class="dropdown-item" type="button">All</button>
+                  <button class="dropdown-item" type="button">Org-1</button>
+                  <button class="dropdown-item" type="button">Org-2</button>
+                </div>
+              </div>
+       
+
+
+
+ <table id="sometable" class="table" style="width:100%" style="height:100%" >
+    <script>
+       x =  [{"Name":"Bob Marley","Email":"cc@gmail.com","Phone":"480-616-3942","NACRN ID":"61-9353495","care coordinator":'John Smith, Tommy Forrest'},
+        {"Name":"Red Wellington","Email":"abrazelton1@gmail.com","Phone":"480-616-3942","NACRN ID":"61-9353495","care coordinator":'John Smith, Tommy Forrest'},
+        {"Name":"Harley Watson","Email":"wbernon2@de.yahoo.com","Phone":"480-616-3942","NACRN ID":"67-2990233","care coordinator":'Bob Dylan'},
+        {"Name":"Margret Robson","Email":"pmcfee3@gmail.com","Phone":"480-616-3942","NACRN ID":"14-8107573","care coordinator":'John Smith, Tommy Forrest'},
+        {"Name":"Kevin Mcalister","Email":"amarm@gmail.com","Phone":"480-616-3942","NACRN ID":"59-1075839","care coordinator":'Bob Dylan'},
+        {"Name":"Elyssa Reddington","Email":"ecaulwell@gmail.com","Phone":"480-616-3942","NACRN ID":"70-1589633","care coordinator":'Bob Dylan'},
+        {"Name":"Karlik Thompson","Email":"kreith6hotmail.com","Phone":"480-616-3942","NACRN ID":"38-6470718","care coordinator":'Bob Dylan'},
+        {"Name":"Kalina Kalrson","Email":"kcrotty7@hotmail.com","Phone":"480-616-3942","NACRN ID":"70-0608006","care coordinator":'Bob Dylan'},
+        {"Name":"Tanhya Maxton","Email":"tbullivent8@hotmail.com","Phone":"480-616-3942","NACRN ID":"10-1837772","care coordinator":'Bob Dylan'},
+        {"Name":"Rose Red","Email":"csilvers@gmail.com","Phone":"480-616-3942","NACRN ID":"25-3012853","care coordinator":'Bob Dylan'}];
+    function updateTable(tableId, jsonData){
+
+        var tableHTML = "<tr>";
+        for (var headers in jsonData[0]) {
+        tableHTML += "<th>" + headers + "</th>";
+        }
+        tableHTML += "</tr>";
+
+        for (var eachItem in jsonData) {
+        tableHTML += "<tr>";
+        var dataObj = jsonData[eachItem];
+        for (var eachValue in dataObj){
+            if (eachValue === 'Name'){
+                tableHTML += "<td> <a data-toggle='modal' onclick='updatefields(this);' data-target='#editusermodal' href='#editrecord'>" + dataObj[eachValue] + " </a> </td>";
+            }
+            else{
+                tableHTML += "<td>" + dataObj[eachValue] + "</td>";
+            }
+        }
+        tableHTML += "</tr>";
+        }
+
+        document.getElementById(tableId).innerHTML = tableHTML;
+        }
+        updateTable("sometable", x);
+    </script>
+
+</table>   
+</div>
+                </div>
+              </div>
+                </main>
+
+  
+  <!-- Edit User Modal -->
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" id="editusermodal" role="dialog" aria-labelledby="editusermodalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-body">
+            <div class="container">
+             
+                  <div class="row">
+                    <div class="col-8">
+                      <form>
+                          <h5> Associated Care Co-ordinator</h5>
+                                <div class="row">
+                                  <div class="col-6">
+                                    <div class="list-group">
+                                      <p id="userslist" class="list-group-item">John Smith, Tommy Forrest</p>       
+                                    </div>                
+                                  </div>
+                                  <div class="col-6">
+                                    <button type="button"  data-toggle="modal" data-target="#addnewnamemodal" class="btn btn-light">Add</button>
+                                    <button type="button" onclick="addOptions();"  data-toggle="modal" data-target="#removenamemodal" class="btn btn-light">Remove</button>
+
+                                  </div>
+                                </div>
+
+                          <div class="row">
+                          
+                            <div class="col">
+                              
+                                <div class="form-group">
+                                  <label for="firstname">Name</label>
+                                  <input id="Name" type="email" class="form-control" id="firstname" aria-describedby="emailHelp" placeholder="Bob">
+                            </div>
+                            </div>
+                          </div>
+
+
+
+                          <div class="row">
+                          
+                            <div class="col-6">
+                              
+                                    <div class="form-group">
+                                      <label for="phonenumber">Phone Number</label>
+                                      <input id="Phone" type="email" class="form-control" id="phonenumber" aria-describedby="emailHelp" placeholder="4806163942">
+                                </div>
+                                <button type="button" id="addalertbutton" class="btn btn-light">Add Alert</button>
+                            </div>
+                            <div class="col-6">
+                                    <div class="form-group">
+                                      <label for="email">Email</label>
+                                      <input id="Email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="cc@gmail.com">
+                                </div>
+                                <button type="button" id="addnotebutton" class="btn btn-light">Add Note</button>
+                            </div>
+                          </div>
+                        </form>
+
+                        </div>
+
+                        <div class="col-4">
+                          <h5>Last 3 alerts</h5>
+                          <div class="list-group">
+
+                            <a href="#" class="list-group-item list-group-item-action list-group-item-danger" data-placement="right" title="On 14th Feb he was misbehaving." data-toggle="tooltip">Misbehavior</a>
+                            <a href="#" class="list-group-item list-group-item-action list-group-item-danger"data-placement="right" title="From childhood he was having bipolar symptoms." data-toggle="tooltip">Bipolar Disorder</a>
+                            <a href="#" class="list-group-item list-group-item-action list-group-item-danger"data-placement="right" title="He was a bad person, he did not share his food with me." data-toggle="tooltip">Bad Person</a>
+                            
+                            
+                            <div class="collapse" id="collapseExample">
+                              <a href="#" class="list-group-item list-group-item-action list-group-item-danger"data-placement="right" title="He was not sharing his personal contact with me." data-toggle="tooltip">Really Bad Person</a>
+                              <a href="#" class="list-group-item list-group-item-action list-group-item-danger"data-placement="right" title="He was not sharing his personal contact with me." data-toggle="tooltip">Really Bad Bad Person</a>
+                            </div>
+
+                          </div><br>
+                          <button type="button" aria-expanded="false" aria-controls="collapseExample" data-toggle="collapse" href="#collapseExample" class="btn btn-light">Show more</butuon>
+                        </div>
+                        
+           
+            </div><br>
+<div class="row">
+  <div class="col-4">
+    <h5>Last 3 Notes</h5> 
+    </div>
+      <div class="col-8">
+            <form class="form-inline">
+              <input class="form-control" type="search" placeholder="Search Alerts and Notes.." aria-label="Search">
+              <button class="btn btn-outline-success" >Search</button>
+            </form>
+      </div>
+      </div>
+
+
+<div class="row">
+
+
+    <table id="editusernotes" class="table" style="width:100%" style="height:100%" >
+      <script>
+         var y =  [{"User":"Vaclav","date":"1/14/2020","Visibility":'Global',"Subject":"montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus"},
+            {"User":"Teri","date":"2/9/2020","Visibility":'Organizational',"Subject":"ante vivamus tortor duis mattis egestas metus aenean fermentum donec"},
+            {"User":"Keenan","date":"7/27/2019","Visibility":'Organizational',"Subject":"iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl"}]
+      function updateTable(tableId, jsonData){
+  
+          var tableHTML = "<tr>";
+          for (var headers in jsonData[0]) {
+          tableHTML += "<th>" + headers + "</th>";
+          }
+          tableHTML += "</tr>";
+          let i = 0;
+          for (var eachItem in jsonData) {
+          tableHTML += "<tr data-toggle='modal' id='openrowmodal' data-target='#rowmodal'>";
+          var dataObj = jsonData[eachItem];
+          for (var eachValue in dataObj){
+              if (eachValue === 'Name'){
+                  tableHTML += "<td>" + dataObj[eachValue] + " </td>";
+              }
+              else{
+                  tableHTML += "<td>" + dataObj[eachValue] + "</td>";
+              }
+          }
+          tableHTML += "</tr>";
+          }
+  
+          document.getElementById(tableId).innerHTML = tableHTML;
+          }
+          updateTable("editusernotes", y);
+      </script>
+  
+  </table> 
+  </div>
+            
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light float-left" data-dismiss="modal">Show More</button>
+          <button type="button" class="btn btn-light" data-dismiss="modal">Save changes</butuon>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+  <!-- view row modal -->
+  <div class="modal" id="rowmodal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Note</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">User - Robinson Cruiso</li>
+              <li class="list-group-item">Date - 1/14/2020</li>
+              <li class="list-group-item">Subject - montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus</li>
+            </ul>
+        <div class="modal-footer">
+          <button type="button" id="closerowmdoal" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+
+        <!-- Add Note Modal -->
+<div class="modal" id="addnotemodal" data-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Add Note Here</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="fluid">
+
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Subject</span>
+              </div>
+              <input type="text" class="form-control" placeholder="Note Title" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+
+
+            <label for="NoteText">Body</label>
+              <textarea class="form-control" id="NoteText" rows="3"></textarea>
+  
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer float-left">
+
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Do not share globally</label>
+        </div>
+
+        <button type="button" class="btn btn-light"  id="submitnotebutton">Add Note</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- add new name -->
+<div class="modal fade" id="addnewnamemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Add Care coordinator</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="addnameform">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Care coordinator name</label>
+            <input type="email" class="form-control" id="nameinput" aria-describedby="emailHelp">
+            <small id="emailHelp" class="form-text text-muted"></small>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" onclick="addName(document.getElementById('addnameform').elements.nameinput.value)" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- remove name modal -->
+<div class="modal fade" id="removenamemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Add Care coordinator</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="selectInput">Options</label>
+          </div>
+          <select class="custom-select" id="selectInput">
+            <!-- <option selected>Choose...</option>
+            <option value="1">John Smith</option>
+            <option value="2">Tommy Forest</option> -->
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" onclick="deleteName($('#selectInput').find(':selected').text())" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+        <!-- Add Alert Modal -->
+        <div class="modal" id="addalertmodal" data-backdrop="static">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Add Alert Here</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                  <div class="fluid">
+        
+        
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Subject</span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Alert Title" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+        
+        
+                    <label for="NoteText">Body</label>
+                      <textarea class="form-control" id="NoteText" rows="3"></textarea>
+          
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">        
+                <button type="button" class="btn btn-light pull-left" id="submitalertbutton">Add Alert</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script src="https://kit.fontawesome.com/bbf8fb8b35.js" crossorigin="anonymous"></script>
+
+
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
+   
+   <script>
+     namelist = ["John Smith"," Tommy Forrest"];
+     
+     function addName(name){
+       namelist.push(name);
+       updatebox(namelist);
+     }
+
+     function updatebox(namelist){
+      let target = document.getElementById('userslist');
+      target.innerHTML = namelist.toString();
+     }
+     
+     function addOptions(){
+      let = option=null;
+      let select_target = document.getElementById("selectInput");
+      namelist.forEach(element => {
+        option = document.createElement('option');
+        option.text = element;
+        option.value = element;
+        select_target.appendChild(option);
+        option = null;
+      });
+     }
+
+    function deleteName(name){
+      namelist = namelist.filter(e => e !== name);
+      // if needed i can add a update select function here...
+      updatebox(namelist);
+     }
+
+     
+
+
+     
+     function updatefields(thisobj){
+      
+      x.forEach(x_obj => {
+        if (x_obj['Name'].trim() == thisobj.text.trim()){
+          document.getElementById('Name').placeholder = x_obj['Name'];
+          document.getElementById('Phone').placeholder = x_obj['Phone'];
+          document.getElementById('Email').placeholder = x_obj['Email'];
+        }
+      });
+      
+     }
+
+      function inserttext(){
+        let target = document.getElementById('userslist');
+        let value = target.value;
+        target.innerHTML += ', Bob Marley';
+      }
+
+      $(document).on("click","#addnotebutton",function(){
+      $('#editusermodal').modal('hide');
+      $('#addnotemodal').modal('show');
+    });
+
+    $(document).on("click","#addalertbutton",function(){
+      $('#editusermodal').modal('hide');
+      $('#addalertmodal').modal('show');
+    });
+
+    $(document).on("click","#submitalertbutton",function(){
+      $('#addalertmodal').modal('hide');
+      $('#editusermodal').modal('show');
+    });
+
+    $(document).on("click","#submitalertbutton",function(){
+      $('#addalertmodal').modal('hide');
+      $('#editusermodal').modal('show');
+    });
+
+    $(document).on("click","#openrowmodal",function(){
+      $('#editusermodal').modal('hide');
+      $('#rowmodal').modal('show');
+    });
+
+    $(document).on("click","#closerowmdoal",function(){
+      $('#editusermodal').modal('show');
+      $('#rowmodal').modal('hide');
+    });
+
+    $('.dropdown-toggle').dropdown()
+
+    </script>
+  </body>
+</html>

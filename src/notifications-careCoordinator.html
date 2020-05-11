@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>All Programs</title>
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Public+Sans|Source+Sans+Pro|Roboto&display=swap" rel="stylesheet">
+    <style>
+      #loader {
+        transition: all 0.3s ease-in-out;
+        opacity: 1;
+        visibility: visible;
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background: #fff;
+        z-index: 90000;
+      }
+
+      #loader.fadeOut {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .spinner {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: calc(50% - 20px);
+        left: calc(50% - 20px);
+        background-color: #333;
+        border-radius: 100%;
+        -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+        animation: sk-scaleout 1.0s infinite ease-in-out;
+      }
+
+      @-webkit-keyframes sk-scaleout {
+        0% { -webkit-transform: scale(0) }
+        100% {
+          -webkit-transform: scale(1.0);
+          opacity: 0;
+        }
+      }
+
+      @keyframes sk-scaleout {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        } 100% {
+          -webkit-transform: scale(1.0);
+          transform: scale(1.0);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="app">
+    <!-- @TOC -->
+    <!-- =================================================== -->
+    <!--
+      + @Page Loader
+      + @App Content
+          - #Left Sidebar
+              > $Sidebar Header
+              > $Sidebar Menu
+
+          - #Main
+              > $Topbar
+              > $App Screen Content
+    -->
+
+    <!-- @Page Loader -->
+    <!-- =================================================== -->
+    <div id='loader'>
+      <div class="spinner"></div>
+    </div>
+
+    <script>
+      window.addEventListener('load', function load() {
+        const loader = document.getElementById('loader');
+        setTimeout(function() {
+          loader.classList.add('fadeOut');
+        }, 300);
+      });
+    </script>
+
+    <!-- @App Content -->
+    <!-- =================================================== -->
+    <div>
+      <!-- #Left Sidebar ==================== -->
+      <div class="sidebar">
+        <div class="sidebar-inner">
+          <!-- ### $Sidebar Header ### -->
+          <div class="sidebar-logo">
+            <div class="peers ai-c fxw-nw">
+              <div class="peer peer-greed">
+                <a class="sidebar-link td-n" href="index.html">
+                  <div class="peers ai-c fxw-nw">
+                    <div class="peer">
+                      <div class="logo">
+                        <img src="assets/static/images/navajologo.png" alt="">
+                      </div>
+                    </div>
+                    <div class="peer peer-greed">
+                      <h5 class="lh-1 mB-0 logo-text">NACRN</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="peer">
+                <div class="mobile-toggle sidebar-toggle">
+                  <a href="" class="td-n">
+                    <i class="ti-arrow-circle-left"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ### $Sidebar Menu ### -->
+          <ul class="sidebar-menu scrollable pos-r" id="sideNavBar">
+          </ul>
+        </div>
+      </div>
+
+      <div class="page-container">
+        <!-- ### $Topbar ### -->
+       
+          <div class="header navbar" id = "topBar">
+          
+        </div>
+
+       
+
+        <!-- ### $App Screen Content ### -->
+        <main class='main-content bgc-grey-100'>
+          <div id='mainContent'>
+           
+             
+                <!-- Sidebar -->
+            
+                    <ul class="ovY-a pos-r scrollable lis-n p-0 m-0 fsz-sm">
+                      <li>
+                        <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+                          <div class="peer mR-15">
+                            <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/lego/5.jpg" alt="">
+                          </div>
+                          <div class="peer peer-greed">
+                            <span>
+                              <span class="fw-500">Reminder</span>
+                              <span class="c-grey-600"> You have your next approintment on  <span class="text-dark">March 5th</span>
+                              </span>
+                            </span>
+                            <p class="m-0">
+                              <small class="fsz-xs">5 mins ago</small>
+                            </p>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+                          <div class="peer mR-15">
+                            <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/lego/5.jpg" alt="">
+                          </div>
+                          <div class="peer peer-greed">
+                            <span>
+                              <span class="fw-500">Reminder</span>
+                              <span class="c-grey-600">Check our new programs launched. Verify if you are <span class="text-dark"> Eligible.</span>
+                              </span>
+                            </span>
+                            <p class="m-0">
+                              <small class="fsz-xs">7 mins ago</small>
+                            </p>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+                          <div class="peer mR-15">
+                            <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/women/3.jpg" alt="">
+                          </div>
+                          <div class="peer peer-greed">
+                            <span>
+                              <span class="fw-500">New Organization Added</span>
+                              <span class="c-grey-600">Lucy lee(Admin) added new organization<span class="text-dark"> Food for All</span>
+                              </span>
+                            </span>
+                            <p class="m-0">
+                              <small class="fsz-xs">10 mins ago</small>
+                            </p>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+                          <div class="peer mR-15">
+                            <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/men/15.jpg" alt="">
+                          </div>
+                          <div class="peer peer-greed">
+                            <span>
+                              <span class="fw-500">New Question Added</span>
+                              <span class="c-grey-600">Harry Bose(Power User) added new Question to<span class="text-dark"> Education for All</span>
+                              </span>
+                            </span>
+                            <p class="m-0">
+                              <small class="fsz-xs">15 mins ago</small>
+                            </p>
+                          </div>
+                        </a>
+                      </li>
+                      
+                    </ul>
+              
+                
+                
+               
+                
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+   
+
+    <script src="https://kit.fontawesome.com/bbf8fb8b35.js" crossorigin="anonymous"></script>
+  </body>
+</html>
