@@ -1,8 +1,8 @@
 {
-  "name": "adminator",
+  "name": "NACRN",
   "version": "1.0.0",
   "private": true,
-  "description": "HTML Admin Template",
+  "description": "NACRN WEBSITE",
   "scripts": {
     "start": "webpack-dev-server",
     "dev": "webpack-dashboard -t 'Project' -- webpack-dev-server",

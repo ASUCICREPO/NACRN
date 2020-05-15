@@ -151,7 +151,7 @@ let careCoordinatorBar = `<li class="nav-item mT-30 actived">
 </a>
 </li>
 <li class="nav-item mT-30 actived">
-<a class="sidebar-link" href="careCoordinator_index.html">
+<a class="sidebar-link" href="careCoordinator_ ">
   <span class="icon-holder">
     <i class="c-blue-500 fas fa-search"></i>
   </span>

@@ -1,28 +1,18 @@
 # NACRN Prototype Application
-This project is based on the Bootstrap 4 **Adminator** dashboard theme, seen [here](https://github.com/puikinsh/Adminator-admin-dashboard).  Note that some of the functionality brought by the dashboard theme is not used, like calendar plugins, Google Maps integration, etc.  
-
-## TOC
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installing & Local Development](#installing--local-development)
-- [Files/Folder Structure](#filesfolders-structure)
-- [Deployment](#deployment)
-- [Built With](#built-with)
-- [Changelog](#changelog)
-- [Authors](#authors)
-- [License](#license)
-
 
 ## Getting Started
-In order to run the NACRN project on your local machine, you'll need the following prerequesite software installed.  After installing the necessary software, follow the startup instructions given below to host the project and start development.
+
+In order to run the NACRN project on your local machine, you'll need the following prerequesite software installed. After installing the necessary software, follow the startup instructions given below to host the project and start development.
 
 #### Prerequisites
-  - Node.js
-  - Yarn or NPM
-  - Git
-  - libpng-dev (*Linux only*)
+
+- Node.js
+- Yarn or NPM
+- Git
+- libpng-dev (_Linux only_)
 
 #### Startup & Local Development
+
 To clone the repository and start the Webpack server, run the following commands:
 
 ```
@@ -32,9 +22,10 @@ To clone the repository and start the Webpack server, run the following commands
 > npm run dev
 ```
 
-Allow Webpack to compile.  If this happens successfully, the Node terminal window should display all the project files as green and labeled as "[emitted]" 
+Allow Webpack to compile. If this happens successfully, the Node terminal window should display all the project files as green and labeled as "[emitted]"
 
 ## Files/Folders Structure
+
 Here is a brief explanation of the template folder structure and some of its main files usage:
 
 ```
@@ -98,6 +89,7 @@ Here is a brief explanation of the template folder structure and some of its mai
 ```
 
 ## Built With
+
 - [Babel](https://babeljs.io/)
 - [Webpack](https://webpack.js.org/)
 - [Eslint](https://eslint.org/)
@@ -124,13 +116,17 @@ Here is a brief explanation of the template folder structure and some of its mai
 - [Bootstrap Datepicker](https://bootstrap-datepicker.readthedocs.io/en/latest/)
 
 ## Changelog
+
 #### V 1.0.0
+
 Initial Release
 
 ## Authors
-[Colorlib](https://colorlib.com)
+
+ASU CIC TEAM
 
 ## More info
+
 - [Bootstrap Dashboards](https://colorlib.com/wp/free-bootstrap-admin-dashboard-templates/)
 - [Bootstrap Templates](https://colorlib.com/wp/free-bootstrap-templates/)
 - [HTML Templates](https://colorlib.com/wp/free-html-website-templates/)
@@ -138,7 +134,3 @@ Initial Release
 - [Website Templates](https://colorlib.com/wp/templates/)
 - [Free CSS Templates](https://colorlib.com/wp/free-css-website-templates/)
 - [WordPress Themes](https://colorlib.com/wp/free-wordpress-themes/)
-
-## License
-
-Adminator is licensed under The MIT License (MIT). Which means that you can use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the final products. But you always need to state that Colorlib is the original author of this template.
