@@ -347,6 +347,28 @@ let admin_settings = `<div class="header-container">
               </div>
             </a>
           </li>
+          <li>
+                        <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+                          <div class="peer mR-15">
+                            <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/men/7.jpg" alt="">
+                          </div>
+                          <div class="peer peer-greed">
+                            <div>
+                              <div class="peers jc-sb fxw-nw mB-5">
+                                <div class="peer">
+                                  <p class="fw-500 mB-0">Moo Doe(Admin)</p>
+                                </div>
+                                <div class="peer">
+                                  <small class="fsz-xs">15 mins ago</small>
+                                </div>
+                              </div>
+                              <span class="c-grey-600 fsz-sm">
+                                Please update your City of Birth.
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
          
           <li>
             <a href="email.html" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
@@ -525,6 +547,28 @@ let careCoordinator_settings = `<div class="header-container">
               </div>
             </a>
           </li>
+          <li>
+          <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+            <div class="peer mR-15">
+              <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/men/7.jpg" alt="">
+            </div>
+            <div class="peer peer-greed">
+              <div>
+                <div class="peers jc-sb fxw-nw mB-5">
+                  <div class="peer">
+                    <p class="fw-500 mB-0">Moo Doe(Admin)</p>
+                  </div>
+                  <div class="peer">
+                    <small class="fsz-xs">15 mins ago</small>
+                  </div>
+                </div>
+                <span class="c-grey-600 fsz-sm">
+                  Please update your City of Birth.
+                </span>
+              </div>
+            </div>
+          </a>
+        </li>
          
           <li>
             <a href="email.html" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
@@ -641,6 +685,28 @@ let powerUser_settings = `<div class="header-container">
               </div>
             </a>
           </li>
+          <li>
+          <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+            <div class="peer mR-15">
+              <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/men/7.jpg" alt="">
+            </div>
+            <div class="peer peer-greed">
+              <div>
+                <div class="peers jc-sb fxw-nw mB-5">
+                  <div class="peer">
+                    <p class="fw-500 mB-0">Moo Doe(Admin)</p>
+                  </div>
+                  <div class="peer">
+                    <small class="fsz-xs">15 mins ago</small>
+                  </div>
+                </div>
+                <span class="c-grey-600 fsz-sm">
+                  Please update your City of Birth.
+                </span>
+              </div>
+            </div>
+          </a>
+        </li>
           <li>
             <a href="notifications-powerUser.html" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
               <div class="peer mR-15">
@@ -884,6 +950,28 @@ let endUserSettings = `
                   </div>
                 </a>
               </li>
+              <li>
+              <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+                <div class="peer mR-15">
+                  <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/men/7.jpg" alt="">
+                </div>
+                <div class="peer peer-greed">
+                  <div>
+                    <div class="peers jc-sb fxw-nw mB-5">
+                      <div class="peer">
+                        <p class="fw-500 mB-0">Moo Doe(Admin)</p>
+                      </div>
+                      <div class="peer">
+                        <small class="fsz-xs">15 mins ago</small>
+                      </div>
+                    </div>
+                    <span class="c-grey-600 fsz-sm">
+                      Please update your City of Birth.
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </li>
              
               <li>
                 <a href="email.html" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
