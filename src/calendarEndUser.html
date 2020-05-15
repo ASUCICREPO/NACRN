@@ -194,7 +194,11 @@
 		font-size: 7px;
 		font-family: "Helvetica Nueue",Arial,Verdana,sans-serif;
 		background-color: #DDDDDD;
+
 		}
+    body {
+  position: relative;
+}
 
 	#wrap {
 		width: 550px;
@@ -294,7 +298,7 @@
     </style>
   </head>
 
-  <body class="app">
+  <body class="app"  data-spy="scroll" data-target="#targettt" >
     <!-- @TOC -->
     <!-- =================================================== -->
     <!--
@@ -410,7 +414,7 @@ function myFunction() {
                  
                 
 
- 
+                   
                       
                       <div class="form-group">
                         <label for="inputState">Please select the Program you would like to Schedule Appointment for?</label>
@@ -487,8 +491,8 @@ function myFunction() {
                 </div>
 
               
-       
-                <div class="masonry-item col-md-6" id = "targettt">
+       <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+                <div class="masonry-item col-md-6" id = "#targettt" >
                 <div class="bgc-white p-20 bd">
                   <h6 class="c-grey-900" >Your Appoinments</h6>
                  
@@ -545,6 +549,7 @@ function myFunction() {
                         </li>
                         
                       </ul>
+                      </div>
 
                      <div class="modal fade" id="calendar-edit">
                 <div class="modal-dialog" role="document">

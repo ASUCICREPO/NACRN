@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>End User Home</title>
+    <title>Care Coordinator Home</title>
 
     <link href="https://fonts.googleapis.com/css?family=PT+Sans|Public+Sans|Source+Sans+Pro|Roboto&display=swap" rel="stylesheet">
     <style>
@@ -322,7 +322,7 @@ function myFunction() {
                 </div>
               </div>
 
-
+<h3>Your upcoming appointments!</h3>
          <table class="table" style="width:100%" style="height:100%" >
  
     <thead class = "thead-dark">
@@ -423,9 +423,7 @@ function myFunction() {
     </tbody>
 </table>
 <div class = "form-group"> 
- <button class="btn btn-primary" float = "left" onclick="window.location.href='calendarEndUser.html'">Show more</button>
-  <button class="btn btn-primary" float = "right" onclick= "window.location.href='calendarEndUser.html'">Cancel Scheduled Appointments</button>
-
+ <button class="btn btn-primary" float = "left" onclick="window.location.href='calendarEndUser.html'">Manage Appointments</button>
 
  </div>
 
@@ -437,42 +435,75 @@ function myFunction() {
               <div class="masonry-item col-md-6">
                 <div class="bgc-white p-20 bd">
                  
-                  <div class="mT-50">
-                   <h4 class="c-grey-900">Schedule an Appointment</h4>
+                  <div class="mT-30">
                     <form>
                  
-                
-
- 
                       
                       <div class="form-group">
-                        <label for="inputState">Please select the Program you would like to Schedule Appointment for?</label>
+                        <label for="inputState">Select the Organization</label>
                           <select id="inputState" class="form-control" aria-expanded="false">
                             <option selected>Homelessness</option>
                             <option>Child Care</option>
                           </select>
                       </div>
                       <div class="form-group">
-                        <label for="inputState">Please select any Care Coordinator you would like to Schedule Appointment with?</label>
+                        <label for="inputState">Select the Care Coordinator</label>
                           <select id="nputState" class="form-control" aria-expanded="false">
-                            <option selected>Any</option>
+                            <option selected>Lucy Kerr</option>
                             <option>Amenda Brown</option>
-                            <option>Lucy Brown</option>
                             <option>Macy Holmes</option>
                           </select>
                         </div>
+
                       </div>
+                       <div class="form-group">
+                      
+                          
+                            <button type="button" class="btn btn-primary pull-left" align="center" width = "50p"  onclick="window.location.href='calendar_careCoordinator.html'">Manage my Availability</button>  &nbsp;&nbsp;&nbsp;&nbsp;
+                             <button type="button" class="btn btn-primary pull-right" align="center" witdh = "50p"  onclick="window.location.href='calendar_careCoordinator_add_availability.html'" >Schedule Appointment</button>
+                          
+                      </div>
+
+ 
                         
-                        
-                          <div class="form-group">
+
+                        <div class="modal fade" id="manageSchedule" tabindex="-1" role="dialog" aria-labelledby="signupModelLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Manage Schedule</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <form>
+                      <div class="form-group ">
+                          <label for="inputState">NACRN User</label>
+                          <select id="inputState" class="form-control">
+                            <option selected>Erika Noah</option>
+                            <option>Tom Sawyer</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
                           <label class="fw-500">Appointment Subject</label>
                           <input class="form-control bdc-grey-200" placeholder = "Enter subject for the Appointment">
                         </div>
-                           <div class="form-group">
-                          <label class="fw-500">Date</label>
-                          <input class="form-control bdc-grey-200" placeholder = "Select the Date from date picker or Enter the Date" id = "dateField">
-                        </div>
-                            <div class="form-group ">
+                        
+                        <div class="row">
+                          <div class="col-md-6">
+                            <label class="fw-500">Date</label>
+                            <div class="timepicker-input input-icon form-group">
+                              <div class="input-group">
+                                <div class="input-group-addon bgc-white bd bdwR-0">
+                                  <i class="ti-calendar"></i>
+                                </div>
+                                <input type="text" class="form-control bdc-grey-200 start-date" placeholder="Select the Appointment Date" data-provide="datepicker">
+                              </div>
+                            </div>
+                          </div>
+                          </div>
+      <div class="form-group ">
                           <label for="inputState">Timings</label>
                           <select id="inputState" class="form-control">
                             <option selected>10 AM - 11AM</option>
@@ -482,59 +513,277 @@ function myFunction() {
                             <option>02 PM - 03 PM</option>
                           </select>
                         </div>
-                    
-                         
-                            
-                       
-                          
-     
                           
                         
                         <div class="form-group">
                           <label class="fw-500">Appointment Information</label>
                           <textarea class="form-control bdc-grey-200" rows='5'placeholder = "Enter Additional Information"></textarea>
-                   
-                      
-                         
-</div>
-<div class = "row">
-       
-                        
-                        
-                        <button type="button" class="btn btn-primary pull-right" align="right" witdh = "50p" >Schedule Appointment </button>
                         </div>
-                     
-     
+                       <div class="form-group">
+  
+
+<!-- Button (Double) -->
+
+
+</form>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="manageAvailability" tabindex="-1" role="dialog" aria-labelledby="signupModelLabel" aria-hidden="true" width = "768px" max-height= calc(100vh - 210px)>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Manage Availability</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <div class="mT-30">
+      <form>
+      <div class="form-group col-md ">
+                    <label class="text-normal text-dark">Appointment Time</label>
+                      <div class="form-group row" >
+                          <label for="inputState">Start Time</label>
+                        <div class="col-sm-10">  <select id="inputState" class="form-control">
+                            <option selected>10.00AM</option>
+                            <option>10.15AM</option>
+                            <option>10.30AM</option>
+                            <option>10.45AM</option>
+                            <option>11.00AM</option>
+                            <option>11.15AM</option>
+                            <option>11.30AM</option>
+                          </select>
+                        </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="inputState">End Time &nbsp;</label>
+                          <div class="col-sm-10"> 
+                          <select id="inputState" class="form-control">
+                            <option selected>10.15AM</option>
+                            
+                            <option>10.30AM</option>
+                            <option>10.45AM</option>
+                            <option>11.00AM</option>
+                            <option>11.15AM</option>
+                            <option>11.30AM</option>
+                            <option>11.45AM</option>
+                          </select>
+                        </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="inputState">Duration &nbsp;</label>
+                          <div class="col-sm-10"> 
+                          <select id="inputState" class="form-control">
+                            <option selected>15 Minutes</option>
+                            
+                            <option>30 Minutes</option>
+                            <option>45 Minutes</option>
+                            <option>60 Minutes</option>
+                            <option>1 Hour 15 Minutes</option>
+                            <option>1 Hour 30 Minutes</option>
+                            <option>1 Hour 45 Minutes</option>
+                            <option>2 Hours</option>
+                          </select>
+                        </div>
+                        </div>
                         
+                        </div>
+                        </form>
+                         </div>
+                        <form>
+                      
+                        <div class="form-group col-md">
+                       
+          <label class="text-normal text-dark">Recurrence Pattern</label>
+          
+            
+
+         
+          
+          
+           <fieldset>
+          
+          <div class = "radio w-50">
+  <input class="form-check-input" type="radio" name="exampleRadios17" id="exampleRadios17" value="yes" >
+  <label class="form-check-label" for="exampleRadios17">
+    Daily
+  </label>
+  </div>
+  <table>
+  <tr><td width = "50%">
+  <div class = "radio">
+  <input class="form-check-input" type="radio" name="exampleRadios17" id="exampleRadios17" value="No" checked>
+  <label class="form-check-label" for="exampleRadios17">
+    Weekly
+  </label>
+  </div>
+  </td>
+  <td width = "50%">
+ <div>
+  <label class="fw-500">Recur for</label><input class="form-control " width = "5%" placeholder = "1"><label class="fw-500">week(s) On:</label>
+                          
+  </div>                     
+
+ <fieldset>
+  
+  <input type="checkbox" name="items" value="1">&nbsp;<label class="form-check-label" for="exampleRadios17">
+    Sunday
+  </label>
+  <input type="checkbox" name="items" value="2">&nbsp;<label class="form-check-label" for="exampleRadios17">
+    Monday
+  </label>
+  <input type="checkbox" name="items" value="3">&nbsp;<label class="form-check-label" for="exampleRadios17">
+    Tuesday
+  </label>
+  </fieldset>
+   <fieldset>
+  <input type="checkbox" name="items" value="4">&nbsp;<label class="form-check-label" for="exampleRadios17">
+    Wednesday
+  </label>
+   
+  
+  <input type="checkbox" name="items" value="5">&nbsp;<label class="form-check-label" for="exampleRadios17">
+    Thursday
+  </label>
+  </fieldset>
+   <fieldset>
+   <input type="checkbox" name="items" value="5">&nbsp;<label class="form-check-label" for="exampleRadios17">
+    Friday
+  </label>
+
+  <input type="checkbox" name="items" value="5">&nbsp;<label class="form-check-label" for="exampleRadios17">
+    Saturday
+  </label>
+</fieldset>
+
+
+  
+  </td>
+  </tr>
+  </table>
+  <div class = "radio">
+  <input class="form-check-input" type="radio" name="exampleRadios17" id="exampleRadios17" value="yes" required>
+  <label class="form-check-label" for="exampleRadios17">
+    Monthly
+  </label>
+  </div>
+  <div class = "radio">
+  <input class="form-check-input" type="radio" name="exampleRadios17" id="exampleRadios17" value="No" >
+  <label class="form-check-label" for="exampleRadios17">
+    Yearly
+  </label>
+  </div>
+
+  
+  
+
+</fieldset>
+</div>
+                        
+
+                        
+                        <div class="form-group col-md">
+                          <label class="text-normal text-dark">Range of Recurrence</label>
+                          <table class="table" style="width:100%" style="height:100%" >
+                          <tr><td width = "50%"><div class="row">
+                          
+                            <label class="fw-500">Start Date</label>
+                            <div class="timepicker-input input-icon form-group">
+                              <div class="input-group">
+                                <div class="input-group-addon bgc-white bd bdwR-0">
+                                  <i class="ti-calendar"></i>
+                                </div>
+                                <input type="text" class="form-control bdc-grey-200 start-date" placeholder="Start On" data-provide="datepicker">
+                              </div>
+                            </div>
+                          
+                          </div></td><td>
+                          <div class="row">
+                          <div class = "radio w-50">
+  <input class="form-check-input" type="radio" name="exampleRadios18" id="exampleRadios18" value="yes" checked>
+  <label class="form-check-label" for="exampleRadios18">
+    No End Date
+  </label>
+  </div>
+  <div class = "radio">
+  <input class="form-check-input" type="radio" name="exampleRadios18" id="exampleRadios18" value="No" >
+  <label class="form-check-label" for="exampleRadios18">
+   End After:  <input class="form-control" width = "10%" placeholder = "1"> Ocurrences
+  </label>
+  </div>
+  <div class = "radio">
+  <input class="form-check-input" type="radio" name="exampleRadios18" id="exampleRadios18" value="No" >
+  <label class="form-check-label" for="exampleRadios18">
+   End By:  <div class="timepicker-input input-icon form-group">
+                              <div class="input-group">
+                                <div class="input-group-addon bgc-white bd bdwR-0">
+                                  <i class="ti-calendar"></i>
+                                </div>
+                                <input type="text" class="form-control bdc-grey-200 start-date" placeholder="End By" data-provide="datepicker">
+                              </div>
+                            </div>
+  </label>
+  </div>
+                       
+                            
+                          
+                          </div></td></tr>
+                          </table>
+                          </div>
+                       <div class="form-group">
+  
+
+<!-- Button (Double) -->
+
+
+</form>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+          
+            
+                     
                       
                     </form>
-                       
-                         
                   </div>
                 </div>
-                
-                    <div class="masonry-item col-md-6">
+              
+                <div class="masonry-item col-md-6">
                 <div class="bgc-white p-20 bd">
                 <div id='full-calendar'></div>
                 </div>
                 </div>
-
-              
-       
                 <div class="masonry-item col-md-6">
                 <div class="bgc-white p-20 bd">
-                  <h6 class="c-grey-900">Your Appoinments</h6>
+                  <h6 class="c-grey-900">Manage Availability</h6>
                  
 
-                  <ul class="m-0 p-0 mT-20">
+                  <ul class="m-0 p-0 mT-20" id = "Appointments">
                         
                         <li class="bdB peers ai-c jc-sb fxw-nw">
                           <a class="td-n p-20 peers fxw-nw mR-20 peer-greed c-grey-900" href="javascript:void(0);" data-toggle="modal" data-target="#calendar-edit">
-                            
+                            <div class="peer mR-15">
+                              <i class="c-blue-500 fas fa-sync"></i>
+                            </div>
                          
                         
                             <div class="peer">
-                              <span class="fw-600">Quaterly consultation</span>
+                               
+                                <span class="fw-600">Quaterly consultation</span>
                               <div class="c-blue-600">
                                 <span class="c-grey-700">March 01 - </span>
                                 <i>10:00 AM - 11:00 AM</i>
@@ -555,12 +804,14 @@ function myFunction() {
                         </li>
                         <li class="bdB peers ai-c jc-sb fxw-nw">
                           <a class="td-n p-20 peers fxw-nw mR-20 peer-greed c-grey-900" href="javascript:void(0);" data-toggle="modal" data-target="#calendar-edit">
-                          
+                            <div class="peer mR-15">
+                              &nbsp;&nbsp;&nbsp;
+                            </div>
                             <div class="peer">
                               <span class="fw-600">Medical scheme Questions</span>
                               <div class="c-blue-600">
-                                <span class="c-grey-700">March 07 - </span>
-                                <i>10:00 AM - 11:00 AM</i>
+                                <span class="c-grey-700">March 01 - </span>
+                                <i>12:00 PM - 01:00 PM</i>
                             </div>
                           </a>
                           <div class="peers mR-15">
@@ -579,47 +830,8 @@ function myFunction() {
                         
                       </ul>
 
-                     <div class="modal fade" id="calendar-edit">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="bd p-15">
-                      <h5 class="m-0">Add Event</h5>
-                    </div>
-                    <div class="modal-body">
-                      <form>
                       <div class="form-group ">
-                          <label for="inputState">Organization Name</label>
-                          <select id="inputState" class="form-control">
-                            <option selected>Homelessness</option>
-                            <option>ChildCare</option>
-                          </select>
-                        </div>
-                        <div class="form-group">
-                          <label class="fw-500">Appointment Subject</label>
-                          <input class="form-control bdc-grey-200" placeholder = "Enter subject for your Appointment">
-                        </div>
-                        <div class="form-group ">
-                          <label for="inputState">Care Co-ordinator</label>
-                          <select id="inputState" class="form-control">
-                            <option selected>Deenas Doe</option>
-                            <option>Lucy Kerr</option>
-                          </select>
-                        </div>
-                        <div class="row">
-                          <div class="col-md-6">
-                            <label class="fw-500">Start</label>
-                            <div class="timepicker-input input-icon form-group">
-                              <div class="input-group">
-                                <div class="input-group-addon bgc-white bd bdwR-0">
-                                  <i class="ti-calendar"></i>
-                                </div>
-                                <input type="text" class="form-control bdc-grey-200 start-date" placeholder="Datepicker" data-provide="datepicker">
-                              </div>
-                            </div>
-                          </div>
-                          </div>
-      <div class="form-group ">
-                          <label for="inputState">Timings</label>
+                          <label for="inputState">Open Timings</label>
                           <select id="inputState" class="form-control">
                             <option selected>10 AM - 11AM</option>
                             <option>11 AM - 12PM</option>
@@ -628,33 +840,59 @@ function myFunction() {
                             <option>02 PM - 03 PM</option>
                           </select>
                         </div>
-                          
-                        
-                        <div class="form-group">
-                          <label class="fw-500">Appointment Information</label>
-                          <textarea class="form-control bdc-grey-200" rows='5'placeholder = "Enter your questions "></textarea>
+                         
+
+
+  <div class="form-group ">
+                          <label for="inputState">Start Time</label>
+                          <select id="inputState" class="form-control">
+                            <option selected>10.00AM</option>
+                            <option>10.15AM</option>
+                            <option>10.30AM</option>
+                            <option>10.45AM</option>
+                            <option>11.00AM</option>
+                            <option>11.15AM</option>
+                            <option>11.30AM</option>
+                          </select>
                         </div>
-                       <div class="form-group">
-  
+                        <div class="form-group ">
+                          <label for="inputState">End Time</label>
+                          <select id="inputState" class="form-control">
+                            <option selected>10.15AM</option>
+                            
+                            <option>10.30AM</option>
+                            <option>10.45AM</option>
+                            <option>11.00AM</option>
+                            <option>11.15AM</option>
+                            <option>11.30AM</option>
+                            <option>11.45AM</option>
+                          </select>
+                        </div>
 
-<!-- Button (Double) -->
 
-<div class="btn-toolbar">
- 
-  <div class="col-md-8">
-  <button id="cancel" name="cancel" class="btn btn-secondary" value="1" data-dismiss = "modal">Cancel</button> <button id="submit" name="submit" class="btn btn-primary" value="1" data-dismiss = "modal">Save</button>
-    
-  </div>
-</div>
-    </div>
+
+                  
+                      <div class="form-group row">
+                        <div class="col-sm-10">
+                         <i class="c-blue-500 fas fa-sync"></i> &nbsp;
+                         <button class="btn btn-primary pull-Left" data-toggle="modal" data-target="#manageAvailability">Add Recurrence</button>
+                        
+                      
+                         
+                          <button class="btn btn-primary pull-right">Add Availability</button>
+                        </div>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
+              
+                </div>
+                </div>
 
-                </div>
-                </div>
-                 
                 </main>
+              
+
   
 </div>
 

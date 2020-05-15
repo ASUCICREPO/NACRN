@@ -42,7 +42,7 @@ let adminBar = `<li class="nav-item mT-30 actived">
   <span class="title">Form Management</span>
 </a>
 <li class="nav-item mT-30 actived">
-<a class="sidebar-link" href="invite-admin.html">
+<a class="sidebar-link" href="invite_admin.html">
   <span class="icon-holder">
     <i class="c-blue-500 fab fa-telegram-plane"></i>
   </span>
@@ -151,7 +151,7 @@ let careCoordinatorBar = `<li class="nav-item mT-30 actived">
 </a>
 </li>
 <li class="nav-item mT-30 actived">
-<a class="sidebar-link" href="index_careCoordinator.html">
+<a class="sidebar-link" href="careCoordinator_index.html">
   <span class="icon-holder">
     <i class="c-blue-500 fas fa-search"></i>
   </span>
@@ -569,7 +569,7 @@ let careCoordinator_settings = `<div class="header-container">
     <ul class="dropdown-menu fsz-sm">
     
       <li>
-        <a href="settings-careCoordinator.html" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
+        <a href="settings_careCoordinator.html" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
           <i class="ti-user mR-10"></i>
           <span>Profile</span>
         </a>

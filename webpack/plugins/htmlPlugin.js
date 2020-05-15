@@ -45,7 +45,7 @@ const titles = {
   settings: 'Settings',
   'settings-admin': 'Settings',
   invite_endUser: 'invite_endUser',
-  'invite-admin': 'Invite',
+
   'edit-profile-endUser': 'edit-profile-endUser',
   'edit-profile-admin': 'Edit Profile',
   'edit-contact-preferences': 'Edit Contact Preferences',
@@ -82,7 +82,13 @@ const titles = {
   'settings_powerUser': 'settings_powerUser',
   'edit_programs_powerUser': 'edit_programs_powerUser',
   'caretaker-powerUser': 'caretaker-powerUser',
-
+  'careCoordinatorChat': 'careCoordinatorChat',
+  'settings_careCoordinator': 'settings_careCoordinator',
+  'notifications-careCoordinator': 'notifications-careCoordinator',
+  'careCoordinator_index': 'careCoordinator_index',
+  'caretaker-careCoordinator': 'caretaker-careCoordinator',
+  'invite_careCoordinator': 'invite_careCoordinator',
+  'form-management-powerUser': 'form-management-powerUser'
 
 }
 

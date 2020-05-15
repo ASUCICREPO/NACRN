@@ -122,6 +122,22 @@ catch(err){
 
  // Redirecting to other page.
 
+}else if (username == "carecoordinator" && password == "carecoordinator"){
+var redirectPage = 'http://localhost:3000/careCoordinator_home.html'
+try{
+  setTimeout(function(){document.location.href = "http://localhost:3000/careCoordinator_home.html"},500); 
+alert ("Login successful");
+
+}
+catch(err){
+  alert(err.message);
+}
+
+ return false;
+
+
+ // Redirecting to other page.
+
 }
 
 
