@@ -348,7 +348,7 @@ let admin_settings = `<div class="header-container">
             </a>
           </li>
           <li>
-                        <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+                        <a href="email.html" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
                           <div class="peer mR-15">
                             <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/men/7.jpg" alt="">
                           </div>
@@ -548,7 +548,7 @@ let careCoordinator_settings = `<div class="header-container">
             </a>
           </li>
           <li>
-          <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+          <a href="email.html" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
             <div class="peer mR-15">
               <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/men/7.jpg" alt="">
             </div>
@@ -686,7 +686,7 @@ let powerUser_settings = `<div class="header-container">
             </a>
           </li>
           <li>
-          <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+          <a href="email.html" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
             <div class="peer mR-15">
               <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/men/7.jpg" alt="">
             </div>
@@ -951,7 +951,7 @@ let endUserSettings = `
                 </a>
               </li>
               <li>
-              <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+              <a href="email.html" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
                 <div class="peer mR-15">
                   <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/men/7.jpg" alt="">
                 </div>
@@ -959,7 +959,10 @@ let endUserSettings = `
                   <div>
                     <div class="peers jc-sb fxw-nw mB-5">
                       <div class="peer">
-                        <p class="fw-500 mB-0">Moo Doe(Admin)</p>
+<p class='fw-500 mB-0'>
+  Moo Doe(Admin)
+</p>
+
                       </div>
                       <div class="peer">
                         <small class="fsz-xs">15 mins ago</small>
