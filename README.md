@@ -122,8 +122,7 @@ Here is a brief explanation of the template folder structure and some of its mai
 Initial Release
 
 ## Authors
-
-ASU CIC TEAM
+[Colorlib](https://colorlib.com)
 
 ## More info
 
